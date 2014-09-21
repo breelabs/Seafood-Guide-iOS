@@ -1,0 +1,1063 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
+		FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */; };
+		FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
+		FC2BD13819B23CBF003ECABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD13619B23CBF003ECABA /* InfoPlist.strings */; };
+		FC2BD13A19B23CBF003ECABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD13919B23CBF003ECABA /* main.m */; };
+		FC2BD13E19B23CBF003ECABA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD13D19B23CBF003ECABA /* AppDelegate.m */; };
+		FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD13F19B23CBF003ECABA /* Main_iPhone.storyboard */; };
+		FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */; };
+		FC2BD14719B23CBF003ECABA /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD14619B23CBF003ECABA /* FirstViewController.m */; };
+		FC2BD14A19B23CBF003ECABA /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD14919B23CBF003ECABA /* SecondViewController.m */; };
+		FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD14B19B23CBF003ECABA /* Images.xcassets */; };
+		FC2BD15319B23CC0003ECABA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD15219B23CC0003ECABA /* XCTest.framework */; };
+		FC2BD15419B23CC0003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
+		FC2BD15519B23CC0003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
+		FC2BD15D19B23CC0003ECABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD15B19B23CC0003ECABA /* InfoPlist.strings */; };
+		FC2BD15F19B23CC0003ECABA /* Seafood_GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD15E19B23CC0003ECABA /* Seafood_GuideTests.m */; };
+		FC2BD16A19B26E6D003ECABA /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD16919B26E6D003ECABA /* AQGridView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18119B26EB6003ECABA /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD16F19B26EB6003ECABA /* AQGridViewAnimatorItem.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18219B26EB6003ECABA /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17119B26EB6003ECABA /* AQGridViewCell.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18319B26EB6003ECABA /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17419B26EB6003ECABA /* AQGridViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18419B26EB6003ECABA /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17619B26EB6003ECABA /* AQGridViewData.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18519B26EB6003ECABA /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17819B26EB6003ECABA /* AQGridViewUpdateInfo.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18619B26EB6003ECABA /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17A19B26EB6003ECABA /* AQGridViewUpdateItem.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18719B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17C19B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.m */; };
+		FC2BD18819B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD17E19B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.m */; };
+		FC2BD18919B26EB6003ECABA /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD18019B26EB6003ECABA /* UIColor+AQGridView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD18B19B26F00003ECABA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD18A19B26F00003ECABA /* QuartzCore.framework */; };
+		FC2BD19019B26F4C003ECABA /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD18D19B26F4C003ECABA /* GridViewCell.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD19119B26F4C003ECABA /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD18F19B26F4C003ECABA /* GridViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		FC2BD19719B26FD8003ECABA /* FishCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD19419B26FD8003ECABA /* FishCat.m */; };
+		FC2BD19819B26FD8003ECABA /* FishTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD19619B26FD8003ECABA /* FishTVC.m */; };
+		FC2BD19B19B26FF5003ECABA /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD19A19B26FF5003ECABA /* CoreDataTableViewController.m */; };
+		FC2BD19E19B27018003ECABA /* Seafood.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD19D19B27018003ECABA /* Seafood.m */; };
+		FC2BD1A119B27028003ECABA /* TVCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD1A019B27028003ECABA /* TVCDetailViewController.m */; };
+		FC2BD1A919B273F7003ECABA /* fish-1.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A219B273F7003ECABA /* fish-1.jpeg */; };
+		FC2BD1AA19B273F7003ECABA /* fish-2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A319B273F7003ECABA /* fish-2.jpeg */; };
+		FC2BD1AB19B273F7003ECABA /* fish-3.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A419B273F7003ECABA /* fish-3.jpeg */; };
+		FC2BD1AC19B273F7003ECABA /* fish-4.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A519B273F7003ECABA /* fish-4.jpeg */; };
+		FC2BD1AD19B273F7003ECABA /* fish-5.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A619B273F7003ECABA /* fish-5.jpeg */; };
+		FC2BD1AE19B273F7003ECABA /* fish-6.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A719B273F7003ECABA /* fish-6.jpeg */; };
+		FC2BD1AF19B273F7003ECABA /* fish1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1A819B273F7003ECABA /* fish1.png */; };
+		FC2BD1B219B2761A003ECABA /* Seafood_Guide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD1B019B2761A003ECABA /* Seafood_Guide.xcdatamodeld */; };
+		FC2BD1B419B27649003ECABA /* allfish.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1B319B27649003ECABA /* allfish.jpeg */; };
+		FC2BD1B819B27667003ECABA /* donteat.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1B719B27667003ECABA /* donteat.jpeg */; };
+		FC2BD1BB19B276C4003ECABA /* bg-app.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1B919B276C4003ECABA /* bg-app.png */; };
+		FC2BD1BC19B276C4003ECABA /* bg-app@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1BA19B276C4003ECABA /* bg-app@2x.png */; };
+		FC2BD1BE19B27727003ECABA /* tab-mask.png in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD1BD19B27727003ECABA /* tab-mask.png */; };
+		FC3B082E19B41BD70049FA70 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B082D19B41BD70049FA70 /* Social.framework */; };
+		FC3B083719B428E10049FA70 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B083519B428E10049FA70 /* WebViewController.m */; };
+		FC3B083819B428E10049FA70 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3B083619B428E10049FA70 /* WebViewController.xib */; };
+		FC3B083C19B429C20049FA70 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B083A19B429C20049FA70 /* ProgressHUD.m */; };
+		FC3B083D19B429C20049FA70 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC3B083B19B429C20049FA70 /* ProgressHUD.bundle */; };
+		FC3B084019B42A560049FA70 /* config.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B083F19B42A560049FA70 /* config.m */; };
+		FC3B084A19B431D90049FA70 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B084919B431D90049FA70 /* RXMLElement.m */; };
+		FC3B085119B431EA0049FA70 /* DetailNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B084B19B431EA0049FA70 /* DetailNewsViewController.m */; };
+		FC3B085319B431EA0049FA70 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B084D19B431EA0049FA70 /* NewsViewController.m */; };
+		FC3B085719B433610049FA70 /* ios-news.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC3B085619B433610049FA70 /* ios-news.xml */; };
+		FC3B085B19B434150049FA70 /* TableViewCellNews.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3B085819B434150049FA70 /* TableViewCellNews.m */; };
+		FC3B085C19B434150049FA70 /* TableViewCellNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3B085919B434150049FA70 /* TableViewCellNews.xib */; };
+		FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085E19B435430049FA70 /* libxml2.dylib */; };
+		FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B086119B4354F0049FA70 /* libz.dylib */; };
+		FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085D19B435430049FA70 /* libxml2.2.dylib */; };
+		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
+		FCEAB13319B4C3A0004D1846 /* Facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13219B4C3A0004D1846 /* Facebook@2x.png */; };
+		FCEAB13519B4C3A8004D1846 /* Twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13419B4C3A8004D1846 /* Twitter@2x.png */; };
+		FCEAB14019B50337004D1846 /* abandon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13619B50337004D1846 /* abandon.jpg */; };
+		FCEAB14119B50337004D1846 /* boat1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13719B50337004D1846 /* boat1.jpg */; };
+		FCEAB14219B50337004D1846 /* dead.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13819B50337004D1846 /* dead.jpg */; };
+		FCEAB14319B50337004D1846 /* escapement.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13919B50337004D1846 /* escapement.jpg */; };
+		FCEAB14419B50337004D1846 /* feed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13A19B50337004D1846 /* feed.jpg */; };
+		FCEAB14519B50337004D1846 /* filet.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13B19B50337004D1846 /* filet.jpg */; };
+		FCEAB14619B50337004D1846 /* gmo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13C19B50337004D1846 /* gmo.jpg */; };
+		FCEAB14719B50337004D1846 /* habitat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13D19B50337004D1846 /* habitat.jpg */; };
+		FCEAB14819B50337004D1846 /* mutant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13E19B50337004D1846 /* mutant.jpg */; };
+		FCEAB14919B50337004D1846 /* polluted.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB13F19B50337004D1846 /* polluted.jpg */; };
+		FCEAB15419B512F1004D1846 /* More@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15219B512F1004D1846 /* More@2x.png */; };
+		FCEAB15519B512F1004D1846 /* Remove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15319B512F1004D1846 /* Remove@2x.png */; };
+		FCEAB15719B52532004D1846 /* Top_Charts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15619B52532004D1846 /* Top_Charts@2x.png */; };
+		FCEAB15919B52621004D1846 /* clown_fish-50.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15819B52621004D1846 /* clown_fish-50.png */; };
+		FCEAB15B19B52685004D1846 /* Anchor@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15A19B52685004D1846 /* Anchor@2x.png */; };
+		FCEAB15D19B5289C004D1846 /* World_Times@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15C19B5289C004D1846 /* World_Times@2x.png */; };
+		FCEAB15F19B52912004D1846 /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB15E19B52912004D1846 /* Search@2x.png */; };
+		FCEAB16519B55154004D1846 /* LingoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB16419B55154004D1846 /* LingoTableViewController.m */; };
+		FCEAB16819B55549004D1846 /* DetailLingoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB16719B55549004D1846 /* DetailLingoViewController.m */; };
+		FCEAB16A19B562D9004D1846 /* ios-lingo.xml in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB16919B562D9004D1846 /* ios-lingo.xml */; };
+		FCEAB17419B56C80004D1846 /* diver.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB16E19B56C80004D1846 /* diver.jpg */; };
+		FCEAB17519B56C80004D1846 /* fishmeal.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB16F19B56C80004D1846 /* fishmeal.jpg */; };
+		FCEAB17619B56C80004D1846 /* flat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB17019B56C80004D1846 /* flat.jpg */; };
+		FCEAB17719B56C80004D1846 /* hook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB17119B56C80004D1846 /* hook.jpg */; };
+		FCEAB17819B56C80004D1846 /* longlines.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB17219B56C80004D1846 /* longlines.jpg */; };
+		FCEAB17919B56C80004D1846 /* trap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB17319B56C80004D1846 /* trap.jpg */; };
+		FCEAB17B19B61199004D1846 /* Bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB17A19B61199004D1846 /* Bookmarks@2x.png */; };
+		FCEAB17E19B61430004D1846 /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB17D19B61430004D1846 /* AboutTableViewController.m */; };
+		FCEAB18119B654D3004D1846 /* DetailAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEAB18019B654D3004D1846 /* DetailAboutViewController.m */; };
+		FCEAB18319B65B8B004D1846 /* ios-about-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB18219B65B8B004D1846 /* ios-about-1.xml */; };
+		FCEAB18519B660FE004D1846 /* ios-about-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB18419B660FE004D1846 /* ios-about-2.xml */; };
+		FCEAB18719B66507004D1846 /* ios-about-3.xml in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB18619B66507004D1846 /* ios-about-3.xml */; };
+		FCEAB18919B6673B004D1846 /* fabric_plaid_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB18819B6673B004D1846 /* fabric_plaid_@2X.png */; };
+		FCEAB18B19B66784004D1846 /* whitey_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = FCEAB18A19B66784004D1846 /* whitey_@2X.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FC2BD15619B23CC0003ECABA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FC2BD12219B23CBF003ECABA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FC2BD12919B23CBF003ECABA;
+			remoteInfo = "Seafood Guide";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seafood Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2BD12D19B23CBF003ECABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FC2BD13119B23CBF003ECABA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Seafood Guide-Info.plist"; sourceTree = "<group>"; };
+		FC2BD13719B23CBF003ECABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FC2BD13919B23CBF003ECABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC2BD13B19B23CBF003ECABA /* Seafood Guide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Seafood Guide-Prefix.pch"; sourceTree = "<group>"; };
+		FC2BD13C19B23CBF003ECABA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FC2BD13D19B23CBF003ECABA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FC2BD14019B23CBF003ECABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		FC2BD14319B23CBF003ECABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		FC2BD14519B23CBF003ECABA /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		FC2BD14619B23CBF003ECABA /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		FC2BD14819B23CBF003ECABA /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		FC2BD14919B23CBF003ECABA /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		FC2BD14B19B23CBF003ECABA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FC2BD15119B23CC0003ECABA /* Seafood GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Seafood GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC2BD15219B23CC0003ECABA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FC2BD15A19B23CC0003ECABA /* Seafood GuideTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Seafood GuideTests-Info.plist"; sourceTree = "<group>"; };
+		FC2BD15C19B23CC0003ECABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FC2BD15E19B23CC0003ECABA /* Seafood_GuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seafood_GuideTests.m; sourceTree = "<group>"; };
+		FC2BD16819B26E6D003ECABA /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridView.h; sourceTree = "<group>"; };
+		FC2BD16919B26E6D003ECABA /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridView.m; sourceTree = "<group>"; };
+		FC2BD16C19B26EB6003ECABA /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLayout.h"; sourceTree = "<group>"; };
+		FC2BD16D19B26EB6003ECABA /* AQGridView+CellLocationDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridView+CellLocationDelegation.h"; sourceTree = "<group>"; };
+		FC2BD16E19B26EB6003ECABA /* AQGridViewAnimatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewAnimatorItem.h; sourceTree = "<group>"; };
+		FC2BD16F19B26EB6003ECABA /* AQGridViewAnimatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewAnimatorItem.m; sourceTree = "<group>"; };
+		FC2BD17019B26EB6003ECABA /* AQGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewCell.h; sourceTree = "<group>"; };
+		FC2BD17119B26EB6003ECABA /* AQGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewCell.m; sourceTree = "<group>"; };
+		FC2BD17219B26EB6003ECABA /* AQGridViewCell+AQGridViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AQGridViewCell+AQGridViewCellPrivate.h"; sourceTree = "<group>"; };
+		FC2BD17319B26EB6003ECABA /* AQGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewController.h; sourceTree = "<group>"; };
+		FC2BD17419B26EB6003ECABA /* AQGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewController.m; sourceTree = "<group>"; };
+		FC2BD17519B26EB6003ECABA /* AQGridViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewData.h; sourceTree = "<group>"; };
+		FC2BD17619B26EB6003ECABA /* AQGridViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewData.m; sourceTree = "<group>"; };
+		FC2BD17719B26EB6003ECABA /* AQGridViewUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateInfo.h; sourceTree = "<group>"; };
+		FC2BD17819B26EB6003ECABA /* AQGridViewUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateInfo.m; sourceTree = "<group>"; };
+		FC2BD17919B26EB6003ECABA /* AQGridViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AQGridViewUpdateItem.h; sourceTree = "<group>"; };
+		FC2BD17A19B26EB6003ECABA /* AQGridViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AQGridViewUpdateItem.m; sourceTree = "<group>"; };
+		FC2BD17B19B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIndexesOutsideSet.h"; sourceTree = "<group>"; };
+		FC2BD17C19B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIndexesOutsideSet.m"; sourceTree = "<group>"; };
+		FC2BD17D19B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+AQIsSetContiguous.h"; sourceTree = "<group>"; };
+		FC2BD17E19B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
+		FC2BD17F19B26EB6003ECABA /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AQGridView.h"; sourceTree = "<group>"; };
+		FC2BD18019B26EB6003ECABA /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AQGridView.m"; sourceTree = "<group>"; };
+		FC2BD18A19B26F00003ECABA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FC2BD18C19B26F4C003ECABA /* GridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewCell.h; sourceTree = "<group>"; };
+		FC2BD18D19B26F4C003ECABA /* GridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewCell.m; sourceTree = "<group>"; };
+		FC2BD18E19B26F4C003ECABA /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
+		FC2BD18F19B26F4C003ECABA /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		FC2BD19319B26FD8003ECABA /* FishCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishCat.h; sourceTree = "<group>"; };
+		FC2BD19419B26FD8003ECABA /* FishCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishCat.m; sourceTree = "<group>"; };
+		FC2BD19519B26FD8003ECABA /* FishTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FishTVC.h; sourceTree = "<group>"; };
+		FC2BD19619B26FD8003ECABA /* FishTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FishTVC.m; sourceTree = "<group>"; };
+		FC2BD19919B26FF5003ECABA /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		FC2BD19A19B26FF5003ECABA /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		FC2BD19C19B27018003ECABA /* Seafood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Seafood.h; sourceTree = "<group>"; };
+		FC2BD19D19B27018003ECABA /* Seafood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Seafood.m; sourceTree = "<group>"; };
+		FC2BD19F19B27028003ECABA /* TVCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TVCDetailViewController.h; sourceTree = "<group>"; };
+		FC2BD1A019B27028003ECABA /* TVCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TVCDetailViewController.m; sourceTree = "<group>"; };
+		FC2BD1A219B273F7003ECABA /* fish-1.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fish-1.jpeg"; sourceTree = "<group>"; };
+		FC2BD1A319B273F7003ECABA /* fish-2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fish-2.jpeg"; sourceTree = "<group>"; };
+		FC2BD1A419B273F7003ECABA /* fish-3.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fish-3.jpeg"; sourceTree = "<group>"; };
+		FC2BD1A519B273F7003ECABA /* fish-4.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fish-4.jpeg"; sourceTree = "<group>"; };
+		FC2BD1A619B273F7003ECABA /* fish-5.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fish-5.jpeg"; sourceTree = "<group>"; };
+		FC2BD1A719B273F7003ECABA /* fish-6.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fish-6.jpeg"; sourceTree = "<group>"; };
+		FC2BD1A819B273F7003ECABA /* fish1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish1.png; sourceTree = "<group>"; };
+		FC2BD1B119B2761A003ECABA /* Seafood_Guide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Seafood_Guide.xcdatamodel; sourceTree = "<group>"; };
+		FC2BD1B319B27649003ECABA /* allfish.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = allfish.jpeg; sourceTree = "<group>"; };
+		FC2BD1B719B27667003ECABA /* donteat.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = donteat.jpeg; sourceTree = "<group>"; };
+		FC2BD1B919B276C4003ECABA /* bg-app.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-app.png"; sourceTree = "<group>"; };
+		FC2BD1BA19B276C4003ECABA /* bg-app@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bg-app@2x.png"; sourceTree = "<group>"; };
+		FC2BD1BD19B27727003ECABA /* tab-mask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab-mask.png"; sourceTree = "<group>"; };
+		FC3B082D19B41BD70049FA70 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FC3B083419B428E10049FA70 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		FC3B083519B428E10049FA70 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		FC3B083619B428E10049FA70 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		FC3B083919B429C20049FA70 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		FC3B083A19B429C20049FA70 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
+		FC3B083B19B429C20049FA70 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ProgressHUD.bundle; sourceTree = "<group>"; };
+		FC3B083E19B42A560049FA70 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		FC3B083F19B42A560049FA70 /* config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = config.m; sourceTree = "<group>"; };
+		FC3B084819B431D90049FA70 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
+		FC3B084919B431D90049FA70 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
+		FC3B084B19B431EA0049FA70 /* DetailNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailNewsViewController.m; sourceTree = "<group>"; };
+		FC3B084D19B431EA0049FA70 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsViewController.m; sourceTree = "<group>"; };
+		FC3B084E19B431EA0049FA70 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsViewController.h; sourceTree = "<group>"; };
+		FC3B085019B431EA0049FA70 /* DetailNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailNewsViewController.h; sourceTree = "<group>"; };
+		FC3B085619B433610049FA70 /* ios-news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ios-news.xml"; sourceTree = "<group>"; };
+		FC3B085819B434150049FA70 /* TableViewCellNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCellNews.m; sourceTree = "<group>"; };
+		FC3B085919B434150049FA70 /* TableViewCellNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellNews.xib; sourceTree = "<group>"; };
+		FC3B085A19B434150049FA70 /* TableViewCellNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCellNews.h; sourceTree = "<group>"; };
+		FC3B085D19B435430049FA70 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		FC3B085E19B435430049FA70 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		FC3B086119B4354F0049FA70 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FCE79F3919B99F87003E03BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FCEAB13219B4C3A0004D1846 /* Facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook@2x.png"; sourceTree = "<group>"; };
+		FCEAB13419B4C3A8004D1846 /* Twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter@2x.png"; sourceTree = "<group>"; };
+		FCEAB13619B50337004D1846 /* abandon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = abandon.jpg; sourceTree = "<group>"; };
+		FCEAB13719B50337004D1846 /* boat1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boat1.jpg; sourceTree = "<group>"; };
+		FCEAB13819B50337004D1846 /* dead.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dead.jpg; sourceTree = "<group>"; };
+		FCEAB13919B50337004D1846 /* escapement.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = escapement.jpg; sourceTree = "<group>"; };
+		FCEAB13A19B50337004D1846 /* feed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = feed.jpg; sourceTree = "<group>"; };
+		FCEAB13B19B50337004D1846 /* filet.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = filet.jpg; sourceTree = "<group>"; };
+		FCEAB13C19B50337004D1846 /* gmo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gmo.jpg; sourceTree = "<group>"; };
+		FCEAB13D19B50337004D1846 /* habitat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = habitat.jpg; sourceTree = "<group>"; };
+		FCEAB13E19B50337004D1846 /* mutant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mutant.jpg; sourceTree = "<group>"; };
+		FCEAB13F19B50337004D1846 /* polluted.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polluted.jpg; sourceTree = "<group>"; };
+		FCEAB15219B512F1004D1846 /* More@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More@2x.png"; sourceTree = "<group>"; };
+		FCEAB15319B512F1004D1846 /* Remove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Remove@2x.png"; sourceTree = "<group>"; };
+		FCEAB15619B52532004D1846 /* Top_Charts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Top_Charts@2x.png"; sourceTree = "<group>"; };
+		FCEAB15819B52621004D1846 /* clown_fish-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "clown_fish-50.png"; sourceTree = "<group>"; };
+		FCEAB15A19B52685004D1846 /* Anchor@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anchor@2x.png"; sourceTree = "<group>"; };
+		FCEAB15C19B5289C004D1846 /* World_Times@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "World_Times@2x.png"; sourceTree = "<group>"; };
+		FCEAB15E19B52912004D1846 /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search@2x.png"; sourceTree = "<group>"; };
+		FCEAB16319B55154004D1846 /* LingoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LingoTableViewController.h; sourceTree = "<group>"; };
+		FCEAB16419B55154004D1846 /* LingoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LingoTableViewController.m; sourceTree = "<group>"; };
+		FCEAB16619B55549004D1846 /* DetailLingoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailLingoViewController.h; sourceTree = "<group>"; };
+		FCEAB16719B55549004D1846 /* DetailLingoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailLingoViewController.m; sourceTree = "<group>"; };
+		FCEAB16919B562D9004D1846 /* ios-lingo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ios-lingo.xml"; sourceTree = "<group>"; };
+		FCEAB16E19B56C80004D1846 /* diver.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = diver.jpg; sourceTree = "<group>"; };
+		FCEAB16F19B56C80004D1846 /* fishmeal.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fishmeal.jpg; sourceTree = "<group>"; };
+		FCEAB17019B56C80004D1846 /* flat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flat.jpg; sourceTree = "<group>"; };
+		FCEAB17119B56C80004D1846 /* hook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hook.jpg; sourceTree = "<group>"; };
+		FCEAB17219B56C80004D1846 /* longlines.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = longlines.jpg; sourceTree = "<group>"; };
+		FCEAB17319B56C80004D1846 /* trap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = trap.jpg; sourceTree = "<group>"; };
+		FCEAB17A19B61199004D1846 /* Bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Bookmarks@2x.png"; sourceTree = "<group>"; };
+		FCEAB17C19B61430004D1846 /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutTableViewController.h; sourceTree = "<group>"; };
+		FCEAB17D19B61430004D1846 /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutTableViewController.m; sourceTree = "<group>"; };
+		FCEAB17F19B654D3004D1846 /* DetailAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailAboutViewController.h; sourceTree = "<group>"; };
+		FCEAB18019B654D3004D1846 /* DetailAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailAboutViewController.m; sourceTree = "<group>"; };
+		FCEAB18219B65B8B004D1846 /* ios-about-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ios-about-1.xml"; sourceTree = "<group>"; };
+		FCEAB18419B660FE004D1846 /* ios-about-2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ios-about-2.xml"; sourceTree = "<group>"; };
+		FCEAB18619B66507004D1846 /* ios-about-3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "ios-about-3.xml"; sourceTree = "<group>"; };
+		FCEAB18819B6673B004D1846 /* fabric_plaid_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fabric_plaid_@2X.png"; sourceTree = "<group>"; };
+		FCEAB18A19B66784004D1846 /* whitey_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "whitey_@2X.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC2BD12719B23CBF003ECABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */,
+				FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */,
+				FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */,
+				FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */,
+				FC3B082E19B41BD70049FA70 /* Social.framework in Frameworks */,
+				FC2BD18B19B26F00003ECABA /* QuartzCore.framework in Frameworks */,
+				FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */,
+				FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */,
+				FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2BD14E19B23CC0003ECABA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2BD15319B23CC0003ECABA /* XCTest.framework in Frameworks */,
+				FC2BD15519B23CC0003ECABA /* UIKit.framework in Frameworks */,
+				FC2BD15419B23CC0003ECABA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FC2BD12119B23CBF003ECABA = {
+			isa = PBXGroup;
+			children = (
+				FC2BD13319B23CBF003ECABA /* Seafood Guide */,
+				FC2BD15819B23CC0003ECABA /* Seafood GuideTests */,
+				FC2BD12C19B23CBF003ECABA /* Frameworks */,
+				FC2BD12B19B23CBF003ECABA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FC2BD12B19B23CBF003ECABA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */,
+				FC2BD15119B23CC0003ECABA /* Seafood GuideTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC2BD12C19B23CBF003ECABA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCE79F3919B99F87003E03BE /* CoreData.framework */,
+				FC3B086119B4354F0049FA70 /* libz.dylib */,
+				FC3B085D19B435430049FA70 /* libxml2.2.dylib */,
+				FC3B085E19B435430049FA70 /* libxml2.dylib */,
+				FC3B082D19B41BD70049FA70 /* Social.framework */,
+				FC2BD18A19B26F00003ECABA /* QuartzCore.framework */,
+				FC2BD12D19B23CBF003ECABA /* Foundation.framework */,
+				FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */,
+				FC2BD13119B23CBF003ECABA /* UIKit.framework */,
+				FC2BD15219B23CC0003ECABA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC2BD13319B23CBF003ECABA /* Seafood Guide */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B084319B430000049FA70 /* Seafood Guide */,
+				FCEAB16B19B5696C004D1846 /* Lingo */,
+				FC3B085519B433560049FA70 /* Top 10 */,
+				FC3B084219B42FEA0049FA70 /* Data Model */,
+				FC2BD13C19B23CBF003ECABA /* AppDelegate.h */,
+				FC2BD13D19B23CBF003ECABA /* AppDelegate.m */,
+				FC2BD14519B23CBF003ECABA /* FirstViewController.h */,
+				FC2BD14619B23CBF003ECABA /* FirstViewController.m */,
+				FC2BD14819B23CBF003ECABA /* SecondViewController.h */,
+				FC2BD14919B23CBF003ECABA /* SecondViewController.m */,
+				FC2BD13F19B23CBF003ECABA /* Main_iPhone.storyboard */,
+				FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */,
+				FC2BD14B19B23CBF003ECABA /* Images.xcassets */,
+				FC3B084119B42FD80049FA70 /* Images */,
+				FC2BD13419B23CBF003ECABA /* Supporting Files */,
+				FCEAB17C19B61430004D1846 /* AboutTableViewController.h */,
+				FCEAB17D19B61430004D1846 /* AboutTableViewController.m */,
+				FCEAB17F19B654D3004D1846 /* DetailAboutViewController.h */,
+				FCEAB18019B654D3004D1846 /* DetailAboutViewController.m */,
+				FCEAB18619B66507004D1846 /* ios-about-3.xml */,
+				FCEAB18219B65B8B004D1846 /* ios-about-1.xml */,
+				FCEAB18419B660FE004D1846 /* ios-about-2.xml */,
+			);
+			path = "Seafood Guide";
+			sourceTree = "<group>";
+		};
+		FC2BD13419B23CBF003ECABA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B084719B431D90049FA70 /* RaptureXML */,
+				FC3B084619B430620049FA70 /* Config */,
+				FC2BD16B19B26E76003ECABA /* AQGridView */,
+				FC3B084419B430200049FA70 /* ProgressHUD */,
+				FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */,
+				FC2BD13619B23CBF003ECABA /* InfoPlist.strings */,
+				FC2BD13919B23CBF003ECABA /* main.m */,
+				FC2BD13B19B23CBF003ECABA /* Seafood Guide-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC2BD15819B23CC0003ECABA /* Seafood GuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BD15E19B23CC0003ECABA /* Seafood_GuideTests.m */,
+				FC2BD15919B23CC0003ECABA /* Supporting Files */,
+			);
+			path = "Seafood GuideTests";
+			sourceTree = "<group>";
+		};
+		FC2BD15919B23CC0003ECABA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BD15A19B23CC0003ECABA /* Seafood GuideTests-Info.plist */,
+				FC2BD15B19B23CC0003ECABA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FC2BD16B19B26E76003ECABA /* AQGridView */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BD16C19B26EB6003ECABA /* AQGridView+CellLayout.h */,
+				FC2BD16D19B26EB6003ECABA /* AQGridView+CellLocationDelegation.h */,
+				FC2BD16E19B26EB6003ECABA /* AQGridViewAnimatorItem.h */,
+				FC2BD16F19B26EB6003ECABA /* AQGridViewAnimatorItem.m */,
+				FC2BD17019B26EB6003ECABA /* AQGridViewCell.h */,
+				FC2BD17119B26EB6003ECABA /* AQGridViewCell.m */,
+				FC2BD17219B26EB6003ECABA /* AQGridViewCell+AQGridViewCellPrivate.h */,
+				FC2BD17319B26EB6003ECABA /* AQGridViewController.h */,
+				FC2BD17419B26EB6003ECABA /* AQGridViewController.m */,
+				FC2BD17519B26EB6003ECABA /* AQGridViewData.h */,
+				FC2BD17619B26EB6003ECABA /* AQGridViewData.m */,
+				FC2BD17719B26EB6003ECABA /* AQGridViewUpdateInfo.h */,
+				FC2BD17819B26EB6003ECABA /* AQGridViewUpdateInfo.m */,
+				FC2BD17919B26EB6003ECABA /* AQGridViewUpdateItem.h */,
+				FC2BD17A19B26EB6003ECABA /* AQGridViewUpdateItem.m */,
+				FC2BD17B19B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.h */,
+				FC2BD17C19B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.m */,
+				FC2BD17D19B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.h */,
+				FC2BD17E19B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.m */,
+				FC2BD17F19B26EB6003ECABA /* UIColor+AQGridView.h */,
+				FC2BD18019B26EB6003ECABA /* UIColor+AQGridView.m */,
+				FC2BD16819B26E6D003ECABA /* AQGridView.h */,
+				FC2BD16919B26E6D003ECABA /* AQGridView.m */,
+			);
+			name = AQGridView;
+			sourceTree = "<group>";
+		};
+		FC2BD19219B26F56003ECABA /* Grid Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BD18C19B26F4C003ECABA /* GridViewCell.h */,
+				FC2BD18D19B26F4C003ECABA /* GridViewCell.m */,
+				FC2BD18E19B26F4C003ECABA /* GridViewController.h */,
+				FC2BD18F19B26F4C003ECABA /* GridViewController.m */,
+			);
+			name = "Grid Controller";
+			sourceTree = "<group>";
+		};
+		FC3B084119B42FD80049FA70 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAB17A19B61199004D1846 /* Bookmarks@2x.png */,
+				FCEAB16E19B56C80004D1846 /* diver.jpg */,
+				FCEAB16F19B56C80004D1846 /* fishmeal.jpg */,
+				FCEAB17019B56C80004D1846 /* flat.jpg */,
+				FCEAB17119B56C80004D1846 /* hook.jpg */,
+				FCEAB17219B56C80004D1846 /* longlines.jpg */,
+				FCEAB18A19B66784004D1846 /* whitey_@2X.png */,
+				FCEAB17319B56C80004D1846 /* trap.jpg */,
+				FCEAB15E19B52912004D1846 /* Search@2x.png */,
+				FCEAB15C19B5289C004D1846 /* World_Times@2x.png */,
+				FCEAB15A19B52685004D1846 /* Anchor@2x.png */,
+				FCEAB15819B52621004D1846 /* clown_fish-50.png */,
+				FCEAB15619B52532004D1846 /* Top_Charts@2x.png */,
+				FCEAB15219B512F1004D1846 /* More@2x.png */,
+				FCEAB15319B512F1004D1846 /* Remove@2x.png */,
+				FCEAB13619B50337004D1846 /* abandon.jpg */,
+				FCEAB13719B50337004D1846 /* boat1.jpg */,
+				FCEAB13819B50337004D1846 /* dead.jpg */,
+				FCEAB13919B50337004D1846 /* escapement.jpg */,
+				FCEAB13A19B50337004D1846 /* feed.jpg */,
+				FCEAB13B19B50337004D1846 /* filet.jpg */,
+				FCEAB13C19B50337004D1846 /* gmo.jpg */,
+				FCEAB13D19B50337004D1846 /* habitat.jpg */,
+				FCEAB13E19B50337004D1846 /* mutant.jpg */,
+				FCEAB13F19B50337004D1846 /* polluted.jpg */,
+				FCEAB13419B4C3A8004D1846 /* Twitter@2x.png */,
+				FCEAB13219B4C3A0004D1846 /* Facebook@2x.png */,
+				FC2BD1BD19B27727003ECABA /* tab-mask.png */,
+				FCEAB18819B6673B004D1846 /* fabric_plaid_@2X.png */,
+				FC2BD1B919B276C4003ECABA /* bg-app.png */,
+				FC2BD1BA19B276C4003ECABA /* bg-app@2x.png */,
+				FC2BD1B719B27667003ECABA /* donteat.jpeg */,
+				FC2BD1B319B27649003ECABA /* allfish.jpeg */,
+				FC2BD1A219B273F7003ECABA /* fish-1.jpeg */,
+				FC2BD1A319B273F7003ECABA /* fish-2.jpeg */,
+				FC2BD1A419B273F7003ECABA /* fish-3.jpeg */,
+				FC2BD1A519B273F7003ECABA /* fish-4.jpeg */,
+				FC2BD1A619B273F7003ECABA /* fish-5.jpeg */,
+				FC2BD1A719B273F7003ECABA /* fish-6.jpeg */,
+				FC2BD1A819B273F7003ECABA /* fish1.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		FC3B084219B42FEA0049FA70 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC2BD1B019B2761A003ECABA /* Seafood_Guide.xcdatamodeld */,
+				FC2BD19319B26FD8003ECABA /* FishCat.h */,
+				FC2BD19419B26FD8003ECABA /* FishCat.m */,
+				FC2BD19919B26FF5003ECABA /* CoreDataTableViewController.h */,
+				FC2BD19A19B26FF5003ECABA /* CoreDataTableViewController.m */,
+				FC2BD19C19B27018003ECABA /* Seafood.h */,
+				FC2BD19D19B27018003ECABA /* Seafood.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
+		FC3B084319B430000049FA70 /* Seafood Guide */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B084519B4304A0049FA70 /* Web Controller */,
+				FC2BD19219B26F56003ECABA /* Grid Controller */,
+				FC2BD19F19B27028003ECABA /* TVCDetailViewController.h */,
+				FC2BD1A019B27028003ECABA /* TVCDetailViewController.m */,
+				FC2BD19519B26FD8003ECABA /* FishTVC.h */,
+				FC2BD19619B26FD8003ECABA /* FishTVC.m */,
+			);
+			name = "Seafood Guide";
+			sourceTree = "<group>";
+		};
+		FC3B084419B430200049FA70 /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B083919B429C20049FA70 /* ProgressHUD.h */,
+				FC3B083A19B429C20049FA70 /* ProgressHUD.m */,
+				FC3B083B19B429C20049FA70 /* ProgressHUD.bundle */,
+			);
+			name = ProgressHUD;
+			sourceTree = "<group>";
+		};
+		FC3B084519B4304A0049FA70 /* Web Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B083419B428E10049FA70 /* WebViewController.h */,
+				FC3B083519B428E10049FA70 /* WebViewController.m */,
+				FC3B083619B428E10049FA70 /* WebViewController.xib */,
+			);
+			name = "Web Controller";
+			sourceTree = "<group>";
+		};
+		FC3B084619B430620049FA70 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B083E19B42A560049FA70 /* config.h */,
+				FC3B083F19B42A560049FA70 /* config.m */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		FC3B084719B431D90049FA70 /* RaptureXML */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B084819B431D90049FA70 /* RXMLElement.h */,
+				FC3B084919B431D90049FA70 /* RXMLElement.m */,
+			);
+			path = RaptureXML;
+			sourceTree = "<group>";
+		};
+		FC3B085519B433560049FA70 /* Top 10 */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAB16019B5503B004D1846 /* Table View Cell */,
+				FCEAB16119B55046004D1846 /* Data Source */,
+				FCEAB16219B55051004D1846 /* View Controllers */,
+			);
+			name = "Top 10";
+			sourceTree = "<group>";
+		};
+		FCEAB16019B5503B004D1846 /* Table View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B085919B434150049FA70 /* TableViewCellNews.xib */,
+				FC3B085819B434150049FA70 /* TableViewCellNews.m */,
+				FC3B085A19B434150049FA70 /* TableViewCellNews.h */,
+			);
+			name = "Table View Cell";
+			sourceTree = "<group>";
+		};
+		FCEAB16119B55046004D1846 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B085619B433610049FA70 /* ios-news.xml */,
+			);
+			name = "Data Source";
+			sourceTree = "<group>";
+		};
+		FCEAB16219B55051004D1846 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FC3B084B19B431EA0049FA70 /* DetailNewsViewController.m */,
+				FC3B085019B431EA0049FA70 /* DetailNewsViewController.h */,
+				FC3B084D19B431EA0049FA70 /* NewsViewController.m */,
+				FC3B084E19B431EA0049FA70 /* NewsViewController.h */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FCEAB16B19B5696C004D1846 /* Lingo */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAB16C19B56978004D1846 /* Data Source */,
+				FCEAB16D19B56981004D1846 /* View Controllers */,
+			);
+			name = Lingo;
+			sourceTree = "<group>";
+		};
+		FCEAB16C19B56978004D1846 /* Data Source */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAB16919B562D9004D1846 /* ios-lingo.xml */,
+			);
+			name = "Data Source";
+			sourceTree = "<group>";
+		};
+		FCEAB16D19B56981004D1846 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCEAB16619B55549004D1846 /* DetailLingoViewController.h */,
+				FCEAB16719B55549004D1846 /* DetailLingoViewController.m */,
+				FCEAB16319B55154004D1846 /* LingoTableViewController.h */,
+				FCEAB16419B55154004D1846 /* LingoTableViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC2BD12919B23CBF003ECABA /* Seafood Guide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2BD16219B23CC0003ECABA /* Build configuration list for PBXNativeTarget "Seafood Guide" */;
+			buildPhases = (
+				FC2BD12619B23CBF003ECABA /* Sources */,
+				FC2BD12719B23CBF003ECABA /* Frameworks */,
+				FC2BD12819B23CBF003ECABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Seafood Guide";
+			productName = "Seafood Guide";
+			productReference = FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FC2BD15019B23CC0003ECABA /* Seafood GuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC2BD16519B23CC0003ECABA /* Build configuration list for PBXNativeTarget "Seafood GuideTests" */;
+			buildPhases = (
+				FC2BD14D19B23CC0003ECABA /* Sources */,
+				FC2BD14E19B23CC0003ECABA /* Frameworks */,
+				FC2BD14F19B23CC0003ECABA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FC2BD15719B23CC0003ECABA /* PBXTargetDependency */,
+			);
+			name = "Seafood GuideTests";
+			productName = "Seafood GuideTests";
+			productReference = FC2BD15119B23CC0003ECABA /* Seafood GuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC2BD12219B23CBF003ECABA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Jon Brown Designs";
+				TargetAttributes = {
+					FC2BD12919B23CBF003ECABA = {
+						DevelopmentTeam = 2D4Z7WQ7RS;
+					};
+					FC2BD15019B23CC0003ECABA = {
+						TestTargetID = FC2BD12919B23CBF003ECABA;
+					};
+				};
+			};
+			buildConfigurationList = FC2BD12519B23CBF003ECABA /* Build configuration list for PBXProject "Seafood Guide" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC2BD12119B23CBF003ECABA;
+			productRefGroup = FC2BD12B19B23CBF003ECABA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC2BD12919B23CBF003ECABA /* Seafood Guide */,
+				FC2BD15019B23CC0003ECABA /* Seafood GuideTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC2BD12819B23CBF003ECABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCEAB14519B50337004D1846 /* filet.jpg in Resources */,
+				FC2BD1AF19B273F7003ECABA /* fish1.png in Resources */,
+				FCEAB14819B50337004D1846 /* mutant.jpg in Resources */,
+				FCEAB18519B660FE004D1846 /* ios-about-2.xml in Resources */,
+				FC2BD1B819B27667003ECABA /* donteat.jpeg in Resources */,
+				FCEAB14919B50337004D1846 /* polluted.jpg in Resources */,
+				FC2BD1AA19B273F7003ECABA /* fish-2.jpeg in Resources */,
+				FCEAB13319B4C3A0004D1846 /* Facebook@2x.png in Resources */,
+				FCEAB15B19B52685004D1846 /* Anchor@2x.png in Resources */,
+				FCEAB15F19B52912004D1846 /* Search@2x.png in Resources */,
+				FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */,
+				FCEAB17519B56C80004D1846 /* fishmeal.jpg in Resources */,
+				FC2BD1B419B27649003ECABA /* allfish.jpeg in Resources */,
+				FCEAB17B19B61199004D1846 /* Bookmarks@2x.png in Resources */,
+				FCEAB17819B56C80004D1846 /* longlines.jpg in Resources */,
+				FCEAB17719B56C80004D1846 /* hook.jpg in Resources */,
+				FCEAB13519B4C3A8004D1846 /* Twitter@2x.png in Resources */,
+				FC2BD1AC19B273F7003ECABA /* fish-4.jpeg in Resources */,
+				FCEAB16A19B562D9004D1846 /* ios-lingo.xml in Resources */,
+				FCEAB14019B50337004D1846 /* abandon.jpg in Resources */,
+				FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */,
+				FC3B085C19B434150049FA70 /* TableViewCellNews.xib in Resources */,
+				FCEAB14219B50337004D1846 /* dead.jpg in Resources */,
+				FCEAB14319B50337004D1846 /* escapement.jpg in Resources */,
+				FCEAB18B19B66784004D1846 /* whitey_@2X.png in Resources */,
+				FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */,
+				FCEAB14719B50337004D1846 /* habitat.jpg in Resources */,
+				FC2BD1BB19B276C4003ECABA /* bg-app.png in Resources */,
+				FC2BD1A919B273F7003ECABA /* fish-1.jpeg in Resources */,
+				FC2BD1BC19B276C4003ECABA /* bg-app@2x.png in Resources */,
+				FCEAB17419B56C80004D1846 /* diver.jpg in Resources */,
+				FCEAB17919B56C80004D1846 /* trap.jpg in Resources */,
+				FC2BD1AD19B273F7003ECABA /* fish-5.jpeg in Resources */,
+				FCEAB18319B65B8B004D1846 /* ios-about-1.xml in Resources */,
+				FCEAB15519B512F1004D1846 /* Remove@2x.png in Resources */,
+				FC3B083819B428E10049FA70 /* WebViewController.xib in Resources */,
+				FCEAB15719B52532004D1846 /* Top_Charts@2x.png in Resources */,
+				FC2BD1AB19B273F7003ECABA /* fish-3.jpeg in Resources */,
+				FCEAB18719B66507004D1846 /* ios-about-3.xml in Resources */,
+				FC3B085719B433610049FA70 /* ios-news.xml in Resources */,
+				FC3B083D19B429C20049FA70 /* ProgressHUD.bundle in Resources */,
+				FCEAB18919B6673B004D1846 /* fabric_plaid_@2X.png in Resources */,
+				FCEAB17619B56C80004D1846 /* flat.jpg in Resources */,
+				FCEAB14419B50337004D1846 /* feed.jpg in Resources */,
+				FC2BD1AE19B273F7003ECABA /* fish-6.jpeg in Resources */,
+				FC2BD13819B23CBF003ECABA /* InfoPlist.strings in Resources */,
+				FC2BD1BE19B27727003ECABA /* tab-mask.png in Resources */,
+				FCEAB15419B512F1004D1846 /* More@2x.png in Resources */,
+				FCEAB15D19B5289C004D1846 /* World_Times@2x.png in Resources */,
+				FCEAB14619B50337004D1846 /* gmo.jpg in Resources */,
+				FCEAB15919B52621004D1846 /* clown_fish-50.png in Resources */,
+				FCEAB14119B50337004D1846 /* boat1.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2BD14F19B23CC0003ECABA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2BD15D19B23CC0003ECABA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC2BD12619B23CBF003ECABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2BD18719B26EB6003ECABA /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				FC2BD19819B26FD8003ECABA /* FishTVC.m in Sources */,
+				FC2BD18319B26EB6003ECABA /* AQGridViewController.m in Sources */,
+				FC2BD18919B26EB6003ECABA /* UIColor+AQGridView.m in Sources */,
+				FC2BD19019B26F4C003ECABA /* GridViewCell.m in Sources */,
+				FCEAB16819B55549004D1846 /* DetailLingoViewController.m in Sources */,
+				FC2BD19B19B26FF5003ECABA /* CoreDataTableViewController.m in Sources */,
+				FC3B085119B431EA0049FA70 /* DetailNewsViewController.m in Sources */,
+				FC3B083C19B429C20049FA70 /* ProgressHUD.m in Sources */,
+				FC2BD19119B26F4C003ECABA /* GridViewController.m in Sources */,
+				FC2BD14A19B23CBF003ECABA /* SecondViewController.m in Sources */,
+				FC2BD16A19B26E6D003ECABA /* AQGridView.m in Sources */,
+				FC2BD19E19B27018003ECABA /* Seafood.m in Sources */,
+				FC2BD13E19B23CBF003ECABA /* AppDelegate.m in Sources */,
+				FC2BD18219B26EB6003ECABA /* AQGridViewCell.m in Sources */,
+				FCEAB18119B654D3004D1846 /* DetailAboutViewController.m in Sources */,
+				FC2BD1B219B2761A003ECABA /* Seafood_Guide.xcdatamodeld in Sources */,
+				FC3B085B19B434150049FA70 /* TableViewCellNews.m in Sources */,
+				FC2BD19719B26FD8003ECABA /* FishCat.m in Sources */,
+				FCEAB16519B55154004D1846 /* LingoTableViewController.m in Sources */,
+				FC2BD1A119B27028003ECABA /* TVCDetailViewController.m in Sources */,
+				FC2BD18519B26EB6003ECABA /* AQGridViewUpdateInfo.m in Sources */,
+				FC2BD14719B23CBF003ECABA /* FirstViewController.m in Sources */,
+				FC2BD18819B26EB6003ECABA /* NSIndexSet+AQIsSetContiguous.m in Sources */,
+				FCEAB17E19B61430004D1846 /* AboutTableViewController.m in Sources */,
+				FC3B084A19B431D90049FA70 /* RXMLElement.m in Sources */,
+				FC2BD18119B26EB6003ECABA /* AQGridViewAnimatorItem.m in Sources */,
+				FC3B083719B428E10049FA70 /* WebViewController.m in Sources */,
+				FC2BD13A19B23CBF003ECABA /* main.m in Sources */,
+				FC2BD18619B26EB6003ECABA /* AQGridViewUpdateItem.m in Sources */,
+				FC2BD18419B26EB6003ECABA /* AQGridViewData.m in Sources */,
+				FC3B084019B42A560049FA70 /* config.m in Sources */,
+				FC3B085319B431EA0049FA70 /* NewsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC2BD14D19B23CC0003ECABA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC2BD15F19B23CC0003ECABA /* Seafood_GuideTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FC2BD15719B23CC0003ECABA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FC2BD12919B23CBF003ECABA /* Seafood Guide */;
+			targetProxy = FC2BD15619B23CC0003ECABA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FC2BD13619B23CBF003ECABA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2BD13719B23CBF003ECABA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FC2BD13F19B23CBF003ECABA /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2BD14019B23CBF003ECABA /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2BD14319B23CBF003ECABA /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		FC2BD15B19B23CC0003ECABA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FC2BD15C19B23CC0003ECABA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC2BD16019B23CC0003ECABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FC2BD16119B23CC0003ECABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC2BD16319B23CC0003ECABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonathan Brown (2D4Z7WQ7RS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jonathan Brown (2D4Z7WQ7RS)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seafood Guide/Seafood Guide-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDK_DIR)\"/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FC2BD16419B23CC0003ECABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Jonathan Brown (2D4Z7WQ7RS)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Jonathan Brown (2D4Z7WQ7RS)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seafood Guide/Seafood Guide-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDK_DIR)\"/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FC2BD16619B23CC0003ECABA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seafood Guide.app/Seafood Guide";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seafood Guide/Seafood Guide-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Seafood GuideTests/Seafood GuideTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FC2BD16719B23CC0003ECABA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seafood Guide.app/Seafood Guide";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Seafood Guide/Seafood Guide-Prefix.pch";
+				INFOPLIST_FILE = "Seafood GuideTests/Seafood GuideTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC2BD12519B23CBF003ECABA /* Build configuration list for PBXProject "Seafood Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2BD16019B23CC0003ECABA /* Debug */,
+				FC2BD16119B23CC0003ECABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2BD16219B23CC0003ECABA /* Build configuration list for PBXNativeTarget "Seafood Guide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2BD16319B23CC0003ECABA /* Debug */,
+				FC2BD16419B23CC0003ECABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC2BD16519B23CC0003ECABA /* Build configuration list for PBXNativeTarget "Seafood GuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC2BD16619B23CC0003ECABA /* Debug */,
+				FC2BD16719B23CC0003ECABA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FC2BD1B019B2761A003ECABA /* Seafood_Guide.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FC2BD1B119B2761A003ECABA /* Seafood_Guide.xcdatamodel */,
+			);
+			currentVersion = FC2BD1B119B2761A003ECABA /* Seafood_Guide.xcdatamodel */;
+			path = Seafood_Guide.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FC2BD12219B23CBF003ECABA /* Project object */;
+}
