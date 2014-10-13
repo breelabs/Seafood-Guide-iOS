@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8YX-ce-x5E">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
         <!--Second-->
@@ -186,7 +186,7 @@
         <scene sceneID="DDg-wn-dwd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3eP-lr-C19" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Seafood Guide" image="Anchor.png" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Seafood Guide" image="Anchor" id="Z7h-1E-pvt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uvw-9n-n3H">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -205,7 +205,7 @@
         <scene sceneID="WP3-6e-etY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6xI-Qy-Q6Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Fish Lingo" image="Bookmarks.png" id="xFo-BA-Y06"/>
+                    <tabBarItem key="tabBarItem" title="Fish Lingo" image="Bookmarks" id="xFo-BA-Y06"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pqo-2K-aQz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -287,7 +287,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Top 10 Problems" id="KIs-C2-eKO">
-                        <barButtonItem key="leftBarButtonItem" image="Remove.png" id="YdP-Fd-2pg">
+                        <barButtonItem key="leftBarButtonItem" image="Remove" id="YdP-Fd-2pg">
                             <connections>
                                 <action selector="btnToggleClick:" destination="wem-im-Amz" id="GHy-rr-L4h"/>
                             </connections>
@@ -346,7 +346,7 @@
                                         <rect key="frame" x="214" y="399" width="38" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" image="Twitter.png">
+                                        <state key="normal" image="Twitter">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -357,7 +357,7 @@
                                         <rect key="frame" x="254" y="399" width="38" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" image="Facebook.png">
+                                        <state key="normal" image="Facebook">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -403,7 +403,7 @@
         <scene sceneID="6T7-hd-qNL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pJk-hT-rx1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top 10" image="Top_Charts.png" id="nCl-aM-TUN"/>
+                    <tabBarItem key="tabBarItem" title="Top 10" image="TopCharts" id="nCl-aM-TUN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XWJ-BJ-kgo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -461,7 +461,7 @@
                                         <rect key="frame" x="214" y="399" width="38" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" image="Twitter.png">
+                                        <state key="normal" image="Twitter">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -472,7 +472,7 @@
                                         <rect key="frame" x="254" y="399" width="38" height="38"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" image="Facebook.png">
+                                        <state key="normal" image="Facebook">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -518,7 +518,7 @@
         <scene sceneID="N3Y-rJ-0gj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IVb-LL-OYv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" image="World_Times.png" id="8wF-tP-qdP"/>
+                    <tabBarItem key="tabBarItem" title="About" image="WorldTimes" id="8wF-tP-qdP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rcB-cY-fXp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -535,13 +535,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Anchor.png" width="25" height="26"/>
-        <image name="Bookmarks.png" width="25" height="22"/>
-        <image name="Facebook.png" width="25" height="25"/>
-        <image name="Remove.png" width="25" height="25"/>
-        <image name="Top_Charts.png" width="27" height="23"/>
-        <image name="Twitter.png" width="25" height="25"/>
-        <image name="World_Times.png" width="25" height="25"/>
+        <image name="Anchor" width="25" height="26"/>
+        <image name="Bookmarks" width="25" height="22"/>
+        <image name="Facebook" width="25" height="25"/>
+        <image name="Remove" width="25" height="25"/>
+        <image name="TopCharts" width="27" height="23"/>
+        <image name="Twitter" width="25" height="25"/>
+        <image name="WorldTimes" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
