@@ -106,7 +106,7 @@
     
     
     
-    [self performFetch];
+    [self.fetchedResultsController performFetch:nil];
     
 }
 

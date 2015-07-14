@@ -63,6 +63,7 @@
 		FC4E646319EB4C420079C0A3 /* config.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646219EB4C420079C0A3 /* config.m */; };
 		FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC4E646419EB4C560079C0A3 /* ProgressHUD.bundle */; };
 		FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646619EB4C560079C0A3 /* ProgressHUD.m */; };
+		FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDAB7591B537D600040E0F7 /* Lingo.m */; };
 		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -168,6 +169,8 @@
 		FC4E646419EB4C560079C0A3 /* ProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = classes/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
 		FC4E646519EB4C560079C0A3 /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = classes/ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
 		FC4E646619EB4C560079C0A3 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = classes/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
+		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
+		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
 		FCE79F3919B99F87003E03BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -336,6 +339,8 @@
 				FC4E643119EB4B7C0079C0A3 /* FishCat.h */,
 				FC4E643219EB4B7C0079C0A3 /* FishCat.m */,
 				FC4E643319EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld */,
+				FCDAB7581B537D600040E0F7 /* Lingo.h */,
+				FCDAB7591B537D600040E0F7 /* Lingo.m */,
 				FC4E643519EB4B7C0079C0A3 /* Seafood.h */,
 				FC4E643619EB4B7C0079C0A3 /* Seafood.m */,
 			);
@@ -643,6 +648,7 @@
 				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
 				FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */,
 				FC4E645A19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
 				FC4E641619EB4A5C0079C0A3 /* WebViewController.m in Sources */,
 				FC4E645519EB4BF70079C0A3 /* AQGridViewCell.m in Sources */,
 				FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */,

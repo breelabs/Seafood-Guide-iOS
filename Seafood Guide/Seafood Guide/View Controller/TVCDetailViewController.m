@@ -240,9 +240,12 @@
         
         CGSize size = [[item desc] sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290 - (10 * 2), 200000.0f)];
     
-        CGFloat height = MAX(size.height, 44.0f);
+        CGFloat height = MAX(size.height, 100.0f);
         
         return height + (2 * 2);
+        
+        self.tableView.estimatedRowHeight = 100.0;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
         
     }
     return 44;

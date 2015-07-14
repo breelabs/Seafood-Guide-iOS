@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailLingoViewController.h"
+#import "CoreDataTableViewController.h" // so we can fetch
+#import "Lingo.h"
 
 @interface LingoTableViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource,UINavigationBarDelegate, UINavigationControllerDelegate>
 {
@@ -19,9 +21,11 @@
     NSArray *animalSectionTitles;
     NSArray *animalSectionImg;
     NSArray *animalSectionDesc;
+    NSString *uppercaseFirstLetterOfName;
+    NSString *predicateKey;
 }
 
-
+@property (strong, nonatomic) UIWindow *window;
 @property(nonatomic,retain) NSMutableArray *imageArray;
 @property(nonatomic,retain) NSMutableArray *titleArray;
 @property(nonatomic,retain) NSMutableArray *descArray;
@@ -29,4 +33,7 @@
 @property (nonatomic, strong) IBOutlet UIButton* directionsButton;
 
 @property (retain) DetailLingoViewController *detailLingoViewController;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end
