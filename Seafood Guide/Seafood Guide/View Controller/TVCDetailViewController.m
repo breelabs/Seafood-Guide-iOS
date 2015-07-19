@@ -2,8 +2,8 @@
 //  TVCDetailViewController.m
 //  Seafood Guide
 //
-//  Created by Remote Admin on 7/18/12.
-//
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import "TVCDetailViewController.h"
@@ -41,7 +41,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = YES;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -196,6 +196,8 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     
+    if (indexPath.section == 1) {
+    
     if ([indexPath row] == 0) {
         
         [self postToTwitter:self];
@@ -213,6 +215,7 @@
         
     }
     
+    }
     
     
 }
@@ -225,18 +228,18 @@
     if (indexPath.section == 0 && indexPath.row == 2) {
         
      
-//        NSStringDrawingContext *ctx = [NSStringDrawingContext new];
-//        NSAttributedString *aString = [[NSAttributedString alloc] initWithString:[item desc]];
-//        UITextView *calculationView = [[UITextView alloc] init];
-//        [calculationView setAttributedText:aString];
-//        
-//        CGRect textRect = [calculationView.text boundingRectWithSize:CGSizeMake(270 - (10 * 2), 200000.0f)
-//                                                             options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
-        
-//        CGRect textRect = [calculationView.text boundingRectWithSize:self.view.frame.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
-        
-//        CGFloat height = MAX(textRect.size.height, 44.0f);
-//        return height + (2 * 2);
+        //        NSStringDrawingContext *ctx = [NSStringDrawingContext new];
+        //        NSAttributedString *aString = [[NSAttributedString alloc] initWithString:[item desc]];
+        //        UITextView *calculationView = [[UITextView alloc] init];
+        //        [calculationView setAttributedText:aString];
+        //        
+        //        CGRect textRect = [calculationView.text boundingRectWithSize:CGSizeMake(270 - (10 * 2), 200000.0f)
+        //                                                             options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
+
+        //        CGRect textRect = [calculationView.text boundingRectWithSize:self.view.frame.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
+
+        //        CGFloat height = MAX(textRect.size.height, 44.0f);
+        //        return height + (2 * 2);
         
         CGSize size = [[item desc] sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290 - (10 * 2), 200000.0f)];
     
@@ -289,9 +292,6 @@
 }
 
 -(void)goWebsite {
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"http://www.imamac.guru/"]];
-    
-    
     [self urlMkr:@"http://www.google.com"];
     
     NSURL *url = [NSURL URLWithString:@"http://www.foodandwaterwatch.org/common-resources/fish/seafood/seafood-guide-data/"];

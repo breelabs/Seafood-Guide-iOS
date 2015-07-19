@@ -83,9 +83,6 @@
                     <navigationItem key="navigationItem" title="Fish Lingo" id="Uja-eS-Oyr">
                         <barButtonItem key="leftBarButtonItem" id="OZ5-xt-i12"/>
                     </navigationItem>
-                    <connections>
-                        <segue destination="jEn-dd-1RW" kind="push" identifier="lingodetail" id="Vj4-jD-TvD"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GGG-a9-77X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -290,6 +287,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Top 10 Problems" id="KIs-C2-eKO">
                         <barButtonItem key="leftBarButtonItem" image="Remove" id="YdP-Fd-2pg">
+                            <inset key="imageInsets" minX="2" minY="-1" maxX="0.0" maxY="-1"/>
                             <connections>
                                 <action selector="btnToggleClick:" destination="wem-im-Amz" id="GHy-rr-L4h"/>
                             </connections>
@@ -414,97 +412,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KPG-ZU-oHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="578" y="2054"/>
-        </scene>
-        <!--Detail Lingo View Controller-->
-        <scene sceneID="lZB-Tq-Duc">
-            <objects>
-                <viewController restorationIdentifier="detaillingoview" storyboardIdentifier="detaillingoview" id="jEn-dd-1RW" customClass="DetailLingoViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VAL-D2-hZa"/>
-                        <viewControllerLayoutGuide type="bottom" id="A2Y-Ia-pJt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="mWA-6f-8yA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2i4-qv-Nf8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" red="0.58431375029999999" green="0.64705884459999996" blue="0.65098041299999998" alpha="1" colorSpace="deviceRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HB4-nP-jJU">
-                                <rect key="frame" x="6" y="71" width="308" height="437"/>
-                                <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXI-aW-Qrx">
-                                        <rect key="frame" x="7" y="148" width="293" height="241"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W00-4O-CFi">
-                                        <rect key="frame" x="-33" y="-2" width="357" height="142"/>
-                                        <inset key="insetFor6xAndEarlier" minX="0.0" minY="40" maxX="0.0" maxY="-40"/>
-                                    </imageView>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ip-iA-MC0">
-                                        <rect key="frame" x="0.0" y="399" width="308" height="38"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v69-Ds-D5U">
-                                        <rect key="frame" x="214" y="399" width="38" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" image="Twitter">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="postToTwitter:" destination="jEn-dd-1RW" eventType="touchUpInside" id="Gkb-ZO-OvF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jag-OO-P5M">
-                                        <rect key="frame" x="254" y="399" width="38" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <state key="normal" image="Facebook">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="postToFacebook:" destination="jEn-dd-1RW" eventType="touchUpInside" id="ejt-rl-Bfc"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ubB-zR-nc1">
-                                        <rect key="frame" x="0.0" y="86" width="308" height="38"/>
-                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALV-vD-t7E">
-                                        <rect key="frame" x="7" y="94" width="293" height="21"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="1U3-0C-Hiv">
-                        <barButtonItem key="leftBarButtonItem" id="Fj0-DV-uFX"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="fbButton" destination="jag-OO-P5M" id="MvZ-DZ-tXo"/>
-                        <outlet property="imgView" destination="W00-4O-CFi" id="oXe-eu-pyq"/>
-                        <outlet property="lbl" destination="ALV-vD-t7E" id="PrY-H0-bJk"/>
-                        <outlet property="twButton" destination="v69-Ds-D5U" id="aRo-T6-ae2"/>
-                        <outlet property="txtView" destination="hXI-aW-Qrx" id="IEN-cU-wOe"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QaC-e8-63L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1644" y="1209"/>
         </scene>
         <!--About-->
         <scene sceneID="N3Y-rJ-0gj">

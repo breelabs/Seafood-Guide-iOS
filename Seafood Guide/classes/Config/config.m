@@ -1,28 +1,28 @@
 //
 //  config.m
-//  Oodeo
+//  Seafood Guide
 //
-//  Created by paul favier on 19/11/13.
-//  Copyright (c) 2013 MonCocoPilote. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import "config.h"
 
 //Feed
-#define URLFluxXmlNEWS @"http://www.imamac.guru/ios-news.xml"
-#define URLFluxXmlHome @"http://www.imamac.guru/ios.xml"
+#define URLFluxXmlNEWS @""
+#define URLFluxXmlHome @""
 
 
 //Mail
 #define Mail @""
-#define MailSubject @"MG Help Request!"
-#define MailMessage @"A Mac Support message from the Mac Gurus App"
+#define MailSubject @"Smart Seafood Guide iOS App"
+#define MailMessage @"A message from the Smart Seafood Guide iOS App"
 
 //Map
 #define MapLatitude 39.0402
 #define MapLongitude -76.998328
-#define Title @"Mac Gurus"
-#define SubTitle @"Serving the DC, MD and VA Regions"
+#define Title @""
+#define SubTitle @""
 
 @implementation config
 

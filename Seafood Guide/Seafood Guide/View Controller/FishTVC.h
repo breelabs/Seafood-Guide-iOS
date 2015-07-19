@@ -2,8 +2,8 @@
 //  FishTVC.h
 //  Seafood Guide
 //
-//  Created by Remote Admin on 6/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -21,8 +21,6 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property(nonatomic, retain) NSString *yourStringProperty;
-@property (weak, nonatomic) IBOutlet UINavigationItem *navigationBarTitle;
 
 - (id)initWithFishSize:(NSString *)size;
 

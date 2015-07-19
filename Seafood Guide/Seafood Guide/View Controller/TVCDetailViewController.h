@@ -2,8 +2,8 @@
 //  TVCDetailViewController.h
 //  Seafood Guide
 //
-//  Created by Remote Admin on 7/18/12.
-//
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

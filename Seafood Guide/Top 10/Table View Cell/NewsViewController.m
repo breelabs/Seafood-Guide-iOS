@@ -1,9 +1,9 @@
 //
 //  NewsViewController.m
-//  Oodeo
+//  Seafood Guide
 //
-//  Created by paul favier on 15/11/13.
-//  Copyright (c) 2013 MonCocoPilote. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import "NewsViewController.h"
@@ -14,7 +14,9 @@
 #import "config.h"
 
 #define IS_IPAD (( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) ? YES : NO)
-#define IS_IPHONE_5 (([UIScreen mainScreen].scale == 2.f && [UIScreen mainScreen].bounds.size.height == 568)?YES:NO)
+#define IS_IPHONE_5      ([UIScreen mainScreen].bounds.size.height == 568)
+#define IS_IPHONE_6      ([UIScreen mainScreen].bounds.size.height == 667)
+#define IS_IPHONE_6_PLUS ([UIScreen mainScreen].bounds.size.height == 736)
 #define IS_RETINA_DISPLAY_DEVICE (([UIScreen mainScreen].scale == 2.f)?YES:NO)
 
 @interface NewsViewController ()
@@ -23,7 +25,6 @@
 
 @implementation NewsViewController
 @synthesize NewsTbView,imageArray,descArray,titleArray,directionsButton;
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +36,10 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
+    
     [super viewDidLoad];
 
     // Do any additional setup after loading the view from its nib.
@@ -61,6 +64,30 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
     [self refresh];
+    
+    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
+    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
+    
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSUInteger integerFromNews = [defaults integerForKey:@"toggleNews"];
+    
+    if (integerFromNews == 1) {
+        
+        UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [refreshButton setFrame:CGRectMake(0,0,25,25)];
+        refreshButton.userInteractionEnabled = TRUE;
+        
+        [refreshButton setImage:[[UIImage imageNamed:@"More"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        UIBarButtonItem *refreshBarButton = [[UIBarButtonItem alloc] initWithCustomView:refreshButton];
+        self.navigationItem.leftBarButtonItem = refreshBarButton;
+        [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
+        
+    }
+    
+    
+    
+    
 }
 
 -(void)refresh
@@ -152,8 +179,32 @@
     }
     
     
+    
     [NewsTbView reloadData];
     
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
+    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
+    
+    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    NSUInteger integerFromNews = [defaults integerForKey:@"toggleNews"];
+    
+    if (integerFromNews == 1) {
+        
+        [self.cautionView setHidden:YES];
+        UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [refreshButton setFrame:CGRectMake(0,0,25,25)];
+        refreshButton.userInteractionEnabled = TRUE;
+        
+        [refreshButton setImage:[[UIImage imageNamed:@"More"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        UIBarButtonItem *refreshBarButton = [[UIBarButtonItem alloc] initWithCustomView:refreshButton];
+        self.navigationItem.leftBarButtonItem = refreshBarButton;
+        [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
+    }
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -171,6 +222,11 @@
 bool isShown = true;
 
 - (IBAction)btnToggleClick:(id)sender {
+
+    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
+    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
+    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
+    
     
     if (!isShown) {
         _cautionView.frame =  CGRectMake(130, 20, 0, 0);
@@ -195,7 +251,7 @@ bool isShown = true;
         [refreshButton setFrame:CGRectMake(0,0,25,25)];
         refreshButton.userInteractionEnabled = TRUE;
         
-        [refreshButton setImage:[[UIImage imageNamed:@"Remove@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [refreshButton setImage:[[UIImage imageNamed:@"Remove"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
 
         
         //[refreshButton setImage:[UIImage imageNamed:@"Remove@2x.png"] forState:UIControlStateNormal];
@@ -210,15 +266,16 @@ bool isShown = true;
         
         [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
 
-        
+        [self.cautionView setHidden:NO];
         isShown = true;
+        
     } else {
         [UIView animateWithDuration:0.25 animations:^{
             
-            if(IS_IPHONE_5)
+            if(IS_IPHONE_6 || IS_IPHONE_5)
             {
                 //do stuff for 4 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 320, 525);
+                _cautionView.frame =  CGRectMake(0, 0, 320, 568);
             }
             else
             {
@@ -226,14 +283,17 @@ bool isShown = true;
                 _cautionView.frame =  CGRectMake(0, 0, 320, 430);
             }
             
-            _cautionView.frame =  CGRectMake(130, 20, 0, 0);
+            _cautionView.frame =  CGRectMake(568, 20, 0, 0);
+            
+            [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"toggleNews"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
         }];
         
         UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
         [refreshButton setFrame:CGRectMake(0,0,25,5)];
         refreshButton.userInteractionEnabled = TRUE;
         
-        [refreshButton setImage:[[UIImage imageNamed:@"More@2x.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+        [refreshButton setImage:[[UIImage imageNamed:@"More"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
         
         // ASSIGNING THE BUTTON WITH IMAGE TO BACK BAR BUTTON
         

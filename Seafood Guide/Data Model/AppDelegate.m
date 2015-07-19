@@ -24,7 +24,7 @@
 {
     // 1 - Decide what Entity you want
     NSString *entityName = @"Lingo"; // Put your entity name here
-    NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
     
     // 2 - Request that Entity
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
@@ -48,7 +48,7 @@
 {
     // 1 - Decide what Entity you want
     NSString *entityName = @"Seafood"; // Put your entity name here
-    NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
     
     // 2 - Request that Entity
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
@@ -112,7 +112,7 @@
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSUInteger integerFromPrefsLingo = [defaults integerForKey:@"loadlingo"];
     
-    NSLog(@"Importing Core Data Default Values for Lingo...");
+    //NSLog(@"Importing Core Data Default Values for Lingo...");
     
     RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-lingo.xml"];
     
@@ -123,13 +123,13 @@
     //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
     
     //RELOAD DATA BY UNCOMMENTING THE BELOW
-    [[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loadlingo"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loadlingo"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
     
     if (integerFromPrefsLingo == 0) {
         
     for (int i=0; i<rxmlIndividualNew.count; i++) {
-        NSLog(@"i = %d",i);
+        //NSLog(@"i = %d",i);
         
         //NSURL *imgUrl = [NSURL URLWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
         NSString *imgUrl = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
@@ -142,16 +142,16 @@
         
         [self insertLingoWithLingoName:title imageName:imgUrl descName:desc newsName:desc];
         
-        NSLog(@"%@", title);
+        //NSLog(@"Title: %@, Desc: %@, Image: %@", title, desc, imgUrl);
     }
         
         [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"loadlingo"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
     }
-    NSLog(@"Importing Core Data Default Values for Lingo Completed!");
+    //NSLog(@"Importing Core Data Default Values for Lingo Completed!");
     
-    NSLog(@"Importing Core Data Default Values for Seafood...");
+    //NSLog(@"Importing Core Data Default Values for Seafood...");
 
     
     NSUInteger integerFromPrefs = [defaults integerForKey:@"loaddata"];
@@ -160,7 +160,7 @@
     //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loaddata"];
     //[[NSUserDefaults standardUserDefaults] synchronize];
     
-    NSLog(@"Data Load Value %lu", (unsigned long)integerFromPrefs);
+    //NSLog(@"Data Load Value %lu", (unsigned long)integerFromPrefs);
     
     if (integerFromPrefs == 0) {
     
@@ -408,7 +408,7 @@
     }
     
     
-    NSLog(@"Importing Core Data Default Values for Seafood Completed!");
+    //NSLog(@"Importing Core Data Default Values for Seafood Completed!");
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -416,7 +416,6 @@
     
     [self setupFetchedResultsController];
     [self importCoreDataDefaultRoles];
-    [self insertLingoWithLingoName:@"Test" imageName:@"Test" descName:@"Test" newsName:@"Test"];
     
     // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/
     //[Socialize storeConsumerKey:@"949236fa-03da-4e7b-9b6a-20ef5ce84a2b"];
@@ -477,7 +476,7 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            //NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
@@ -549,7 +548,7 @@
          Lightweight migration will only work for a limited set of schema changes; consult "Core Data Model Versioning and Data Migration Programming Guide" for details.
          
          */
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        //NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
     

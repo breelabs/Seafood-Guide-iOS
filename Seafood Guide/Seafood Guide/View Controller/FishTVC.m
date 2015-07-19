@@ -2,8 +2,8 @@
 //  FishTVC.m
 //  Seafood Guide
 //
-//  Created by Remote Admin on 6/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import "FishTVC.h"
@@ -36,7 +36,7 @@
     
     // 1 - Decide what Entity you want
     NSString *entityName = @"Seafood"; // Put your entity name here
-    NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
     
     // 2 - Request that Entity
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
@@ -71,14 +71,14 @@
         self.title = @"Dirty Dozen";
     }
     
-    NSLog(@"Setting up predicate value %lu", (unsigned long)integerFromPrefs);
+    //NSLog(@"Setting up predicate value %lu", (unsigned long)integerFromPrefs);
     
     if(predicateKey)
     {
         
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"fishtype like[c] %@",predicateKey];
         [request setPredicate:pred];
-        NSLog(@"Setting up predicate value %@", predicateKey);
+        //NSLog(@"Setting up predicate value %@", predicateKey);
     }
     
     
@@ -92,18 +92,7 @@
                                                                         managedObjectContext:self.managedObjectContext
                                                                           sectionNameKeyPath:@"uppercaseFirstLetterOfName"
                                                                                    cacheName:nil];
-    
-    
-    //[request setPropertiesToGroupBy:[NSArray arrayWithObject:statusDesc]];
-    
-  
-    
- 
-//    for (NSObject* o in fishnames)
-//    {
-//        NSLog(@"%@",o);
-//    }
-    
+       
     
     
     [self.fetchedResultsController performFetch:nil];
@@ -112,36 +101,25 @@
 
 
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    // Return the number of sections.
-//    return [animalSectionTitles count];
-//}
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return [[self.fetchedResultsController sections] count];
+}
+
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
     return [sectionInfo name];
-    
-//    if ([self.tableView.dataSource tableView:tableView numberOfRowsInSection:section] == 0) {
-//        return nil;
-//    }
-//    return [animalSectionTitles objectAtIndex:section];
-    
 }
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    // Return the number of rows in the section.
-//    NSString *sectionTitle = [animalSectionTitles objectAtIndex:section];
-//    NSArray *sectionAnimals = [animals objectForKey:sectionTitle];
-//    return [sectionAnimals count];
-//}
+
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
+    id <NSFetchedResultsSectionInfo> sectionInfo = [[self.fetchedResultsController sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
 
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
     [self setupFetchedResultsController];
     
     
@@ -171,7 +149,13 @@
     
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+    return [self.fetchedResultsController sectionIndexTitles];
+}
 
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+    return [self.fetchedResultsController sectionForSectionIndexTitle:title atIndex:index];
+}
 
 - (id)initWithFishSize:(NSString *)size
 {
@@ -188,17 +172,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // BUG
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-   
-    
     self.navigationItem.backBarButtonItem.title = @"Back";
 }
 
@@ -234,10 +207,6 @@
     }
     NSInteger currentRow = sumSections + indexPath.row;
     
-    //NSInteger currentRow = indexPath.row;
-    
-    //NSLog(@"hey %ld", (long)currentRow);
-    
     Seafood *allSeafood = [[self.fetchedResultsController fetchedObjects] objectAtIndex:currentRow];
     [detailViewController setItem:allSeafood];
     
@@ -248,7 +217,6 @@
 }
 -(void)viewDidAppear:(BOOL)animated
 {
-    //[super viewDidAppear:YES];
     [self.navigationItem setHidesBackButton:NO];
 }
 

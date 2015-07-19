@@ -1,9 +1,9 @@
 //
 //  NewsViewController.h
-//  Oodeo
+//  Seafood Guide
 //
-//  Created by paul favier on 15/11/13.
-//  Copyright (c) 2013 MonCocoPilote. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -17,7 +17,7 @@
     UIButton * backButton ;
 }
 
-@property (strong, nonatomic) IBOutlet UIView *cautionView;
+@property (nonatomic, assign) IBOutlet UIView *cautionView;
 @property (strong, nonatomic) IBOutlet UIButton *btnToggle;
 @property (nonatomic, retain) IBOutlet UITableView *NewsTbView;
 @property(nonatomic,retain) NSMutableArray *imageArray;

@@ -2,8 +2,8 @@
 //  GridViewController.h
 //  Seafood Guide
 //
-//  Created by Remote Admin on 6/7/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

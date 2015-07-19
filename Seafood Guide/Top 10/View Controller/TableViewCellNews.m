@@ -1,9 +1,9 @@
 //
 //  TableViewCellNews.m
-//  Oodeo
+//  Seafood Guide
 //
-//  Created by paul favier on 18/11/13.
-//  Copyright (c) 2013 MonCocoPilote. All rights reserved.
+//  Created by Jon Brown on 9/2/14.
+//  Copyright (c) 2014 Jon Brown Designs. All rights reserved.
 //
 
 #import "TableViewCellNews.h"

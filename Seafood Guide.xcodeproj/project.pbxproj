@@ -428,8 +428,8 @@
 			isa = PBXGroup;
 			children = (
 				FC4E640119EB49D30079C0A3 /* AboutTableViewController.h */,
-				FC4E640219EB49D30079C0A3 /* DetailAboutViewController.h */,
 				FC4E640319EB49D30079C0A3 /* AboutTableViewController.m */,
+				FC4E640219EB49D30079C0A3 /* DetailAboutViewController.h */,
 				FC4E640419EB49D30079C0A3 /* DetailAboutViewController.m */,
 			);
 			name = ViewControllers;
