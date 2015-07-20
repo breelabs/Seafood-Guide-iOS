@@ -103,6 +103,7 @@
                         <segue destination="IVb-LL-OYv" kind="relationship" relationship="viewControllers" id="kP3-ER-VfE"/>
                         <segue destination="6xI-Qy-Q6Z" kind="relationship" relationship="viewControllers" id="LPW-2E-Hdc"/>
                         <segue destination="pJk-hT-rx1" kind="relationship" relationship="viewControllers" id="MoX-eG-xNR"/>
+                        <segue destination="SgJ-z8-TfF" kind="relationship" relationship="viewControllers" id="Yy1-bt-JoE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -303,7 +304,52 @@
             </objects>
             <point key="canvasLocation" x="1104" y="2054"/>
         </scene>
-        <!--Detail News View Controller-->
+        <!--Root View Controller-->
+        <scene sceneID="8xE-Pl-lL2">
+            <objects>
+                <tableViewController id="pLD-LQ-dij" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="DoI-Do-Q0j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hec-v2-RPk">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hec-v2-RPk" id="eVH-DK-mdL">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pLD-LQ-dij" id="dwM-9c-GBS"/>
+                            <outlet property="delegate" destination="pLD-LQ-dij" id="4ef-CW-VJZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="1ui-lb-6hg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B1p-2b-cna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1104" y="2832"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="mhV-s7-7e9">
+            <objects>
+                <navigationController id="SgJ-z8-TfF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More" image="More" id="Miu-Uq-eeD"/>
+                    <navigationItem key="navigationItem" id="HUk-2R-wn9"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u1k-JI-NNx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pLD-LQ-dij" kind="relationship" relationship="rootViewController" id="w8D-ft-DRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oF-wy-GeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="578" y="2832"/>
+        </scene>
+        <!--Title-->
         <scene sceneID="YDT-f4-FBg">
             <objects>
                 <viewController restorationIdentifier="detailview" storyboardIdentifier="detailview" id="8b5-7G-PGb" customClass="DetailNewsViewController" sceneMemberID="viewController">
@@ -379,9 +425,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aia-bH-8mX">
-                        <barButtonItem key="leftBarButtonItem" id="ent-DY-fGJ"/>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="okG-fn-SiS"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="Title" id="aia-bH-8mX">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="n7L-8F-gi0"/>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="fbButton" destination="jwu-7M-qBQ" id="kme-hi-b1Z"/>
                         <outlet property="imgView" destination="qzJ-jF-Dax" id="5i5-oo-kHj"/>
@@ -437,6 +487,7 @@
         <image name="Anchor" width="25" height="26"/>
         <image name="Bookmarks" width="25" height="22"/>
         <image name="Facebook" width="25" height="25"/>
+        <image name="More" width="25" height="5"/>
         <image name="Remove" width="25" height="25"/>
         <image name="TopCharts" width="27" height="23"/>
         <image name="Twitter" width="25" height="25"/>

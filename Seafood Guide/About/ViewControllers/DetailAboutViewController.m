@@ -54,6 +54,17 @@
     self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     self.automaticallyAdjustsScrollViewInsets = NO;
     // Do any additional setup after loading the view.
+    
+    myInt = [[self lblTitle]length];
+    if (myInt > 15) {
+        str = [self lblTitle];
+        str = [str substringToIndex: MIN(25, [str length])];
+        NSString* All = [NSString stringWithFormat:@"%@...", str];
+        self.navigationItem.title = All;
+    } else {
+        NSString* All = [self lblTitle];
+        self.navigationItem.title = All;
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -72,21 +83,6 @@
     [self.fbButton setAlpha:1];
     [self.twButton setAlpha:1];
     [self.lblshare setAlpha:1];
-    
-    
-    myInt = [[self lblTitle]length];
-    if (myInt > 15) {
-        str = [self lblTitle];
-        str = [str substringToIndex: MIN(15, [str length])];
-        NSString* All = [NSString stringWithFormat:@"%@...", str];
-        self.navigationItem.title = All;
-    } else {
-        NSString* All = [self lblTitle];
-        self.navigationItem.title = All;
-    }
-    
-    
-    
     [UIView commitAnimations];
 }
 

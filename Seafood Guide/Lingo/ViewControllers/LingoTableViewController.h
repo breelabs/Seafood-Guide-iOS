@@ -20,7 +20,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-
+@property (nonatomic, strong) NSMutableArray *sectionIndexTitles;
 - (id)initWithLingoSize:(NSString *)size;
 
 @end

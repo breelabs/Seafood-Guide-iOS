@@ -385,7 +385,7 @@ DetailNewsViewController *controller = [self.storyboard instantiateViewControlle
     controller.image = [imageArray objectAtIndex:indexPath.row];
     controller.lblTitle = [titleArray objectAtIndex:indexPath.row];
     controller.txtProject = [descArray objectAtIndex:indexPath.row];
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:nil action:nil];
     [self.navigationController pushViewController:controller animated:YES];
     
 
