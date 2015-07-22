@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="About" representedClassName="About" syncable="YES">
+        <attribute name="descnews" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="linknews" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="titlenews" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="Lingo" representedClassName="Lingo" syncable="YES">
         <attribute name="descnews" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="imageurl" optional="YES" attributeType="String" syncable="YES"/>
@@ -31,9 +36,10 @@
         <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="Lingo" positionX="81" positionY="144" width="128" height="105"/>
         <element name="News" positionX="160" positionY="192" width="128" height="135"/>
         <element name="Recipies" positionX="160" positionY="192" width="128" height="60"/>
         <element name="Seafood" positionX="0" positionY="0" width="128" height="135"/>
-        <element name="Lingo" positionX="81" positionY="144" width="128" height="105"/>
+        <element name="About" positionX="81" positionY="144" width="128" height="90"/>
     </elements>
 </model>

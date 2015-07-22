@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Seafood.h"
 #import "Lingo.h"
+#import "About.h"
 #import "RXMLElement.h"
 
 @implementation AppDelegate
@@ -19,54 +20,6 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize fetchedResultsController = __fetchedResultsController;
 
-
-- (void)setupLingoFetchedResultsController
-{
-    // 1 - Decide what Entity you want
-    NSString *entityName = @"Lingo"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
-    
-    // 2 - Request that Entity
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
-    
-    // 3 - Filter it if you want
-    //request.predicate = [NSPredicate predicateWithFormat:@"Person.name = Blah"];
-    
-    // 4 - Sort it if you want
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"titlenews"
-                                                                                     ascending:YES
-                                                                                      selector:@selector(localizedCaseInsensitiveCompare:)]];
-    // 5 - Fetch it
-    self.fetchedResultsControllerLingo = [[NSFetchedResultsController alloc] initWithFetchRequest:request
-                                                                        managedObjectContext:self.managedObjectContext
-                                                                          sectionNameKeyPath:nil
-                                                                                   cacheName:nil];
-    [self.fetchedResultsControllerLingo performFetch:nil];
-}
-
-- (void)setupFetchedResultsController
-{
-    // 1 - Decide what Entity you want
-    NSString *entityName = @"Seafood"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
-    
-    // 2 - Request that Entity
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
-    
-    // 3 - Filter it if you want
-    //request.predicate = [NSPredicate predicateWithFormat:@"Person.name = Blah"];
-    
-    // 4 - Sort it if you want
-    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name"
-                                                                                     ascending:YES
-                                                                                      selector:@selector(localizedCaseInsensitiveCompare:)]];
-    // 5 - Fetch it
-    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
-                                                                        managedObjectContext:self.managedObjectContext
-                                                                          sectionNameKeyPath:nil
-                                                                                   cacheName:nil];
-    [self.fetchedResultsController performFetch:nil];
-}
 
 -(void)insertRoleWithRoleName:(NSString *)seafoodName typeName:(NSString *)seafoodType descName:(NSString *)seafoodDesc goodName:(NSString *)seafoodGood badName:(NSString *)seafoodBad regName:(NSString *)seafoodRegion
 
@@ -102,25 +55,86 @@
     [self.managedObjectContext save:nil];
 }
 
+-(void)insertAboutWithAboutName:(NSString *)aboutTitle descName:(NSString *)aboutDesc newsName:(NSString *)aboutNews
+
+{
+    
+    About *about = [NSEntityDescription insertNewObjectForEntityForName:@"About"
+                                                 inManagedObjectContext:self.managedObjectContext];
+    
+    
+    about.titlenews = aboutTitle;
+    about.descnews = aboutDesc;
+    about.linknews = aboutNews;
+    
+    [self.managedObjectContext save:nil];
+}
 
 - (void)importCoreDataDefaultRoles {
     
     NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
     NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
     [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
-    
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
+    
+    //IMPORT ABOUT
+    NSUInteger integerFromPrefsAbout = [defaults integerForKey:@"loadabout"];
+    RXMLElement *rootXMLAbout1 = [RXMLElement elementFromXMLFile:@"ios-about-1.xml"];
+    RXMLElement *rootXMLAbout2 = [RXMLElement elementFromXMLFile:@"ios-about-2.xml"];
+    RXMLElement *rootXMLAbout3 = [RXMLElement elementFromXMLFile:@"ios-about-3.xml"];
+    RXMLElement *rxmlabout1 = [rootXMLAbout1 child:@"news"];
+    RXMLElement *rxmlabout2 = [rootXMLAbout2 child:@"news"];
+    RXMLElement *rxmlabout3 = [rootXMLAbout3 child:@"news"];
+    NSArray *rxmlIndividualNew1 = [rxmlabout1 children:@"new"];
+    NSArray *rxmlIndividualNew2 = [rxmlabout2 children:@"new"];
+    NSArray *rxmlIndividualNew3 = [rxmlabout3 children:@"new"];
+    
+    //RELOAD DATA BY UNCOMMENTING THE BELOW
+    //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loadabout"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (integerFromPrefsAbout == 0) {
+        
+        for (int i=0; i<rxmlIndividualNew1.count; i++) {
+            
+            NSString *title = [NSString stringWithString:[[rxmlIndividualNew1 objectAtIndex:i] child:@"titlenews"].text];
+            NSString *desc = [NSString stringWithString:[[rxmlIndividualNew1 objectAtIndex:i] child:@"descnews"].text];
+            NSString *link = [NSString stringWithString:[[rxmlIndividualNew1 objectAtIndex:i] child:@"linknews"].text];
+
+            [self insertAboutWithAboutName:title descName:desc newsName:link];
+            
+        }
+        
+        for (int i=0; i<rxmlIndividualNew2.count; i++) {
+            
+            NSString *title = [NSString stringWithString:[[rxmlIndividualNew2 objectAtIndex:i] child:@"titlenews"].text];
+            NSString *desc = [NSString stringWithString:[[rxmlIndividualNew2 objectAtIndex:i] child:@"descnews"].text];
+            NSString *link = [NSString stringWithString:[[rxmlIndividualNew2 objectAtIndex:i] child:@"linknews"].text];
+            
+            [self insertAboutWithAboutName:title descName:desc newsName:link];
+            
+        }
+        
+        for (int i=0; i<rxmlIndividualNew3.count; i++) {
+            
+            NSString *title = [NSString stringWithString:[[rxmlIndividualNew3 objectAtIndex:i] child:@"titlenews"].text];
+            NSString *desc = [NSString stringWithString:[[rxmlIndividualNew3 objectAtIndex:i] child:@"descnews"].text];
+            NSString *link = [NSString stringWithString:[[rxmlIndividualNew3 objectAtIndex:i] child:@"linknews"].text];
+            
+            [self insertAboutWithAboutName:title descName:desc newsName:link];
+            
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"loadabout"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+    }
+    
+    //IMPORT FISH LINGO
     NSUInteger integerFromPrefsLingo = [defaults integerForKey:@"loadlingo"];
-    
-    //NSLog(@"Importing Core Data Default Values for Lingo...");
-    
     RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-lingo.xml"];
-    
     RXMLElement *rxmlNews = [rootXML child:@"news"];
-    
     NSArray *rxmlIndividualNew = [rxmlNews children:@"new"];
-    
-    //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
     
     //RELOAD DATA BY UNCOMMENTING THE BELOW
     //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loadlingo"];
@@ -129,38 +143,26 @@
     if (integerFromPrefsLingo == 0) {
         
     for (int i=0; i<rxmlIndividualNew.count; i++) {
-        //NSLog(@"i = %d",i);
         
-        //NSURL *imgUrl = [NSURL URLWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
         NSString *imgUrl = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
-        
-        //UIImage *img1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]];
-        //UIImage *img1 = [UIImage imageNamed:imgUrl];
-        
         NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
         NSString *desc = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"descnews"].text];
         
         [self insertLingoWithLingoName:title imageName:imgUrl descName:desc newsName:desc];
         
-        //NSLog(@"Title: %@, Desc: %@, Image: %@", title, desc, imgUrl);
     }
         
         [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"loadlingo"];
         [[NSUserDefaults standardUserDefaults] synchronize];
         
     }
-    //NSLog(@"Importing Core Data Default Values for Lingo Completed!");
-    
-    //NSLog(@"Importing Core Data Default Values for Seafood...");
 
-    
+    //IMPORT FISH DATA
     NSUInteger integerFromPrefs = [defaults integerForKey:@"loaddata"];
     
     //RELOAD DATA BY UNCOMMENTING THE BELOW
     //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loaddata"];
     //[[NSUserDefaults standardUserDefaults] synchronize];
-    
-    //NSLog(@"Data Load Value %lu", (unsigned long)integerFromPrefs);
     
     if (integerFromPrefs == 0) {
     
@@ -414,7 +416,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     
-    [self setupFetchedResultsController];
     [self importCoreDataDefaultRoles];
     
     // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/

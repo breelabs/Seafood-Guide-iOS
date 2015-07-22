@@ -7,362 +7,262 @@
 //
 
 #import "AboutTableViewController.h"
-#import "RXMLElement.h"
-#import <Social/Social.h>
+#import "CoreDataTableViewController.h"
+#import "About.h"
+#import "AppDelegate.h"
 #import "DetailAboutViewController.h"
 
-@interface AboutTableViewController ()
-
-@end
-
 @implementation AboutTableViewController
+@synthesize window = _window;
+@synthesize fetchedResultsController = __fetchedResultsController;
+@synthesize fetchedResultsController1 = __fetchedResultsController1;
+@synthesize fetchedResultsController2 = __fetchedResultsController2;
+@synthesize managedObjectContext = __managedObjectContext;
 
-@synthesize tableView = _tableView, AboutTbView,descArray,titleArray,directionsButton,titleSec2Array,descSec2Array,titleSec3Array,descSec3Array;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (NSManagedObjectContext *)managedObjectContext
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
+    if (!__managedObjectContext)
+    {
+        __managedObjectContext = [(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext];
     }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    
-    // Do any additional setup after loading the view from its nib.
-    self.descArray = [[NSMutableArray alloc]init];
-    self.titleArray = [[NSMutableArray alloc]init];
-    
-    self.descSec2Array = [[NSMutableArray alloc]init];
-    self.titleSec2Array = [[NSMutableArray alloc]init];
-    
-    self.descSec3Array = [[NSMutableArray alloc]init];
-    self.titleSec3Array = [[NSMutableArray alloc]init];
-    
-    // Add these right after creating the UITableView
-    AboutTbView.delegate = self;
-    AboutTbView.dataSource = self;
-    
-    [self refresh];
-    
-    [self refreshsec2];
-    
-    [self refreshsec3];
-}
-
--(void)refresh
-{
-    // Create the request.
-    //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[config getFeedNEWS]]];
-    
-    // Create url connection and fire request
-    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-    RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-about-1.xml"];
-    
-    RXMLElement *rxmlNews = [rootXML child:@"news"];
-    
-    NSArray *rxmlIndividualNew = [rxmlNews children:@"new"];
-    
-    //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
-    
-    for (int i=0; i<rxmlIndividualNew.count; i++) {
-        //NSLog(@"i = %d",i);
-        
-        NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
-        NSString *desc = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"descnews"].text];
-        
-        [titleArray addObject:title];
-        [descArray addObject:desc];
-    }
-    
-    
-    [AboutTbView reloadData];
-    
-}
-
--(void)refreshsec2
-{
-    // Create the request.
-    //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[config getFeedNEWS]]];
-    
-    // Create url connection and fire request
-    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-    RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-about-2.xml"];
-    
-    RXMLElement *rxmlNews = [rootXML child:@"news"];
-    
-    NSArray *rxmlIndividualNew = [rxmlNews children:@"new"];
-    
-    //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
-    
-    for (int i=0; i<rxmlIndividualNew.count; i++) {
-        //NSLog(@"i = %d",i);
-        
-        NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
-        NSString *desc = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"descnews"].text];
-        
-        [titleSec2Array addObject:title];
-        [descSec2Array addObject:desc];
-    }
-    
-    
-    [AboutTbView reloadData];
-    
-}
-
--(void)refreshsec3
-{
-    // Create the request.
-    //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[config getFeedNEWS]]];
-    
-    // Create url connection and fire request
-    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
-    RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-about-3.xml"];
-    
-    RXMLElement *rxmlNews = [rootXML child:@"news"];
-    
-    NSArray *rxmlIndividualNew = [rxmlNews children:@"new"];
-    
-    //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
-    
-    for (int i=0; i<rxmlIndividualNew.count; i++) {
-        //NSLog(@"i = %d",i);
-        
-        NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
-        NSString *desc = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"descnews"].text];
-        
-        [titleSec3Array addObject:title];
-        [descSec3Array addObject:desc];
-    }
-    
-    
-    [AboutTbView reloadData];
+    return __managedObjectContext;
     
 }
 
 
-- (void)didReceiveMemoryWarning
+- (void)setupFetchedResultsController
+
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    // 1 - Decide what Entity you want
+    NSString *entityName = @"About"; // Put your entity name here
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    
+    // 2 - Request that Entity
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
+    
+    
+    // 3 - Filter it if you want
+    
+    NSPredicate * predicate = [NSPredicate predicateWithFormat:@"linknews = '3'"];
+    [request setPredicate:predicate];
+    
+    // 4 - Sort it if you want
+    request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"linknews"
+                                                                                     ascending:YES
+                                                                                      selector:@selector(localizedCaseInsensitiveCompare:)]];
+    
+    // 5 - Fetch it
+    self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                                                        managedObjectContext:self.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    
+    
+    [self.fetchedResultsController performFetch:nil];
+    
+    
+    
+    
 }
 
-#pragma mark - Table view data source
+- (void)setupFetchedResultsController1
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
+    
+    // 1 - Decide what Entity you want
+    NSString *entityName1 = @"About"; // Put your entity name here
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    
+    // 2 - Request that Entity
+    NSFetchRequest *request1 = [NSFetchRequest fetchRequestWithEntityName:entityName1];
+    
+    
+    // 3 - Filter it if you want
+    
+    NSPredicate * predicate1 = [NSPredicate predicateWithFormat:@"linknews = '1'"];
+    [request1 setPredicate:predicate1];
+    
+    // 4 - Sort it if you want
+    request1.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"linknews"
+                                                                                     ascending:YES
+                                                                                      selector:@selector(localizedCaseInsensitiveCompare:)]];
+    
+    // 5 - Fetch it
+    self.fetchedResultsController1 = [[NSFetchedResultsController alloc] initWithFetchRequest:request1
+                                                                        managedObjectContext:self.managedObjectContext
+                                                                          sectionNameKeyPath:nil
+                                                                                   cacheName:nil];
+    
+    
+    [self.fetchedResultsController1 performFetch:nil];
+    
+    
+    
+    
+}
+
+- (void)setupFetchedResultsController2
+
+{
+    
+    // 1 - Decide what Entity you want
+    NSString *entityName2 = @"About"; // Put your entity name here
+    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
+    
+    // 2 - Request that Entity
+    NSFetchRequest *request2 = [NSFetchRequest fetchRequestWithEntityName:entityName2];
+    
+    
+    // 3 - Filter it if you want
+    
+    NSPredicate * predicate2 = [NSPredicate predicateWithFormat:@"linknews = '2'"];
+    [request2 setPredicate:predicate2];
+    
+    // 4 - Sort it if you want
+    request2.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"linknews"
+                                                                                      ascending:YES
+                                                                                       selector:@selector(localizedCaseInsensitiveCompare:)]];
+    
+    // 5 - Fetch it
+    self.fetchedResultsController2 = [[NSFetchedResultsController alloc] initWithFetchRequest:request2
+                                                                         managedObjectContext:self.managedObjectContext
+                                                                           sectionNameKeyPath:nil
+                                                                                    cacheName:nil];
+    
+    
+    [self.fetchedResultsController2 performFetch:nil];
+    
+    
+    
+    
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 3;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    // Return the number of rows in the section.
-    //return [titleArray count];
-    
-    if (section == 0) {
-		return 6;
-	} else if (section == 1) {
-		return 1;
-	} else if (section == 2) {
-        return 4;
-    }
-    
-    return [titleArray count];
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSArray *sectionTitleInfo = @[@"About the Seafood Guide", @"What You Can Do" , @"Labeling"];
+    return [sectionTitleInfo objectAtIndex:section];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)table numberOfRowsInSection:(NSInteger)section {
+    if (section == 0) {
+        return 6;
+    } else if (section == 1) {
+        return 1;
+    } else if (section == 2) {
+        return 4;
+    }
+    NSArray *fetchedObjects = [__fetchedResultsController fetchedObjects];
+    return [fetchedObjects count];
+}
+
+- (void)viewWillAppear:(BOOL)animated
 {
-    
-
-        // whatever height you'd want for a real section header
-    
-    NSArray *sectionTitleInfo = @[@"About the Seafood Guide", @"What You Can Do" , @"Labeling"];
-        return [sectionTitleInfo objectAtIndex:section];
-
+    [super viewWillAppear:animated];
+    [self setupFetchedResultsController];
+    [self setupFetchedResultsController1];
+    [self setupFetchedResultsController2];
     
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellID = @"aboutcell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
     
+    static NSString *CellIdentifier = @"aboutcell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-     if (indexPath.section == 0) {
-         cell.textLabel.text = [titleArray objectAtIndex:indexPath.row];
-         
-     } else if (indexPath.section == 1) {
-         cell.textLabel.text = [titleSec2Array objectAtIndex:indexPath.row];
-     } else if (indexPath.section == 2) {
-         cell.textLabel.text = [titleSec3Array objectAtIndex:indexPath.row];
-     }
+    NSArray *fetchedObjects = [__fetchedResultsController fetchedObjects];
+    NSArray *fetchedObjects1 = [__fetchedResultsController1 fetchedObjects];
+    NSArray *fetchedObjects2 = [__fetchedResultsController2 fetchedObjects];
     
-    cell.textLabel.numberOfLines = 0;
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    [UIView beginAnimations:@"ResizeAnimation" context:NULL];
-    [UIView setAnimationDuration:0.5f];
-    [UIView commitAnimations];
-
-    return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    
-    DetailAboutViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"detailabout"];
-    
-    
-    if (_detailAboutViewController == nil) {
-        
-        NSString * storyboardName = @"Main_iPhone";
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-        self.detailAboutViewController = [storyboard instantiateViewControllerWithIdentifier:@"detailabout"];
-        
-    }
+    NSArray *title4 = [fetchedObjects valueForKeyPath:@"titlenews"];
+    NSArray *title6 = [fetchedObjects1 valueForKeyPath:@"titlenews"];
+    NSArray *title1 = [fetchedObjects2 valueForKeyPath:@"titlenews"];
     
     if (indexPath.section == 0) {
-        controller.lblTitle = [titleArray objectAtIndex:indexPath.row];
-        controller.txtProject = [descArray objectAtIndex:indexPath.row];
+        cell.textLabel.text = [title6 objectAtIndex:indexPath.row];
+        
     } else if (indexPath.section == 1) {
-        controller.lblTitle = [titleSec2Array objectAtIndex:indexPath.row];
-        controller.txtProject = [descSec2Array objectAtIndex:indexPath.row];
+        cell.textLabel.text = [title1 objectAtIndex:indexPath.row];
     } else if (indexPath.section == 2) {
-        controller.lblTitle = [titleSec3Array objectAtIndex:indexPath.row];
-        controller.txtProject = [descSec3Array objectAtIndex:indexPath.row];
+        cell.textLabel.text = [title4 objectAtIndex:indexPath.row];
     }
+    
+    // Configure the cell...
+    
+    // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
+    // About *about = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
+    // cell.textLabel.text = about.titlenews;
+    
+    //NSLog(@"%@", lingo.titlenews);
+    
+    return cell;
+    
+}
 
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.navigationItem.backBarButtonItem.title = @"Back";
+}
+
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+    
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Table view sends data to detail view
+// Core data to detail view
+
+-(void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DetailAboutViewController *detailViewController = [[DetailAboutViewController alloc]init];
+    
+ 
+    
+    if (indexPath.section == 0) {
+        About *allAbout = [[__fetchedResultsController1 fetchedObjects] objectAtIndex:indexPath.row];
+        [detailViewController setItem:allAbout];
+    } else if (indexPath.section == 1) {
+        About *allAbout1 = [[__fetchedResultsController2 fetchedObjects] objectAtIndex:indexPath.row];
+        [detailViewController setItem:allAbout1];
+    } else if (indexPath.section == 2) {
+        About *allAbout2 = [[__fetchedResultsController fetchedObjects] objectAtIndex:indexPath.row];
+        [detailViewController setItem:allAbout2];
+    }
+    
+   
+    [self.navigationController pushViewController:detailViewController
+                                         animated:YES];
+    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
-    [self.navigationController pushViewController:controller animated:YES];
-
 }
-
-
-- (IBAction)postToTwitter:(id)sender {
-    
-    [self urlMkr:@"http://www.google.com"];
-    
-    NSInteger tid = ((UIControl *) sender).tag;
-    
-    SLComposeViewController *tweetSheet = [SLComposeViewController
-                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
-    
-    [tweetSheet setInitialText:[titleArray objectAtIndex:tid]];
-    [self presentViewController:tweetSheet animated:YES completion:nil];
-    
-}
-
-- (IBAction)postToFacebook:(id)sender {
-    
-    [self urlMkr:@"http://www.google.com"];
-    
-    NSInteger tid = ((UIControl *) sender).tag;
-    
-    
-    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    
-    [controller setInitialText:[descArray objectAtIndex:tid]];
-    [self presentViewController:controller animated:YES completion:Nil];
-    
-}
-
--(void)urlMkr:(NSString *)makeURL
+-(void)viewDidAppear:(BOOL)animated
 {
-    
-    // Set URL String
-    
-    NSURL *myURL = [NSURL URLWithString:makeURL]; // gets url from string
-    NSURLRequest *req = [NSURLRequest requestWithURL:myURL];
-    
-    // Make the Request
-    
-    NSURLResponse *resp;
-    NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:NULL];
-    
-    // for ASYNC[[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately:YES];
-    
-    if(!data){
-        
-        UIViewController *myError = [[UIViewController alloc]init];
-        myError.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-        myError.modalPresentationStyle = UIModalPresentationFormSheet;
-        myError.view.backgroundColor = [UIColor blackColor];
-        //[self presentModalViewController:myError animated:YES];
-        [self presentViewController:myError animated:YES completion:nil];
-        
-        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2 - 146,
-                                                                     40,
-                                                                     472, 260)];
-        myLabel.text = @"\n This \n Requires \n A Network \n Connection.";
-        myLabel.font = [UIFont boldSystemFontOfSize:48];
-        myLabel.backgroundColor = [UIColor clearColor];
-        myLabel.shadowColor = [UIColor grayColor];
-        myLabel.shadowOffset = CGSizeMake(1,1);
-        myLabel.textColor = [UIColor whiteColor];
-        myLabel.textAlignment = NSTextAlignmentCenter;
-        myLabel.lineBreakMode = NSLineBreakByWordWrapping;
-        myLabel.numberOfLines = 18;
-        [myLabel sizeToFit];
-        [myError.view addSubview:myLabel];
-        //[self.myLabel release];
-        
-        self.directionsButton = [self createButtonWithFrame:CGRectMake(22, 395, 276, 52) andLabel:@"Go Back"];
-        
-        [myError.view addSubview:directionsButton];
-        
-        [self.directionsButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    
-    
+    [self.navigationItem setHidesBackButton:NO];
 }
-
--(UIButton*)createButtonWithFrame:(CGRect)frame andLabel:(NSString*)label
-{
-    
-    UIButton *button = [[UIButton alloc] initWithFrame:frame];
-    
-    [button setTitleShadowColor:[UIColor blackColor] forState:UIControlStateNormal];
-    button.titleLabel.shadowOffset = CGSizeMake(0, -1);
-    button.titleLabel.font = [UIFont boldSystemFontOfSize:18];
-    
-    [button setTitle:label forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    
-    [[button layer] setBorderWidth:1.0f];
-    [[button layer] setBorderColor:[UIColor whiteColor].CGColor];
-    [[button layer] setMasksToBounds:YES];
-    [[button layer] setCornerRadius:4.0]; //when radius is 0, the border is a rectangle
-    [[button layer] setBorderWidth:1.0];
-    
-    return button;
-}
-
--(void)closeView
-{
-    //[self dismissModalViewControllerAnimated:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
 
 @end

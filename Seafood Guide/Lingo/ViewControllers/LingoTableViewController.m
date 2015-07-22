@@ -178,7 +178,7 @@
     [self.navigationController pushViewController:detailViewController
                                          animated:YES];
     
-    self.navigationItem.backBarButtonItem.title = @"";
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 -(void)viewDidAppear:(BOOL)animated
 {

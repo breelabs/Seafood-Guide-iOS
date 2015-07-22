@@ -7,6 +7,9 @@
 //
 
 #import "DetailAboutViewController.h"
+#import "AboutTableViewController.h"
+#import "WebViewController.h"
+#import "config.h"
 #import <Social/Social.h>
 
 @interface DetailAboutViewController ()
@@ -14,94 +17,246 @@
 @end
 
 @implementation DetailAboutViewController
-@synthesize txtView,lbl,lblTitle,txtProject,backg,lblshare,directionsButton,myInt;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+@synthesize item, directionsButton;
+
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         // Custom initialization
     }
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [[self view] setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
-    #pragma mark - Button Style
+    self.title = [item titlenews];
     
-    // R: 76 G: 76 B: 76
-    UIColor *buttColor = [UIColor colorWithRed:(255.0 / 255.0) green:(255.0 / 255.0) blue:(255.0 / 255.0) alpha: 1];
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
     
-    
-    CALayer * layer = [customButton layer];
-    [layer setMasksToBounds:YES];
-    [layer setCornerRadius:4.0]; //when radius is 0, the border is a rectangle
-    [layer setBorderWidth:1.0];
-    [layer setBorderColor:[buttColor CGColor]];
-    
-    UIImage * backgroundPattern = [UIImage imageNamed:@"Whitey"];
-    
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
-    
-    
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Whitey"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    // Do any additional setup after loading the view.
-    
-    myInt = [[self lblTitle]length];
-    if (myInt > 15) {
-        str = [self lblTitle];
-        str = [str substringToIndex: MIN(25, [str length])];
-        NSString* All = [NSString stringWithFormat:@"%@...", str];
-        self.navigationItem.title = All;
-    } else {
-        NSString* All = [self lblTitle];
-        self.navigationItem.title = All;
-    }
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.automaticallyAdjustsScrollViewInsets = YES;
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:YES];
     
-    [txtView setText:txtProject];
-    
-    NSString *uppercase = [lblTitle uppercaseString];
-    
-    [lbl setText:uppercase];
-    [UIView beginAnimations:@"ResizeAnimation" context:NULL];
-    [UIView setAnimationDuration:0.5f];
-    [self.lbl setAlpha:1];
-    [self.txtView setAlpha:1];
-    [self.backg setAlpha:1];
-    [self.fbButton setAlpha:1];
-    [self.twButton setAlpha:1];
-    [self.lblshare setAlpha:1];
-    [UIView commitAnimations];
 }
-
--(void)viewDidDisappear:(BOOL)animated
-{
-    [self.lbl setText:nil];
-    [self.txtView setText:nil];
-    [self.backg setAlpha:0];
-    [self.txtView setAlpha:0];
-    [self.lbl setAlpha:0];
-    [self.fbButton setAlpha:0];
-    [self.twButton setAlpha:0];
-    [self.lblshare setAlpha:0];
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // #warning Potentially incomplete method implementation.
+    // Return the number of sections.
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // #warning Incomplete method implementation.
+    // Return the number of rows in the section.
+    if (section==0)
+    {
+        return 2;
+    }
+    else{
+        return 4;
+    }
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UITableViewCell *cell = nil;
+    
+    if (indexPath.section == 0) {
+        
+        if([indexPath row] == 0)
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType1"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellType1"];
+            [[cell textLabel] setText:[item titlenews]];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        else if([indexPath row] == 1)
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType2"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"CellType2"];
+            [[cell textLabel] setText:[item descnews]];
+            cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
+            cell.textLabel.numberOfLines = 0;
+            cell.textLabel.font = [UIFont fontWithName:@"Helvetica" size:17.0];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+        
+        
+        
+    } else if (indexPath.section == 1) {
+        
+        if([indexPath row] == 0)
+        {
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType6"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType6"];
+            [[cell textLabel] setText:@"Share On Twitter"];
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+        } else if ([indexPath row] == 1) {
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType7"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType7"];
+            [[cell textLabel] setText:@"Share On Facebook"];
+            
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+        } else if ([indexPath row] == 2) {
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType8"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType8"];
+            [[cell textLabel] setText:@"View Online Guide"];
+            // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+        } else if ([indexPath row] == 3) {
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType9"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType9"];
+            [[cell textLabel] setText:@"Email to a friend"];
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+        } else if ([indexPath row] == 4) {
+            
+            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType10"];
+            if(!cell)
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType10"];
+            [[cell textLabel] setText:@"Like this item"];
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            
+        }
+        
+    }
+    
+    return cell;
+}
+
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    //NSString *text = @"25345234 582345 928345 923485yp2349857y32terughewrkgjherlkjgehrg"
+    
+    
+    // Navigation logic may go here. Create and push another view controller.
+    /*
+     DetailViewController *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
+     // ...
+     // Pass the selected object to the new view controller.
+     [self.navigationController pushViewController:detailViewController animated:YES];
+     */
+    
+    if (indexPath.section == 1) {
+        
+        
+        if ([indexPath row] == 0) {
+            
+            [self postToTwitter:self];
+            
+        } else if ([indexPath row] == 1) {
+            
+            [self postToFacebook:self];
+            
+        } else if ([indexPath row] == 2) {
+            
+            [self goWebsite];
+        } else if ([indexPath row] == 3) {
+            
+            [self sendEmail];
+            
+        }
+        
+    }
+    
+    
+    
+}
+
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (indexPath.section == 0 && indexPath.row == 1) {
+        
+        
+        //        NSStringDrawingContext *ctx = [NSStringDrawingContext new];
+        //        NSAttributedString *aString = [[NSAttributedString alloc] initWithString:[item desc]];
+        //        UITextView *calculationView = [[UITextView alloc] init];
+        //        [calculationView setAttributedText:aString];
+        //
+        //        CGRect textRect = [calculationView.text boundingRectWithSize:CGSizeMake(270 - (10 * 2), 200000.0f)
+        //                                                             options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
+        
+        //        CGRect textRect = [calculationView.text boundingRectWithSize:self.view.frame.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
+        
+        //        CGFloat height = MAX(textRect.size.height, 44.0f);
+        //        return height + (2 * 2);
+        
+        CGSize size = [[item descnews] sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290 - (10 * 2), 200000.0f)];
+        
+        CGFloat height = MAX(size.height, 100.0f);
+        
+        return height + (2 * 2);
+        
+        self.tableView.estimatedRowHeight = 100.0;
+        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
+    }
+    return 44;
+}
+
+
+-(NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if (section == 0) {
+        return @"About Information";
+    } else if (section == 1) {
+        return @"Share";
+    }
+    
+    return nil;
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    //[super viewDidAppear:YES];
+    [self.navigationItem setHidesBackButton:NO];
 }
 
 - (IBAction)postToTwitter:(id)sender {
@@ -110,29 +265,110 @@
     SLComposeViewController *tweetSheet = [SLComposeViewController
                                            composeViewControllerForServiceType:SLServiceTypeTwitter];
     
-    str = [self txtProject];
+    str = [item descnews];
     str = [str substringToIndex: MIN(65, [str length])];
     
-    NSString *one = [self lblTitle];
+    NSString *one = [item titlenews];
+    NSString *two = [item descnews];
     
-    NSString* All = [NSString stringWithFormat:@"%@\rDescription:%@", one, str];
+    NSString* All = [NSString stringWithFormat:@"Fish Name: %@\r%@\rDescription:%@", one, two, str];
     
     [tweetSheet setInitialText:All];
     [self presentViewController:tweetSheet animated:YES completion:nil];
     
 }
 
+-(void)goWebsite {
+    [self urlMkr:@"http://www.google.com"];
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.foodandwaterwatch.org/common-resources/fish/seafood/seafood-guide-data/"];
+    WebViewController *webViewController = [[WebViewController alloc] initWithURL:url andTitle:@"Online Guide"];
+    [self presentViewController:webViewController animated:YES completion:nil];
+}
+
 - (IBAction)postToFacebook:(id)sender {
     
     [self urlMkr:@"http://www.google.com"];
-    
     SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     
-    [controller setInitialText:txtProject];
+    str = [item descnews];
+    str = [str substringToIndex: MIN(100, [str length])];
+    
+    NSString *one = [item titlenews];
+    NSString *two = [item descnews];
+    
+    NSString* All = [NSString stringWithFormat:@"Fish Name: %@\r%@\rDescription:\r%@\r-- Seafood App", one, two, str];
+    
+    [controller setInitialText:All];
     [self presentViewController:controller animated:YES completion:Nil];
     
 }
 
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            //NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
+            [ProgressHUD showError:@"Email Not Sent"];
+            break;
+        case MFMailComposeResultSaved:
+            //NSLog(@"Mail saved: you saved the email message in the drafts folder.");
+            [ProgressHUD showSuccess:@"Email Saved!"];
+            break;
+        case MFMailComposeResultSent:
+            // NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
+            [ProgressHUD showSuccess:@"Email Sent!"];
+            break;
+        case MFMailComposeResultFailed:
+            //NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
+            [ProgressHUD showError:@"Email Not Sent"];
+            break;
+        default:
+            //NSLog(@"Mail not sent.");
+            [ProgressHUD showError:@"Email Not Sent"];
+            break;
+    }
+    // Remove the mail view
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+-(void)sendEmail {
+    
+    str = [item descnews];
+    str = [str substringToIndex: MIN(1165, [str length])];
+    
+    NSString *one = [item titlenews];
+    NSString *two = [item descnews];
+    
+    NSString* All = [NSString stringWithFormat:@"Fish Name: %@\n\nType: %@\n\n\nDescription:\n%@", one, two, str];
+    
+    
+    [self urlMkr:@"http://www.google.com"];
+    
+    if ([MFMailComposeViewController canSendMail])
+    {
+        MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
+        mailer.mailComposeDelegate = self;
+        [mailer setSubject:[NSString stringWithFormat:@"Food & Water Watch - Check This Out: %@", one]];
+        NSArray *toRecipients = [NSArray arrayWithObjects:[config getMail], nil];
+        [mailer setToRecipients:toRecipients];
+        NSString *emailBody = All;
+        [mailer setMessageBody:emailBody isHTML:NO];
+        [self presentViewController:mailer animated:YES completion:nil];
+    }
+    else
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+                                                        message:@"Your device doesn't support the composer sheet"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        
+    }
+}
 
 -(void)urlMkr:(NSString *)makeURL
 {
@@ -212,5 +448,4 @@
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 @end

@@ -8,30 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "DetailAboutViewController.h"
+#import "CoreDataTableViewController.h" // so we can fetch
+#import "About.h"
 
 @interface AboutTableViewController : UITableViewController <UITableViewDelegate,UITableViewDataSource,UINavigationBarDelegate, UINavigationControllerDelegate>
 {
-    NSArray *_objects;
-    NSMutableData *_responseData;
+    NSString *uppercaseFirstLetterOfName;
+    NSString *predicateKey;
     DetailAboutViewController *_detailAboutViewController;
-    UIButton * backButton ;
-    
 }
-
-
-@property(nonatomic,retain) NSMutableArray *titleArray;
-@property(nonatomic,retain) NSMutableArray *descArray;
-
-@property(nonatomic,retain) NSMutableArray *titleSec2Array;
-@property(nonatomic,retain) NSMutableArray *descSec2Array;
-
-@property(nonatomic,retain) NSMutableArray *titleSec3Array;
-@property(nonatomic,retain) NSMutableArray *descSec3Array;
-
-
-@property (nonatomic, retain) IBOutlet UITableView *AboutTbView;
-@property (nonatomic, strong) IBOutlet UIButton* directionsButton;
-
+@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController1;
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController2;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (retain) DetailAboutViewController *detailAboutViewController;
-
 @end

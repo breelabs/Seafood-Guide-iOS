@@ -7,30 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
+#import "ProgressHUD.h"
 
-@interface DetailAboutViewController : UIViewController <UINavigationBarDelegate, UINavigationControllerDelegate>
+@class About;
 
-{
-    NSString *str;
-    NSString *lblTitle;
-    NSString *txtProject;
-    IBOutlet UIButton *customButton;
-    IBOutlet UIWindow *window;
+@interface DetailAboutViewController : UITableViewController <UIWebViewDelegate,MFMailComposeViewControllerDelegate>
+
+{    NSString *str;
     
 }
 
-@property(nonatomic,retain) IBOutlet UIImageView *backg;
-@property(nonatomic,retain) IBOutlet UILabel *lbl;
-@property(nonatomic,retain) IBOutlet UILabel *lblshare;
-@property(nonatomic,retain) IBOutlet UITextView *txtView;
-@property(nonatomic,retain) IBOutlet UIButton *fbButton;
-@property(nonatomic,retain) IBOutlet UIButton *twButton;
+@property (nonatomic, strong) About *item;
 @property (nonatomic, strong) IBOutlet UIButton* directionsButton;
-@property (nonatomic, assign) long myInt;
-
-@property (nonatomic, retain) NSString *lblTitle;
-@property (nonatomic, retain) NSString *txtProject;
-
 
 @end
 
