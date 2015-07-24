@@ -179,7 +179,7 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     NSArray *fetchedObjects = [__fetchedResultsController fetchedObjects];
     NSArray *fetchedObjects1 = [__fetchedResultsController1 fetchedObjects];
     NSArray *fetchedObjects2 = [__fetchedResultsController2 fetchedObjects];

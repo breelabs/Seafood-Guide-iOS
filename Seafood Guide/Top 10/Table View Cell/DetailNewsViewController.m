@@ -42,6 +42,9 @@
     [layer setCornerRadius:4.0]; //when radius is 0, the border is a rectangle
     [layer setBorderWidth:1.0];
     [layer setBorderColor:[buttColor CGColor]];
+    
+    NSString* All = [self lblTitle];
+    self.navigationItem.title = All;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -59,18 +62,6 @@
     [self.fbButton setAlpha:1];
     [self.twButton setAlpha:1];
     [self.lblshare setAlpha:1];
-    
-    myInt = [[self lblTitle]length];
-    if (myInt > 15) {
-        str = [self lblTitle];
-        str = [str substringToIndex: MIN(15, [str length])];
-        NSString* All = [NSString stringWithFormat:@"%@...", str];
-        self.navigationItem.title = All;
-    } else {
-        NSString* All = [self lblTitle];
-        self.navigationItem.title = All;
-    }
-    
     
     [UIView commitAnimations];
 }

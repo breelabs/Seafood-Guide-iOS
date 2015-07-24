@@ -12,6 +12,7 @@
 #import "RXMLElement.h"
 #import "DetailNewsViewController.h"
 #import "config.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define IS_IPAD (( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) ? YES : NO)
 #define IS_IPHONE_5      ([UIScreen mainScreen].bounds.size.height == 568)
@@ -24,7 +25,7 @@
 @end
 
 @implementation NewsViewController
-@synthesize NewsTbView,imageArray,descArray,titleArray,directionsButton;
+@synthesize NewsTbView,numArray,imageArray,descArray,titleArray,directionsButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -43,6 +44,7 @@
     [super viewDidLoad];
 
     // Do any additional setup after loading the view from its nib.
+    self.numArray = [[NSMutableArray alloc] init];
     self.imageArray = [[NSMutableArray alloc]init];
     self.descArray = [[NSMutableArray alloc]init];
     self.titleArray = [[NSMutableArray alloc]init];
@@ -51,17 +53,17 @@
     NewsTbView.delegate = self;
     NewsTbView.dataSource = self;
     
-    UIImage * backgroundPattern = [UIImage imageNamed:@"Whitey"];
+   // UIImage * backgroundPattern = [UIImage imageNamed:@"Whitey"];
     
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
+    //[self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
     
     
-    UIGraphicsBeginImageContext(self.view.frame.size);
-    [[UIImage imageNamed:@"Whitey"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
+    //UIGraphicsBeginImageContext(self.view.frame.size);
+   // [[UIImage imageNamed:@"Whitey"] drawInRect:self.view.bounds];
+    //UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    //UIGraphicsEndImageContext();
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
+   // self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
     [self refresh];
     
@@ -111,13 +113,14 @@
         
         //NSURL *imgUrl = [NSURL URLWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
         NSString *imgUrl = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
-        
+        NSString *num = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"linknews"].text];
         //UIImage *img1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]];
         UIImage *img1 = [UIImage imageNamed:imgUrl];
         
         NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
         NSString *desc = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"descnews"].text];
         
+        [numArray addObject:num];
         [imageArray addObject:img1];
         [titleArray addObject:title];
         [descArray addObject:desc];
@@ -333,7 +336,18 @@ bool isShown = true;
     }
     
     cell.textLabel.numberOfLines = 0;
+    cell.numb.text = [numArray objectAtIndex:indexPath.row];
     cell.image.image = [imageArray objectAtIndex:indexPath.row];
+    cell.image.layer.cornerRadius = 5;
+    cell.image.clipsToBounds = YES;
+    cell.image.layer.borderColor=[[UIColor grayColor] CGColor];
+    cell.image.layer.borderWidth=1.2;
+    
+    cell.circle.layer.cornerRadius=15;
+    cell.circle.clipsToBounds=YES;
+    cell.circle.layer.borderColor=[[UIColor grayColor] CGColor];
+    cell.circle.layer.borderWidth=2.0;
+    
     cell.text.text = [titleArray objectAtIndex:indexPath.row];
     cell.image.contentMode = UIViewContentModeScaleToFill;
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
@@ -344,7 +358,7 @@ bool isShown = true;
     [cell.twitterButton setAlpha:0];
     [UIView beginAnimations:@"ResizeAnimation" context:NULL];
     [UIView setAnimationDuration:0.5f];
-    [cell.image setAlpha:.7];
+    [cell.image setAlpha:1];
     [cell.text setAlpha:1];
     [cell.imagetitle setAlpha:1];
     [cell.facebookButton setAlpha:1];
