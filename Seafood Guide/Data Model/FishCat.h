@@ -14,9 +14,9 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, copy) NSString* caption;
+@property (nonatomic, copy) NSString *caption;
 
-@property (nonatomic, retain) UIImage* image;
+@property (nonatomic, retain) UIImage *image;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;

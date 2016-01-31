@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F51B65D37B0019E1CA /* AppGalleryView.m */; };
+		FC1195FE1B65D37B0019E1CA /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */; };
+		FC1195FF1B65D37B0019E1CA /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F91B65D37B0019E1CA /* CustomCell.m */; };
+		FC1196001B65D37B0019E1CA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1195FA1B65D37B0019E1CA /* CustomCell.xib */; };
+		FC1196011B65D37B0019E1CA /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195FC1B65D37B0019E1CA /* DetailView.m */; };
 		FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
 		FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */; };
 		FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
@@ -64,6 +69,14 @@
 		FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC4E646419EB4C560079C0A3 /* ProgressHUD.bundle */; };
 		FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646619EB4C560079C0A3 /* ProgressHUD.m */; };
 		FC7153811B5DE3E300F6E137 /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7153801B5DE3E300F6E137 /* About.m */; };
+		FC9AC0B81C5E815100DD92CD /* allfish.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B01C5E815100DD92CD /* allfish.png */; };
+		FC9AC0B91C5E815100DD92CD /* donteat.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B11C5E815100DD92CD /* donteat.png */; };
+		FC9AC0BA1C5E815100DD92CD /* fish1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B21C5E815100DD92CD /* fish1.png */; };
+		FC9AC0BB1C5E815100DD92CD /* fish2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B31C5E815100DD92CD /* fish2.png */; };
+		FC9AC0BC1C5E815100DD92CD /* fish3.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B41C5E815100DD92CD /* fish3.png */; };
+		FC9AC0BD1C5E815100DD92CD /* fish4.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B51C5E815100DD92CD /* fish4.png */; };
+		FC9AC0BE1C5E815100DD92CD /* fish5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B61C5E815100DD92CD /* fish5.png */; };
+		FC9AC0BF1C5E815100DD92CD /* fish6.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B71C5E815100DD92CD /* fish6.png */; };
 		FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDAB7591B537D600040E0F7 /* Lingo.m */; };
 		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -79,6 +92,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC1195F41B65D37B0019E1CA /* AppGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGalleryView.h; sourceTree = "<group>"; };
+		FC1195F51B65D37B0019E1CA /* AppGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGalleryView.m; sourceTree = "<group>"; };
+		FC1195F61B65D37B0019E1CA /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
+		FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARScrollViewEnhancer.m; sourceTree = "<group>"; };
+		FC1195F81B65D37B0019E1CA /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		FC1195F91B65D37B0019E1CA /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		FC1195FA1B65D37B0019E1CA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		FC1195FB1B65D37B0019E1CA /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
+		FC1195FC1B65D37B0019E1CA /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seafood Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2BD12D19B23CBF003ECABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -172,6 +194,14 @@
 		FC4E646619EB4C560079C0A3 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = classes/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
 		FC71537F1B5DE3E300F6E137 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = "Data Model/About.h"; sourceTree = "<group>"; };
 		FC7153801B5DE3E300F6E137 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = "Data Model/About.m"; sourceTree = "<group>"; };
+		FC9AC0B01C5E815100DD92CD /* allfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = allfish.png; path = Export/allfish.png; sourceTree = "<group>"; };
+		FC9AC0B11C5E815100DD92CD /* donteat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = donteat.png; path = Export/donteat.png; sourceTree = "<group>"; };
+		FC9AC0B21C5E815100DD92CD /* fish1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish1.png; path = Export/fish1.png; sourceTree = "<group>"; };
+		FC9AC0B31C5E815100DD92CD /* fish2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish2.png; path = Export/fish2.png; sourceTree = "<group>"; };
+		FC9AC0B41C5E815100DD92CD /* fish3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish3.png; path = Export/fish3.png; sourceTree = "<group>"; };
+		FC9AC0B51C5E815100DD92CD /* fish4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish4.png; path = Export/fish4.png; sourceTree = "<group>"; };
+		FC9AC0B61C5E815100DD92CD /* fish5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish5.png; path = Export/fish5.png; sourceTree = "<group>"; };
+		FC9AC0B71C5E815100DD92CD /* fish6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish6.png; path = Export/fish6.png; sourceTree = "<group>"; };
 		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
 		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
 		FCE79F3919B99F87003E03BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -207,6 +237,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC1195E81B65CDE40019E1CA /* More */ = {
+			isa = PBXGroup;
+			children = (
+				FC1195F41B65D37B0019E1CA /* AppGalleryView.h */,
+				FC1195F51B65D37B0019E1CA /* AppGalleryView.m */,
+				FC1195F61B65D37B0019E1CA /* ARScrollViewEnhancer.h */,
+				FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */,
+				FC1195F81B65D37B0019E1CA /* CustomCell.h */,
+				FC1195F91B65D37B0019E1CA /* CustomCell.m */,
+				FC1195FA1B65D37B0019E1CA /* CustomCell.xib */,
+				FC1195FB1B65D37B0019E1CA /* DetailView.h */,
+				FC1195FC1B65D37B0019E1CA /* DetailView.m */,
+			);
+			name = More;
+			sourceTree = "<group>";
+		};
 		FC2BD12119B23CBF003ECABA = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +292,7 @@
 		FC2BD13319B23CBF003ECABA /* Seafood Guide */ = {
 			isa = PBXGroup;
 			children = (
+				FC1195E81B65CDE40019E1CA /* More */,
 				FC4E63F619EB48720079C0A3 /* About */,
 				FC3B084319B430000049FA70 /* Seafood Guide */,
 				FCEAB16B19B5696C004D1846 /* Lingo */,
@@ -335,6 +382,7 @@
 		FC3B084219B42FEA0049FA70 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC9AC0C01C5E815800DD92CD /* Export */,
 				FC4E642D19EB4B7C0079C0A3 /* AppDelegate.h */,
 				FC4E642E19EB4B7C0079C0A3 /* AppDelegate.m */,
 				FC4E642F19EB4B7C0079C0A3 /* CoreDataTableViewController.h */,
@@ -460,6 +508,21 @@
 			name = RaptureXML;
 			sourceTree = "<group>";
 		};
+		FC9AC0C01C5E815800DD92CD /* Export */ = {
+			isa = PBXGroup;
+			children = (
+				FC9AC0B01C5E815100DD92CD /* allfish.png */,
+				FC9AC0B11C5E815100DD92CD /* donteat.png */,
+				FC9AC0B21C5E815100DD92CD /* fish1.png */,
+				FC9AC0B31C5E815100DD92CD /* fish2.png */,
+				FC9AC0B41C5E815100DD92CD /* fish3.png */,
+				FC9AC0B51C5E815100DD92CD /* fish4.png */,
+				FC9AC0B61C5E815100DD92CD /* fish5.png */,
+				FC9AC0B71C5E815100DD92CD /* fish6.png */,
+			);
+			name = Export;
+			sourceTree = "<group>";
+		};
 		FCEAB16019B5503B004D1846 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -561,7 +624,7 @@
 		FC2BD12219B23CBF003ECABA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Jon Brown Designs";
 				TargetAttributes = {
 					FC2BD12919B23CBF003ECABA = {
@@ -596,14 +659,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9AC0BF1C5E815100DD92CD /* fish6.png in Resources */,
+				FC1196001B65D37B0019E1CA /* CustomCell.xib in Resources */,
+				FC9AC0BD1C5E815100DD92CD /* fish4.png in Resources */,
 				FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */,
+				FC9AC0BB1C5E815100DD92CD /* fish2.png in Resources */,
+				FC9AC0BC1C5E815100DD92CD /* fish3.png in Resources */,
 				FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */,
 				FC4E641719EB4A5C0079C0A3 /* WebViewController.xib in Resources */,
 				FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */,
 				FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */,
 				FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */,
+				FC9AC0BA1C5E815100DD92CD /* fish1.png in Resources */,
+				FC9AC0B91C5E815100DD92CD /* donteat.png in Resources */,
 				FC4E641F19EB4AB70079C0A3 /* ios-lingo.xml in Resources */,
 				FC4E63FE19EB49CA0079C0A3 /* ios-about-1.xml in Resources */,
+				FC9AC0B81C5E815100DD92CD /* allfish.png in Resources */,
+				FC9AC0BE1C5E815100DD92CD /* fish5.png in Resources */,
 				FC4E642719EB4B1B0079C0A3 /* ios-news.xml in Resources */,
 				FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */,
 				FC4E642C19EB4B300079C0A3 /* TableViewCellNews.xib in Resources */,
@@ -639,6 +711,7 @@
 				FC4E645C19EB4BF70079C0A3 /* UIColor+AQGridView.m in Sources */,
 				FC4E645419EB4BF70079C0A3 /* AQGridViewAnimatorItem.m in Sources */,
 				FC4E640B19EB4A490079C0A3 /* GridViewCell.m in Sources */,
+				FC1195FE1B65D37B0019E1CA /* ARScrollViewEnhancer.m in Sources */,
 				FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */,
 				FC4E645919EB4BF70079C0A3 /* AQGridViewUpdateItem.m in Sources */,
 				FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */,
@@ -649,10 +722,13 @@
 				FC4E645319EB4BF70079C0A3 /* AQGridView.m in Sources */,
 				FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */,
 				FC4E645619EB4BF70079C0A3 /* AQGridViewController.m in Sources */,
+				FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */,
 				FC4E645819EB4BF70079C0A3 /* AQGridViewUpdateInfo.m in Sources */,
+				FC1195FF1B65D37B0019E1CA /* CustomCell.m in Sources */,
 				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
 				FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */,
 				FC4E645A19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				FC1196011B65D37B0019E1CA /* DetailView.m in Sources */,
 				FC7153811B5DE3E300F6E137 /* About.m in Sources */,
 				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
 				FC4E641619EB4A5C0079C0A3 /* WebViewController.m in Sources */,
@@ -734,6 +810,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -810,6 +887,7 @@
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -839,6 +917,7 @@
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

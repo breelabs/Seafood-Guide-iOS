@@ -22,10 +22,10 @@
     
     if(self)
     {
-        self.caption = theCaption;
-        self.image = theImage;
+        
     }
-    
+    self.caption = theCaption;
+    self.image = theImage;
     
     return self;
 }
@@ -39,21 +39,20 @@
     
     FishCat* fish3 = [[FishCat alloc] initWithCaption:@"Steak Like Fish" andImage:[UIImage imageNamed:@"fish3"]];
     
-    
     FishCat* fish4 = [[FishCat alloc] initWithCaption:@"Small Fish" andImage:[UIImage imageNamed:@"fish4"]];
-    
     
     FishCat* fish5 = [[FishCat alloc] initWithCaption:@"Shell Fish" andImage:[UIImage imageNamed:@"fish5"]];
     
-    
     FishCat* fish6 = [[FishCat alloc] initWithCaption:@"Other" andImage:[UIImage imageNamed:@"fish6"]];
     
-    FishCat* fish7 = [[FishCat alloc] initWithCaption:@"All Fish" andImage:[UIImage imageNamed:@"allfish"]];
+    FishCat* fish7 = [[FishCat alloc] initWithCaption:@"All Fish" andImage:[UIImage imageNamed:@"allfish.png"]];
     
     FishCat* fish8 = [[FishCat alloc] initWithCaption:@"Dirty Dozen" andImage:[UIImage imageNamed:@"donteat"]];
     
     
     return [NSArray arrayWithObjects:fish1, fish2, fish3, fish4, fish5, fish6, fish7, fish8, nil];
 }
+
+
 
 @end

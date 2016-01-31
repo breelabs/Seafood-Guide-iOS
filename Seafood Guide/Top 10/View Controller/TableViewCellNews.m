@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation TableViewCellNews
-@synthesize date,text,image,imagetitle,facebookButton,twitterButton;
+@synthesize date,text,image,imagetitle,facebookButton,twitterButton,numb,circle;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

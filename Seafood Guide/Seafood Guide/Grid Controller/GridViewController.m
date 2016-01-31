@@ -104,7 +104,10 @@
     
     FishCat* service = [services objectAtIndex:index];
     
-    [cell.imageView setImage:service.image];
+    [cell.imageView setImage:service.image]; 
+    
+    NSLog(@"Value of IMAGE = %@", service.image);
+    
     [cell.captionLabel setText:service.caption];
     
     return cell;

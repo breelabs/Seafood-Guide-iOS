@@ -2,16 +2,18 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "allfish.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "allfish.jpeg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "scale" : "3x",
-      "filename" : "allfish.jpeg"
+      "filename" : "allfish.jpeg",
+      "scale" : "3x"
     }
   ],
   "info" : {
