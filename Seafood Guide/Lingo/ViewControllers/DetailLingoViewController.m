@@ -360,12 +360,31 @@
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-                                                        message:@"Your device doesn't support the composer sheet"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:@"Failure"
+                                    message:@"Your device doesn't support the composer sheet"
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction *noButton = [UIAlertAction
+                                   actionWithTitle:@"Dismiss"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {
+                                       //Handle no, thanks button
+                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                   }];
+        
+        [alert addAction:noButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
+//                                                        message:@"Your device doesn't support the composer sheet"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert show];
         
     }
 }

@@ -42,13 +42,15 @@
     
     else {
         // iOS 6
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     }
     
     // Start loading the data.
     [self refresh];
 }
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    return YES;
+}
 /// Data load/reload method ///
 
 -(void)refresh {
@@ -76,8 +78,26 @@
     
     NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data loading error" message:msg delegate:self cancelButtonTitle:@"Dismiss"otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"Data loading error"
+                                message:msg
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction *noButton = [UIAlertAction
+                               actionWithTitle:@"Dismiss"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle no, thanks button
+                                   [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                               }];
+    
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data loading error" message:msg delegate:self cancelButtonTitle:@"Dismiss"otherButtonTitles:nil];
+//    [alert show];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

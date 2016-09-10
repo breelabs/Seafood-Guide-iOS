@@ -52,8 +52,24 @@
 
 -(IBAction)view_description {
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Info" message:input_description delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-    [alert show];
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:@"App Info"
+                                message:input_description
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction *noButton = [UIAlertAction
+                               actionWithTitle:@"Dismiss"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle no, thanks button
+                                   [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                               }];
+    
+    [alert addAction:noButton];
+    
+//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Info" message:input_description delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+//    [alert show];
 }
 
 /// View Did Load ///
@@ -104,7 +120,6 @@
     
     else {
         // iOS 6
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     }
     
     // Add nice corner effect to
@@ -142,7 +157,10 @@
     // Load the input data.
     [self refresh];
 }
-
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    return YES;
+}
 /// View Did Appear ///
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -291,8 +309,27 @@
 	[self dismissViewControllerAnimated:NO completion:nil];
 	
     if (result == MFMailComposeResultFailed) {
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message Error" message:@"Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-		[alert show];
+		
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:@"Message Error"
+                                    message:@"Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again."
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        
+        UIAlertAction *noButton = [UIAlertAction
+                                   actionWithTitle:@"Dismiss"
+                                   style:UIAlertActionStyleDefault
+                                   handler:^(UIAlertAction * action) {
+                                       //Handle no, thanks button
+                                       [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                   }];
+        
+        [alert addAction:noButton];
+        
+        [self presentViewController:alert animated:YES completion:nil];
+        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Message Error" message:@"Mail was unable to send your E-Mail. Make sure you are connected to an EDGE/3G/4G or WiFi conection and try again." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+//		[alert show];
 	}
 }
 
@@ -318,8 +355,25 @@
         }
         
         else {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Info" message:@"You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-            [alertView show];
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:@"Info"
+                                        message:@"ou can't send a tweet right now, make sure your device has an internet connection and you have at least one Facebook account setup."
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *noButton = [UIAlertAction
+                                       actionWithTitle:@"Dismiss"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                       }];
+            
+            [alert addAction:noButton];
+            
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Info" message:@"You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+//            [alertView show];
         }
     }
     
@@ -330,8 +384,27 @@
         }
         
         else {
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Info" message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-            [alertView show];
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:@"Info"
+                                        message:@"ou can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup."
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *noButton = [UIAlertAction
+                                       actionWithTitle:@"Dismiss"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                       }];
+            
+            [alert addAction:noButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+          
+//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Info" message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+//            [alertView show];
         }
     }
     

@@ -69,6 +69,7 @@
 		FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC4E646419EB4C560079C0A3 /* ProgressHUD.bundle */; };
 		FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646619EB4C560079C0A3 /* ProgressHUD.m */; };
 		FC7153811B5DE3E300F6E137 /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7153801B5DE3E300F6E137 /* About.m */; };
+		FC8FD36D1D84A51800CBA1D1 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8FD36C1D84A51800CBA1D1 /* iRate.m */; };
 		FC9AC0B81C5E815100DD92CD /* allfish.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B01C5E815100DD92CD /* allfish.png */; };
 		FC9AC0B91C5E815100DD92CD /* donteat.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B11C5E815100DD92CD /* donteat.png */; };
 		FC9AC0BA1C5E815100DD92CD /* fish1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B21C5E815100DD92CD /* fish1.png */; };
@@ -194,6 +195,8 @@
 		FC4E646619EB4C560079C0A3 /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = classes/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
 		FC71537F1B5DE3E300F6E137 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = "Data Model/About.h"; sourceTree = "<group>"; };
 		FC7153801B5DE3E300F6E137 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = "Data Model/About.m"; sourceTree = "<group>"; };
+		FC8FD36B1D84A51800CBA1D1 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
+		FC8FD36C1D84A51800CBA1D1 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
 		FC9AC0B01C5E815100DD92CD /* allfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = allfish.png; path = Export/allfish.png; sourceTree = "<group>"; };
 		FC9AC0B11C5E815100DD92CD /* donteat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = donteat.png; path = Export/donteat.png; sourceTree = "<group>"; };
 		FC9AC0B21C5E815100DD92CD /* fish1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish1.png; path = Export/fish1.png; sourceTree = "<group>"; };
@@ -308,6 +311,7 @@
 		FC2BD13419B23CBF003ECABA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC8FD36E1D84A52700CBA1D1 /* iRate */,
 				FC4E646019EB4C260079C0A3 /* RaptureXML */,
 				FC3B084619B430620049FA70 /* Config */,
 				FC2BD16B19B26E76003ECABA /* AQGridView */,
@@ -506,6 +510,15 @@
 				FC4E645E19EB4C200079C0A3 /* RXMLElement.m */,
 			);
 			name = RaptureXML;
+			sourceTree = "<group>";
+		};
+		FC8FD36E1D84A52700CBA1D1 /* iRate */ = {
+			isa = PBXGroup;
+			children = (
+				FC8FD36B1D84A51800CBA1D1 /* iRate.h */,
+				FC8FD36C1D84A51800CBA1D1 /* iRate.m */,
+			);
+			name = iRate;
 			sourceTree = "<group>";
 		};
 		FC9AC0C01C5E815800DD92CD /* Export */ = {
@@ -728,6 +741,7 @@
 				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
 				FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */,
 				FC4E645A19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
+				FC8FD36D1D84A51800CBA1D1 /* iRate.m in Sources */,
 				FC1196011B65D37B0019E1CA /* DetailView.m in Sources */,
 				FC7153811B5DE3E300F6E137 /* About.m in Sources */,
 				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
@@ -886,7 +900,7 @@
 					"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -916,7 +930,7 @@
 					"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

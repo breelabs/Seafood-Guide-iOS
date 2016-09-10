@@ -11,6 +11,7 @@
 #import "Lingo.h"
 #import "About.h"
 #import "RXMLElement.h"
+#import "iRate.h"
 
 @implementation AppDelegate
 
@@ -20,7 +21,17 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize fetchedResultsController = __fetchedResultsController;
 
-
++ (void)initialize
+{
+    //set the bundle ID. normally you wouldn't need to do this
+    //as it is picked up automatically from your Info.plist file
+    //but we want to test with an app that's actually on the store
+    [iRate sharedInstance].applicationBundleID = @"com.jonbrown.org.Seafood-Guide";
+    [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
+    
+    //enable preview mode
+    [iRate sharedInstance].previewMode = NO;
+}
 -(void)insertRoleWithRoleName:(NSString *)seafoodName typeName:(NSString *)seafoodType descName:(NSString *)seafoodDesc goodName:(NSString *)seafoodGood badName:(NSString *)seafoodBad regName:(NSString *)seafoodRegion
 
 {
@@ -495,7 +506,7 @@
     
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        __managedObjectContext = [[NSManagedObjectContext alloc] init];
+       __managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [__managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return __managedObjectContext;
