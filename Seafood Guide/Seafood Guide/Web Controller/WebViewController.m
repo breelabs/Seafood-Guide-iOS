@@ -78,15 +78,33 @@
     NSString *errorString = [error localizedDescription];
     NSString *errorTitle = [NSString stringWithFormat:@"Error (%ld)", (long)error.code];
     
-    UIAlertView *errorView =
-    [[UIAlertView alloc] initWithTitle:errorTitle
-                               message:errorString delegate:self cancelButtonTitle:nil
-                     otherButtonTitles:@"OK", nil];
-    [errorView show];
+    UIAlertController *alert = [UIAlertController
+                                alertControllerWithTitle:errorTitle
+                                message:errorString
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    UIAlertAction *noButton = [UIAlertAction
+                               actionWithTitle:@"Dismiss"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction * action) {
+                                   //Handle no, thanks button
+                                   [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                               }];
+    
+    [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+    
+//    UIAlertView *errorView =
+//    [[UIAlertView alloc] initWithTitle:errorTitle
+//                               message:errorString delegate:self cancelButtonTitle:nil
+//                     otherButtonTitles:@"OK", nil];
+//    [errorView show];
 }
-- (void)didPresentAlertView:(UIAlertView *)alertView {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//- (void)didPresentAlertView:(UIAlertView *)alertView {
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 - (UIBarPosition)positionForBar:(id <UIBarPositioning>)bar
 {
     return UIBarPositionTopAttached;
