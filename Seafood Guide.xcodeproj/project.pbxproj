@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC07E65F1D88F1EA00B48EE5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07E65E1D88F1EA00B48EE5 /* MBProgressHUD.m */; };
 		FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F51B65D37B0019E1CA /* AppGalleryView.m */; };
 		FC1195FE1B65D37B0019E1CA /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */; };
 		FC1195FF1B65D37B0019E1CA /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F91B65D37B0019E1CA /* CustomCell.m */; };
@@ -93,6 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC07E65C1D88F1EA00B48EE5 /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		FC07E65D1D88F1EA00B48EE5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		FC07E65E1D88F1EA00B48EE5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FC1195F41B65D37B0019E1CA /* AppGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGalleryView.h; sourceTree = "<group>"; };
 		FC1195F51B65D37B0019E1CA /* AppGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGalleryView.m; sourceTree = "<group>"; };
 		FC1195F61B65D37B0019E1CA /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
@@ -240,6 +244,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC07E6601D88F1F000B48EE5 /* MGProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				FC07E65C1D88F1EA00B48EE5 /* MBProgressHUD-Prefix.pch */,
+				FC07E65D1D88F1EA00B48EE5 /* MBProgressHUD.h */,
+				FC07E65E1D88F1EA00B48EE5 /* MBProgressHUD.m */,
+			);
+			name = MGProgressHUD;
+			sourceTree = "<group>";
+		};
 		FC1195E81B65CDE40019E1CA /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +325,7 @@
 		FC2BD13419B23CBF003ECABA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FC07E6601D88F1F000B48EE5 /* MGProgressHUD */,
 				FC8FD36E1D84A52700CBA1D1 /* iRate */,
 				FC4E646019EB4C260079C0A3 /* RaptureXML */,
 				FC3B084619B430620049FA70 /* Config */,
@@ -733,6 +748,7 @@
 				FC4E645B19EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				FC2BD13A19B23CBF003ECABA /* main.m in Sources */,
 				FC4E645319EB4BF70079C0A3 /* AQGridView.m in Sources */,
+				FC07E65F1D88F1EA00B48EE5 /* MBProgressHUD.m in Sources */,
 				FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */,
 				FC4E645619EB4BF70079C0A3 /* AQGridViewController.m in Sources */,
 				FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */,

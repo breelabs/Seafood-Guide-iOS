@@ -10,20 +10,21 @@
 #import <QuartzCore/QuartzCore.h>
 #import "CustomCell.h"
 #import "DetailView.h"
+#import "MBProgressHUD.h"
 
 // Replace 'danielsadjadian' with your developer name. make sure your
 // developer name is typed like the above with no spaces or capital letters.
 #define DEV_NAME @"jonbrowndesigns"
 
 @class CustomCell;
-@interface AppGalleryView : UIViewController <UITableViewDataSource, UITableViewDelegate> {
+@interface AppGalleryView : UIViewController <UITableViewDataSource, UITableViewDelegate, MBProgressHUDDelegate> {
     
     // TableView - show the logo, labels, etc...
     IBOutlet UITableView *app_table;
     
     // JSON parsing - data storage.
     NSMutableData *responseData;
-    
+    MBProgressHUD *HUD;
     // App list data - name, icon, dev name
     // price, url link, etc...
     NSArray *app_names;

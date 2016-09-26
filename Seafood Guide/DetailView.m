@@ -41,9 +41,119 @@
     NSString *button_4 = @"Copy Link";
     NSString *cancelTitle = @"Cancel";
     
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:actionSheetTitle delegate:self cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherButtonTitles:button_1, button_2, button_3, button_4, nil];
+    //UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:actionSheetTitle delegate:self cancelButtonTitle:cancelTitle destructiveButtonTitle:nil otherButtonTitles:button_1, button_2, button_3, button_4, nil];
     
-    [actionSheet showInView:self.view];
+    //[actionSheet showInView:self.view];
+    
+    
+    UIAlertController *actionSheet = [UIAlertController alertControllerWithTitle:actionSheetTitle message:@"" preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    [actionSheet addAction:[UIAlertAction actionWithTitle:cancelTitle style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+        
+        // Cancel button tappped.
+        [self dismissViewControllerAnimated:YES completion:^{
+        }];
+    }]];
+    
+    [actionSheet addAction:[UIAlertAction actionWithTitle:button_1 style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        // Facebook button tapped.
+        
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+            
+            [self send_fb_post];
+            
+        } else {
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:@"Info"
+                                        message:@"You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup."
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *noButton = [UIAlertAction
+                                       actionWithTitle:@"Dismiss"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                       }];
+            
+            [alert addAction:noButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+        
+        
+    }]];
+    
+    [actionSheet addAction:[UIAlertAction actionWithTitle:button_2 style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        // Twitter button tapped.
+        
+        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+            [self send_tweet];
+        }
+        
+        else {
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:@"Info"
+                                        message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup."
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *noButton = [UIAlertAction
+                                       actionWithTitle:@"Dismiss"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                       }];
+            
+            [alert addAction:noButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+        
+        
+    }]];
+    
+    [actionSheet addAction:[UIAlertAction actionWithTitle:button_3 style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        // Email button tapped.
+        
+        MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
+        composer.mailComposeDelegate = self;
+        
+        if ([MFMailComposeViewController canSendMail]) {
+            [composer setToRecipients:[NSArray arrayWithObjects:@"", nil]];
+            [composer setSubject:@""];
+            [composer setMessageBody:[NSString stringWithFormat:SHARE_MESS_EMAIL, input_name, input_dev_name, [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", input_id]] isHTML:NO];
+            
+            [self presentViewController:composer animated:YES completion:nil];
+        }
+        
+        
+        
+        
+    }]];
+    
+    [actionSheet addAction:[UIAlertAction actionWithTitle:button_4 style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        
+        // Copy Link button tapped.
+        
+        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
+        pasteboard.string = [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", input_id];
+        
+        
+    }]];
+    
+    // Present action sheet.
+    [self presentViewController:actionSheet animated:YES completion:nil];
+    
 }
 
 -(IBAction)download {
@@ -67,6 +177,8 @@
                                }];
     
     [alert addAction:noButton];
+    
+    [self presentViewController:alert animated:YES completion:nil];
     
 //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"App Info" message:input_description delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
 //    [alert show];
@@ -345,89 +457,6 @@
 
 
 /// Other methods ///
-
--(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
-    
-    if (buttonIndex == 0) {
-        
-        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
-            [self send_fb_post];
-        }
-        
-        else {
-            
-            UIAlertController *alert = [UIAlertController
-                                        alertControllerWithTitle:@"Info"
-                                        message:@"ou can't send a tweet right now, make sure your device has an internet connection and you have at least one Facebook account setup."
-                                        preferredStyle:UIAlertControllerStyleAlert];
-            
-            
-            UIAlertAction *noButton = [UIAlertAction
-                                       actionWithTitle:@"Dismiss"
-                                       style:UIAlertActionStyleDefault
-                                       handler:^(UIAlertAction * action) {
-                                           //Handle no, thanks button
-                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
-                                       }];
-            
-            [alert addAction:noButton];
-            
-//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Info" message:@"You can't send a Facebook post right now, make sure your device has an internet connection and you have at least one Facebook account setup." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-//            [alertView show];
-        }
-    }
-    
-    else if (buttonIndex == 1) {
-        
-        if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
-            [self send_tweet];
-        }
-        
-        else {
-            
-            UIAlertController *alert = [UIAlertController
-                                        alertControllerWithTitle:@"Info"
-                                        message:@"ou can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup."
-                                        preferredStyle:UIAlertControllerStyleAlert];
-            
-            
-            UIAlertAction *noButton = [UIAlertAction
-                                       actionWithTitle:@"Dismiss"
-                                       style:UIAlertActionStyleDefault
-                                       handler:^(UIAlertAction * action) {
-                                           //Handle no, thanks button
-                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
-                                       }];
-            
-            [alert addAction:noButton];
-            
-            [self presentViewController:alert animated:YES completion:nil];
-          
-//            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Info" message:@"You can't send a tweet right now, make sure your device has an internet connection and you have at least one Twitter account setup." delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
-//            [alertView show];
-        }
-    }
-    
-    else if (buttonIndex == 2) {
-        
-        MFMailComposeViewController *composer = [[MFMailComposeViewController alloc] init];
-        composer.mailComposeDelegate = self;
-        
-        if ([MFMailComposeViewController canSendMail]) {
-            [composer setToRecipients:[NSArray arrayWithObjects:@"", nil]];
-            [composer setSubject:@""];
-            [composer setMessageBody:[NSString stringWithFormat:SHARE_MESS_EMAIL, input_name, input_dev_name, [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", input_id]] isHTML:NO];
-            
-            [self presentViewController:composer animated:YES completion:nil];
-        }
-    }
-    
-    else if (buttonIndex == 3) {
-        UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-        pasteboard.string = [NSString stringWithFormat:@"http://itunes.apple.com/app/id%@", input_id];
-    }
-}
-
 
 
 -(BOOL)prefersStatusBarHidden {

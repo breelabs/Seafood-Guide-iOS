@@ -7,6 +7,7 @@
 //
 
 #import "AppGalleryView.h"
+#import "MBProgressHUD.h"
 
 @interface AppGalleryView ()
 
@@ -18,9 +19,19 @@
 /// Buttons ///
 
 -(IBAction)refresh_button {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        [self performSelector:@selector(hideHud) withObject:self afterDelay:1.0 ];
+    });
     [self refresh];
 }
-
+- (void)hideHud
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
+}
 -(IBAction)done {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -33,16 +44,8 @@
     
     // Initilise the app logo image cache.
     self.cached_images = [[NSMutableDictionary alloc] init];
-    
-    // Get rid of the UIStatus bar.
-    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
-        // iOS 7
-        [self performSelector:@selector(setNeedsStatusBarAppearanceUpdate)];
-    }
-    
-    else {
-        // iOS 6
-    }
+    app_table.delegate = self;
+    app_table.dataSource = self;
     
     // Start loading the data.
     [self refresh];
@@ -56,20 +59,138 @@
 -(void)refresh {
     
     // Show the user the data is loading.
-    [active startAnimating];
+    //[active startAnimating];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        HUD.delegate = self;
+    });
+    
+    
     
     // Setup the JSON url and download the data on request.
     NSString *link = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&country=us&entity=software", DEV_NAME];
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:link]];
-    NSURLConnection *theConnection =[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
     
-    if (theConnection) {
+    //NSURLConnection *theConnection =[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:theRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        
+        // handle basic connectivity issues here
+        
+        if (error) {
+            //NSLog(@"dataTaskWithRequest error: %@", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+            
+            
+            NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:@"Data loading error"
+                                        message:msg
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *noButton = [UIAlertAction
+                                       actionWithTitle:@"Dismiss"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                       }];
+            
+            [alert addAction:noButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            return;
+        }
+        
+        // handle HTTP errors here
+        
+        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+            
+            NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+            
+            if (statusCode != 200) {
+                //NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                });
+                NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
+                
+                UIAlertController *alert = [UIAlertController
+                                            alertControllerWithTitle:@"Data loading error"
+                                            message:msg
+                                            preferredStyle:UIAlertControllerStyleAlert];
+                
+                
+                UIAlertAction *noButton = [UIAlertAction
+                                           actionWithTitle:@"Dismiss"
+                                           style:UIAlertActionStyleDefault
+                                           handler:^(UIAlertAction * action) {
+                                               //Handle no, thanks button
+                                               [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                           }];
+                
+                [alert addAction:noButton];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+                
+                return;
+            }
+        }
+        
+        // otherwise, everything is probably fine and you should interpret the `data` contents
+        
         responseData = [[NSMutableData alloc] init];
-    }
+        [responseData setLength:0];
+        [responseData appendData:data];
+        
+        NSError *myError = nil;
+        NSDictionary *res = [NSJSONSerialization JSONObjectWithData:responseData options:NSJSONReadingMutableLeaves error:&myError];
+        
+        // Store how many apps need to be loaded.
+        result_count = [[res valueForKey:@"resultCount"] integerValue];
+        
+        // Store the app data - name, icon, etc...
+        app_names = [[res objectForKey:@"results"] valueForKey:@"trackName"];
+        dev_names = [[res objectForKey:@"results"] valueForKey:@"sellerName"];
+        app_prices = [[res objectForKey:@"results"] valueForKey:@"formattedPrice"];
+        app_icons = [[res objectForKey:@"results"] valueForKey:@"artworkUrl512"];
+        app_ids = [[res objectForKey:@"results"] valueForKey:@"trackId"];
+        app_versions = [[res objectForKey:@"results"] valueForKey:@"version"];
+        app_descriptions = [[res objectForKey:@"results"] valueForKey:@"description"];
+        app_age = [[res objectForKey:@"results"] valueForKey:@"contentAdvisoryRating"];
+        app_ratings = [[res objectForKey:@"results"] valueForKey:@"averageUserRating"];
+        app_size = [[res objectForKey:@"results"] valueForKey:@"fileSizeBytes"];
+        app_screenshot_iphone = [[res objectForKey:@"results"] valueForKey:@"screenshotUrls"];
+        app_screenshot_ipad = [[res objectForKey:@"results"] valueForKey:@"ipadScreenshotUrls"];
+        
+        // Data is now saved locally, so lets load
+        // it into the UITableView to be presented
+        // to the user and stop the activity indicator.
+        [active stopAnimating];
+        [app_table reloadData];
+        
+        //NSLog(@"data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+        });
+    }];
+    [dataTask resume];
     
-    else {
-        NSLog(@"Error");
-    }
+    
+    
+    
+    
+    
+    
+    
 }
 
 /// Data loading methods ///
