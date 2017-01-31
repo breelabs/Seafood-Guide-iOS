@@ -36,7 +36,6 @@
 		FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FD19EB49CA0079C0A3 /* ios-about-3.xml */; };
 		FC4E640519EB49D30079C0A3 /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640319EB49D30079C0A3 /* AboutTableViewController.m */; };
 		FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640419EB49D30079C0A3 /* DetailAboutViewController.m */; };
-		FC4E640B19EB4A490079C0A3 /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640819EB4A490079C0A3 /* GridViewCell.m */; };
 		FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640A19EB4A490079C0A3 /* GridViewController.m */; };
 		FC4E641119EB4A530079C0A3 /* FishTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640E19EB4A530079C0A3 /* FishTVC.m */; };
 		FC4E641219EB4A530079C0A3 /* TVCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641019EB4A530079C0A3 /* TVCDetailViewController.m */; };
@@ -55,16 +54,6 @@
 		FC4E643919EB4B7C0079C0A3 /* FishCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643219EB4B7C0079C0A3 /* FishCat.m */; };
 		FC4E643A19EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643319EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld */; };
 		FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643619EB4B7C0079C0A3 /* Seafood.m */; };
-		FC4E645319EB4BF70079C0A3 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643D19EB4BF70079C0A3 /* AQGridView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645419EB4BF70079C0A3 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644119EB4BF70079C0A3 /* AQGridViewAnimatorItem.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645519EB4BF70079C0A3 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644319EB4BF70079C0A3 /* AQGridViewCell.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645619EB4BF70079C0A3 /* AQGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644619EB4BF70079C0A3 /* AQGridViewController.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645719EB4BF70079C0A3 /* AQGridViewData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644819EB4BF70079C0A3 /* AQGridViewData.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645819EB4BF70079C0A3 /* AQGridViewUpdateInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644A19EB4BF70079C0A3 /* AQGridViewUpdateInfo.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645919EB4BF70079C0A3 /* AQGridViewUpdateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644C19EB4BF70079C0A3 /* AQGridViewUpdateItem.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645A19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E644E19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645B19EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E645019EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		FC4E645C19EB4BF70079C0A3 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E645219EB4BF70079C0A3 /* UIColor+AQGridView.m */; settings = {COMPILER_FLAGS = "-w"; }; };
 		FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E645E19EB4C200079C0A3 /* RXMLElement.m */; };
 		FC4E646319EB4C420079C0A3 /* config.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646219EB4C420079C0A3 /* config.m */; };
 		FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC4E646419EB4C560079C0A3 /* ProgressHUD.bundle */; };
@@ -652,7 +641,7 @@
 		FC2BD12219B23CBF003ECABA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Jon Brown Designs";
 				TargetAttributes = {
 					FC2BD12919B23CBF003ECABA = {
@@ -731,38 +720,27 @@
 				FC4E643719EB4B7C0079C0A3 /* AppDelegate.m in Sources */,
 				FC4E642419EB4B120079C0A3 /* DetailNewsViewController.m in Sources */,
 				FC4E641219EB4A530079C0A3 /* TVCDetailViewController.m in Sources */,
-				FC4E645719EB4BF70079C0A3 /* AQGridViewData.m in Sources */,
 				FC4E641119EB4A530079C0A3 /* FishTVC.m in Sources */,
 				FC4E643A19EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld in Sources */,
 				FC4E642B19EB4B300079C0A3 /* TableViewCellNews.m in Sources */,
 				FC4E641D19EB4AAC0079C0A3 /* LingoTableViewController.m in Sources */,
-				FC4E645C19EB4BF70079C0A3 /* UIColor+AQGridView.m in Sources */,
-				FC4E645419EB4BF70079C0A3 /* AQGridViewAnimatorItem.m in Sources */,
-				FC4E640B19EB4A490079C0A3 /* GridViewCell.m in Sources */,
 				FC1195FE1B65D37B0019E1CA /* ARScrollViewEnhancer.m in Sources */,
 				FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */,
-				FC4E645919EB4BF70079C0A3 /* AQGridViewUpdateItem.m in Sources */,
 				FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */,
 				FC4E640519EB49D30079C0A3 /* AboutTableViewController.m in Sources */,
 				FC4E643919EB4B7C0079C0A3 /* FishCat.m in Sources */,
-				FC4E645B19EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				FC2BD13A19B23CBF003ECABA /* main.m in Sources */,
-				FC4E645319EB4BF70079C0A3 /* AQGridView.m in Sources */,
 				FC07E65F1D88F1EA00B48EE5 /* MBProgressHUD.m in Sources */,
 				FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */,
-				FC4E645619EB4BF70079C0A3 /* AQGridViewController.m in Sources */,
 				FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */,
-				FC4E645819EB4BF70079C0A3 /* AQGridViewUpdateInfo.m in Sources */,
 				FC1195FF1B65D37B0019E1CA /* CustomCell.m in Sources */,
 				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
 				FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */,
-				FC4E645A19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
 				FC8FD36D1D84A51800CBA1D1 /* iRate.m in Sources */,
 				FC1196011B65D37B0019E1CA /* DetailView.m in Sources */,
 				FC7153811B5DE3E300F6E137 /* About.m in Sources */,
 				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
 				FC4E641619EB4A5C0079C0A3 /* WebViewController.m in Sources */,
-				FC4E645519EB4BF70079C0A3 /* AQGridViewCell.m in Sources */,
 				FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */,
 				FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */,
 			);
@@ -835,14 +813,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -855,7 +838,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -875,20 +858,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -916,7 +904,7 @@
 					"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -946,7 +934,7 @@
 					"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

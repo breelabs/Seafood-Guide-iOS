@@ -38,10 +38,7 @@
 {
 	if ( [obj isKindOfClass: [self class]] == NO )
 	{
-		if ( (void *)objc_unretainedPointer(self) < (void *)objc_unretainedPointer(obj) )
-			return ( NSOrderedAscending );
-		if ( (void *)objc_unretainedPointer(self) > (void *)objc_unretainedPointer(obj) )
-			return ( NSOrderedDescending );
+		
 		return ( NSOrderedSame );			// how ??!?!?
 	}
 	

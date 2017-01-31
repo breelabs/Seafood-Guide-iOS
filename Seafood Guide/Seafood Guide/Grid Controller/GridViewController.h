@@ -7,19 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AQGridView.h"
 #import <CoreData/CoreData.h>
 #import "FishTVC.h"
 
-@interface GridViewController : UIViewController <AQGridViewDelegate, AQGridViewDataSource>
-
+@interface GridViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+{
+    IBOutlet UIButton *customButtonHome;
+}
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, retain) IBOutlet AQGridView * gridView;
-
 @property (nonatomic, retain) NSArray * services;
+@property (nonatomic, retain) NSArray * recipeImages;
+@property (nonatomic, retain) IBOutlet UICollectionView *myCollectionView;
+@property (retain) TVCDetailViewController *detailNewsViewController;
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+
 
 @end

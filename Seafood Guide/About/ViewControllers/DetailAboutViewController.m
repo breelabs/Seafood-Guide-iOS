@@ -229,14 +229,32 @@
         //        CGFloat height = MAX(textRect.size.height, 44.0f);
         //        return height + (2 * 2);
         
-        CGSize size = [[item descnews] sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290 - (10 * 2), 200000.0f)];
+        //CGSize size = [[item descnews] sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290 - (10 * 2), 200000.0f)];
         
-        CGFloat height = MAX(size.height, 100.0f);
+        // Create a paragraph style with the desired line break mode
+        NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+        paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
+        
+        // Create the attributes dictionary with the font and paragraph style
+        NSDictionary *attributes = @{
+                                     NSFontAttributeName:[UIFont systemFontOfSize:17],
+                                     NSParagraphStyleAttributeName:paragraphStyle
+                                     };
+        
+        // Call boundingRectWithSize:options:attributes:context for the string
+        CGRect textRect = [[item descnews] boundingRectWithSize:CGSizeMake(290 - (10 * 2), 200000.0f)
+                                                    options:NSStringDrawingUsesLineFragmentOrigin
+                                                 attributes:attributes
+                                                    context:nil];
+        
+        float height = textRect.size.height;
+        
+        //CGFloat height = MAX(size.height, 100.0f);
         
         return height + (2 * 2);
         
-        self.tableView.estimatedRowHeight = 100.0;
-        self.tableView.rowHeight = UITableViewAutomaticDimension;
+        //self.tableView.estimatedRowHeight = 100.0;
+        //self.tableView.rowHeight = UITableViewAutomaticDimension;
         
     }
     return 44;
