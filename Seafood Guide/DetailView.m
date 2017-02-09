@@ -157,7 +157,8 @@
 }
 
 -(IBAction)download {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url_with_id]];
+    UIApplication *application = [UIApplication sharedApplication];
+    [application openURL:[NSURL URLWithString:url_with_id] options:@{} completionHandler:nil];
 }
 
 -(IBAction)view_description {
