@@ -258,7 +258,7 @@
         
         if (result.height >= 568) {
             // 4 inch display (or bigger).
-            [scroll setContentSize:CGSizeMake(320, 585)];
+            [scroll setContentSize:CGSizeMake(320, 985)];
         }
     }
     

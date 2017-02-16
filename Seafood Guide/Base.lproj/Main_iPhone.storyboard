@@ -490,14 +490,14 @@
                 <viewController storyboardIdentifier="more_detailview" id="IXe-4n-A15" customClass="DetailView" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4OY-cO-5TW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" id="4oX-SO-rJY">
-                                <rect key="frame" x="0.0" y="44" width="320" height="534"/>
-                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                            <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="4oX-SO-rJY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="topRight" id="dFe-wB-pN0">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="808"/>
+                                    <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="topRight" misplaced="YES" id="dFe-wB-pN0">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1500"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" text="Jon Brown Designs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZZ4-4J-Wfv">
@@ -599,8 +599,8 @@
                                                     <outlet property="_scrollView" destination="rBF-sQ-6H2" id="nng-bS-D3T"/>
                                                 </connections>
                                             </view>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="qVO-Q2-iqg">
-                                                <rect key="frame" x="15" y="504" width="295" height="550"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="qVO-Q2-iqg">
+                                                <rect key="frame" x="15" y="504" width="295" height="840"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -623,7 +623,7 @@
                                 </subviews>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
-                                        <size key="value" width="0.0" height="0.0"/>
+                                        <size key="value" width="0.0" height="2000"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
@@ -687,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VU-OG-EYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="2832"/>
+            <point key="canvasLocation" x="1643.5" y="2831.5"/>
         </scene>
     </scenes>
     <resources>
