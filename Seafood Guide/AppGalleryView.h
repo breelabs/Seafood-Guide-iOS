@@ -15,6 +15,7 @@
 // Replace 'danielsadjadian' with your developer name. make sure your
 // developer name is typed like the above with no spaces or capital letters.
 #define DEV_NAME @"jonbrowndesigns"
+#define DEV_NAME2 @"thearcoftheunitedstates"
 
 @class CustomCell;
 @interface AppGalleryView : UIViewController <UITableViewDataSource, UITableViewDelegate, MBProgressHUDDelegate> {
@@ -24,6 +25,7 @@
     
     // JSON parsing - data storage.
     NSMutableData *responseData;
+    NSMutableData *responseData2;
     MBProgressHUD *HUD;
     // App list data - name, icon, dev name
     // price, url link, etc...
@@ -40,9 +42,25 @@
     NSArray *app_screenshot_iphone;
     NSArray *app_screenshot_ipad;
     
+    NSArray *app_names2;
+    NSArray *dev_names2;
+    NSArray *app_prices2;
+    NSArray *app_icons2;
+    NSArray *app_ids2;
+    NSArray *app_versions2;
+    NSArray *app_descriptions2;
+    NSArray *app_age2;
+    NSArray *app_ratings2;
+    NSArray *app_size2;
+    NSArray *app_screenshot_iphone2;
+    NSArray *app_screenshot_ipad2;
+    
+    NSURLConnection * jon_apps;
+    NSURLConnection * arc_apps;
     // How many apps need to be shown?
     // (Automatically processed).
     NSInteger result_count;
+    NSInteger result_count2;
     
     // Activity indicator - data loading.
     IBOutlet UIActivityIndicatorView *active;

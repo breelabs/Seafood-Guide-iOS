@@ -25,6 +25,7 @@
         [self performSelector:@selector(hideHud) withObject:self afterDelay:1.0 ];
     });
     [self refresh];
+    
 }
 - (void)hideHud
 {
@@ -49,6 +50,7 @@
     
     // Start loading the data.
     [self refresh];
+    [self refresh2];
 }
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
@@ -72,7 +74,7 @@
     NSString *link = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&country=us&entity=software", DEV_NAME];
     NSURLRequest *theRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:link]];
     
-    //NSURLConnection *theConnection =[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
+    //NSURLConnection *jon_apps =[[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
     
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
     
@@ -193,6 +195,131 @@
     
 }
 
+
+-(void)refresh2 {
+    
+    // Show the user the data is loading.
+    //[active startAnimating];
+    
+    
+    // Setup the JSON url and download the data on request.
+    NSString *link2 = [NSString stringWithFormat:@"https://itunes.apple.com/search?term=%@&country=us&entity=software", DEV_NAME2];
+    NSURLRequest *theRequest2 = [NSURLRequest requestWithURL:[NSURL URLWithString:link2]];
+    
+    //NSURLConnection *arc_apps =[[NSURLConnection alloc] initWithRequest:theRequest2 delegate:self];
+    
+    NSURLSession *session2 = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSURLSessionDataTask *dataTask2 = [session2 dataTaskWithRequest:theRequest2 completionHandler:^(NSData *data2, NSURLResponse *response2, NSError *error) {
+        
+        // handle basic connectivity issues here
+        
+        if (error) {
+            //NSLog(@"dataTaskWithRequest error: %@", error);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [MBProgressHUD hideHUDForView:self.view animated:YES];
+            });
+            
+            
+            NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
+            
+            UIAlertController *alert = [UIAlertController
+                                        alertControllerWithTitle:@"Data loading error"
+                                        message:msg
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            
+            UIAlertAction *noButton = [UIAlertAction
+                                       actionWithTitle:@"Dismiss"
+                                       style:UIAlertActionStyleDefault
+                                       handler:^(UIAlertAction * action) {
+                                           //Handle no, thanks button
+                                           [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                       }];
+            
+            [alert addAction:noButton];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+            return;
+        }
+        
+        // handle HTTP errors here
+        
+        if ([response2 isKindOfClass:[NSHTTPURLResponse class]]) {
+            
+            NSInteger statusCode = [(NSHTTPURLResponse *)response2 statusCode];
+            
+            if (statusCode != 200) {
+                //NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                });
+                NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
+                
+                UIAlertController *alert = [UIAlertController
+                                            alertControllerWithTitle:@"Data loading error"
+                                            message:msg
+                                            preferredStyle:UIAlertControllerStyleAlert];
+                
+                
+                UIAlertAction *noButton = [UIAlertAction
+                                           actionWithTitle:@"Dismiss"
+                                           style:UIAlertActionStyleDefault
+                                           handler:^(UIAlertAction * action) {
+                                               //Handle no, thanks button
+                                               [self.presentedViewController dismissViewControllerAnimated:NO completion:nil];
+                                           }];
+                
+                [alert addAction:noButton];
+                
+                [self presentViewController:alert animated:YES completion:nil];
+                
+                return;
+            }
+        }
+        
+        // otherwise, everything is probably fine and you should interpret the `data` contents
+        
+        responseData2 = [[NSMutableData alloc] init];
+        [responseData2 setLength:0];
+        [responseData2 appendData:data2];
+        
+        NSError *myError = nil;
+        NSDictionary *res2 = [NSJSONSerialization JSONObjectWithData:responseData2 options:NSJSONReadingMutableLeaves error:&myError];
+        
+        // Store how many apps need to be loaded.
+        result_count2 = [[res2 valueForKey:@"resultCount"] integerValue];
+        
+        // Store the app data - name, icon, etc...
+        app_names2 = [[res2 objectForKey:@"results"] valueForKey:@"trackName" ];
+        dev_names2 = [[res2 objectForKey:@"results"] valueForKey:@"sellerName"];
+        app_prices2 = [[res2 objectForKey:@"results"] valueForKey:@"formattedPrice"];
+        app_icons2 = [[res2 objectForKey:@"results"] valueForKey:@"artworkUrl512"];
+        app_ids2 = [[res2 objectForKey:@"results"] valueForKey:@"trackId"];
+        app_versions2 = [[res2 objectForKey:@"results"] valueForKey:@"version"];
+        app_descriptions2 = [[res2 objectForKey:@"results"] valueForKey:@"description"];
+        app_age2 = [[res2 objectForKey:@"results"] valueForKey:@"contentAdvisoryRating"];
+        app_ratings2 = [[res2 objectForKey:@"results"] valueForKey:@"averageUserRating"];
+        app_size2 = [[res2 objectForKey:@"results"] valueForKey:@"fileSizeBytes"];
+        app_screenshot_iphone2 = [[res2 objectForKey:@"results"] valueForKey:@"screenshotUrls"];
+        app_screenshot_ipad2 = [[res2 objectForKey:@"results"] valueForKey:@"ipadScreenshotUrls"];
+        
+        // Data is now saved locally, so lets load
+        // it into the UITableView to be presented
+        // to the user and stop the activity indicator.
+        [active stopAnimating];
+        [app_table reloadData];
+        
+        //NSLog(@"data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+
+    }];
+    [dataTask2 resume];
+    
+   
+}
+
+
 /// Data loading methods ///
 
 -(void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -222,11 +349,22 @@
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    [responseData setLength:0];
+    if (connection == jon_apps) {
+        [responseData setLength:0];
+    } else if ( connection == arc_apps) {
+        [responseData2 setLength:0];
+    }
+    
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    [responseData appendData:data];
+    
+    if (connection == jon_apps) {
+        [responseData appendData:data];
+    } else if ( connection == arc_apps) {
+        [responseData2 appendData:data];
+    }
+ 
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -251,6 +389,26 @@
     app_screenshot_iphone = [[res objectForKey:@"results"] valueForKey:@"screenshotUrls"];
     app_screenshot_ipad = [[res objectForKey:@"results"] valueForKey:@"ipadScreenshotUrls"];
     
+    NSDictionary *res2 = [NSJSONSerialization JSONObjectWithData:responseData2 options:NSJSONReadingMutableLeaves error:&myError];
+    
+    // Store how many apps need to be loaded.
+    result_count2 = [[res2 valueForKey:@"resultCount"] integerValue];
+    
+    // Store the app data - name, icon, etc...
+    app_names2 = [[res2 objectForKey:@"results"] valueForKey:@"trackName"];
+    dev_names2 = [[res2 objectForKey:@"results"] valueForKey:@"sellerName"];
+    app_prices2 = [[res2 objectForKey:@"results"] valueForKey:@"formattedPrice"];
+    app_icons2 = [[res2 objectForKey:@"results"] valueForKey:@"artworkUrl512"];
+    app_ids2 = [[res2 objectForKey:@"results"] valueForKey:@"trackId"];
+    app_versions2 = [[res2 objectForKey:@"results"] valueForKey:@"version"];
+    app_descriptions2 = [[res2 objectForKey:@"results"] valueForKey:@"description"];
+    app_age2 = [[res2 objectForKey:@"results"] valueForKey:@"contentAdvisoryRating"];
+    app_ratings2 = [[res2 objectForKey:@"results"] valueForKey:@"averageUserRating"];
+    app_size2 = [[res2 objectForKey:@"results"] valueForKey:@"fileSizeBytes"];
+    app_screenshot_iphone2 = [[res2 objectForKey:@"results"] valueForKey:@"screenshotUrls"];
+    app_screenshot_ipad2 = [[res2 objectForKey:@"results"] valueForKey:@"ipadScreenshotUrls"];
+    
+    
     // Data is now saved locally, so lets load
     // it into the UITableView to be presented
     // to the user and stop the activity indicator.
@@ -262,107 +420,214 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    // Check the rating, make sure it is
-    // not null first and then pass it on.
+    if (indexPath.section == 0)
+    {
+        // Check the rating, make sure it is
+        // not null first and then pass it on.
+        
+        NSString *selectedValue = [app_names objectAtIndex:indexPath.row];
+        
+        NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
+        NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
+        [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
+        
+        NSString *cellValue;
+        
+        if ([selectedValue  isEqual: @"Animal Age Converter"]){
+            cellValue = @"0";
+        } else if ([selectedValue  isEqual: @"Seafood Guide"]) {
+            cellValue = @"1";
+        } else if ([selectedValue  isEqual: @"We're Gurus!"]) {
+            cellValue = @"2";
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setValue:cellValue forKey:@"cellIndex"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        NSLog(@"WHY %@", cellValue);
+        
+        NSInteger rating;
+        
+        if (![app_ratings[indexPath.row] isKindOfClass:[NSNull class]]) {
+            rating = [app_ratings[indexPath.row] integerValue];
+        }
+        
+        else {
+            rating = 0;
+        }
+        
+        // Open the detail view and pass the data
+        // to be presented in detail to the user.
+        
+        // Edit the input size to MB.
+        float size = [app_size[indexPath.row] integerValue];
+        size = (size / 1000000);
+        
+        
+        
+        
+        NSString *view_name = @"Main_iPhone";
+        UIStoryboard *newStoryboard = [UIStoryboard storyboardWithName:view_name bundle: nil];
+        DetailView *firstvc = [newStoryboard instantiateViewControllerWithIdentifier:@"more_detailview"];
+        self.data_pass = firstvc;
+        
+        
+        // Set the data to be passed - names, links, etc...
+        data_pass.input_name = [NSString stringWithFormat:@"%@", app_names[indexPath.row]];
+        data_pass.input_dev_name = @"Jon Brown Designs";
+        data_pass.input_price = [NSString stringWithFormat:@"%@", app_prices[indexPath.row]];
+        data_pass.input_size = [NSString stringWithFormat:@"%.1fMB", size];
+        data_pass.input_age = [NSString stringWithFormat:@"%@", app_age[indexPath.row]];
+        data_pass.input_version = [NSString stringWithFormat:@"V%@", app_versions[indexPath.row]];
+        data_pass.input_id = [NSString stringWithFormat:@"%@", app_ids[indexPath.row]];
+        data_pass.input_rating = [NSString stringWithFormat:@"%ld", (long)rating];
+        data_pass.input_logo_link = [NSString stringWithFormat:@"%@", app_icons[indexPath.row]];
+        data_pass.input_choice = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+        data_pass.input_description = [NSString stringWithFormat:@"%@", app_descriptions[indexPath.row]];
+        
+        // Pass the screenshot array. We will show the
+        // correct image type depending on the device
+        // and then what type of screenshots are available.
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            
+            // If the device is an iPad, we will show iPad
+            // size screenshots. However if the app is an iPhone
+            // only app then we will have to show the iPhone
+            // sized screenshots.
+            
+            if ([app_screenshot_ipad[indexPath.row] count] > 0) {
+                data_pass.input_screenshot = app_screenshot_ipad;
+            }
+            
+            else {
+                data_pass.input_screenshot = app_screenshot_iphone;
+            }
+        }
+        
+        else {
+            
+            // If the device is an iPhone/iPod Touch, we will show
+            // iPhone size screenshots. However if the app is an iPad
+            // only app then we will have to show the iPad sized screenshots.
+            
+            if ([app_screenshot_iphone[indexPath.row] count] > 0) {
+                data_pass.input_screenshot = app_screenshot_iphone;
+            }
+            
+            else {
+                data_pass.input_screenshot = app_screenshot_ipad;
+            }
+        }
+        
+        [self presentViewController:firstvc animated:YES completion:^{
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        }];
+    }
     
-    NSString *selectedValue = [app_names objectAtIndex:indexPath.row];
     
-    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
-    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
-    
-    NSString *cellValue;
-    
-    if ([selectedValue  isEqual: @"Animal Age Converter"]){
-        cellValue = @"0";
-    } else if ([selectedValue  isEqual: @"Seafood Guide"]) {
-        cellValue = @"1";
-    } else if ([selectedValue  isEqual: @"We're Gurus!"]) {
+    if (indexPath.section == 1)
+    {
+        
+        // Check the rating, make sure it is
+        // not null first and then pass it on.
+        
+        //NSString *selectedValue = [app_names2 objectAtIndex:indexPath.row];
+        
+        NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
+        NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
+        [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
+        
+        NSString *cellValue;
+        
         cellValue = @"2";
-    }
-    
-    [[NSUserDefaults standardUserDefaults] setValue:cellValue forKey:@"cellIndex"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    NSLog(@"WHY %@", cellValue);
-    
-    NSInteger rating;
-    
-    if (![app_ratings[indexPath.row] isKindOfClass:[NSNull class]]) {
-        rating = [app_ratings[indexPath.row] integerValue];
-    }
-    
-    else {
-        rating = 0;
-    }
-    
-    // Open the detail view and pass the data
-    // to be presented in detail to the user.
-    
-    // Edit the input size to MB.
-    float size = [app_size[indexPath.row] integerValue];
-    size = (size / 1000000);
-    
-
-    
-    
-    NSString *view_name = @"Main_iPhone";
-    UIStoryboard *newStoryboard = [UIStoryboard storyboardWithName:view_name bundle: nil];
-    DetailView *firstvc = [newStoryboard instantiateViewControllerWithIdentifier:@"more_detailview"];
-    self.data_pass = firstvc;
-    
-    
-    // Set the data to be passed - names, links, etc...
-    data_pass.input_name = [NSString stringWithFormat:@"%@", app_names[indexPath.row]];
-	data_pass.input_dev_name = [NSString stringWithFormat:@"%@", dev_names[indexPath.row]];
-    data_pass.input_price = [NSString stringWithFormat:@"%@", app_prices[indexPath.row]];
-    data_pass.input_size = [NSString stringWithFormat:@"%.1fMB", size];
-    data_pass.input_age = [NSString stringWithFormat:@"%@", app_age[indexPath.row]];
-    data_pass.input_version = [NSString stringWithFormat:@"V%@", app_versions[indexPath.row]];
-    data_pass.input_id = [NSString stringWithFormat:@"%@", app_ids[indexPath.row]];
-    data_pass.input_rating = [NSString stringWithFormat:@"%ld", (long)rating];
-    data_pass.input_logo_link = [NSString stringWithFormat:@"%@", app_icons[indexPath.row]];
-    data_pass.input_choice = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
-    data_pass.input_description = [NSString stringWithFormat:@"%@", app_descriptions[indexPath.row]];
-    
-    // Pass the screenshot array. We will show the
-    // correct image type depending on the device
-    // and then what type of screenshots are available.
-    
-    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         
-        // If the device is an iPad, we will show iPad
-        // size screenshots. However if the app is an iPhone
-        // only app then we will have to show the iPhone
-        // sized screenshots.
+        [[NSUserDefaults standardUserDefaults] setValue:cellValue forKey:@"cellIndex"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
         
-        if ([app_screenshot_ipad[indexPath.row] count] > 0) {
-            data_pass.input_screenshot = app_screenshot_ipad;
+        NSLog(@"WHY %@", cellValue);
+        
+        NSInteger rating;
+        
+        if (![app_ratings2[indexPath.row] isKindOfClass:[NSNull class]]) {
+            rating = [app_ratings2[indexPath.row] integerValue];
         }
         
         else {
-            data_pass.input_screenshot = app_screenshot_iphone;
+            rating = 0;
         }
-    }
-    
-    else {
         
-        // If the device is an iPhone/iPod Touch, we will show
-        // iPhone size screenshots. However if the app is an iPad
-        // only app then we will have to show the iPad sized screenshots.
+        // Open the detail view and pass the data
+        // to be presented in detail to the user.
         
-        if ([app_screenshot_iphone[indexPath.row] count] > 0) {
-            data_pass.input_screenshot = app_screenshot_iphone;
+        // Edit the input size to MB.
+        float size = [app_size2[indexPath.row] integerValue];
+        size = (size / 1000000);
+        
+        
+        
+        
+        NSString *view_name = @"Main_iPhone";
+        UIStoryboard *newStoryboard = [UIStoryboard storyboardWithName:view_name bundle: nil];
+        DetailView *firstvc = [newStoryboard instantiateViewControllerWithIdentifier:@"more_detailview"];
+        self.data_pass = firstvc;
+        
+        
+        // Set the data to be passed - names, links, etc...
+        data_pass.input_name = [NSString stringWithFormat:@"%@", app_names2[indexPath.row]];
+        data_pass.input_dev_name = @"The Arc";
+        data_pass.input_price = [NSString stringWithFormat:@"%@", app_prices2[indexPath.row]];
+        data_pass.input_size = [NSString stringWithFormat:@"%.1fMB", size];
+        data_pass.input_age = [NSString stringWithFormat:@"%@", app_age2[indexPath.row]];
+        data_pass.input_version = [NSString stringWithFormat:@"V%@", app_versions2[indexPath.row]];
+        data_pass.input_id = [NSString stringWithFormat:@"%@", app_ids2[indexPath.row]];
+        data_pass.input_rating = [NSString stringWithFormat:@"%ld", (long)rating];
+        data_pass.input_logo_link = [NSString stringWithFormat:@"%@", app_icons2[indexPath.row]];
+        data_pass.input_choice = [NSString stringWithFormat:@"%ld", (long)indexPath.row];
+        data_pass.input_description = [NSString stringWithFormat:@"%@", app_descriptions2[indexPath.row]];
+        
+        // Pass the screenshot array. We will show the
+        // correct image type depending on the device
+        // and then what type of screenshots are available.
+        
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+            
+            // If the device is an iPad, we will show iPad
+            // size screenshots. However if the app is an iPhone
+            // only app then we will have to show the iPhone
+            // sized screenshots.
+            
+            if ([app_screenshot_ipad2[indexPath.row] count] > 0) {
+                data_pass.input_screenshot = app_screenshot_ipad2;
+            }
+            
+            else {
+                data_pass.input_screenshot = app_screenshot_iphone2;
+            }
         }
         
         else {
-            data_pass.input_screenshot = app_screenshot_ipad;
+            
+            // If the device is an iPhone/iPod Touch, we will show
+            // iPhone size screenshots. However if the app is an iPad
+            // only app then we will have to show the iPad sized screenshots.
+            
+            if ([app_screenshot_iphone[indexPath.row] count] > 0) {
+                data_pass.input_screenshot = app_screenshot_iphone2;
+            }
+            
+            else {
+                data_pass.input_screenshot = app_screenshot_ipad2;
+            }
         }
+        
+        [self presentViewController:firstvc animated:YES completion:^{
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+        }];
+        
+        
     }
     
-    [self presentViewController:firstvc animated:YES completion:^{
-        [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -378,10 +643,6 @@
     
     cell.logo_image.image = nil;
     
-    // Set the labels - name, info, etc...
-    cell.name_label.text = [NSString stringWithFormat:@"%@", app_names[indexPath.row]];
-    cell.dev_label.text = [NSString stringWithFormat:@"%@", dev_names[indexPath.row]];
-    
     // Set the rating stars to the correct number
     // and then show the stars.
     NSInteger rating;
@@ -392,57 +653,148 @@
     cell.star_4.alpha = 1.0;
     cell.star_5.alpha = 1.0;
     
-    if (![app_ratings[indexPath.row] isKindOfClass:[NSNull class]]) {
-        
-        rating = [app_ratings[indexPath.row] integerValue];
-        
-        for (int loop = 0; loop <= rating; loop++) {
-            
-            switch (loop) {
-                    
-                case 1: cell.star_1.alpha = 1.0; break;
-                case 2: cell.star_2.alpha = 1.0; break;
-                case 3: cell.star_3.alpha = 1.0; break;
-                case 4: cell.star_4.alpha = 1.0; break;
-                case 5: cell.star_5.alpha = 1.0; break;
-                    
-                default: break;
-            }
-        }
-    }
-    
     // Set the app logo in the imageview. We will also be caching
     // the images in asynchronously so that there is no image
     // flickering issues and so the UITableView uns smoothly
     // while being scrolled.
     NSString *identifier = [NSString stringWithFormat:@"Cell%ld", (long)indexPath.row];
     
-    if ([self.cached_images objectForKey:identifier] != nil) {
-        cell.logo_image.image = [self.cached_images valueForKey:identifier];
+    
+    
+    
+    if(indexPath.section == 0) {
+        // Set the labels - name, info, etc...
+        cell.name_label.text = [NSString stringWithFormat:@"%@", app_names[indexPath.row]];
+        cell.dev_label.text = @"Jon Brown Designs";
+        
+        
+        if (![app_ratings[indexPath.row] isKindOfClass:[NSNull class]]) {
+            
+            rating = [app_ratings[indexPath.row] integerValue];
+            
+            for (int loop = 0; loop <= rating; loop++) {
+                
+                switch (loop) {
+                        
+                    case 1: cell.star_1.alpha = 1.0; break;
+                    case 2: cell.star_2.alpha = 1.0; break;
+                    case 3: cell.star_3.alpha = 1.0; break;
+                    case 4: cell.star_4.alpha = 1.0; break;
+                    case 5: cell.star_5.alpha = 1.0; break;
+                        
+                    default: break;
+                }
+            }
+        }
+        
+        
+            
+            dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
+            dispatch_async(downloadQueue, ^{
+                
+                NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons[indexPath.row]]];
+                NSData *data = [NSData dataWithContentsOfURL:imageUrl];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    UIImage *image = [UIImage imageWithData:data];
+                    [cell.logo_image setImage:image];
+                    
+                    [self.cached_images setValue:image forKey:identifier];
+                    cell.logo_image.image = [self.cached_images valueForKey:identifier];
+                    
+                    // Content has been loaded into the cell, so stop
+                    // the activity indicator from spinning.
+                    [cell.logo_active stopAnimating];
+                });
+            });
+        
+
+        
     }
     
-    else {
+    if(indexPath.section == 1) {
         
-        dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
-        dispatch_async(downloadQueue, ^{
+        if(indexPath.row == 0){
+            [cell.name_label setHidden:YES];
+            [cell.dev_label setHidden:YES];
+            [cell.logo_image setHidden:YES];
+            [cell.logo_active setHidden:YES];
+            [cell.star_5 setHidden:YES];
+            [cell.star_4 setHidden:YES];
+            [cell.star_3 setHidden:YES];
+            [cell.star_2 setHidden:YES];
+            [cell.star_1 setHidden:YES];
+            [cell.contentView setHidden:YES];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+        if(indexPath.row == 1){
+            [cell.name_label setHidden:YES];
+            [cell.dev_label setHidden:YES];
+            [cell.logo_image setHidden:YES];
+            [cell.logo_active setHidden:YES];
+            [cell.star_5 setHidden:YES];
+            [cell.star_4 setHidden:YES];
+            [cell.star_3 setHidden:YES];
+            [cell.star_2 setHidden:YES];
+            [cell.star_1 setHidden:YES];
+            [cell.contentView setHidden:YES];
+            cell.accessoryType = UITableViewCellAccessoryNone;
+        }
+        
+        // Set the labels - name, info, etc...
+        
+        cell.name_label.text = [NSString stringWithFormat:@"%@", app_names2[indexPath.row]];
+        cell.dev_label.text = @"The Arc";
+        
+        if (![app_ratings2[indexPath.row] isKindOfClass:[NSNull class]]) {
             
-            NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons[indexPath.row]]];
-            NSData *data = [NSData dataWithContentsOfURL:imageUrl];
+            rating = [app_ratings2[indexPath.row] integerValue];
             
-            dispatch_async(dispatch_get_main_queue(), ^{
+            for (int loop = 0; loop <= rating; loop++) {
                 
-                UIImage *image = [UIImage imageWithData:data];
-                [cell.logo_image setImage:image];
+                switch (loop) {
+                        
+                    case 1: cell.star_1.alpha = 1.0; break;
+                    case 2: cell.star_2.alpha = 1.0; break;
+                    case 3: cell.star_3.alpha = 1.0; break;
+                    case 4: cell.star_4.alpha = 1.0; break;
+                    case 5: cell.star_5.alpha = 1.0; break;
+                        
+                    default: break;
+                }
+            }
+        }
+        
+        
+        
+            
+            dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
+            dispatch_async(downloadQueue, ^{
                 
-                [self.cached_images setValue:image forKey:identifier];
-                cell.logo_image.image = [self.cached_images valueForKey:identifier];
+                NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons2[indexPath.row]]];
+                NSData *data = [NSData dataWithContentsOfURL:imageUrl];
                 
-                // Content has been loaded into the cell, so stop
-                // the activity indicator from spinning.
-                [cell.logo_active stopAnimating];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    UIImage *image = [UIImage imageWithData:data];
+                    [cell.logo_image setImage:image];
+                    
+                    [self.cached_images setValue:image forKey:identifier];
+                    cell.logo_image.image = [self.cached_images valueForKey:identifier];
+                    
+                    // Content has been loaded into the cell, so stop
+                    // the activity indicator from spinning.
+                    [cell.logo_active stopAnimating];
+                });
             });
-        });
+        
+
+        
+        
     }
+    
     
     // Apply image boarder effects. It looks
     // much nicer with rounded corners. You can
@@ -470,15 +822,67 @@
 }
 
 -(CGFloat)tableView :(UITableView *)tableView heightForRowAtIndexPath :(NSIndexPath *)indexPath {
-    return 116;
+    
+    float heightForRow = 116;
+    
+    if(indexPath.section == 1) {
+        
+        if(indexPath.row == 0){
+            return 0;
+        }
+        if(indexPath.row == 1){
+            return 0;
+        }
+        
+    }
+      return heightForRow;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *) tableView {
-    return 1;
+    return 2;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    
+    if (section == 0)
+    {
+        return @"Our Apps";
+    }
+    if (section == 1)
+    {
+        return @"Contributed";
+    }
+    return @"Contributed";
 }
 
 -(NSInteger)tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
+   
+    if (section == 0)
+    {
+        return result_count;
+    }
+    if (section == 1)
+    {
+        return result_count2;
+    }
     return result_count;
+    
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    
+    if(section==0){
+        return 50.0f;
+    }
+    else if(section==1){
+        return 50.0f;
+    }
+    else{
+        return 50.0f;
+    }
+    
 }
 
 /// Other methods ///
