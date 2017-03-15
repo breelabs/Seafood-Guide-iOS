@@ -7,7 +7,6 @@
 //
 
 #import "AppGalleryView.h"
-#import "MBProgressHUD.h"
 
 @interface AppGalleryView ()
 
@@ -20,27 +19,28 @@
 
 -(IBAction)refresh_button {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [ProgressHUD show:@"Please wait..."];
         
         [self performSelector:@selector(hideHud) withObject:self afterDelay:1.0 ];
     });
     [self refresh];
-    
+    [self refresh2];
 }
 - (void)hideHud
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+        [ProgressHUD dismiss];
     });
 }
 -(IBAction)done {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 /// View Did Load ///
 
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     
     // Initilise the app logo image cache.
@@ -51,7 +51,19 @@
     // Start loading the data.
     [self refresh];
     [self refresh2];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [app_table reloadData];
+    });
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [app_table reloadData];
+    });
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     return YES;
@@ -64,8 +76,7 @@
     //[active startAnimating];
     
     dispatch_async(dispatch_get_main_queue(), ^{
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-        HUD.delegate = self;
+        [ProgressHUD show:@"Please wait..."];
     });
     
     
@@ -85,7 +96,7 @@
         if (error) {
             //NSLog(@"dataTaskWithRequest error: %@", error);
             dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [ProgressHUD dismiss];
             });
             
             
@@ -121,7 +132,7 @@
             if (statusCode != 200) {
                 //NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    [ProgressHUD dismiss];
                 });
                 NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
                 
@@ -177,11 +188,12 @@
         // it into the UITableView to be presented
         // to the user and stop the activity indicator.
         [active stopAnimating];
-        [app_table reloadData];
+        
         
         //NSLog(@"data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
         dispatch_async(dispatch_get_main_queue(), ^{
-            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            [app_table reloadData];
+            [ProgressHUD dismiss];
         });
     }];
     [dataTask resume];
@@ -217,7 +229,7 @@
         if (error) {
             //NSLog(@"dataTaskWithRequest error: %@", error);
             dispatch_async(dispatch_get_main_queue(), ^{
-                [MBProgressHUD hideHUDForView:self.view animated:YES];
+                [ProgressHUD dismiss];
             });
             
             
@@ -253,7 +265,7 @@
             if (statusCode != 200) {
                 //NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
                 dispatch_async(dispatch_get_main_queue(), ^{
-                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+                    [ProgressHUD dismiss];
                 });
                 NSString *msg = [NSString stringWithFormat:@"Failed: %@", [error description]];
                 
@@ -309,14 +321,14 @@
         // it into the UITableView to be presented
         // to the user and stop the activity indicator.
         [active stopAnimating];
-        [app_table reloadData];
+        
         
         //NSLog(@"data: %@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-
+        
     }];
     [dataTask2 resume];
     
-   
+    
 }
 
 
@@ -344,8 +356,8 @@
     
     [self presentViewController:alert animated:YES completion:nil];
     
-//    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data loading error" message:msg delegate:self cancelButtonTitle:@"Dismiss"otherButtonTitles:nil];
-//    [alert show];
+    //    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data loading error" message:msg delegate:self cancelButtonTitle:@"Dismiss"otherButtonTitles:nil];
+    //    [alert show];
 }
 
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -364,7 +376,7 @@
     } else if ( connection == arc_apps) {
         [responseData2 appendData:data];
     }
- 
+    
 }
 
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection {
@@ -374,7 +386,7 @@
     
     // Store how many apps need to be loaded.
     result_count = [[res valueForKey:@"resultCount"] integerValue];
-
+    
     // Store the app data - name, icon, etc...
     app_names = [[res objectForKey:@"results"] valueForKey:@"trackName"];
     dev_names = [[res objectForKey:@"results"] valueForKey:@"sellerName"];
@@ -633,7 +645,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     // Delegate call back for cell at index path.
-    static NSString *CellIdentifier = @"Cell";
+    NSString *CellIdentifier = [NSString stringWithFormat:@"%ld_%ld",(long)indexPath.section,(long)indexPath.row];
     CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
@@ -675,41 +687,41 @@
             for (int loop = 0; loop <= rating; loop++) {
                 
                 switch (loop) {
-                        
+                    
                     case 1: cell.star_1.alpha = 1.0; break;
                     case 2: cell.star_2.alpha = 1.0; break;
                     case 3: cell.star_3.alpha = 1.0; break;
                     case 4: cell.star_4.alpha = 1.0; break;
                     case 5: cell.star_5.alpha = 1.0; break;
-                        
+                    
                     default: break;
                 }
             }
         }
         
         
-            
-            dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
-            dispatch_async(downloadQueue, ^{
-                
-                NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons[indexPath.row]]];
-                NSData *data = [NSData dataWithContentsOfURL:imageUrl];
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    UIImage *image = [UIImage imageWithData:data];
-                    [cell.logo_image setImage:image];
-                    
-                    [self.cached_images setValue:image forKey:identifier];
-                    cell.logo_image.image = [self.cached_images valueForKey:identifier];
-                    
-                    // Content has been loaded into the cell, so stop
-                    // the activity indicator from spinning.
-                    [cell.logo_active stopAnimating];
-                });
-            });
         
-
+        dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
+        dispatch_async(downloadQueue, ^{
+            
+            NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons[indexPath.row]]];
+            NSData *data = [NSData dataWithContentsOfURL:imageUrl];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                UIImage *image = [UIImage imageWithData:data];
+                [cell.logo_image setImage:image];
+                
+                [self.cached_images setValue:image forKey:identifier];
+                cell.logo_image.image = [self.cached_images valueForKey:identifier];
+                
+                // Content has been loaded into the cell, so stop
+                // the activity indicator from spinning.
+                [cell.logo_active stopAnimating];
+            });
+        });
+        
+        
         
     }
     
@@ -755,13 +767,13 @@
             for (int loop = 0; loop <= rating; loop++) {
                 
                 switch (loop) {
-                        
+                    
                     case 1: cell.star_1.alpha = 1.0; break;
                     case 2: cell.star_2.alpha = 1.0; break;
                     case 3: cell.star_3.alpha = 1.0; break;
                     case 4: cell.star_4.alpha = 1.0; break;
                     case 5: cell.star_5.alpha = 1.0; break;
-                        
+                    
                     default: break;
                 }
             }
@@ -769,28 +781,28 @@
         
         
         
-            
-            dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
-            dispatch_async(downloadQueue, ^{
-                
-                NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons2[indexPath.row]]];
-                NSData *data = [NSData dataWithContentsOfURL:imageUrl];
-                
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                    UIImage *image = [UIImage imageWithData:data];
-                    [cell.logo_image setImage:image];
-                    
-                    [self.cached_images setValue:image forKey:identifier];
-                    cell.logo_image.image = [self.cached_images valueForKey:identifier];
-                    
-                    // Content has been loaded into the cell, so stop
-                    // the activity indicator from spinning.
-                    [cell.logo_active stopAnimating];
-                });
-            });
         
-
+        dispatch_queue_t downloadQueue = dispatch_queue_create("image downloader", NULL);
+        dispatch_async(downloadQueue, ^{
+            
+            NSURL *imageUrl =[NSURL URLWithString:[NSString stringWithFormat:@"%@", app_icons2[indexPath.row]]];
+            NSData *data = [NSData dataWithContentsOfURL:imageUrl];
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                UIImage *image = [UIImage imageWithData:data];
+                [cell.logo_image setImage:image];
+                
+                [self.cached_images setValue:image forKey:identifier];
+                cell.logo_image.image = [self.cached_images valueForKey:identifier];
+                
+                // Content has been loaded into the cell, so stop
+                // the activity indicator from spinning.
+                [cell.logo_active stopAnimating];
+            });
+        });
+        
+        
         
         
     }
@@ -835,7 +847,7 @@
         }
         
     }
-      return heightForRow;
+    return heightForRow;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *) tableView {
@@ -857,7 +869,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *) tableView numberOfRowsInSection:(NSInteger)section {
-   
+    
     if (section == 0)
     {
         return result_count;
@@ -903,6 +915,13 @@
 -(void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)  handleBack:(id)sender
+{
+    // pop to root view controller
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    
 }
 
 @end

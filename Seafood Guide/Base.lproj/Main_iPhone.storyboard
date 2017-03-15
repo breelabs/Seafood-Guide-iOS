@@ -325,7 +325,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2oF-wy-GeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="2832"/>
+            <point key="canvasLocation" x="562" y="2840"/>
         </scene>
         <!--More Apps-->
         <scene sceneID="4JY-LI-1pd">
@@ -361,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LaG-Ii-HU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="2832"/>
+            <point key="canvasLocation" x="1088" y="2840"/>
         </scene>
         <!--Detail News View Controller-->
         <scene sceneID="YDT-f4-FBg">
@@ -687,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2VU-OG-EYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643.5" y="2831.5"/>
+            <point key="canvasLocation" x="1628" y="2840"/>
         </scene>
     </scenes>
     <resources>
