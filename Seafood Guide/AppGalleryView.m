@@ -451,6 +451,8 @@
             cellValue = @"1";
         } else if ([selectedValue  isEqual: @"We're Gurus!"]) {
             cellValue = @"2";
+        } else if ([selectedValue  isEqual: @"BeFit Tracker"]) {
+            cellValue = @"3";
         }
         
         [[NSUserDefaults standardUserDefaults] setValue:cellValue forKey:@"cellIndex"];
@@ -687,13 +689,13 @@
             for (int loop = 0; loop <= rating; loop++) {
                 
                 switch (loop) {
-                    
+                        
                     case 1: cell.star_1.alpha = 1.0; break;
                     case 2: cell.star_2.alpha = 1.0; break;
                     case 3: cell.star_3.alpha = 1.0; break;
                     case 4: cell.star_4.alpha = 1.0; break;
                     case 5: cell.star_5.alpha = 1.0; break;
-                    
+                        
                     default: break;
                 }
             }
@@ -767,13 +769,13 @@
             for (int loop = 0; loop <= rating; loop++) {
                 
                 switch (loop) {
-                    
+                        
                     case 1: cell.star_1.alpha = 1.0; break;
                     case 2: cell.star_2.alpha = 1.0; break;
                     case 3: cell.star_3.alpha = 1.0; break;
                     case 4: cell.star_4.alpha = 1.0; break;
                     case 5: cell.star_5.alpha = 1.0; break;
-                    
+                        
                     default: break;
                 }
             }
