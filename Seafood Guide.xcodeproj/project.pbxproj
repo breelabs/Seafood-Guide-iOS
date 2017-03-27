@@ -68,6 +68,7 @@
 		FC9AC0BD1C5E815100DD92CD /* fish4.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B51C5E815100DD92CD /* fish4.png */; };
 		FC9AC0BE1C5E815100DD92CD /* fish5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B61C5E815100DD92CD /* fish5.png */; };
 		FC9AC0BF1C5E815100DD92CD /* fish6.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B71C5E815100DD92CD /* fish6.png */; };
+		FCD699A21E89CAC100D4ED3C /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FCD699A11E89CAC100D4ED3C /* iRate.bundle */; };
 		FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDAB7591B537D600040E0F7 /* Lingo.m */; };
 		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -198,6 +199,7 @@
 		FC9AC0B51C5E815100DD92CD /* fish4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish4.png; path = Export/fish4.png; sourceTree = "<group>"; };
 		FC9AC0B61C5E815100DD92CD /* fish5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish5.png; path = Export/fish5.png; sourceTree = "<group>"; };
 		FC9AC0B71C5E815100DD92CD /* fish6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish6.png; path = Export/fish6.png; sourceTree = "<group>"; };
+		FCD699A11E89CAC100D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
 		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
 		FCE79F3919B99F87003E03BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -281,6 +283,7 @@
 		FC2BD12C19B23CBF003ECABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FCD699A11E89CAC100D4ED3C /* iRate.bundle */,
 				FCE79F3919B99F87003E03BE /* CoreData.framework */,
 				FC3B086119B4354F0049FA70 /* libz.dylib */,
 				FC3B085D19B435430049FA70 /* libxml2.2.dylib */,
@@ -695,6 +698,7 @@
 				FC9AC0BE1C5E815100DD92CD /* fish5.png in Resources */,
 				FC4E642719EB4B1B0079C0A3 /* ios-news.xml in Resources */,
 				FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */,
+				FCD699A21E89CAC100D4ED3C /* iRate.bundle in Resources */,
 				FC4E642C19EB4B300079C0A3 /* TableViewCellNews.xib in Resources */,
 				FC2BD13819B23CBF003ECABA /* InfoPlist.strings in Resources */,
 			);

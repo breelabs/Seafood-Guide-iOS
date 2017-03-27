@@ -26,10 +26,12 @@
     //set the bundle ID. normally you wouldn't need to do this
     //as it is picked up automatically from your Info.plist file
     //but we want to test with an app that's actually on the store
-    [iRate sharedInstance].applicationBundleID = @"com.jonbrown.org.Seafood-Guide";
     [iRate sharedInstance].onlyPromptIfLatestVersion = NO;
     
     //enable preview mode
+    [iRate sharedInstance].remindPeriod = 0;
+    [iRate sharedInstance].promptForNewVersionIfUserRated = YES;
+    [iRate sharedInstance].promptAtLaunch = YES;
     [iRate sharedInstance].previewMode = NO;
 }
 -(void)insertRoleWithRoleName:(NSString *)seafoodName typeName:(NSString *)seafoodType descName:(NSString *)seafoodDesc goodName:(NSString *)seafoodGood badName:(NSString *)seafoodBad regName:(NSString *)seafoodRegion
