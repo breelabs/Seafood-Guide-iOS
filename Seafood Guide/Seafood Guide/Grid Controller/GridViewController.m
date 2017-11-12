@@ -10,12 +10,20 @@
 #import "FishCat.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define IS_IPHONE_4 (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)480) < DBL_EPSILON)
-#define IS_IPHONE_5 (([UIScreen mainScreen].scale == 2.f && [UIScreen mainScreen].bounds.size.height == 568)?YES:NO)
-#define IS_IPHONE_6 (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)667) < DBL_EPSILON)
-#define IS_IPHONE_6_PLUS (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)736) < DBL_EPSILON)
-#define IS_IPAD (( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) ? YES : NO)
-#define IS_RETINA_DISPLAY_DEVICE (([UIScreen mainScreen].scale == 2.f)?YES:NO)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define IS_IPHONE_X  (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
 
 @implementation GridViewController
 {
@@ -50,10 +58,29 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
     [myCollectionView setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
+    
+    
+    if (@available(iOS 11, *)) {
+        UIEdgeInsets insets = [UIApplication sharedApplication].delegate.window.safeAreaInsets;
+        if (insets.top > 0) {
+            // We're running on an iPhone with a notch.
+            
+            // move Collection View to propper place
+            CGRect mycviewFrame = myCollectionView.frame;
+            mycviewFrame.origin.y = 110;
+            mycviewFrame.origin.x = 0;
+            myCollectionView.frame = mycviewFrame;
+            self.myCollectionView.frame = CGRectMake(0,110,375,692);
+            
+        }
+    }
+    
+    
+    
 }
 
 - (BOOL)prefersStatusBarHidden {
-    return YES;
+    return NO;
 }
 
 
@@ -61,15 +88,20 @@ static NSString * const reuseIdentifier = @"Cell";
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
+    int numberOfCellInRow = 2;
+    CGFloat cellWidth =  ([[UIScreen mainScreen] bounds].size.width-45)/numberOfCellInRow;
+    
     if(IS_IPHONE_6)
     {
-        return CGSizeMake(137, 100);
-    } else if(IS_IPHONE_4) {
-        return CGSizeMake(137, 77);
-    } else if(IS_IPHONE_6_PLUS) {
-        return CGSizeMake(137, 100);
+        return CGSizeMake(cellWidth, 120);
+    } else if(IS_IPHONE_4_OR_LESS) {
+        return CGSizeMake(cellWidth, 56);
+    } else if(IS_IPHONE_6P) {
+        return CGSizeMake(cellWidth, 140);
+    } else if(IS_IPHONE_X) {
+        return CGSizeMake(cellWidth, 140);
     } else {
-        return CGSizeMake(137, 100);
+        return CGSizeMake(cellWidth, 86);
     }
 }
 

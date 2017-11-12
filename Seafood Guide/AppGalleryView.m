@@ -449,9 +449,9 @@
             cellValue = @"0";
         } else if ([selectedValue  isEqual: @"Seafood Guide"]) {
             cellValue = @"1";
-        } else if ([selectedValue  isEqual: @"We're Gurus!"]) {
-            cellValue = @"2";
         } else if ([selectedValue  isEqual: @"BeFit Tracker"]) {
+            cellValue = @"2";
+        } else if ([selectedValue  isEqual: @"We're Gurus!"]) {
             cellValue = @"3";
         }
         

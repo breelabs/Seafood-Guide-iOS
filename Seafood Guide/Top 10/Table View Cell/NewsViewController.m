@@ -14,11 +14,20 @@
 #import "config.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define IS_IPAD (( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad ) ? YES : NO)
-#define IS_IPHONE_5      ([UIScreen mainScreen].bounds.size.height == 568)
-#define IS_IPHONE_6      ([UIScreen mainScreen].bounds.size.height == 667)
-#define IS_IPHONE_6_PLUS ([UIScreen mainScreen].bounds.size.height == 736)
-#define IS_RETINA_DISPLAY_DEVICE (([UIScreen mainScreen].scale == 2.f)?YES:NO)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+#define IS_IPHONE_X  (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
 
 @interface NewsViewController ()
 
@@ -240,10 +249,25 @@ bool isShown = true;
                 //do stuff for 4 inch iPhone screen
                 _cautionView.frame =  CGRectMake(0, 0, 320, 520);
             }
+            if(IS_IPHONE_6)
+            {
+                //do stuff for 4 inch iPhone screen
+                _cautionView.frame =  CGRectMake(0, 0, 375, 620);
+            }
+            if(IS_IPHONE_6P)
+            {
+                //do stuff for 4 inch iPhone screen
+                _cautionView.frame =  CGRectMake(0, 0, 415, 700);
+            }
+            if(IS_IPHONE_X)
+            {
+                //do stuff for 4 inch iPhone screen
+                _cautionView.frame =  CGRectMake(0, 0, 375, 740);
+            }
             else
             {
                 //do stuff for 3.5 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 320, 430);
+                [_cautionView setHidden:YES];
             }
             
             
