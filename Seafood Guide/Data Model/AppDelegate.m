@@ -34,7 +34,7 @@
     [SARate sharedInstance].remindPeriod = 30;
     [SARate sharedInstance].promptForNewVersionIfUserRated = YES;
     //enable preview mode
-    [SARate sharedInstance].previewMode = YES;
+    [SARate sharedInstance].previewMode = NO;
     
     [SARate sharedInstance].email = @"jonbrown2@mac.com";
     // 4 and 5 stars

@@ -84,8 +84,8 @@ static NSString *const iRateMacAppStoreBundleID = @"com.apple.appstore";
 static NSString *const iRateAppLookupURLFormat = @"http://itunes.apple.com/%@/lookup";
 
 static NSString *const iRateiOSAppStoreURLScheme = @"itms-apps";
-static NSString *const iRateiOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@";
-static NSString *const iRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/id%@";
+static NSString *const iRateiOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/app/seafood-guide/id915176295?mt=8&action=write-review";
+static NSString *const iRateiOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/seafood-guide/id915176295?mt=8&action=write-review";
 static NSString *const iRateMacAppStoreURLFormat = @"macappstore://itunes.apple.com/app/id%@";
 
 
