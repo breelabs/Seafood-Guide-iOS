@@ -99,7 +99,7 @@ static NSString * const reuseIdentifier = @"Cell";
     } else if(IS_IPHONE_6P) {
         return CGSizeMake(cellWidth, 140);
     } else if(IS_IPHONE_X) {
-        return CGSizeMake(cellWidth, 140);
+        return CGSizeMake(cellWidth, 120);
     } else {
         return CGSizeMake(cellWidth, 86);
     }
