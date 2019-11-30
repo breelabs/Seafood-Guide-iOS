@@ -17,13 +17,12 @@
 
 @implementation TVCDetailViewController
 
-@synthesize item, directionsButton;
+@synthesize item;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -34,13 +33,7 @@
     [[self view] setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     
     self.title = [item name];
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.automaticallyAdjustsScrollViewInsets = YES;
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -54,11 +47,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -70,10 +58,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // #warning Incomplete method implementation.
-    // Return the number of rows in the section.
+    if(section==0) {
+        return 3;
+    } else {
+        return 1;
+    }
     
-    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,26 +125,8 @@
         cell = [tableView dequeueReusableCellWithIdentifier:@"CellType6"];
         if(!cell)
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType6"];
-        [[cell textLabel] setText:@"Share On Twitter"];
-            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        [[cell textLabel] setText:@"Email to a friend"];
         
-        } else if ([indexPath row] == 1) {
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType7"];
-            if(!cell)
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType7"];
-            [[cell textLabel] setText:@"Share On Facebook"];
-            
-            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            
-        }  else if ([indexPath row] == 2) {
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType8"];
-            if(!cell)
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType8"];
-            [[cell textLabel] setText:@"Email to a friend"];
-            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            
         }
 
     } 
@@ -173,14 +145,6 @@
     
     if ([indexPath row] == 0) {
         
-        [self postToTwitter:self];
-    
-    } else if ([indexPath row] == 1) {
-        
-        [self postToFacebook:self];
-        
-    }  else if ([indexPath row] == 2) {
-        
         [self sendEmail];
         
     }
@@ -196,47 +160,22 @@
 {
     
     if (indexPath.section == 0 && indexPath.row == 2) {
-        
-     
-        //        NSStringDrawingContext *ctx = [NSStringDrawingContext new];
-        //        NSAttributedString *aString = [[NSAttributedString alloc] initWithString:[item desc]];
-        //        UITextView *calculationView = [[UITextView alloc] init];
-        //        [calculationView setAttributedText:aString];
-        //        
-        //        CGRect textRect = [calculationView.text boundingRectWithSize:CGSizeMake(270 - (10 * 2), 200000.0f)
-        //                                                             options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
-
-        //        CGRect textRect = [calculationView.text boundingRectWithSize:self.view.frame.size options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:calculationView.font} context:ctx];
-
-        //        CGFloat height = MAX(textRect.size.height, 44.0f);
-        //        return height + (2 * 2);
-        
-        //CGSize size = [[item desc] sizeWithFont:[UIFont systemFontOfSize:17] constrainedToSize:CGSizeMake(290 - (10 * 2), 200000.0f)];
-    
-        // Create a paragraph style with the desired line break mode
+ 
         NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
         paragraphStyle.lineBreakMode = NSLineBreakByWordWrapping;
         
-        // Create the attributes dictionary with the font and paragraph style
         NSDictionary *attributes = @{
                                      NSFontAttributeName:[UIFont systemFontOfSize:17],
                                      NSParagraphStyleAttributeName:paragraphStyle
                                      };
         
-        // Call boundingRectWithSize:options:attributes:context for the string
         CGRect textRect = [[item desc] boundingRectWithSize:CGSizeMake(290 - (10 * 2), 200000.0f)
                                                options:NSStringDrawingUsesLineFragmentOrigin
                                             attributes:attributes
                                                context:nil];
         
         float height = textRect.size.height;
-        
-        //CGFloat height = MAX(size.height, 100.0f);
-        
         return height + (2 * 2);
-        
-        //self.tableView.estimatedRowHeight = 100.0;
-        //self.tableView.rowHeight = UITableViewAutomaticDimension;
         
     }
     return 44;
@@ -259,73 +198,26 @@
     [self.navigationItem setHidesBackButton:NO];
 }
 
-- (IBAction)postToTwitter:(id)sender {
-    
-    
-    SLComposeViewController *tweetSheet = [SLComposeViewController
-                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
-    
-    str = [item desc];
-    str = [str substringToIndex: MIN(65, [str length])];
-    
-    NSString *one = [item name];
-    NSString *two = [item region];
-    NSString *three = [item good];
-    
-    NSString* All = [NSString stringWithFormat:@"Fish Name: %@\r%@\r%@\rDescription:%@", one, two, three, str];
-    
-    [tweetSheet setInitialText:All];
-    [self presentViewController:tweetSheet animated:YES completion:nil];
-    
-}
-
-
-
-- (IBAction)postToFacebook:(id)sender {
-    
-    
-    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    
-    str = [item desc];
-    str = [str substringToIndex: MIN(100, [str length])];
-    
-    NSString *one = [item name];
-    NSString *two = [item region];
-    NSString *three = [item good];
-    
-    NSString* All = [NSString stringWithFormat:@"Fish Name: %@\r%@\r%@\rDescription:\r%@\r-- Seafood App", one, two, three, str];
-    
-    [controller setInitialText:All];
-    [self presentViewController:controller animated:YES completion:Nil];
-    
-}
-
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
 {
     switch (result)
     {
         case MFMailComposeResultCancelled:
-            //NSLog(@"Mail cancelled: you cancelled the operation and no email message was queued.");
             [ProgressHUD showError:@"Email Not Sent"];
             break;
         case MFMailComposeResultSaved:
-            //NSLog(@"Mail saved: you saved the email message in the drafts folder.");
             [ProgressHUD showSuccess:@"Email Saved!"];
             break;
         case MFMailComposeResultSent:
-            // NSLog(@"Mail send: the email message is queued in the outbox. It is ready to send.");
             [ProgressHUD showSuccess:@"Email Sent!"];
             break;
         case MFMailComposeResultFailed:
-            //NSLog(@"Mail failed: the email message was not saved or queued, possibly due to an error.");
             [ProgressHUD showError:@"Email Not Sent"];
             break;
         default:
-            //NSLog(@"Mail not sent.");
             [ProgressHUD showError:@"Email Not Sent"];
             break;
     }
-    // Remove the mail view
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

@@ -37,21 +37,8 @@
 
 {
     
-    // 1 - Decide what Entity you want
     NSString *entityName = @"Seafood"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
-    
-    // 2 - Request that Entity
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
-    
-    
-//    NSString *theFrameThatWasTouchedwithTheUsersFinger = [[NSString alloc]init];
-//    theFrameThatWasTouchedwithTheUsersFinger = note;
-
-    
-    // 3 - Filter it if you want
-
-    
     NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
     NSUInteger integerFromPrefs = [defaults integerForKey:@"justclicked"];
     predicateKey = [NSString stringWithFormat:@"%li",  (unsigned long)integerFromPrefs];
@@ -73,24 +60,19 @@
     } else if (integerFromPrefs == 7) {
         self.title = @"Dirty Dozen";
     }
-    
-    //NSLog(@"Setting up predicate value %lu", (unsigned long)integerFromPrefs);
-    
+        
     if(predicateKey)
     {
         
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"fishtype like[c] %@",predicateKey];
         [request setPredicate:pred];
-        //NSLog(@"Setting up predicate value %@", predicateKey);
     }
     
     
-    // 4 - Sort it if you want
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"name"
                                                                                      ascending:YES
                                                                                       selector:@selector(localizedCaseInsensitiveCompare:)]];
     
-    // 5 - Fetch it
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:self.managedObjectContext
                                                                           sectionNameKeyPath:@"uppercaseFirstLetterOfName"
@@ -138,9 +120,6 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    
-    // Configure the cell...
-
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     Seafood *seafood = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -179,21 +158,9 @@
     self.navigationItem.backBarButtonItem.title = @"Back";
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view sends data to detail view

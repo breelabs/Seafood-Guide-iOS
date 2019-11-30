@@ -19,13 +19,12 @@
 @end
 
 @implementation NewsViewController
-@synthesize NewsTbView,numArray,imageArray,descArray,titleArray,directionsButton;
+@synthesize NewsTbView,numArray,imageArray,descArray,titleArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
         
     }
     return self;
@@ -37,27 +36,13 @@
     
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view from its nib.
     self.numArray = [[NSMutableArray alloc] init];
     self.imageArray = [[NSMutableArray alloc]init];
     self.descArray = [[NSMutableArray alloc]init];
     self.titleArray = [[NSMutableArray alloc]init];
     
-    // Add these right after creating the UITableView
     NewsTbView.delegate = self;
     NewsTbView.dataSource = self;
-    
-   // UIImage * backgroundPattern = [UIImage imageNamed:@"Whitey"];
-    
-    //[self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
-    
-    
-    //UIGraphicsBeginImageContext(self.view.frame.size);
-   // [[UIImage imageNamed:@"Whitey"] drawInRect:self.view.bounds];
-    //UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    //UIGraphicsEndImageContext();
-    
-   // self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
     [self refresh];
 
@@ -65,27 +50,16 @@
 
 -(void)refresh
 {
-    // Create the request.
-    //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[config getFeedNEWS]]];
-    
-    // Create url connection and fire request
-    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-news.xml"];
     
     RXMLElement *rxmlNews = [rootXML child:@"news"];
     
     NSArray *rxmlIndividualNew = [rxmlNews children:@"new"];
-    
-    //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
-    
-    for (int i=0; i<rxmlIndividualNew.count; i++) {
-        //NSLog(@"i = %d",i);
         
-        //NSURL *imgUrl = [NSURL URLWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
+    for (int i=0; i<rxmlIndividualNew.count; i++) {
         NSString *imgUrl = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
         NSString *num = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"linknews"].text];
-        //UIImage *img1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]];
         UIImage *img1 = [UIImage imageNamed:imgUrl];
         
         NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
@@ -104,44 +78,32 @@
 #pragma mark NSURLConnection Delegate Methods
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-    // A response has been received, this is where we initialize the instance var you created
-    // so that we can append data to it in the didReceiveData method
-    // Furthermore, this method is called each time there is a redirect so reinitializing it
-    // also serves to clear it
+
     _responseData = [[NSMutableData alloc] init];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-    // Append the new data to the instance variable you declared
     [_responseData appendData:data];
 }
 
 - (NSCachedURLResponse *)connection:(NSURLConnection *)connection
                   willCacheResponse:(NSCachedURLResponse*)cachedResponse {
-    // Return nil to indicate not necessary to store a cached response for this connection
     return nil;
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    // The request is complete and data has been received
-    
-    // You can parse the stuff in your instance variable now
-    //RXMLElement *rootXML = [RXMLElement elementFromXMLData:_responseData];
+
     RXMLElement *rootXML = [RXMLElement elementFromXMLFile:@"ios-news.xml"];
     
     RXMLElement *rxmlNews = [rootXML child:@"news"];
     
     NSArray *rxmlIndividualNew = [rxmlNews children:@"new"];
     
-    //NSLog(@"test nsarray : %@",[[rxmlIndividualNew objectAtIndex:0] child:@"imageurl"]);
     
     for (int i=0; i<rxmlIndividualNew.count; i++) {
-        //NSLog(@"i = %d",i);
         
-        //NSURL *imgUrl = [NSURL URLWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
         NSString *imgUrl = [NSString stringWithFormat:@"%@" , [[rxmlIndividualNew objectAtIndex:i] child:@"imageurl"].text];
         
-        //UIImage *img1 = [UIImage imageWithData:[NSData dataWithContentsOfURL:imgUrl]];
         UIImage *img1 = [UIImage imageNamed:imgUrl];
         
         NSString *title = [NSString stringWithString:[[rxmlIndividualNew objectAtIndex:i] child:@"titlenews"].text];
@@ -163,15 +125,13 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
-    // The request has failed for some reason!
-    // Check the error var
+
 }
 
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -222,29 +182,13 @@
     [cell.image setAlpha:0];
     [cell.imagetitle setAlpha:0];
     [cell.text setAlpha:0];
-    [cell.facebookButton setAlpha:0];
-    [cell.twitterButton setAlpha:0];
     [UIView beginAnimations:@"ResizeAnimation" context:NULL];
     [UIView setAnimationDuration:0.5f];
     [cell.image setAlpha:1];
     [cell.text setAlpha:1];
     [cell.imagetitle setAlpha:1];
-    [cell.facebookButton setAlpha:1];
-    [cell.twitterButton setAlpha:1];
     [UIView commitAnimations];
     
-   // [MBProgressHUD hideAllHUDsForView:[UIApplication sharedApplication].keyWindow animated:YES];
-    
-    [cell.twitterButton    addTarget:self
-                              action:@selector(postToTwitter:)
-                    forControlEvents:UIControlEventTouchUpInside];
-    cell.twitterButton.tag = indexPath.row;
-    
-    [cell.facebookButton    addTarget:self
-                               action:@selector(postToFacebook:)
-                     forControlEvents:UIControlEventTouchUpInside];
-    cell.facebookButton.tag = indexPath.row;
-
     return cell;
 }
 
@@ -273,41 +217,6 @@ DetailNewsViewController *controller = [self.storyboard instantiateViewControlle
 
 }
 
-
-- (IBAction)postToTwitter:(id)sender {
-    
-    
-    
-    NSInteger tid = ((UIControl *) sender).tag;
-    
-    SLComposeViewController *tweetSheet = [SLComposeViewController
-                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
-    
-    [tweetSheet setInitialText:[titleArray objectAtIndex:tid]];
-    //[tweetSheet addURL:object.link];
-    [tweetSheet addImage:[imageArray objectAtIndex:tid]];
-    [self presentViewController:tweetSheet animated:YES completion:nil];
-    
-}
-
-- (IBAction)postToFacebook:(id)sender {
-    
-   
-    
-    NSInteger tid = ((UIControl *) sender).tag;
-   
-    
-    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    
-      [controller setInitialText:[descArray objectAtIndex:tid]];
-  //  [controller addURL:object.link];
-    [controller addImage:[imageArray objectAtIndex:tid]];
-    [self presentViewController:controller animated:YES completion:Nil];
-    
-}
-
-
-
 -(UIButton*)createButtonWithFrame:(CGRect)frame andLabel:(NSString*)label
 {
     
@@ -323,17 +232,10 @@ DetailNewsViewController *controller = [self.storyboard instantiateViewControlle
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor whiteColor].CGColor];
     [[button layer] setMasksToBounds:YES];
-    [[button layer] setCornerRadius:4.0]; //when radius is 0, the border is a rectangle
+    [[button layer] setCornerRadius:4.0]; 
     [[button layer] setBorderWidth:1.0];
     
     return button;
-}
-
--(void)closeView
-{
-    //[self dismissModalViewControllerAnimated:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

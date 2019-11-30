@@ -20,7 +20,6 @@
 }
 
 @property (nonatomic, strong) Lingo *item;
-@property (nonatomic, strong) IBOutlet UIButton* directionsButton;
 
 
 @end

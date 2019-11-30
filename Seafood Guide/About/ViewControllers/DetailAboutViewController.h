@@ -19,7 +19,6 @@
 }
 
 @property (nonatomic, strong) About *item;
-@property (nonatomic, strong) IBOutlet UIButton* directionsButton;
 
 @end
 

@@ -21,13 +21,7 @@
 }
 
 @property(nonatomic,retain) IBOutlet UIImageView *imgView;
-@property(nonatomic,retain) IBOutlet UIImageView *backg;
-@property(nonatomic,retain) IBOutlet UILabel *lbl;
-@property(nonatomic,retain) IBOutlet UILabel *lblshare;
 @property(nonatomic,retain) IBOutlet UITextView *txtView;
-@property(nonatomic,retain) IBOutlet UIButton *fbButton;
-@property(nonatomic,retain) IBOutlet UIButton *twButton;
-@property (nonatomic, strong) IBOutlet UIButton* directionsButton;
 @property (nonatomic, assign) long myInt;
 
 @property (nonatomic, retain) UIImage *image;

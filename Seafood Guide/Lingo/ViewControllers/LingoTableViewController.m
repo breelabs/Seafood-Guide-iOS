@@ -32,36 +32,22 @@
 - (void)setupFetchedResultsController
 
 {
-    
-    // 1 - Decide what Entity you want
+
     NSString *entityName = @"Lingo"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
-    
-    // 2 - Request that Entity
+
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
-    
-    
-    // 3 - Filter it if you want
-    
-    //predicateKey = @"";
-    
-    // 4 - Sort it if you want
+
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"titlenews"
                                                                                      ascending:YES
                                                                                       selector:@selector(localizedCaseInsensitiveCompare:)]];
     
-    // 5 - Fetch it
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:self.managedObjectContext
                                                                           sectionNameKeyPath:@"uppercaseFirstLetterOfName"
                                                                                    cacheName:nil];
     
-    
     [self.fetchedResultsController performFetch:nil];
-    
-    
-    
- 
+
 }
 
 
@@ -97,18 +83,12 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    
-    // Configure the cell...
-    
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     Lingo *lingo = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
     cell.textLabel.text = lingo.titlenews;
-    
-    //NSLog(@"%@", lingo.titlenews);
-    
+        
     return cell;
     
 }
@@ -140,24 +120,12 @@
     self.navigationItem.backBarButtonItem.title = @"Back";
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-
-}
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 #pragma mark - Table view sends data to detail view
-// Core data to detail view
 
 -(void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

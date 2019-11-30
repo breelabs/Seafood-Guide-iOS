@@ -3,7 +3,18 @@
 		<new>
 			<imageurl>boat1.jpg</imageurl>
 			<titlenews>Conflicting Interests</titlenews>
-			<descnews>Open water aquaculture facilities could cause conflict of interest. Areas of current significant competing economic use or public value must be eliminated for consideration for open ocean aquaculture. These areas include 1) fishing grounds and routes to those fishing grounds; 2) vessel traffic lanes; 3) military sites and areas of concern regarding national security; 4) marine reserves and otherwise protected areas; and, 5) areas of significant multiple use.</descnews>
+			<descnews>Open water aquaculture facilities could cause conflict of interest. Areas of current significant competing economic use or public value must be eliminated for consideration for open
+ocean aquaculture. These areas include
+                
+1) fishing grounds and routes to those fishing grounds;
+                
+2) vessel traffic lanes;
+                
+3) military sites and areas of concern regarding national security;
+                
+4) marine reserves and otherwise protected areas; and,
+                
+5) areas of significant multiple use.</descnews>
 			<linknews>1</linknews>
 		</new>
 		<new>
@@ -57,7 +68,11 @@
         <new>
 			<imageurl>polluted.jpg</imageurl>
 			<titlenews>Water Pollution</titlenews>
-			<descnews>Water flowing out of an aquaculture facility can carry excessive nutrients, particulates,rusted drain pipe bacteria, other diseased organisms and polluting chemicals. These may harm surrounding habitats, cause algal blooms, poison ocean wildlife and other severe disturbances. Feed and fecal matter from aquaculture facilities can deplete the dissolved oxygen concentrations within and around the site. Since different fish have varying tolerances to dissolved oxygen levels, the wastewater being discharged from an aquaculture operation may have large impacts outside the facility long before a problem is detected within. Anti-fouling agents used to keep cages/pens clean are highly toxic. For example, the common anti-fouling agent butyltin (specifically tributyltin) has been linked to reproductive problems in gastropod mollusks (i.e. whelks and abalone) and is suspected to cause immune suppression in marine mammals including dolphins, seals and sea otters.</descnews>
+			<descnews>Water flowing out of an aquaculture facility can carry excessive nutrients, particulates,rusted drain pipe bacteria, other diseased organisms and polluting chemicals. These may harm surrounding habitats, cause algal blooms, poison ocean wildlife and other severe disturbances.
+                
+Feed and fecal matter from aquaculture facilities can deplete the dissolved oxygen concentrations within and around the site. Since different fish have varying tolerances to dissolved oxygen levels, the wastewater being discharged from an aquaculture operation may have large impacts outside the facility long before a problem is detected within.
+                
+Anti-fouling agents used to keep cages/pens clean are highly toxic. For example, the common anti-fouling agent butyltin (specifically tributyltin) has been linked to reproductive problems in gastropod mollusks (i.e. whelks and abalone) and is suspected to cause immune suppression in marine mammals including dolphins, seals and sea otters.</descnews>
 			<linknews>10</linknews>
 		</new>
 	</news>

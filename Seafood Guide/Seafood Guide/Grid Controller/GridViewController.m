@@ -22,9 +22,18 @@
 
 static NSString * const reuseIdentifier = @"Cell";
 
+- (CGSize)collectionView:(UICollectionView *)collectionView
+              layout:(UICollectionViewLayout *)collectionViewLayout
+sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+CGFloat padding = 30;
+CGFloat cellSize = collectionView.frame.size.width - padding;
+return CGSizeMake(cellSize / 2, cellSize / 2);
+}
 
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+
+
 - (void) viewDidLoad
 {
     [super viewDidLoad];
@@ -44,19 +53,11 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
     [myCollectionView setBackgroundColor:[UIColor colorWithPatternImage:backgroundPattern]];
     
-    
-    
-    
-    
-    
 }
 
 - (BOOL)prefersStatusBarHidden {
     return NO;
 }
-
-
-
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -147,18 +148,11 @@ static NSString * const reuseIdentifier = @"Cell";
         
     }
     
-    
-    
-    
-    
-    NSLog(@"Predicate value## %@", selectedItem);
-    
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return recipePhotos.count;
@@ -179,6 +173,4 @@ static NSString * const reuseIdentifier = @"Cell";
     
     return cell;
 }
-
-
 @end

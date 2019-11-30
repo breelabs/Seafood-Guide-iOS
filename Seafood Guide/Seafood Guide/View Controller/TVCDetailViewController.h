@@ -17,7 +17,5 @@
 }
 
 @property (nonatomic, strong) Seafood *item;
-@property (nonatomic, strong) IBOutlet UIButton* directionsButton;
-
 
 @end

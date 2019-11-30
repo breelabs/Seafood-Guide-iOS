@@ -34,26 +34,17 @@
 - (void)setupFetchedResultsController
 
 {
-    
-    // 1 - Decide what Entity you want
     NSString *entityName = @"About"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
     
-    // 2 - Request that Entity
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:entityName];
-    
-    
-    // 3 - Filter it if you want
     
     NSPredicate * predicate = [NSPredicate predicateWithFormat:@"linknews = '3'"];
     [request setPredicate:predicate];
     
-    // 4 - Sort it if you want
     request.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"linknews"
                                                                                      ascending:YES
                                                                                       selector:@selector(localizedCaseInsensitiveCompare:)]];
-    
-    // 5 - Fetch it
+
     self.fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:request
                                                                         managedObjectContext:self.managedObjectContext
                                                                           sectionNameKeyPath:nil
@@ -70,26 +61,17 @@
 - (void)setupFetchedResultsController1
 
 {
-    
-    // 1 - Decide what Entity you want
     NSString *entityName1 = @"About"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
     
-    // 2 - Request that Entity
     NSFetchRequest *request1 = [NSFetchRequest fetchRequestWithEntityName:entityName1];
-    
-    
-    // 3 - Filter it if you want
     
     NSPredicate * predicate1 = [NSPredicate predicateWithFormat:@"linknews = '1'"];
     [request1 setPredicate:predicate1];
     
-    // 4 - Sort it if you want
     request1.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"linknews"
                                                                                      ascending:YES
                                                                                       selector:@selector(localizedCaseInsensitiveCompare:)]];
     
-    // 5 - Fetch it
     self.fetchedResultsController1 = [[NSFetchedResultsController alloc] initWithFetchRequest:request1
                                                                         managedObjectContext:self.managedObjectContext
                                                                           sectionNameKeyPath:nil
@@ -106,26 +88,17 @@
 - (void)setupFetchedResultsController2
 
 {
-    
-    // 1 - Decide what Entity you want
     NSString *entityName2 = @"About"; // Put your entity name here
-    //NSLog(@"Setting up a Fetched Results Controller for the Entity named %@", entityName);
     
-    // 2 - Request that Entity
     NSFetchRequest *request2 = [NSFetchRequest fetchRequestWithEntityName:entityName2];
-    
-    
-    // 3 - Filter it if you want
     
     NSPredicate * predicate2 = [NSPredicate predicateWithFormat:@"linknews = '2'"];
     [request2 setPredicate:predicate2];
     
-    // 4 - Sort it if you want
     request2.sortDescriptors = [NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"linknews"
                                                                                       ascending:YES
                                                                                        selector:@selector(localizedCaseInsensitiveCompare:)]];
     
-    // 5 - Fetch it
     self.fetchedResultsController2 = [[NSFetchedResultsController alloc] initWithFetchRequest:request2
                                                                          managedObjectContext:self.managedObjectContext
                                                                            sectionNameKeyPath:nil
@@ -197,16 +170,6 @@
         cell.textLabel.text = [title4 objectAtIndex:indexPath.row];
     }
     
-    // Configure the cell...
-    
-    // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
-    // About *about = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    
-    // cell.textLabel.text = about.titlenews;
-    
-    //NSLog(@"%@", lingo.titlenews);
-    
     return cell;
     
 }
@@ -218,30 +181,16 @@
     self.navigationItem.backBarButtonItem.title = @"Back";
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    
-}
-
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 #pragma mark - Table view sends data to detail view
-// Core data to detail view
 
 -(void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DetailAboutViewController *detailViewController = [[DetailAboutViewController alloc]init];
-    
- 
     
     if (indexPath.section == 0) {
         About *allAbout = [[__fetchedResultsController1 fetchedObjects] objectAtIndex:indexPath.row];

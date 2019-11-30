@@ -15,7 +15,7 @@
 @end
 
 @implementation DetailNewsViewController
-@synthesize txtView,imgView,lbl,image,lblTitle,txtProject,backg,lblshare,directionsButton,myInt;
+@synthesize txtView,imgView,image,lblTitle,txtProject,myInt;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,13 +29,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
     #pragma mark - Button Style
     
     // R: 76 G: 76 B: 76
     UIColor *buttColor = [UIColor colorWithRed:(255.0 / 255.0) green:(255.0 / 255.0) blue:(255.0 / 255.0) alpha: 1];
-    self.automaticallyAdjustsScrollViewInsets = NO;
     
     CALayer * layer = [customButton layer];
     [layer setMasksToBounds:YES];
@@ -52,16 +49,9 @@
 
     [imgView setImage:image];
     [txtView setText:txtProject];
-    [lbl setText:lblTitle];
-    [UIView beginAnimations:@"ResizeAnimation" context:NULL];
     [UIView setAnimationDuration:0.5f];
     [self.imgView setAlpha:1];
-    [self.lbl setAlpha:1];
     [self.txtView setAlpha:1];
-    [self.backg setAlpha:1];
-    [self.fbButton setAlpha:1];
-    [self.twButton setAlpha:1];
-    [self.lblshare setAlpha:1];
     
     [UIView commitAnimations];
 }
@@ -69,63 +59,24 @@
 -(void)viewDidDisappear:(BOOL)animated
 {
     [self.imgView setImage:nil];
-    [self.lbl setText:nil];
     [self.txtView setText:nil];
-    [self.backg setAlpha:0];
     [self.imgView setAlpha:0];
     [self.txtView setAlpha:0];
-    [self.lbl setAlpha:0];
-    [self.fbButton setAlpha:0];
-    [self.twButton setAlpha:0];
-    [self.lblshare setAlpha:0];
     
 
 }
+
 
 
 - (void)didMoveToParentViewController:(UIViewController *)parent
 {
     if (![parent isEqual:self.parentViewController]) {
-        //NSLog(@"Back pressed");
         
     }
 }
-
-- (IBAction)postToTwitter:(id)sender {
-    
-    
-    SLComposeViewController *tweetSheet = [SLComposeViewController
-                                           composeViewControllerForServiceType:SLServiceTypeTwitter];
-    
-    str = [self txtProject];
-    str = [str substringToIndex: MIN(65, [str length])];
-    
-    NSString *one = [self lblTitle];
-    
-    NSString* All = [NSString stringWithFormat:@"%@\rDescription:%@", one, str];
-    
-    [tweetSheet setInitialText:All];
-    [self presentViewController:tweetSheet animated:YES completion:nil];
-    
-}
-
-- (IBAction)postToFacebook:(id)sender {
-    
-    
-    
-    SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    
-    [controller setInitialText:txtProject];
-    [controller addImage:image];
-    [self presentViewController:controller animated:YES completion:Nil];
-    
-}
-
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -152,7 +103,6 @@
 
 -(void)closeView
 {
-    //[self dismissModalViewControllerAnimated:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
     [self.navigationController popViewControllerAnimated:YES];
     

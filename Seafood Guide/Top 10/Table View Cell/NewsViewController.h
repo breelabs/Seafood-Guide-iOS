@@ -18,17 +18,12 @@
     UIButton * backButton ;
 }
 
-@property (nonatomic, assign) IBOutlet UIView *cautionView;
-@property (strong, nonatomic) IBOutlet UIButton *btnToggle;
 @property (nonatomic, retain) IBOutlet UITableView *NewsTbView;
 @property(nonatomic,retain) NSMutableArray *numArray;
 @property(nonatomic,retain) NSMutableArray *imageArray;
 @property(nonatomic,retain) NSMutableArray *titleArray;
 @property(nonatomic,retain) NSMutableArray *descArray;
-@property (nonatomic, strong) IBOutlet UIButton* directionsButton;
 
 @property (retain) DetailNewsViewController *detailNewsViewController;
-
--(IBAction)btnToggleClick:(id)sender;
 
 @end

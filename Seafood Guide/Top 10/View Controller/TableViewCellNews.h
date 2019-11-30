@@ -12,14 +12,10 @@
 
 {
     
-    IBOutlet UILabel *date;
     IBOutlet UILabel *text;
     IBOutlet UIImageView *image;
     IBOutlet UILabel *circle;
     IBOutlet UILabel *numb;
-    IBOutlet UIImageView *imagetitle;
-    IBOutlet UIButton *facebookButton;
-    IBOutlet UIButton *twitterButton;
     
 }
 
@@ -29,6 +25,4 @@
 @property (nonatomic, retain) UILabel *numb;
 @property (nonatomic, retain) UIImageView *image;
 @property (nonatomic, retain) UIImageView *imagetitle;
-@property (nonatomic, retain) UIButton *facebookButton;
-@property (nonatomic, retain) UIButton *twitterButton;
 @end

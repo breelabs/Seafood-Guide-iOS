@@ -10,13 +10,12 @@
 #import <QuartzCore/QuartzCore.h>
 
 @implementation TableViewCellNews
-@synthesize date,text,image,imagetitle,facebookButton,twitterButton,numb,circle;
+@synthesize date,text,image,imagetitle,numb,circle;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        // Initialization code
     }
     
     return self;
@@ -26,12 +25,10 @@
 {
     [super setSelected:selected animated:animated];
     
-    // Configure the view for the selected state
 }
 - (void)viewDidLoad
 {
-    //[super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
     
 #pragma mark - Button Style
     
