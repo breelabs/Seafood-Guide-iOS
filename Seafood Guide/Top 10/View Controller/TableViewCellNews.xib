@@ -42,8 +42,8 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZd-vy-BTp">
-                        <rect key="frame" x="148" y="106" width="153" height="35"/>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZd-vy-BTp">
+                        <rect key="frame" x="166" y="106" width="135" height="35"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -67,7 +67,7 @@
                 <outlet property="numb" destination="Y1p-G8-Neo" id="ogX-Ql-9Qu"/>
                 <outlet property="text" destination="rZd-vy-BTp" id="Ok2-ev-Agx"/>
             </connections>
-            <point key="canvasLocation" x="652.17391304347836" y="279.24107142857139"/>
+            <point key="canvasLocation" x="651.20000000000005" y="278.86056971514245"/>
         </tableViewCell>
     </objects>
 </document>

@@ -14,21 +14,6 @@
 #import "config.h"
 #import <QuartzCore/QuartzCore.h>
 
-#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
-
-#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
-#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
-#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
-#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
-
-#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
-#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
-#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
-#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
-#define IS_IPHONE_X  (IS_IPHONE && SCREEN_MAX_LENGTH == 812.0)
-
 @interface NewsViewController ()
 
 @end
@@ -75,30 +60,7 @@
    // self.view.backgroundColor = [UIColor colorWithPatternImage:image];
     
     [self refresh];
-    
-    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
-    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
-    
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSUInteger integerFromNews = [defaults integerForKey:@"toggleNews"];
-    
-    if (integerFromNews == 1) {
-        
-        UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [refreshButton setFrame:CGRectMake(0,0,25,25)];
-        refreshButton.userInteractionEnabled = TRUE;
-        
-        [refreshButton setImage:[[UIImage imageNamed:@"More"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        UIBarButtonItem *refreshBarButton = [[UIBarButtonItem alloc] initWithCustomView:refreshButton];
-        self.navigationItem.leftBarButtonItem = refreshBarButton;
-        [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
-        
-    }
-    
-    
-    
-    
+
 }
 
 -(void)refresh
@@ -198,25 +160,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
-    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
-    
-    NSUserDefaults * defaults = [NSUserDefaults standardUserDefaults];
-    NSUInteger integerFromNews = [defaults integerForKey:@"toggleNews"];
-    
-    if (integerFromNews == 1) {
-        
-        [self.cautionView setHidden:YES];
-        UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [refreshButton setFrame:CGRectMake(0,0,25,25)];
-        refreshButton.userInteractionEnabled = TRUE;
-        
-        [refreshButton setImage:[[UIImage imageNamed:@"More"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        UIBarButtonItem *refreshBarButton = [[UIBarButtonItem alloc] initWithCustomView:refreshButton];
-        self.navigationItem.leftBarButtonItem = refreshBarButton;
-        [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
-    }
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
@@ -231,106 +174,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-bool isShown = true;
 
-- (IBAction)btnToggleClick:(id)sender {
-
-    NSString *defaultPrefsFile = [[NSBundle mainBundle] pathForResource:@"defaultPrefs" ofType:@"plist"];
-    NSDictionary *defaultPreferences = [NSDictionary dictionaryWithContentsOfFile:defaultPrefsFile];
-    [[NSUserDefaults standardUserDefaults] registerDefaults:defaultPreferences];
-    
-    
-    if (!isShown) {
-        _cautionView.frame =  CGRectMake(130, 20, 0, 0);
-        [UIView animateWithDuration:0.25 animations:^{
-            
-            if(IS_IPHONE_5)
-            {
-                //do stuff for 4 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 320, 520);
-            }
-            if(IS_IPHONE_6)
-            {
-                //do stuff for 4 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 375, 620);
-            }
-            if(IS_IPHONE_6P)
-            {
-                //do stuff for 4 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 415, 700);
-            }
-            if(IS_IPHONE_X)
-            {
-                //do stuff for 4 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 375, 740);
-            }
-            else
-            {
-                //do stuff for 3.5 inch iPhone screen
-                [_cautionView setHidden:YES];
-            }
-            
-            
-        
-        }];
-        
-        UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [refreshButton setFrame:CGRectMake(0,0,25,25)];
-        refreshButton.userInteractionEnabled = TRUE;
-        
-        [refreshButton setImage:[[UIImage imageNamed:@"Remove"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-
-        
-        //[refreshButton setImage:[UIImage imageNamed:@"Remove@2x.png"] forState:UIControlStateNormal];
-        
-        // ASSIGNING THE BUTTON WITH IMAGE TO BACK BAR BUTTON
-        
-        #define setTurqoiseColor [UIColor colorWithRed:68.0f/255.0f green:181.0f/255.0f blue:223.0f/255.0f alpha:1.0]
-        
-        UIBarButtonItem *refreshBarButton = [[UIBarButtonItem alloc] initWithCustomView:refreshButton];
-        
-        self.navigationItem.leftBarButtonItem = refreshBarButton;
-        
-        [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
-
-        [self.cautionView setHidden:NO];
-        isShown = true;
-        
-    } else {
-        [UIView animateWithDuration:0.25 animations:^{
-            
-            if(IS_IPHONE_6 || IS_IPHONE_5)
-            {
-                //do stuff for 4 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 320, 568);
-            }
-            else
-            {
-                //do stuff for 3.5 inch iPhone screen
-                _cautionView.frame =  CGRectMake(0, 0, 320, 430);
-            }
-            
-            _cautionView.frame =  CGRectMake(568, 20, 0, 0);
-            
-            [[NSUserDefaults standardUserDefaults] setValue:@"1" forKey:@"toggleNews"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        }];
-        
-        UIButton *refreshButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [refreshButton setFrame:CGRectMake(0,0,25,5)];
-        refreshButton.userInteractionEnabled = TRUE;
-        
-        [refreshButton setImage:[[UIImage imageNamed:@"More"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-        
-        // ASSIGNING THE BUTTON WITH IMAGE TO BACK BAR BUTTON
-        
-        UIBarButtonItem *refreshBarButton = [[UIBarButtonItem alloc] initWithCustomView:refreshButton];
-        self.navigationItem.leftBarButtonItem = refreshBarButton;
-        [refreshButton addTarget:self action:@selector(btnToggleClick:) forControlEvents:UIControlEventTouchDown];
-        
-        isShown = false;
-    }
-}
 
 #pragma mark - Table View
 
@@ -432,7 +276,7 @@ DetailNewsViewController *controller = [self.storyboard instantiateViewControlle
 
 - (IBAction)postToTwitter:(id)sender {
     
-    [self urlMkr:@"http://www.google.com"];
+    
     
     NSInteger tid = ((UIControl *) sender).tag;
     
@@ -448,7 +292,7 @@ DetailNewsViewController *controller = [self.storyboard instantiateViewControlle
 
 - (IBAction)postToFacebook:(id)sender {
     
-    [self urlMkr:@"http://www.google.com"];
+   
     
     NSInteger tid = ((UIControl *) sender).tag;
    
@@ -462,105 +306,7 @@ DetailNewsViewController *controller = [self.storyboard instantiateViewControlle
     
 }
 
--(void)urlMkr:(NSString *)makeURL
-{
-    
-    // Set URL String
-    
-    //NSURL *myURL = [NSURL URLWithString:makeURL]; // gets url from string
-    //NSURLRequest *req = [NSURLRequest requestWithURL:myURL];
-    
-    // Make the Request
-    
-    //NSURLResponse *resp;
-    //NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:NULL];
-    
-    // for ASYNC[[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately:YES];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:makeURL]
-            completionHandler:^(NSData *data,
-                                NSURLResponse *response,
-                                NSError *error) {
-                // handle response
-                
-                if (error) {
-                    //NSLog(@"dataTaskWithRequest error: %@", error);
-                    UIViewController *myError = [[UIViewController alloc]init];
-                    myError.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                    myError.modalPresentationStyle = UIModalPresentationFormSheet;
-                    myError.view.backgroundColor = [UIColor blackColor];
-                    //[self presentModalViewController:myError animated:YES];
-                    [self presentViewController:myError animated:YES completion:nil];
-                    
-                    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2 - 146,
-                                                                                 40,
-                                                                                 472, 260)];
-                    myLabel.text = @"\n This \n Requires \n A Network \n Connection.";
-                    myLabel.font = [UIFont boldSystemFontOfSize:48];
-                    myLabel.backgroundColor = [UIColor clearColor];
-                    myLabel.shadowColor = [UIColor grayColor];
-                    myLabel.shadowOffset = CGSizeMake(1,1);
-                    myLabel.textColor = [UIColor whiteColor];
-                    myLabel.textAlignment = NSTextAlignmentCenter;
-                    myLabel.lineBreakMode = NSLineBreakByWordWrapping;
-                    myLabel.numberOfLines = 18;
-                    [myLabel sizeToFit];
-                    [myError.view addSubview:myLabel];
-                    //[self.myLabel release];
-                    
-                    self.directionsButton = [self createButtonWithFrame:CGRectMake(22, 395, 276, 52) andLabel:@"Go Back"];
-                    
-                    [myError.view addSubview:directionsButton];
-                    
-                    [self.directionsButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-                    return;
-                }
-                
-                // handle HTTP errors here
-                
-                if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                    
-                    NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-                    
-                    if (statusCode != 200) {
-                        //NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
-                        UIViewController *myError = [[UIViewController alloc]init];
-                        myError.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                        myError.modalPresentationStyle = UIModalPresentationFormSheet;
-                        myError.view.backgroundColor = [UIColor blackColor];
-                        //[self presentModalViewController:myError animated:YES];
-                        [self presentViewController:myError animated:YES completion:nil];
-                        
-                        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2 - 146,
-                                                                                     40,
-                                                                                     472, 260)];
-                        myLabel.text = @"\n This \n Requires \n A Network \n Connection.";
-                        myLabel.font = [UIFont boldSystemFontOfSize:48];
-                        myLabel.backgroundColor = [UIColor clearColor];
-                        myLabel.shadowColor = [UIColor grayColor];
-                        myLabel.shadowOffset = CGSizeMake(1,1);
-                        myLabel.textColor = [UIColor whiteColor];
-                        myLabel.textAlignment = NSTextAlignmentCenter;
-                        myLabel.lineBreakMode = NSLineBreakByWordWrapping;
-                        myLabel.numberOfLines = 18;
-                        [myLabel sizeToFit];
-                        [myError.view addSubview:myLabel];
-                        //[self.myLabel release];
-                        
-                        self.directionsButton = [self createButtonWithFrame:CGRectMake(22, 395, 276, 52) andLabel:@"Go Back"];
-                        
-                        [myError.view addSubview:directionsButton];
-                        
-                        [self.directionsButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-                        return;
-                    }
-                }
-                
-            }] resume];
-    
-    
-}
+
 
 -(UIButton*)createButtonWithFrame:(CGRect)frame andLabel:(NSString*)label
 {

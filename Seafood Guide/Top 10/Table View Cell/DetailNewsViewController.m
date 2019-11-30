@@ -93,7 +93,7 @@
 
 - (IBAction)postToTwitter:(id)sender {
     
-    [self urlMkr:@"http://www.google.com"];
+    
     SLComposeViewController *tweetSheet = [SLComposeViewController
                                            composeViewControllerForServiceType:SLServiceTypeTwitter];
     
@@ -111,7 +111,7 @@
 
 - (IBAction)postToFacebook:(id)sender {
     
-    [self urlMkr:@"http://www.google.com"];
+    
     
     SLComposeViewController *controller = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
     
@@ -128,106 +128,6 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)urlMkr:(NSString *)makeURL
-{
-    
-    // Set URL String
-    
-   // NSURL *myURL = [NSURL URLWithString:makeURL]; // gets url from string
-    //NSURLRequest *req = [NSURLRequest requestWithURL:myURL];
-    
-    // Make the Request
-    
-    //NSURLResponse *resp;
-    //NSData *data = [NSURLConnection sendSynchronousRequest:req returningResponse:&resp error:NULL];
-    
-    // for ASYNC[[NSURLConnection alloc] initWithRequest:req delegate:self startImmediately:YES];
-    
-    NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:makeURL]
-            completionHandler:^(NSData *data,
-                                NSURLResponse *response,
-                                NSError *error) {
-                // handle response
-                
-                if (error) {
-                    //NSLog(@"dataTaskWithRequest error: %@", error);
-                    UIViewController *myError = [[UIViewController alloc]init];
-                    myError.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                    myError.modalPresentationStyle = UIModalPresentationFormSheet;
-                    myError.view.backgroundColor = [UIColor blackColor];
-                    //[self presentModalViewController:myError animated:YES];
-                    [self presentViewController:myError animated:YES completion:nil];
-                    
-                    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2 - 146,
-                                                                                 40,
-                                                                                 472, 260)];
-                    myLabel.text = @"\n This \n Requires \n A Network \n Connection.";
-                    myLabel.font = [UIFont boldSystemFontOfSize:48];
-                    myLabel.backgroundColor = [UIColor clearColor];
-                    myLabel.shadowColor = [UIColor grayColor];
-                    myLabel.shadowOffset = CGSizeMake(1,1);
-                    myLabel.textColor = [UIColor whiteColor];
-                    myLabel.textAlignment = NSTextAlignmentCenter;
-                    myLabel.lineBreakMode = NSLineBreakByWordWrapping;
-                    myLabel.numberOfLines = 18;
-                    [myLabel sizeToFit];
-                    [myError.view addSubview:myLabel];
-                    //[self.myLabel release];
-                    
-                    self.directionsButton = [self createButtonWithFrame:CGRectMake(22, 395, 276, 52) andLabel:@"Go Back"];
-                    
-                    [myError.view addSubview:directionsButton];
-                    
-                    [self.directionsButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-                    return;
-                }
-                
-                // handle HTTP errors here
-                
-                if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                    
-                    NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
-                    
-                    if (statusCode != 200) {
-                        //NSLog(@"dataTaskWithRequest HTTP status code: %ld", (long)statusCode);
-                        UIViewController *myError = [[UIViewController alloc]init];
-                        myError.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                        myError.modalPresentationStyle = UIModalPresentationFormSheet;
-                        myError.view.backgroundColor = [UIColor blackColor];
-                        //[self presentModalViewController:myError animated:YES];
-                        [self presentViewController:myError animated:YES completion:nil];
-                        
-                        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width/2 - 146,
-                                                                                     40,
-                                                                                     472, 260)];
-                        myLabel.text = @"\n This \n Requires \n A Network \n Connection.";
-                        myLabel.font = [UIFont boldSystemFontOfSize:48];
-                        myLabel.backgroundColor = [UIColor clearColor];
-                        myLabel.shadowColor = [UIColor grayColor];
-                        myLabel.shadowOffset = CGSizeMake(1,1);
-                        myLabel.textColor = [UIColor whiteColor];
-                        myLabel.textAlignment = NSTextAlignmentCenter;
-                        myLabel.lineBreakMode = NSLineBreakByWordWrapping;
-                        myLabel.numberOfLines = 18;
-                        [myLabel sizeToFit];
-                        [myError.view addSubview:myLabel];
-                        //[self.myLabel release];
-                        
-                        self.directionsButton = [self createButtonWithFrame:CGRectMake(22, 395, 276, 52) andLabel:@"Go Back"];
-                        
-                        [myError.view addSubview:directionsButton];
-                        
-                        [self.directionsButton addTarget:self action:@selector(closeView) forControlEvents:UIControlEventTouchUpInside];
-                        return;
-                    }
-                }
-                
-            }] resume];
-    
-    
-    
-}
 
 -(UIButton*)createButtonWithFrame:(CGRect)frame andLabel:(NSString*)label
 {
