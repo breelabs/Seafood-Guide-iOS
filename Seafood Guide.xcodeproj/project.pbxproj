@@ -52,14 +52,6 @@
 		FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646619EB4C560079C0A3 /* ProgressHUD.m */; };
 		FC7153811B5DE3E300F6E137 /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7153801B5DE3E300F6E137 /* About.m */; };
 		FC8F8C621FB839D10015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C611FB839D10015E5E8 /* LaunchScreen.storyboard */; };
-		FC8F8C741FB8A0A90015E5E8 /* star-gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C651FB8A0A90015E5E8 /* star-gray@2x.png */; };
-		FC8F8C751FB8A0A90015E5E8 /* SARate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C661FB8A0A90015E5E8 /* SARate.m */; };
-		FC8F8C761FB8A0A90015E5E8 /* SARateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C671FB8A0A90015E5E8 /* SARateViewController.m */; };
-		FC8F8C781FB8A0A90015E5E8 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8F8C6A1FB8A0A90015E5E8 /* iRate.m */; };
-		FC8F8C791FB8A0A90015E5E8 /* star@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C6C1FB8A0A90015E5E8 /* star@2x.png */; };
-		FC8F8C7A1FB8A0A90015E5E8 /* star-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C6E1FB8A0A90015E5E8 /* star-gray.png */; };
-		FC8F8C7B1FB8A0A90015E5E8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C701FB8A0A90015E5E8 /* star.png */; };
-		FC8F8C811FB8A27C0015E5E8 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C691FB8A0A90015E5E8 /* iRate.bundle */; };
 		FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDAB7591B537D600040E0F7 /* Lingo.m */; };
 		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -141,17 +133,6 @@
 		FC71537F1B5DE3E300F6E137 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = "Data Model/About.h"; sourceTree = "<group>"; };
 		FC7153801B5DE3E300F6E137 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = "Data Model/About.m"; sourceTree = "<group>"; };
 		FC8F8C611FB839D10015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FC8F8C651FB8A0A90015E5E8 /* star-gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray@2x.png"; sourceTree = "<group>"; };
-		FC8F8C661FB8A0A90015E5E8 /* SARate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARate.m; sourceTree = "<group>"; };
-		FC8F8C671FB8A0A90015E5E8 /* SARateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SARateViewController.m; sourceTree = "<group>"; };
-		FC8F8C691FB8A0A90015E5E8 /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
-		FC8F8C6A1FB8A0A90015E5E8 /* iRate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iRate.m; sourceTree = "<group>"; };
-		FC8F8C6B1FB8A0A90015E5E8 /* iRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iRate.h; sourceTree = "<group>"; };
-		FC8F8C6C1FB8A0A90015E5E8 /* star@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star@2x.png"; sourceTree = "<group>"; };
-		FC8F8C6D1FB8A0A90015E5E8 /* SARate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARate.h; sourceTree = "<group>"; };
-		FC8F8C6E1FB8A0A90015E5E8 /* star-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray.png"; sourceTree = "<group>"; };
-		FC8F8C6F1FB8A0A90015E5E8 /* SARateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARateViewController.h; sourceTree = "<group>"; };
-		FC8F8C701FB8A0A90015E5E8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		FCD699A11E89CAC100D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
 		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
@@ -243,7 +224,6 @@
 		FC2BD13419B23CBF003ECABA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FC8F8C641FB8A0A90015E5E8 /* SARate */,
 				FC4E646019EB4C260079C0A3 /* RaptureXML */,
 				FC3B084619B430620049FA70 /* Config */,
 				FC3B084419B430200049FA70 /* ProgressHUD */,
@@ -400,32 +380,6 @@
 			name = RaptureXML;
 			sourceTree = "<group>";
 		};
-		FC8F8C641FB8A0A90015E5E8 /* SARate */ = {
-			isa = PBXGroup;
-			children = (
-				FC8F8C651FB8A0A90015E5E8 /* star-gray@2x.png */,
-				FC8F8C661FB8A0A90015E5E8 /* SARate.m */,
-				FC8F8C671FB8A0A90015E5E8 /* SARateViewController.m */,
-				FC8F8C681FB8A0A90015E5E8 /* iRate */,
-				FC8F8C6C1FB8A0A90015E5E8 /* star@2x.png */,
-				FC8F8C6D1FB8A0A90015E5E8 /* SARate.h */,
-				FC8F8C6E1FB8A0A90015E5E8 /* star-gray.png */,
-				FC8F8C6F1FB8A0A90015E5E8 /* SARateViewController.h */,
-				FC8F8C701FB8A0A90015E5E8 /* star.png */,
-			);
-			path = SARate;
-			sourceTree = "<group>";
-		};
-		FC8F8C681FB8A0A90015E5E8 /* iRate */ = {
-			isa = PBXGroup;
-			children = (
-				FC8F8C691FB8A0A90015E5E8 /* iRate.bundle */,
-				FC8F8C6A1FB8A0A90015E5E8 /* iRate.m */,
-				FC8F8C6B1FB8A0A90015E5E8 /* iRate.h */,
-			);
-			path = iRate;
-			sourceTree = "<group>";
-		};
 		FCEAB16019B5503B004D1846 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,23 +516,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC8F8C811FB8A27C0015E5E8 /* iRate.bundle in Resources */,
 				FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */,
 				FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */,
-				FC8F8C791FB8A0A90015E5E8 /* star@2x.png in Resources */,
 				FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */,
 				FC8F8C621FB839D10015E5E8 /* LaunchScreen.storyboard in Resources */,
 				FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */,
 				FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */,
 				FC4E641F19EB4AB70079C0A3 /* ios-lingo.xml in Resources */,
 				FC4E63FE19EB49CA0079C0A3 /* ios-about-1.xml in Resources */,
-				FC8F8C7A1FB8A0A90015E5E8 /* star-gray.png in Resources */,
 				FC4E642719EB4B1B0079C0A3 /* ios-news.xml in Resources */,
 				FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */,
 				FC4E642C19EB4B300079C0A3 /* TableViewCellNews.xib in Resources */,
-				FC8F8C7B1FB8A0A90015E5E8 /* star.png in Resources */,
 				FC2BD13819B23CBF003ECABA /* InfoPlist.strings in Resources */,
-				FC8F8C741FB8A0A90015E5E8 /* star-gray@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,18 +555,15 @@
 				FC4E643A19EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld in Sources */,
 				FC4E642B19EB4B300079C0A3 /* TableViewCellNews.m in Sources */,
 				FC4E641D19EB4AAC0079C0A3 /* LingoTableViewController.m in Sources */,
-				FC8F8C781FB8A0A90015E5E8 /* iRate.m in Sources */,
 				FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */,
 				FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */,
 				FC4E640519EB49D30079C0A3 /* AboutTableViewController.m in Sources */,
 				FC4E643919EB4B7C0079C0A3 /* FishCat.m in Sources */,
 				FC2BD13A19B23CBF003ECABA /* main.m in Sources */,
-				FC8F8C761FB8A0A90015E5E8 /* SARateViewController.m in Sources */,
 				FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */,
 				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
 				FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */,
 				FC7153811B5DE3E300F6E137 /* About.m in Sources */,
-				FC8F8C751FB8A0A90015E5E8 /* SARate.m in Sources */,
 				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
 				FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */,
 				FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */,

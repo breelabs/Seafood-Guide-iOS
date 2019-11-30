@@ -11,7 +11,6 @@
 #import "Lingo.h"
 #import "About.h"
 #import "RXMLElement.h"
-#import "SARate.h"
 
 @implementation AppDelegate
 
@@ -21,41 +20,7 @@
 @synthesize persistentStoreCoordinator = __persistentStoreCoordinator;
 @synthesize fetchedResultsController = __fetchedResultsController;
 
-+ (void)initialize
-{
-    //set the bundle ID. normally you wouldn't need to do this
-    //as it is picked up automatically from your Info.plist file
-    //but we want to test with an app that's actually on the store
 
-    
-    //configure
-    [SARate sharedInstance].daysUntilPrompt = 5;
-    [SARate sharedInstance].usesUntilPrompt = 5;
-    [SARate sharedInstance].remindPeriod = 30;
-    [SARate sharedInstance].promptForNewVersionIfUserRated = YES;
-    //enable preview mode
-    [SARate sharedInstance].previewMode = NO;
-    
-    [SARate sharedInstance].email = @"jonbrown2@mac.com";
-    // 4 and 5 stars
-    [SARate sharedInstance].minAppStoreRaiting = 4;
-    [SARate sharedInstance].emailSubject = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"];
-    [SARate sharedInstance].emailText = @"Disadvantages: ";
-    [SARate sharedInstance].headerLabelText = @"Like app?";
-    [SARate sharedInstance].descriptionLabelText = @"Touch the star to rate.";
-    [SARate sharedInstance].rateButtonLabelText = @"Rate";
-    [SARate sharedInstance].cancelButtonLabelText = @"Not Now";
-    [SARate sharedInstance].setRaitingAlertTitle = @"Rate";
-    [SARate sharedInstance].setRaitingAlertMessage = @"Touch the star to rate.";
-    [SARate sharedInstance].appstoreRaitingAlertTitle = @"Write a review on the AppStore";
-    [SARate sharedInstance].appstoreRaitingAlertMessage = @"Would you mind taking a moment to rate it on the AppStore? It won’t take more than a minute. Thanks for your support!";
-    [SARate sharedInstance].appstoreRaitingCancel = @"Cancel";
-    [SARate sharedInstance].appstoreRaitingButton = @"Rate It Now";
-    [SARate sharedInstance].disadvantagesAlertTitle = @"Disadvantages";
-    [SARate sharedInstance].disadvantagesAlertMessage = @"Please specify the deficiencies in the application. We will try to fix it!";
-    
-    
-}
 -(void)insertRoleWithRoleName:(NSString *)seafoodName typeName:(NSString *)seafoodType descName:(NSString *)seafoodDesc goodName:(NSString *)seafoodGood badName:(NSString *)seafoodBad regName:(NSString *)seafoodRegion
 
 {
