@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FC07E65F1D88F1EA00B48EE5 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07E65E1D88F1EA00B48EE5 /* MBProgressHUD.m */; };
-		FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F51B65D37B0019E1CA /* AppGalleryView.m */; };
-		FC1195FE1B65D37B0019E1CA /* ARScrollViewEnhancer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */; };
-		FC1195FF1B65D37B0019E1CA /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195F91B65D37B0019E1CA /* CustomCell.m */; };
-		FC1196001B65D37B0019E1CA /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC1195FA1B65D37B0019E1CA /* CustomCell.xib */; };
-		FC1196011B65D37B0019E1CA /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1195FC1B65D37B0019E1CA /* DetailView.m */; };
 		FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
 		FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */; };
 		FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
@@ -39,8 +33,6 @@
 		FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640A19EB4A490079C0A3 /* GridViewController.m */; };
 		FC4E641119EB4A530079C0A3 /* FishTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640E19EB4A530079C0A3 /* FishTVC.m */; };
 		FC4E641219EB4A530079C0A3 /* TVCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641019EB4A530079C0A3 /* TVCDetailViewController.m */; };
-		FC4E641619EB4A5C0079C0A3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641419EB4A5C0079C0A3 /* WebViewController.m */; };
-		FC4E641719EB4A5C0079C0A3 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4E641519EB4A5C0079C0A3 /* WebViewController.xib */; };
 		FC4E641C19EB4AAC0079C0A3 /* DetailLingoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641919EB4AAC0079C0A3 /* DetailLingoViewController.m */; };
 		FC4E641D19EB4AAC0079C0A3 /* LingoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641B19EB4AAC0079C0A3 /* LingoTableViewController.m */; };
 		FC4E641F19EB4AB70079C0A3 /* ios-lingo.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E641E19EB4AB70079C0A3 /* ios-lingo.xml */; };
@@ -68,14 +60,6 @@
 		FC8F8C7A1FB8A0A90015E5E8 /* star-gray.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C6E1FB8A0A90015E5E8 /* star-gray.png */; };
 		FC8F8C7B1FB8A0A90015E5E8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C701FB8A0A90015E5E8 /* star.png */; };
 		FC8F8C811FB8A27C0015E5E8 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C691FB8A0A90015E5E8 /* iRate.bundle */; };
-		FC9AC0B81C5E815100DD92CD /* allfish.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B01C5E815100DD92CD /* allfish.png */; };
-		FC9AC0B91C5E815100DD92CD /* donteat.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B11C5E815100DD92CD /* donteat.png */; };
-		FC9AC0BA1C5E815100DD92CD /* fish1.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B21C5E815100DD92CD /* fish1.png */; };
-		FC9AC0BB1C5E815100DD92CD /* fish2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B31C5E815100DD92CD /* fish2.png */; };
-		FC9AC0BC1C5E815100DD92CD /* fish3.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B41C5E815100DD92CD /* fish3.png */; };
-		FC9AC0BD1C5E815100DD92CD /* fish4.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B51C5E815100DD92CD /* fish4.png */; };
-		FC9AC0BE1C5E815100DD92CD /* fish5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B61C5E815100DD92CD /* fish5.png */; };
-		FC9AC0BF1C5E815100DD92CD /* fish6.png in Resources */ = {isa = PBXBuildFile; fileRef = FC9AC0B71C5E815100DD92CD /* fish6.png */; };
 		FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDAB7591B537D600040E0F7 /* Lingo.m */; };
 		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
 /* End PBXBuildFile section */
@@ -91,18 +75,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FC07E65C1D88F1EA00B48EE5 /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
-		FC07E65D1D88F1EA00B48EE5 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
-		FC07E65E1D88F1EA00B48EE5 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		FC1195F41B65D37B0019E1CA /* AppGalleryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppGalleryView.h; sourceTree = "<group>"; };
-		FC1195F51B65D37B0019E1CA /* AppGalleryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppGalleryView.m; sourceTree = "<group>"; };
-		FC1195F61B65D37B0019E1CA /* ARScrollViewEnhancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARScrollViewEnhancer.h; sourceTree = "<group>"; };
-		FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARScrollViewEnhancer.m; sourceTree = "<group>"; };
-		FC1195F81B65D37B0019E1CA /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		FC1195F91B65D37B0019E1CA /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		FC1195FA1B65D37B0019E1CA /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
-		FC1195FB1B65D37B0019E1CA /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailView.h; sourceTree = "<group>"; };
-		FC1195FC1B65D37B0019E1CA /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailView.m; sourceTree = "<group>"; };
 		FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seafood Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2BD12D19B23CBF003ECABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,17 +103,12 @@
 		FC4E640219EB49D30079C0A3 /* DetailAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailAboutViewController.h; path = About/ViewControllers/DetailAboutViewController.h; sourceTree = "<group>"; };
 		FC4E640319EB49D30079C0A3 /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutTableViewController.m; path = About/ViewControllers/AboutTableViewController.m; sourceTree = "<group>"; };
 		FC4E640419EB49D30079C0A3 /* DetailAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailAboutViewController.m; path = About/ViewControllers/DetailAboutViewController.m; sourceTree = "<group>"; };
-		FC4E640719EB4A490079C0A3 /* GridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewCell.h; path = "Seafood Guide/Grid Controller/GridViewCell.h"; sourceTree = "<group>"; };
-		FC4E640819EB4A490079C0A3 /* GridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewCell.m; path = "Seafood Guide/Grid Controller/GridViewCell.m"; sourceTree = "<group>"; };
 		FC4E640919EB4A490079C0A3 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewController.h; path = "Seafood Guide/Grid Controller/GridViewController.h"; sourceTree = "<group>"; };
 		FC4E640A19EB4A490079C0A3 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewController.m; path = "Seafood Guide/Grid Controller/GridViewController.m"; sourceTree = "<group>"; };
 		FC4E640D19EB4A530079C0A3 /* FishTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FishTVC.h; path = "Seafood Guide/View Controller/FishTVC.h"; sourceTree = "<group>"; };
 		FC4E640E19EB4A530079C0A3 /* FishTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FishTVC.m; path = "Seafood Guide/View Controller/FishTVC.m"; sourceTree = "<group>"; };
 		FC4E640F19EB4A530079C0A3 /* TVCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVCDetailViewController.h; path = "Seafood Guide/View Controller/TVCDetailViewController.h"; sourceTree = "<group>"; };
 		FC4E641019EB4A530079C0A3 /* TVCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVCDetailViewController.m; path = "Seafood Guide/View Controller/TVCDetailViewController.m"; sourceTree = "<group>"; };
-		FC4E641319EB4A5C0079C0A3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebViewController.h; path = "Seafood Guide/Web Controller/WebViewController.h"; sourceTree = "<group>"; };
-		FC4E641419EB4A5C0079C0A3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebViewController.m; path = "Seafood Guide/Web Controller/WebViewController.m"; sourceTree = "<group>"; };
-		FC4E641519EB4A5C0079C0A3 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WebViewController.xib; path = "Seafood Guide/Web Controller/WebViewController.xib"; sourceTree = "<group>"; };
 		FC4E641819EB4AAC0079C0A3 /* DetailLingoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailLingoViewController.h; path = Lingo/ViewControllers/DetailLingoViewController.h; sourceTree = "<group>"; };
 		FC4E641919EB4AAC0079C0A3 /* DetailLingoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailLingoViewController.m; path = Lingo/ViewControllers/DetailLingoViewController.m; sourceTree = "<group>"; };
 		FC4E641A19EB4AAC0079C0A3 /* LingoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LingoTableViewController.h; path = Lingo/ViewControllers/LingoTableViewController.h; sourceTree = "<group>"; };
@@ -164,29 +131,6 @@
 		FC4E643419EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Seafood_Guide.xcdatamodel; sourceTree = "<group>"; };
 		FC4E643519EB4B7C0079C0A3 /* Seafood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Seafood.h; path = "Data Model/Seafood.h"; sourceTree = "<group>"; };
 		FC4E643619EB4B7C0079C0A3 /* Seafood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Seafood.m; path = "Data Model/Seafood.m"; sourceTree = "<group>"; };
-		FC4E643C19EB4BF70079C0A3 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridView.h; path = classes/AQGridView/AQGridView.h; sourceTree = "<group>"; };
-		FC4E643D19EB4BF70079C0A3 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridView.m; path = classes/AQGridView/AQGridView.m; sourceTree = "<group>"; };
-		FC4E643E19EB4BF70079C0A3 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AQGridView+CellLayout.h"; path = "classes/AQGridView/AQGridView+CellLayout.h"; sourceTree = "<group>"; };
-		FC4E643F19EB4BF70079C0A3 /* AQGridView+CellLocationDelegation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AQGridView+CellLocationDelegation.h"; path = "classes/AQGridView/AQGridView+CellLocationDelegation.h"; sourceTree = "<group>"; };
-		FC4E644019EB4BF70079C0A3 /* AQGridViewAnimatorItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridViewAnimatorItem.h; path = classes/AQGridView/AQGridViewAnimatorItem.h; sourceTree = "<group>"; };
-		FC4E644119EB4BF70079C0A3 /* AQGridViewAnimatorItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridViewAnimatorItem.m; path = classes/AQGridView/AQGridViewAnimatorItem.m; sourceTree = "<group>"; };
-		FC4E644219EB4BF70079C0A3 /* AQGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridViewCell.h; path = classes/AQGridView/AQGridViewCell.h; sourceTree = "<group>"; };
-		FC4E644319EB4BF70079C0A3 /* AQGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridViewCell.m; path = classes/AQGridView/AQGridViewCell.m; sourceTree = "<group>"; };
-		FC4E644419EB4BF70079C0A3 /* AQGridViewCell+AQGridViewCellPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AQGridViewCell+AQGridViewCellPrivate.h"; path = "classes/AQGridView/AQGridViewCell+AQGridViewCellPrivate.h"; sourceTree = "<group>"; };
-		FC4E644519EB4BF70079C0A3 /* AQGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridViewController.h; path = classes/AQGridView/AQGridViewController.h; sourceTree = "<group>"; };
-		FC4E644619EB4BF70079C0A3 /* AQGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridViewController.m; path = classes/AQGridView/AQGridViewController.m; sourceTree = "<group>"; };
-		FC4E644719EB4BF70079C0A3 /* AQGridViewData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridViewData.h; path = classes/AQGridView/AQGridViewData.h; sourceTree = "<group>"; };
-		FC4E644819EB4BF70079C0A3 /* AQGridViewData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridViewData.m; path = classes/AQGridView/AQGridViewData.m; sourceTree = "<group>"; };
-		FC4E644919EB4BF70079C0A3 /* AQGridViewUpdateInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridViewUpdateInfo.h; path = classes/AQGridView/AQGridViewUpdateInfo.h; sourceTree = "<group>"; };
-		FC4E644A19EB4BF70079C0A3 /* AQGridViewUpdateInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridViewUpdateInfo.m; path = classes/AQGridView/AQGridViewUpdateInfo.m; sourceTree = "<group>"; };
-		FC4E644B19EB4BF70079C0A3 /* AQGridViewUpdateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridViewUpdateItem.h; path = classes/AQGridView/AQGridViewUpdateItem.h; sourceTree = "<group>"; };
-		FC4E644C19EB4BF70079C0A3 /* AQGridViewUpdateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridViewUpdateItem.m; path = classes/AQGridView/AQGridViewUpdateItem.m; sourceTree = "<group>"; };
-		FC4E644D19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexSet+AQIndexesOutsideSet.h"; path = "classes/AQGridView/NSIndexSet+AQIndexesOutsideSet.h"; sourceTree = "<group>"; };
-		FC4E644E19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexSet+AQIndexesOutsideSet.m"; path = "classes/AQGridView/NSIndexSet+AQIndexesOutsideSet.m"; sourceTree = "<group>"; };
-		FC4E644F19EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSIndexSet+AQIsSetContiguous.h"; path = "classes/AQGridView/NSIndexSet+AQIsSetContiguous.h"; sourceTree = "<group>"; };
-		FC4E645019EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexSet+AQIsSetContiguous.m"; path = "classes/AQGridView/NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
-		FC4E645119EB4BF70079C0A3 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+AQGridView.h"; path = "classes/AQGridView/UIColor+AQGridView.h"; sourceTree = "<group>"; };
-		FC4E645219EB4BF70079C0A3 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+AQGridView.m"; path = "classes/AQGridView/UIColor+AQGridView.m"; sourceTree = "<group>"; };
 		FC4E645D19EB4C200079C0A3 /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RXMLElement.h; path = classes/RaptureXML/RXMLElement.h; sourceTree = "<group>"; };
 		FC4E645E19EB4C200079C0A3 /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RXMLElement.m; path = classes/RaptureXML/RXMLElement.m; sourceTree = "<group>"; };
 		FC4E646119EB4C420079C0A3 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = classes/Config/config.h; sourceTree = "<group>"; };
@@ -208,14 +152,6 @@
 		FC8F8C6E1FB8A0A90015E5E8 /* star-gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "star-gray.png"; sourceTree = "<group>"; };
 		FC8F8C6F1FB8A0A90015E5E8 /* SARateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SARateViewController.h; sourceTree = "<group>"; };
 		FC8F8C701FB8A0A90015E5E8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
-		FC9AC0B01C5E815100DD92CD /* allfish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = allfish.png; path = Export/allfish.png; sourceTree = "<group>"; };
-		FC9AC0B11C5E815100DD92CD /* donteat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = donteat.png; path = Export/donteat.png; sourceTree = "<group>"; };
-		FC9AC0B21C5E815100DD92CD /* fish1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish1.png; path = Export/fish1.png; sourceTree = "<group>"; };
-		FC9AC0B31C5E815100DD92CD /* fish2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish2.png; path = Export/fish2.png; sourceTree = "<group>"; };
-		FC9AC0B41C5E815100DD92CD /* fish3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish3.png; path = Export/fish3.png; sourceTree = "<group>"; };
-		FC9AC0B51C5E815100DD92CD /* fish4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish4.png; path = Export/fish4.png; sourceTree = "<group>"; };
-		FC9AC0B61C5E815100DD92CD /* fish5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish5.png; path = Export/fish5.png; sourceTree = "<group>"; };
-		FC9AC0B71C5E815100DD92CD /* fish6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fish6.png; path = Export/fish6.png; sourceTree = "<group>"; };
 		FCD699A11E89CAC100D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
 		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
@@ -252,32 +188,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FC07E6601D88F1F000B48EE5 /* MGProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				FC07E65C1D88F1EA00B48EE5 /* MBProgressHUD-Prefix.pch */,
-				FC07E65D1D88F1EA00B48EE5 /* MBProgressHUD.h */,
-				FC07E65E1D88F1EA00B48EE5 /* MBProgressHUD.m */,
-			);
-			name = MGProgressHUD;
-			sourceTree = "<group>";
-		};
-		FC1195E81B65CDE40019E1CA /* More */ = {
-			isa = PBXGroup;
-			children = (
-				FC1195F41B65D37B0019E1CA /* AppGalleryView.h */,
-				FC1195F51B65D37B0019E1CA /* AppGalleryView.m */,
-				FC1195F61B65D37B0019E1CA /* ARScrollViewEnhancer.h */,
-				FC1195F71B65D37B0019E1CA /* ARScrollViewEnhancer.m */,
-				FC1195F81B65D37B0019E1CA /* CustomCell.h */,
-				FC1195F91B65D37B0019E1CA /* CustomCell.m */,
-				FC1195FA1B65D37B0019E1CA /* CustomCell.xib */,
-				FC1195FB1B65D37B0019E1CA /* DetailView.h */,
-				FC1195FC1B65D37B0019E1CA /* DetailView.m */,
-			);
-			name = More;
-			sourceTree = "<group>";
-		};
 		FC2BD12119B23CBF003ECABA = {
 			isa = PBXGroup;
 			children = (
@@ -318,7 +228,6 @@
 		FC2BD13319B23CBF003ECABA /* Seafood Guide */ = {
 			isa = PBXGroup;
 			children = (
-				FC1195E81B65CDE40019E1CA /* More */,
 				FC4E63F619EB48720079C0A3 /* About */,
 				FC3B084319B430000049FA70 /* Seafood Guide */,
 				FCEAB16B19B5696C004D1846 /* Lingo */,
@@ -335,10 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				FC8F8C641FB8A0A90015E5E8 /* SARate */,
-				FC07E6601D88F1F000B48EE5 /* MGProgressHUD */,
 				FC4E646019EB4C260079C0A3 /* RaptureXML */,
 				FC3B084619B430620049FA70 /* Config */,
-				FC2BD16B19B26E76003ECABA /* AQGridView */,
 				FC3B084419B430200049FA70 /* ProgressHUD */,
 				FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */,
 				FC2BD13619B23CBF003ECABA /* InfoPlist.strings */,
@@ -366,41 +273,9 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FC2BD16B19B26E76003ECABA /* AQGridView */ = {
-			isa = PBXGroup;
-			children = (
-				FC4E643C19EB4BF70079C0A3 /* AQGridView.h */,
-				FC4E643D19EB4BF70079C0A3 /* AQGridView.m */,
-				FC4E643E19EB4BF70079C0A3 /* AQGridView+CellLayout.h */,
-				FC4E643F19EB4BF70079C0A3 /* AQGridView+CellLocationDelegation.h */,
-				FC4E644019EB4BF70079C0A3 /* AQGridViewAnimatorItem.h */,
-				FC4E644119EB4BF70079C0A3 /* AQGridViewAnimatorItem.m */,
-				FC4E644219EB4BF70079C0A3 /* AQGridViewCell.h */,
-				FC4E644319EB4BF70079C0A3 /* AQGridViewCell.m */,
-				FC4E644419EB4BF70079C0A3 /* AQGridViewCell+AQGridViewCellPrivate.h */,
-				FC4E644519EB4BF70079C0A3 /* AQGridViewController.h */,
-				FC4E644619EB4BF70079C0A3 /* AQGridViewController.m */,
-				FC4E644719EB4BF70079C0A3 /* AQGridViewData.h */,
-				FC4E644819EB4BF70079C0A3 /* AQGridViewData.m */,
-				FC4E644919EB4BF70079C0A3 /* AQGridViewUpdateInfo.h */,
-				FC4E644A19EB4BF70079C0A3 /* AQGridViewUpdateInfo.m */,
-				FC4E644B19EB4BF70079C0A3 /* AQGridViewUpdateItem.h */,
-				FC4E644C19EB4BF70079C0A3 /* AQGridViewUpdateItem.m */,
-				FC4E644D19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.h */,
-				FC4E644E19EB4BF70079C0A3 /* NSIndexSet+AQIndexesOutsideSet.m */,
-				FC4E644F19EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.h */,
-				FC4E645019EB4BF70079C0A3 /* NSIndexSet+AQIsSetContiguous.m */,
-				FC4E645119EB4BF70079C0A3 /* UIColor+AQGridView.h */,
-				FC4E645219EB4BF70079C0A3 /* UIColor+AQGridView.m */,
-			);
-			name = AQGridView;
-			sourceTree = "<group>";
-		};
 		FC2BD19219B26F56003ECABA /* Grid Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E640719EB4A490079C0A3 /* GridViewCell.h */,
-				FC4E640819EB4A490079C0A3 /* GridViewCell.m */,
 				FC4E640919EB4A490079C0A3 /* GridViewController.h */,
 				FC4E640A19EB4A490079C0A3 /* GridViewController.m */,
 			);
@@ -410,7 +285,6 @@
 		FC3B084219B42FEA0049FA70 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC9AC0C01C5E815800DD92CD /* Export */,
 				FC4E642D19EB4B7C0079C0A3 /* AppDelegate.h */,
 				FC4E642E19EB4B7C0079C0A3 /* AppDelegate.m */,
 				FC4E642F19EB4B7C0079C0A3 /* CoreDataTableViewController.h */,
@@ -431,7 +305,6 @@
 		FC3B084319B430000049FA70 /* Seafood Guide */ = {
 			isa = PBXGroup;
 			children = (
-				FC3B084519B4304A0049FA70 /* Web Controller */,
 				FC2BD19219B26F56003ECABA /* Grid Controller */,
 				FC4E63FA19EB48C60079C0A3 /* ViewControllers */,
 			);
@@ -446,16 +319,6 @@
 				FC4E646619EB4C560079C0A3 /* ProgressHUD.m */,
 			);
 			name = ProgressHUD;
-			sourceTree = "<group>";
-		};
-		FC3B084519B4304A0049FA70 /* Web Controller */ = {
-			isa = PBXGroup;
-			children = (
-				FC4E641319EB4A5C0079C0A3 /* WebViewController.h */,
-				FC4E641419EB4A5C0079C0A3 /* WebViewController.m */,
-				FC4E641519EB4A5C0079C0A3 /* WebViewController.xib */,
-			);
-			name = "Web Controller";
 			sourceTree = "<group>";
 		};
 		FC3B084619B430620049FA70 /* Config */ = {
@@ -561,21 +424,6 @@
 				FC8F8C6B1FB8A0A90015E5E8 /* iRate.h */,
 			);
 			path = iRate;
-			sourceTree = "<group>";
-		};
-		FC9AC0C01C5E815800DD92CD /* Export */ = {
-			isa = PBXGroup;
-			children = (
-				FC9AC0B01C5E815100DD92CD /* allfish.png */,
-				FC9AC0B11C5E815100DD92CD /* donteat.png */,
-				FC9AC0B21C5E815100DD92CD /* fish1.png */,
-				FC9AC0B31C5E815100DD92CD /* fish2.png */,
-				FC9AC0B41C5E815100DD92CD /* fish3.png */,
-				FC9AC0B51C5E815100DD92CD /* fish4.png */,
-				FC9AC0B61C5E815100DD92CD /* fish5.png */,
-				FC9AC0B71C5E815100DD92CD /* fish6.png */,
-			);
-			name = Export;
 			sourceTree = "<group>";
 		};
 		FCEAB16019B5503B004D1846 /* Table View Cell */ = {
@@ -715,25 +563,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8F8C811FB8A27C0015E5E8 /* iRate.bundle in Resources */,
-				FC9AC0BF1C5E815100DD92CD /* fish6.png in Resources */,
-				FC1196001B65D37B0019E1CA /* CustomCell.xib in Resources */,
-				FC9AC0BD1C5E815100DD92CD /* fish4.png in Resources */,
 				FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */,
-				FC9AC0BB1C5E815100DD92CD /* fish2.png in Resources */,
-				FC9AC0BC1C5E815100DD92CD /* fish3.png in Resources */,
 				FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */,
 				FC8F8C791FB8A0A90015E5E8 /* star@2x.png in Resources */,
-				FC4E641719EB4A5C0079C0A3 /* WebViewController.xib in Resources */,
 				FC4E646719EB4C560079C0A3 /* ProgressHUD.bundle in Resources */,
 				FC8F8C621FB839D10015E5E8 /* LaunchScreen.storyboard in Resources */,
 				FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */,
 				FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */,
-				FC9AC0BA1C5E815100DD92CD /* fish1.png in Resources */,
-				FC9AC0B91C5E815100DD92CD /* donteat.png in Resources */,
 				FC4E641F19EB4AB70079C0A3 /* ios-lingo.xml in Resources */,
 				FC4E63FE19EB49CA0079C0A3 /* ios-about-1.xml in Resources */,
-				FC9AC0B81C5E815100DD92CD /* allfish.png in Resources */,
-				FC9AC0BE1C5E815100DD92CD /* fish5.png in Resources */,
 				FC8F8C7A1FB8A0A90015E5E8 /* star-gray.png in Resources */,
 				FC4E642719EB4B1B0079C0A3 /* ios-news.xml in Resources */,
 				FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */,
@@ -769,24 +607,18 @@
 				FC4E642B19EB4B300079C0A3 /* TableViewCellNews.m in Sources */,
 				FC4E641D19EB4AAC0079C0A3 /* LingoTableViewController.m in Sources */,
 				FC8F8C781FB8A0A90015E5E8 /* iRate.m in Sources */,
-				FC1195FE1B65D37B0019E1CA /* ARScrollViewEnhancer.m in Sources */,
 				FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */,
 				FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */,
 				FC4E640519EB49D30079C0A3 /* AboutTableViewController.m in Sources */,
 				FC4E643919EB4B7C0079C0A3 /* FishCat.m in Sources */,
 				FC2BD13A19B23CBF003ECABA /* main.m in Sources */,
-				FC07E65F1D88F1EA00B48EE5 /* MBProgressHUD.m in Sources */,
 				FC8F8C761FB8A0A90015E5E8 /* SARateViewController.m in Sources */,
 				FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */,
-				FC1195FD1B65D37B0019E1CA /* AppGalleryView.m in Sources */,
-				FC1195FF1B65D37B0019E1CA /* CustomCell.m in Sources */,
 				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
 				FC4E645F19EB4C200079C0A3 /* RXMLElement.m in Sources */,
-				FC1196011B65D37B0019E1CA /* DetailView.m in Sources */,
 				FC7153811B5DE3E300F6E137 /* About.m in Sources */,
 				FC8F8C751FB8A0A90015E5E8 /* SARate.m in Sources */,
 				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
-				FC4E641619EB4A5C0079C0A3 /* WebViewController.m in Sources */,
 				FC4E646819EB4C560079C0A3 /* ProgressHUD.m in Sources */,
 				FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */,
 			);

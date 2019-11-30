@@ -9,7 +9,6 @@
 #import "TVCDetailViewController.h"
 #import "FishTVC.h"
 #import <Social/Social.h>
-#import "WebViewController.h"
 #import "config.h"
 
 @interface TVCDetailViewController ()
@@ -74,7 +73,7 @@
     // #warning Incomplete method implementation.
     // Return the number of rows in the section.
     
-    return 4;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -148,28 +147,12 @@
             
             //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             
-        } else if ([indexPath row] == 2) {
+        }  else if ([indexPath row] == 2) {
             
             cell = [tableView dequeueReusableCellWithIdentifier:@"CellType8"];
             if(!cell)
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType8"];
-            [[cell textLabel] setText:@"View Online Guide"];
-           // cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            
-        } else if ([indexPath row] == 3) {
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType9"];
-            if(!cell)
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType9"];
             [[cell textLabel] setText:@"Email to a friend"];
-            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            
-        } else if ([indexPath row] == 4) {
-            
-            cell = [tableView dequeueReusableCellWithIdentifier:@"CellType10"];
-            if(!cell)
-                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"CellType10"];
-            [[cell textLabel] setText:@"Like this item"];
             //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             
         }
@@ -185,16 +168,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    //NSString *text = @"25345234 582345 928345 923485yp2349857y32terughewrkgjherlkjgehrg"
-    
-    
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
     
     if (indexPath.section == 1) {
     
@@ -206,10 +179,7 @@
         
         [self postToFacebook:self];
         
-    } else if ([indexPath row] == 2) {
-        
-        [self goWebsite];
-    } else if ([indexPath row] == 3) {
+    }  else if ([indexPath row] == 2) {
         
         [self sendEmail];
         
@@ -309,13 +279,7 @@
     
 }
 
--(void)goWebsite {
-    [self urlMkr:@"http://www.google.com"];
-    
-    NSURL *url = [NSURL URLWithString:@"http://www.foodandwaterwatch.org/common-resources/fish/seafood/seafood-guide-data/"];
-    WebViewController *webViewController = [[WebViewController alloc] initWithURL:url andTitle:@"Online Guide"];
-    [self presentViewController:webViewController animated:YES completion:nil];
-}
+
 
 - (IBAction)postToFacebook:(id)sender {
     
