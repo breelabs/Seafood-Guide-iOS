@@ -9,7 +9,6 @@
 #import "DetailLingoViewController.h"
 #import "LingoTableViewController.h"
 #import "config.h"
-#import <Social/Social.h>
 
 @interface DetailLingoViewController ()
 

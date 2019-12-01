@@ -9,7 +9,6 @@
 #import "DetailAboutViewController.h"
 #import "AboutTableViewController.h"
 #import "config.h"
-#import <Social/Social.h>
 
 @interface DetailAboutViewController ()
 

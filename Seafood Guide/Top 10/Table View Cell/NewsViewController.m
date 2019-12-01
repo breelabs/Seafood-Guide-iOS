@@ -8,7 +8,6 @@
 
 #import "NewsViewController.h"
 #import "TableViewCellNews.h"
-#import <Social/Social.h>
 #import "RXMLElement.h"
 #import "DetailNewsViewController.h"
 #import "config.h"

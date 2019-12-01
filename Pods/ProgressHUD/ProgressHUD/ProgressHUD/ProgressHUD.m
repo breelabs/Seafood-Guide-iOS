@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2014 Related Code - http://relatedcode.com
+// Copyright (c) 2018 Related Code - http://relatedcode.com
 //
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -11,15 +11,26 @@
 
 #import "ProgressHUD.h"
 
-@implementation ProgressHUD
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+@interface ProgressHUD()
+{
+	UIWindow *window;
+	UIView *viewBackground;
+	UIToolbar *toolbarHUD;
+	UIActivityIndicatorView *spinner;
+	UIImageView *imageView;
+	UILabel *labelStatus;
+}
+@end
+//-------------------------------------------------------------------------------------------------------------------------------------------------
 
-@synthesize interaction, window, background, hud, spinner, image, label;
+@implementation ProgressHUD
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 + (ProgressHUD *)shared
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	static dispatch_once_t once = 0;
+	static dispatch_once_t once;
 	static ProgressHUD *progressHUD;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	dispatch_once(&once, ^{ progressHUD = [[ProgressHUD alloc] init]; });
@@ -27,60 +38,111 @@
 	return progressHUD;
 }
 
+#pragma mark - Display methods
+
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 + (void)dismiss
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[[self shared] hudHide];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudHide];
+	});
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
++ (void)show
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:nil image:nil spin:YES hide:NO interaction:YES];
+	});
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 + (void)show:(NSString *)status
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[self shared].interaction = YES;
-	[[self shared] hudMake:status image:nil spin:YES hide:NO];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:status image:nil spin:YES hide:NO interaction:YES];
+	});
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-+ (void)show:(NSString *)status Interaction:(BOOL)Interaction
++ (void)show:(NSString *)status Interaction:(BOOL)interaction
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[self shared].interaction = Interaction;
-	[[self shared] hudMake:status image:nil spin:YES hide:NO];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:status image:nil spin:YES hide:NO interaction:interaction];
+	});
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
++ (void)showSuccess
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:nil image:[self shared].imageSuccess spin:NO hide:YES interaction:YES];
+	});
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 + (void)showSuccess:(NSString *)status
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[self shared].interaction = YES;
-	[[self shared] hudMake:status image:HUD_IMAGE_SUCCESS spin:NO hide:YES];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:status image:[self shared].imageSuccess spin:NO hide:YES interaction:YES];
+	});
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-+ (void)showSuccess:(NSString *)status Interaction:(BOOL)Interaction
++ (void)showSuccess:(NSString *)status Interaction:(BOOL)interaction
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[self shared].interaction = Interaction;
-	[[self shared] hudMake:status image:HUD_IMAGE_SUCCESS spin:NO hide:YES];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:status image:[self shared].imageSuccess spin:NO hide:YES interaction:interaction];
+	});
+}
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
++ (void)showError
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+{
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:nil image:[self shared].imageError spin:NO hide:YES interaction:YES];
+	});
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 + (void)showError:(NSString *)status
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[self shared].interaction = YES;
-	[[self shared] hudMake:status image:HUD_IMAGE_ERROR spin:NO hide:YES];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:status image:[self shared].imageError spin:NO hide:YES interaction:YES];
+	});
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-+ (void)showError:(NSString *)status Interaction:(BOOL)Interaction
++ (void)showError:(NSString *)status Interaction:(BOOL)interaction
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[self shared].interaction = Interaction;
-	[[self shared] hudMake:status image:HUD_IMAGE_ERROR spin:NO hide:YES];
+	dispatch_async(dispatch_get_main_queue(), ^{
+		[[self shared] hudCreate:status image:[self shared].imageError spin:NO hide:YES interaction:interaction];
+	});
 }
+
+#pragma mark - Property methods
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------
++ (void)statusFont:(UIFont *)font			{	[self shared].statusFont		= font;		}
++ (void)statusColor:(UIColor *)color		{	[self shared].statusColor		= color;	}
++ (void)spinnerColor:(UIColor *)color		{	[self shared].spinnerColor		= color;	}
++ (void)hudColor:(UIColor *)color			{	[self shared].hudColor			= color;	}
++ (void)backgroundColor:(UIColor *)color	{	[self shared].backgroundColor	= color;	}
++ (void)imageSuccess:(UIImage *)image		{	[self shared].imageSuccess		= image;	}
++ (void)imageError:(UIImage *)image			{	[self shared].imageError		= image;	}
+//-------------------------------------------------------------------------------------------------------------------------------------------------
+
+#pragma mark -
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (id)init
@@ -88,100 +150,106 @@
 {
 	self = [super initWithFrame:[[UIScreen mainScreen] bounds]];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
+	self.statusFont			= [UIFont boldSystemFontOfSize:16];
+	self.statusColor		= [UIColor blackColor];
+	self.spinnerColor		= [UIColor grayColor];
+	self.hudColor			= [UIColor colorWithWhite:0.0 alpha:0.1];
+	self.backgroundColor	= [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.2];
+	NSBundle *bundle		= [NSBundle bundleForClass:[self class]];
+	self.imageSuccess		= [UIImage imageNamed:@"ProgressHUD.bundle/progresshud-success" inBundle:bundle compatibleWithTraitCollection:nil];
+	self.imageError			= [UIImage imageNamed:@"ProgressHUD.bundle/progresshud-error" inBundle:bundle compatibleWithTraitCollection:nil];
+	//---------------------------------------------------------------------------------------------------------------------------------------------
 	id<UIApplicationDelegate> delegate = [[UIApplication sharedApplication] delegate];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	if ([delegate respondsToSelector:@selector(window)])
 		window = [delegate performSelector:@selector(window)];
 	else window = [[UIApplication sharedApplication] keyWindow];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	background = nil; hud = nil; spinner = nil; image = nil; label = nil;
+	viewBackground = nil; toolbarHUD = nil; spinner = nil; imageView = nil; labelStatus = nil;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	self.alpha = 0;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	return self;
 }
 
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)hudMake:(NSString *)status image:(UIImage *)img spin:(BOOL)spin hide:(BOOL)hide
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-{
-	[self hudCreate];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	label.text = status;
-	label.hidden = (status == nil) ? YES : NO;
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	image.image = img;
-	image.hidden = (img == nil) ? YES : NO;
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (spin) [spinner startAnimating]; else [spinner stopAnimating];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	[self hudSize];
-	[self hudOrient];
-	[self hudPosition:nil];
-	[self hudShow];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (hide) [NSThread detachNewThreadSelector:@selector(timedHide) toTarget:self withObject:nil];
-}
+#pragma mark -
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)hudCreate
+- (void)hudCreate:(NSString *)status image:(UIImage *)image spin:(BOOL)spin hide:(BOOL)hide interaction:(BOOL)interaction
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	if (hud == nil)
+	if (toolbarHUD == nil)
 	{
-		hud = [[UIToolbar alloc] initWithFrame:CGRectZero];
-		hud.translucent = YES;
-		hud.backgroundColor = HUD_BACKGROUND_COLOR;
-		hud.layer.cornerRadius = 10;
-		hud.layer.masksToBounds = YES;
+		toolbarHUD = [[UIToolbar alloc] initWithFrame:CGRectZero];
+		toolbarHUD.translucent = YES;
+		toolbarHUD.backgroundColor = self.hudColor;
+		toolbarHUD.layer.cornerRadius = 10;
+		toolbarHUD.layer.masksToBounds = YES;
 		[self registerNotifications];
 	}
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (hud.superview == nil)
+	if (toolbarHUD.superview == nil)
 	{
 		if (interaction == NO)
 		{
-			CGRect frame = CGRectMake(window.frame.origin.x, window.frame.origin.y, window.frame.size.width, window.frame.size.height);
-			background = [[UIView alloc] initWithFrame:frame];
-			background.backgroundColor = [UIColor clearColor];
-			[window addSubview:background];
-			[background addSubview:hud];
+			viewBackground = [[UIView alloc] initWithFrame:window.frame];
+			viewBackground.backgroundColor = self.backgroundColor;
+			[window addSubview:viewBackground];
+			[viewBackground addSubview:toolbarHUD];
 		}
-		else [window addSubview:hud];
+		else [window addSubview:toolbarHUD];
 	}
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	if (spinner == nil)
 	{
 		spinner = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-		spinner.color = HUD_SPINNER_COLOR;
+		spinner.color = self.spinnerColor;
 		spinner.hidesWhenStopped = YES;
 	}
-	if (spinner.superview == nil) [hud addSubview:spinner];
+	if (spinner.superview == nil) [toolbarHUD addSubview:spinner];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (image == nil)
+	if (imageView == nil)
 	{
-		image = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 28, 28)];
+		imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 28, 28)];
 	}
-	if (image.superview == nil) [hud addSubview:image];
+	if (imageView.superview == nil) [toolbarHUD addSubview:imageView];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (label == nil)
+	if (labelStatus == nil)
 	{
-		label = [[UILabel alloc] initWithFrame:CGRectZero];
-		label.font = HUD_STATUS_FONT;
-		label.textColor = HUD_STATUS_COLOR;
-		label.backgroundColor = [UIColor clearColor];
-		label.textAlignment = NSTextAlignmentCenter;
-		label.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
-		label.numberOfLines = 0;
+		labelStatus = [[UILabel alloc] initWithFrame:CGRectZero];
+		labelStatus.font = self.statusFont;
+		labelStatus.textColor = self.statusColor;
+		labelStatus.backgroundColor = [UIColor clearColor];
+		labelStatus.textAlignment = NSTextAlignmentCenter;
+		labelStatus.baselineAdjustment = UIBaselineAdjustmentAlignCenters;
+		labelStatus.numberOfLines = 0;
 	}
-	if (label.superview == nil) [hud addSubview:label];
+	if (labelStatus.superview == nil) [toolbarHUD addSubview:labelStatus];
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	labelStatus.text = status;
+	labelStatus.hidden = (status == nil) ? YES : NO;
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	imageView.image = image;
+	imageView.hidden = (image == nil) ? YES : NO;
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	if (spin) [spinner startAnimating]; else [spinner stopAnimating];
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	[self hudSize];
+	[self hudPosition:nil];
+	[self hudShow];
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	if (hide) [self timedHide];
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)registerNotifications
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudOrient)
+	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudPosition:)
 												 name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
 
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hudPosition:) name:UIKeyboardWillHideNotification object:nil];
@@ -196,109 +264,74 @@
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	[label removeFromSuperview];		label = nil;
-	[image removeFromSuperview];		image = nil;
-	[spinner removeFromSuperview];		spinner = nil;
-	[hud removeFromSuperview];			hud = nil;
-	[background removeFromSuperview];	background = nil;
+	[labelStatus removeFromSuperview];		labelStatus = nil;
+	[imageView removeFromSuperview];		imageView = nil;
+	[spinner removeFromSuperview];			spinner = nil;
+	[toolbarHUD removeFromSuperview];		toolbarHUD = nil;
+	[viewBackground removeFromSuperview];	viewBackground = nil;
 }
+
+#pragma mark -
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)hudSize
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	CGRect labelRect = CGRectZero;
-	CGFloat hudWidth = 100, hudHeight = 100;
+	CGRect rectLabel = CGRectZero;
+	CGFloat widthHUD = 100, heightHUD = 100;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (label.text != nil)
+	if (labelStatus.text != nil)
 	{
-		NSDictionary *attributes = @{NSFontAttributeName:label.font};
+		NSDictionary *attributes = @{NSFontAttributeName:labelStatus.font};
 		NSInteger options = NSStringDrawingUsesFontLeading | NSStringDrawingTruncatesLastVisibleLine | NSStringDrawingUsesLineFragmentOrigin;
-		labelRect = [label.text boundingRectWithSize:CGSizeMake(200, 300) options:options attributes:attributes context:NULL];
+		rectLabel = [labelStatus.text boundingRectWithSize:CGSizeMake(200, 300) options:options attributes:attributes context:NULL];
 
-		labelRect.origin.x = 12;
-		labelRect.origin.y = 66;
+		widthHUD = rectLabel.size.width + 50;
+		heightHUD = rectLabel.size.height + 75;
 
-		hudWidth = labelRect.size.width + 24;
-		hudHeight = labelRect.size.height + 80;
+		if (widthHUD < 100) widthHUD = 100;
+		if (heightHUD < 100) heightHUD = 100;
 
-		if (hudWidth < 100)
-		{
-			hudWidth = 100;
-			labelRect.origin.x = 0;
-			labelRect.size.width = 100;
-		}
+		rectLabel.origin.x = (widthHUD - rectLabel.size.width) / 2;
+		rectLabel.origin.y = (heightHUD - rectLabel.size.height) / 2 + 25;
 	}
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	hud.bounds = CGRectMake(0, 0, hudWidth, hudHeight);
+	toolbarHUD.bounds = CGRectMake(0, 0, widthHUD, heightHUD);
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	CGFloat imagex = hudWidth/2;
-	CGFloat imagey = (label.text == nil) ? hudHeight/2 : 36;
-	image.center = spinner.center = CGPointMake(imagex, imagey);
+	CGFloat imageX = widthHUD/2;
+	CGFloat imageY = (labelStatus.text == nil) ? heightHUD/2 : 36;
+	imageView.center = spinner.center = CGPointMake(imageX, imageY);
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	label.frame = labelRect;
+	labelStatus.frame = rectLabel;
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
-- (void)hudOrient
-//-------------------------------------------------------------------------------------------------------------------------------------------------
-{
-	CGFloat rotate = 0.0;
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	if (orientation == UIInterfaceOrientationPortrait)				rotate = 0.0;
-	if (orientation == UIInterfaceOrientationPortraitUpsideDown)	rotate = M_PI;
-	if (orientation == UIInterfaceOrientationLandscapeLeft)			rotate = - M_PI_2;
-	if (orientation == UIInterfaceOrientationLandscapeRight)		rotate = + M_PI_2;
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	hud.transform = CGAffineTransformMakeRotation(rotate);
-}
-
- //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)hudPosition:(NSNotification *)notification
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
 	CGFloat heightKeyboard = 0;
 	NSTimeInterval duration = 0;
 	//---------------------------------------------------------------------------------------------------------------------------------------------
-	UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-	//---------------------------------------------------------------------------------------------------------------------------------------------
 	if (notification != nil)
 	{
-		NSDictionary *keyboardInfo = [notification userInfo];
-		duration = [[keyboardInfo valueForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-		CGRect keyboard = [[keyboardInfo valueForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue];
-
+		NSDictionary *info = [notification userInfo];
+		CGRect keyboard = [[info valueForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+		duration = [[info valueForKey:UIKeyboardAnimationDurationUserInfoKey] doubleValue];
 		if ((notification.name == UIKeyboardWillShowNotification) || (notification.name == UIKeyboardDidShowNotification))
 		{
-			if (UIInterfaceOrientationIsPortrait(orientation))
-				heightKeyboard = keyboard.size.height;
-			else heightKeyboard = keyboard.size.width;
+			heightKeyboard = keyboard.size.height;
 		}
 	}
 	else heightKeyboard = [self keyboardHeight];
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	CGRect screen = [UIScreen mainScreen].bounds;
-	if (UIInterfaceOrientationIsLandscape(orientation))
-	{
-		CGFloat temp = screen.size.width;
-		screen.size.width = screen.size.height;
-		screen.size.height = temp;
-	}
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	CGFloat posX = screen.size.width / 2;
-	CGFloat posY = (screen.size.height - heightKeyboard) / 2;
-	//---------------------------------------------------------------------------------------------------------------------------------------------
-	CGPoint center;
-	if (orientation == UIInterfaceOrientationPortrait)				center = CGPointMake(posX, posY);
-	if (orientation == UIInterfaceOrientationPortraitUpsideDown)	center = CGPointMake(posX, screen.size.height-posY);
-	if (orientation == UIInterfaceOrientationLandscapeLeft)			center = CGPointMake(posY, posX);
-	if (orientation == UIInterfaceOrientationLandscapeRight)		center = CGPointMake(screen.size.height-posY, posX);
+	CGPoint center = CGPointMake(screen.size.width/2, (screen.size.height-heightKeyboard)/2);
 	//---------------------------------------------------------------------------------------------------------------------------------------------
 	[UIView animateWithDuration:duration delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-		hud.center = CGPointMake(center.x, center.y);
+		self->toolbarHUD.center = CGPointMake(center.x, center.y);
 	} completion:nil];
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	if (viewBackground != nil) viewBackground.frame = window.frame;
 }
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
@@ -311,14 +344,27 @@
 		{
 			for (UIView *possibleKeyboard in [testWindow subviews])
 			{
-				if ([possibleKeyboard isKindOfClass:NSClassFromString(@"UIPeripheralHostView")] ||
-					[possibleKeyboard isKindOfClass:NSClassFromString(@"UIKeyboard")])
+				if ([[possibleKeyboard description] hasPrefix:@"<UIPeripheralHostView"])
+				{
 					return possibleKeyboard.bounds.size.height;
+				}
+				else if ([[possibleKeyboard description] hasPrefix:@"<UIInputSetContainerView"])
+				{
+					for (UIView *hostKeyboard in [possibleKeyboard subviews])
+					{
+						if ([[hostKeyboard description] hasPrefix:@"<UIInputSetHost"])
+						{
+							return hostKeyboard.frame.size.height;
+						}
+					}
+				}
 			}
 		}
 	}
 	return 0;
 }
+
+#pragma mark -
 
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 - (void)hudShow
@@ -327,14 +373,13 @@
 	if (self.alpha == 0)
 	{
 		self.alpha = 1;
+		toolbarHUD.alpha = 0;
+		toolbarHUD.transform = CGAffineTransformScale(toolbarHUD.transform, 1.4, 1.4);
 
-		hud.alpha = 0;
-		hud.transform = CGAffineTransformScale(hud.transform, 1.4, 1.4);
-
-		NSUInteger options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut;
+		UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseOut;
 		[UIView animateWithDuration:0.15 delay:0 options:options animations:^{
-			hud.transform = CGAffineTransformScale(hud.transform, 1/1.4, 1/1.4);
-			hud.alpha = 1;
+			self->toolbarHUD.transform = CGAffineTransformScale(self->toolbarHUD.transform, 1/1.4, 1/1.4);
+			self->toolbarHUD.alpha = 1;
 		} completion:nil];
 	}
 }
@@ -345,10 +390,10 @@
 {
 	if (self.alpha == 1)
 	{
-		NSUInteger options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseIn;
+		UIViewAnimationOptions options = UIViewAnimationOptionAllowUserInteraction | UIViewAnimationCurveEaseIn;
 		[UIView animateWithDuration:0.15 delay:0 options:options animations:^{
-			hud.transform = CGAffineTransformScale(hud.transform, 0.7, 0.7);
-			hud.alpha = 0;
+			self->toolbarHUD.transform = CGAffineTransformScale(self->toolbarHUD.transform, 0.7, 0.7);
+			self->toolbarHUD.alpha = 0;
 		}
 		completion:^(BOOL finished) {
 			[self hudDestroy];
@@ -361,17 +406,9 @@
 - (void)timedHide
 //-------------------------------------------------------------------------------------------------------------------------------------------------
 {
-	@autoreleasepool
-	{
-		double length = label.text.length;
-		NSTimeInterval sleep = length * 0.04 + 0.5;
-		
-		[NSThread sleepForTimeInterval:sleep];
-		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			[self hudHide];
-		});
-	}
+	NSTimeInterval delay = labelStatus.text.length * 0.04 + 0.5;
+	dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
+	dispatch_after(time, dispatch_get_main_queue(), ^(void){ [self hudHide]; });
 }
 
 @end

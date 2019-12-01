@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
-#import "ProgressHUD.h"
+#import <ProgressHUD/ProgressHUD.h>
 
 @class Lingo;
 

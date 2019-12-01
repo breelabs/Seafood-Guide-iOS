@@ -89,9 +89,6 @@
     NSArray *rxmlIndividualNew2 = [rxmlabout2 children:@"new"];
     NSArray *rxmlIndividualNew3 = [rxmlabout3 children:@"new"];
     
-    //RELOAD DATA BY UNCOMMENTING THE BELOW
-    //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loadabout"];
-    //[[NSUserDefaults standardUserDefaults] synchronize];
     
     if (integerFromPrefsAbout == 0) {
         

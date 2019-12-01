@@ -8,7 +8,6 @@
 
 #import "DetailNewsViewController.h"
 #import "NewsViewController.h"
-#import <Social/Social.h>
 
 @interface DetailNewsViewController ()
 
