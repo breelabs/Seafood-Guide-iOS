@@ -129,8 +129,6 @@
         
     }
     
-    
-    
 }
 
 
@@ -242,13 +240,6 @@
         [alert addAction:noButton];
         
         [self presentViewController:alert animated:YES completion:nil];
-        
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failure"
-//                                                        message:@"Your device doesn't support the composer sheet"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert show];
         
     }
 }

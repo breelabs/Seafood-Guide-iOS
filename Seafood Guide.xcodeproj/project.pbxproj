@@ -21,7 +21,6 @@
 		FC2BD15D19B23CC0003ECABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD15B19B23CC0003ECABA /* InfoPlist.strings */; };
 		FC2BD15F19B23CC0003ECABA /* Seafood_GuideTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD15E19B23CC0003ECABA /* Seafood_GuideTests.m */; };
 		FC2BD18B19B26F00003ECABA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD18A19B26F00003ECABA /* QuartzCore.framework */; };
-		FC3B082E19B41BD70049FA70 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B082D19B41BD70049FA70 /* Social.framework */; };
 		FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085E19B435430049FA70 /* libxml2.dylib */; };
 		FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B086119B4354F0049FA70 /* libz.dylib */; };
 		FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085D19B435430049FA70 /* libxml2.2.dylib */; };
@@ -84,7 +83,6 @@
 		FC2BD15C19B23CC0003ECABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC2BD15E19B23CC0003ECABA /* Seafood_GuideTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Seafood_GuideTests.m; sourceTree = "<group>"; };
 		FC2BD18A19B26F00003ECABA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FC3B082D19B41BD70049FA70 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		FC3B085D19B435430049FA70 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		FC3B085E19B435430049FA70 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		FC3B086119B4354F0049FA70 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
@@ -133,7 +131,6 @@
 		FC71537F1B5DE3E300F6E137 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = "Data Model/About.h"; sourceTree = "<group>"; };
 		FC7153801B5DE3E300F6E137 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = "Data Model/About.m"; sourceTree = "<group>"; };
 		FC8F8C611FB839D10015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FCD699A11E89CAC100D4ED3C /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
 		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
 		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
 		FCE79F3919B99F87003E03BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -148,7 +145,6 @@
 				FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */,
 				FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */,
 				FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */,
-				FC3B082E19B41BD70049FA70 /* Social.framework in Frameworks */,
 				FC2BD18B19B26F00003ECABA /* QuartzCore.framework in Frameworks */,
 				FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */,
 				FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */,
@@ -191,12 +187,10 @@
 		FC2BD12C19B23CBF003ECABA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FCD699A11E89CAC100D4ED3C /* iRate.bundle */,
 				FCE79F3919B99F87003E03BE /* CoreData.framework */,
 				FC3B086119B4354F0049FA70 /* libz.dylib */,
 				FC3B085D19B435430049FA70 /* libxml2.2.dylib */,
 				FC3B085E19B435430049FA70 /* libxml2.dylib */,
-				FC3B082D19B41BD70049FA70 /* Social.framework */,
 				FC2BD18A19B26F00003ECABA /* QuartzCore.framework */,
 				FC2BD12D19B23CBF003ECABA /* Foundation.framework */,
 				FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */,
