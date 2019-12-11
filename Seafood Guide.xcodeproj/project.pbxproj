@@ -9,12 +9,31 @@
 /* Begin PBXBuildFile section */
 		510CB0B28189C39E3FE444C7 /* Pods_Seafood_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D8C747CDD1A4D9AE43483C0 /* Pods_Seafood_GuideTests.framework */; };
 		7EA01CF7D99168FE6CFAA594 /* Pods_Seafood_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2ABA6C87BE5204521E141E /* Pods_Seafood_Guide.framework */; };
+		ED48447423A0DD4B00813483 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447323A0DD4A00813483 /* DetailNewsViewController.swift */; };
+		ED48447623A0DF7000813483 /* DetailLingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447523A0DF7000813483 /* DetailLingoViewController.swift */; };
+		ED48447823A0E07400813483 /* DetailAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447723A0E07400813483 /* DetailAboutViewController.swift */; };
+		ED48447A23A0E1B800813483 /* LingoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447923A0E1B800813483 /* LingoTableViewController.swift */; };
+		ED48447C23A0E2F200813483 /* AboutTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447B23A0E2F200813483 /* AboutTableViewController.swift */; };
+		ED48447E23A0EC8900813483 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447D23A0EC8900813483 /* AppDelegate.swift */; };
+		ED4844A323A0F4F700813483 /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DE023A0D90900EC5F16 /* NewsViewController.swift */; };
+		ED648DC723A0281800EC5F16 /* Lingo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DBC23A0281700EC5F16 /* Lingo+CoreDataClass.swift */; };
+		ED648DC923A0281800EC5F16 /* About+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DC123A0281700EC5F16 /* About+CoreDataProperties.swift */; };
+		ED648DCA23A0281800EC5F16 /* About+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DC423A0281800EC5F16 /* About+CoreDataClass.swift */; };
+		ED648DCC23A0281800EC5F16 /* Seafood+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DC023A0281700EC5F16 /* Seafood+CoreDataClass.swift */; };
+		ED648DCD23A0281800EC5F16 /* Lingo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DBE23A0281700EC5F16 /* Lingo+CoreDataProperties.swift */; };
+		ED648DCF23A0281800EC5F16 /* Seafood+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DC323A0281800EC5F16 /* Seafood+CoreDataProperties.swift */; };
+		ED648DD123A02C3900EC5F16 /* FishCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DD023A02C3900EC5F16 /* FishCat.swift */; };
+		ED648DD323A02DA900EC5F16 /* CoreDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DD223A02DA900EC5F16 /* CoreDataTableViewController.swift */; };
+		ED648DD523A02EAC00EC5F16 /* FishTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DD423A02EAC00EC5F16 /* FishTVC.swift */; };
+		ED648DD923A0D04D00EC5F16 /* TVCDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DD823A0D04D00EC5F16 /* TVCDetailViewController.swift */; };
+		ED648DDB23A0D18700EC5F16 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDA23A0D18700EC5F16 /* GridViewController.swift */; };
+		ED648DDD23A0D26C00EC5F16 /* TableViewCellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDC23A0D26C00EC5F16 /* TableViewCellNews.swift */; };
+		ED648DDF23A0D82600EC5F16 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDE23A0D82600EC5F16 /* config.swift */; };
 		FC16B63D2393878500DB454C /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FC16B63C2393878500DB454C /* RXMLElement.m */; };
 		FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
 		FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */; };
 		FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
 		FC2BD13819B23CBF003ECABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD13619B23CBF003ECABA /* InfoPlist.strings */; };
-		FC2BD13A19B23CBF003ECABA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2BD13919B23CBF003ECABA /* main.m */; };
 		FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD13F19B23CBF003ECABA /* Main_iPhone.storyboard */; };
 		FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */; };
 		FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD14B19B23CBF003ECABA /* Images.xcassets */; };
@@ -30,28 +49,11 @@
 		FC4E63FE19EB49CA0079C0A3 /* ios-about-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FB19EB49CA0079C0A3 /* ios-about-1.xml */; };
 		FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FC19EB49CA0079C0A3 /* ios-about-2.xml */; };
 		FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FD19EB49CA0079C0A3 /* ios-about-3.xml */; };
-		FC4E640519EB49D30079C0A3 /* AboutTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640319EB49D30079C0A3 /* AboutTableViewController.m */; };
-		FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640419EB49D30079C0A3 /* DetailAboutViewController.m */; };
-		FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640A19EB4A490079C0A3 /* GridViewController.m */; };
-		FC4E641119EB4A530079C0A3 /* FishTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E640E19EB4A530079C0A3 /* FishTVC.m */; };
-		FC4E641219EB4A530079C0A3 /* TVCDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641019EB4A530079C0A3 /* TVCDetailViewController.m */; };
-		FC4E641C19EB4AAC0079C0A3 /* DetailLingoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641919EB4AAC0079C0A3 /* DetailLingoViewController.m */; };
-		FC4E641D19EB4AAC0079C0A3 /* LingoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E641B19EB4AAC0079C0A3 /* LingoTableViewController.m */; };
 		FC4E641F19EB4AB70079C0A3 /* ios-lingo.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E641E19EB4AB70079C0A3 /* ios-lingo.xml */; };
-		FC4E642419EB4B120079C0A3 /* DetailNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E642119EB4B120079C0A3 /* DetailNewsViewController.m */; };
-		FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E642319EB4B120079C0A3 /* NewsViewController.m */; };
 		FC4E642719EB4B1B0079C0A3 /* ios-news.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E642619EB4B1B0079C0A3 /* ios-news.xml */; };
-		FC4E642B19EB4B300079C0A3 /* TableViewCellNews.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E642919EB4B300079C0A3 /* TableViewCellNews.m */; };
 		FC4E642C19EB4B300079C0A3 /* TableViewCellNews.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4E642A19EB4B300079C0A3 /* TableViewCellNews.xib */; };
-		FC4E643719EB4B7C0079C0A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E642E19EB4B7C0079C0A3 /* AppDelegate.m */; };
-		FC4E643819EB4B7C0079C0A3 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643019EB4B7C0079C0A3 /* CoreDataTableViewController.m */; };
-		FC4E643919EB4B7C0079C0A3 /* FishCat.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643219EB4B7C0079C0A3 /* FishCat.m */; };
 		FC4E643A19EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643319EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld */; };
-		FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E643619EB4B7C0079C0A3 /* Seafood.m */; };
-		FC4E646319EB4C420079C0A3 /* config.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4E646219EB4C420079C0A3 /* config.m */; };
-		FC7153811B5DE3E300F6E137 /* About.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7153801B5DE3E300F6E137 /* About.m */; };
 		FC8F8C621FB839D10015E5E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8F8C611FB839D10015E5E8 /* LaunchScreen.storyboard */; };
-		FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */ = {isa = PBXBuildFile; fileRef = FCDAB7591B537D600040E0F7 /* Lingo.m */; };
 		FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCE79F3919B99F87003E03BE /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +73,27 @@
 		AC2ABA6C87BE5204521E141E /* Pods_Seafood_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAC15469CCE5A05EC42FD6B7 /* Pods-Seafood GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood GuideTests.release.xcconfig"; path = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.release.xcconfig"; sourceTree = "<group>"; };
 		D9F6403A4CD36BDC8E37CC0E /* Pods-Seafood Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood Guide.release.xcconfig"; path = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.release.xcconfig"; sourceTree = "<group>"; };
+		ED48447323A0DD4A00813483 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailNewsViewController.swift; path = "Top 10/Table View Cell/DetailNewsViewController.swift"; sourceTree = "<group>"; };
+		ED48447523A0DF7000813483 /* DetailLingoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailLingoViewController.swift; path = Lingo/ViewControllers/DetailLingoViewController.swift; sourceTree = "<group>"; };
+		ED48447723A0E07400813483 /* DetailAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailAboutViewController.swift; path = About/ViewControllers/DetailAboutViewController.swift; sourceTree = "<group>"; };
+		ED48447923A0E1B800813483 /* LingoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LingoTableViewController.swift; path = Lingo/ViewControllers/LingoTableViewController.swift; sourceTree = "<group>"; };
+		ED48447B23A0E2F200813483 /* AboutTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AboutTableViewController.swift; path = About/ViewControllers/AboutTableViewController.swift; sourceTree = "<group>"; };
+		ED48447D23A0EC8900813483 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "Data Model/AppDelegate.swift"; sourceTree = "<group>"; };
+		ED648DB723A0239700EC5F16 /* Seafood Guide-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Seafood Guide-Bridging-Header.h"; sourceTree = "<group>"; };
+		ED648DBC23A0281700EC5F16 /* Lingo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lingo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ED648DBE23A0281700EC5F16 /* Lingo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Lingo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED648DC023A0281700EC5F16 /* Seafood+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seafood+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ED648DC123A0281700EC5F16 /* About+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "About+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED648DC323A0281800EC5F16 /* Seafood+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Seafood+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ED648DC423A0281800EC5F16 /* About+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "About+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ED648DD023A02C3900EC5F16 /* FishCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FishCat.swift; path = "Data Model/FishCat.swift"; sourceTree = "<group>"; };
+		ED648DD223A02DA900EC5F16 /* CoreDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataTableViewController.swift; path = "Data Model/CoreDataTableViewController.swift"; sourceTree = "<group>"; };
+		ED648DD423A02EAC00EC5F16 /* FishTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FishTVC.swift; path = "Seafood Guide/View Controller/FishTVC.swift"; sourceTree = "<group>"; };
+		ED648DD823A0D04D00EC5F16 /* TVCDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TVCDetailViewController.swift; path = "Seafood Guide/View Controller/TVCDetailViewController.swift"; sourceTree = "<group>"; };
+		ED648DDA23A0D18700EC5F16 /* GridViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GridViewController.swift; path = "Seafood Guide/Grid Controller/GridViewController.swift"; sourceTree = "<group>"; };
+		ED648DDC23A0D26C00EC5F16 /* TableViewCellNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellNews.swift; path = "Top 10/View Controller/TableViewCellNews.swift"; sourceTree = "<group>"; };
+		ED648DDE23A0D82600EC5F16 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = config.swift; path = classes/Config/config.swift; sourceTree = "<group>"; };
+		ED648DE023A0D90900EC5F16 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = "Top 10/Table View Cell/NewsViewController.swift"; sourceTree = "<group>"; };
 		F8B625D1AA136F8869C38D44 /* Pods-Seafood GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood GuideTests.debug.xcconfig"; path = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC16B63B2393878500DB454C /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
 		FC16B63C2393878500DB454C /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
@@ -80,7 +103,6 @@
 		FC2BD13119B23CBF003ECABA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Seafood Guide-Info.plist"; sourceTree = "<group>"; };
 		FC2BD13719B23CBF003ECABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FC2BD13919B23CBF003ECABA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FC2BD13B19B23CBF003ECABA /* Seafood Guide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Seafood Guide-Prefix.pch"; sourceTree = "<group>"; };
 		FC2BD14019B23CBF003ECABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		FC2BD14319B23CBF003ECABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
@@ -97,45 +119,11 @@
 		FC4E63FB19EB49CA0079C0A3 /* ios-about-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-about-1.xml"; path = "About/DataSource/ios-about-1.xml"; sourceTree = "<group>"; };
 		FC4E63FC19EB49CA0079C0A3 /* ios-about-2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-about-2.xml"; path = "About/DataSource/ios-about-2.xml"; sourceTree = "<group>"; };
 		FC4E63FD19EB49CA0079C0A3 /* ios-about-3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-about-3.xml"; path = "About/DataSource/ios-about-3.xml"; sourceTree = "<group>"; };
-		FC4E640119EB49D30079C0A3 /* AboutTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutTableViewController.h; path = About/ViewControllers/AboutTableViewController.h; sourceTree = "<group>"; };
-		FC4E640219EB49D30079C0A3 /* DetailAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailAboutViewController.h; path = About/ViewControllers/DetailAboutViewController.h; sourceTree = "<group>"; };
-		FC4E640319EB49D30079C0A3 /* AboutTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutTableViewController.m; path = About/ViewControllers/AboutTableViewController.m; sourceTree = "<group>"; };
-		FC4E640419EB49D30079C0A3 /* DetailAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailAboutViewController.m; path = About/ViewControllers/DetailAboutViewController.m; sourceTree = "<group>"; };
-		FC4E640919EB4A490079C0A3 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewController.h; path = "Seafood Guide/Grid Controller/GridViewController.h"; sourceTree = "<group>"; };
-		FC4E640A19EB4A490079C0A3 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewController.m; path = "Seafood Guide/Grid Controller/GridViewController.m"; sourceTree = "<group>"; };
-		FC4E640D19EB4A530079C0A3 /* FishTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FishTVC.h; path = "Seafood Guide/View Controller/FishTVC.h"; sourceTree = "<group>"; };
-		FC4E640E19EB4A530079C0A3 /* FishTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FishTVC.m; path = "Seafood Guide/View Controller/FishTVC.m"; sourceTree = "<group>"; };
-		FC4E640F19EB4A530079C0A3 /* TVCDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TVCDetailViewController.h; path = "Seafood Guide/View Controller/TVCDetailViewController.h"; sourceTree = "<group>"; };
-		FC4E641019EB4A530079C0A3 /* TVCDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TVCDetailViewController.m; path = "Seafood Guide/View Controller/TVCDetailViewController.m"; sourceTree = "<group>"; };
-		FC4E641819EB4AAC0079C0A3 /* DetailLingoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailLingoViewController.h; path = Lingo/ViewControllers/DetailLingoViewController.h; sourceTree = "<group>"; };
-		FC4E641919EB4AAC0079C0A3 /* DetailLingoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailLingoViewController.m; path = Lingo/ViewControllers/DetailLingoViewController.m; sourceTree = "<group>"; };
-		FC4E641A19EB4AAC0079C0A3 /* LingoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LingoTableViewController.h; path = Lingo/ViewControllers/LingoTableViewController.h; sourceTree = "<group>"; };
-		FC4E641B19EB4AAC0079C0A3 /* LingoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LingoTableViewController.m; path = Lingo/ViewControllers/LingoTableViewController.m; sourceTree = "<group>"; };
 		FC4E641E19EB4AB70079C0A3 /* ios-lingo.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-lingo.xml"; path = "Lingo/DataSource/ios-lingo.xml"; sourceTree = "<group>"; };
-		FC4E642019EB4B120079C0A3 /* DetailNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailNewsViewController.h; path = "Top 10/Table View Cell/DetailNewsViewController.h"; sourceTree = "<group>"; };
-		FC4E642119EB4B120079C0A3 /* DetailNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailNewsViewController.m; path = "Top 10/Table View Cell/DetailNewsViewController.m"; sourceTree = "<group>"; };
-		FC4E642219EB4B120079C0A3 /* NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsViewController.h; path = "Top 10/Table View Cell/NewsViewController.h"; sourceTree = "<group>"; };
-		FC4E642319EB4B120079C0A3 /* NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsViewController.m; path = "Top 10/Table View Cell/NewsViewController.m"; sourceTree = "<group>"; };
 		FC4E642619EB4B1B0079C0A3 /* ios-news.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-news.xml"; path = "Top 10/DataSource/ios-news.xml"; sourceTree = "<group>"; };
-		FC4E642819EB4B300079C0A3 /* TableViewCellNews.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewCellNews.h; path = "Top 10/View Controller/TableViewCellNews.h"; sourceTree = "<group>"; };
-		FC4E642919EB4B300079C0A3 /* TableViewCellNews.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewCellNews.m; path = "Top 10/View Controller/TableViewCellNews.m"; sourceTree = "<group>"; };
 		FC4E642A19EB4B300079C0A3 /* TableViewCellNews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TableViewCellNews.xib; path = "Top 10/View Controller/TableViewCellNews.xib"; sourceTree = "<group>"; };
-		FC4E642D19EB4B7C0079C0A3 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "Data Model/AppDelegate.h"; sourceTree = "<group>"; };
-		FC4E642E19EB4B7C0079C0A3 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "Data Model/AppDelegate.m"; sourceTree = "<group>"; };
-		FC4E642F19EB4B7C0079C0A3 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = "Data Model/CoreDataTableViewController.h"; sourceTree = "<group>"; };
-		FC4E643019EB4B7C0079C0A3 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = "Data Model/CoreDataTableViewController.m"; sourceTree = "<group>"; };
-		FC4E643119EB4B7C0079C0A3 /* FishCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FishCat.h; path = "Data Model/FishCat.h"; sourceTree = "<group>"; };
-		FC4E643219EB4B7C0079C0A3 /* FishCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FishCat.m; path = "Data Model/FishCat.m"; sourceTree = "<group>"; };
 		FC4E643419EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Seafood_Guide.xcdatamodel; sourceTree = "<group>"; };
-		FC4E643519EB4B7C0079C0A3 /* Seafood.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Seafood.h; path = "Data Model/Seafood.h"; sourceTree = "<group>"; };
-		FC4E643619EB4B7C0079C0A3 /* Seafood.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Seafood.m; path = "Data Model/Seafood.m"; sourceTree = "<group>"; };
-		FC4E646119EB4C420079C0A3 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = config.h; path = classes/Config/config.h; sourceTree = "<group>"; };
-		FC4E646219EB4C420079C0A3 /* config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = config.m; path = classes/Config/config.m; sourceTree = "<group>"; };
-		FC71537F1B5DE3E300F6E137 /* About.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = About.h; path = "Data Model/About.h"; sourceTree = "<group>"; };
-		FC7153801B5DE3E300F6E137 /* About.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = About.m; path = "Data Model/About.m"; sourceTree = "<group>"; };
 		FC8F8C611FB839D10015E5E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FCDAB7581B537D600040E0F7 /* Lingo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Lingo.h; path = "Data Model/Lingo.h"; sourceTree = "<group>"; };
-		FCDAB7591B537D600040E0F7 /* Lingo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Lingo.m; path = "Data Model/Lingo.m"; sourceTree = "<group>"; };
 		FCE79F3919B99F87003E03BE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -242,7 +230,6 @@
 				FC3B084619B430620049FA70 /* Config */,
 				FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */,
 				FC2BD13619B23CBF003ECABA /* InfoPlist.strings */,
-				FC2BD13919B23CBF003ECABA /* main.m */,
 				FC2BD13B19B23CBF003ECABA /* Seafood Guide-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -269,8 +256,7 @@
 		FC2BD19219B26F56003ECABA /* Grid Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E640919EB4A490079C0A3 /* GridViewController.h */,
-				FC4E640A19EB4A490079C0A3 /* GridViewController.m */,
+				ED648DDA23A0D18700EC5F16 /* GridViewController.swift */,
 			);
 			name = "Grid Controller";
 			sourceTree = "<group>";
@@ -278,19 +264,17 @@
 		FC3B084219B42FEA0049FA70 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E642D19EB4B7C0079C0A3 /* AppDelegate.h */,
-				FC4E642E19EB4B7C0079C0A3 /* AppDelegate.m */,
-				FC4E642F19EB4B7C0079C0A3 /* CoreDataTableViewController.h */,
-				FC4E643019EB4B7C0079C0A3 /* CoreDataTableViewController.m */,
-				FC4E643119EB4B7C0079C0A3 /* FishCat.h */,
-				FC4E643219EB4B7C0079C0A3 /* FishCat.m */,
+				ED48447D23A0EC8900813483 /* AppDelegate.swift */,
+				ED648DD223A02DA900EC5F16 /* CoreDataTableViewController.swift */,
+				ED648DD023A02C3900EC5F16 /* FishCat.swift */,
 				FC4E643319EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld */,
-				FC71537F1B5DE3E300F6E137 /* About.h */,
-				FC7153801B5DE3E300F6E137 /* About.m */,
-				FCDAB7581B537D600040E0F7 /* Lingo.h */,
-				FCDAB7591B537D600040E0F7 /* Lingo.m */,
-				FC4E643519EB4B7C0079C0A3 /* Seafood.h */,
-				FC4E643619EB4B7C0079C0A3 /* Seafood.m */,
+				ED648DC423A0281800EC5F16 /* About+CoreDataClass.swift */,
+				ED648DC123A0281700EC5F16 /* About+CoreDataProperties.swift */,
+				ED648DBC23A0281700EC5F16 /* Lingo+CoreDataClass.swift */,
+				ED648DBE23A0281700EC5F16 /* Lingo+CoreDataProperties.swift */,
+				ED648DC023A0281700EC5F16 /* Seafood+CoreDataClass.swift */,
+				ED648DC323A0281800EC5F16 /* Seafood+CoreDataProperties.swift */,
+				ED648DB723A0239700EC5F16 /* Seafood Guide-Bridging-Header.h */,
 			);
 			name = "Data Model";
 			sourceTree = "<group>";
@@ -307,8 +291,7 @@
 		FC3B084619B430620049FA70 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E646119EB4C420079C0A3 /* config.h */,
-				FC4E646219EB4C420079C0A3 /* config.m */,
+				ED648DDE23A0D82600EC5F16 /* config.swift */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -355,10 +338,8 @@
 		FC4E63F919EB48B80079C0A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E640119EB49D30079C0A3 /* AboutTableViewController.h */,
-				FC4E640319EB49D30079C0A3 /* AboutTableViewController.m */,
-				FC4E640219EB49D30079C0A3 /* DetailAboutViewController.h */,
-				FC4E640419EB49D30079C0A3 /* DetailAboutViewController.m */,
+				ED48447B23A0E2F200813483 /* AboutTableViewController.swift */,
+				ED48447723A0E07400813483 /* DetailAboutViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -366,10 +347,8 @@
 		FC4E63FA19EB48C60079C0A3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E640D19EB4A530079C0A3 /* FishTVC.h */,
-				FC4E640E19EB4A530079C0A3 /* FishTVC.m */,
-				FC4E640F19EB4A530079C0A3 /* TVCDetailViewController.h */,
-				FC4E641019EB4A530079C0A3 /* TVCDetailViewController.m */,
+				ED648DD423A02EAC00EC5F16 /* FishTVC.swift */,
+				ED648DD823A0D04D00EC5F16 /* TVCDetailViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -377,8 +356,7 @@
 		FCEAB16019B5503B004D1846 /* Table View Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E642819EB4B300079C0A3 /* TableViewCellNews.h */,
-				FC4E642919EB4B300079C0A3 /* TableViewCellNews.m */,
+				ED648DDC23A0D26C00EC5F16 /* TableViewCellNews.swift */,
 				FC4E642A19EB4B300079C0A3 /* TableViewCellNews.xib */,
 			);
 			name = "Table View Cell";
@@ -395,10 +373,8 @@
 		FCEAB16219B55051004D1846 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E642019EB4B120079C0A3 /* DetailNewsViewController.h */,
-				FC4E642119EB4B120079C0A3 /* DetailNewsViewController.m */,
-				FC4E642219EB4B120079C0A3 /* NewsViewController.h */,
-				FC4E642319EB4B120079C0A3 /* NewsViewController.m */,
+				ED48447323A0DD4A00813483 /* DetailNewsViewController.swift */,
+				ED648DE023A0D90900EC5F16 /* NewsViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -423,10 +399,8 @@
 		FCEAB16D19B56981004D1846 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FC4E641819EB4AAC0079C0A3 /* DetailLingoViewController.h */,
-				FC4E641919EB4AAC0079C0A3 /* DetailLingoViewController.m */,
-				FC4E641A19EB4AAC0079C0A3 /* LingoTableViewController.h */,
-				FC4E641B19EB4AAC0079C0A3 /* LingoTableViewController.m */,
+				ED48447523A0DF7000813483 /* DetailLingoViewController.swift */,
+				ED48447923A0E1B800813483 /* LingoTableViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -483,6 +457,7 @@
 				TargetAttributes = {
 					FC2BD12919B23CBF003ECABA = {
 						DevelopmentTeam = 2D4Z7WQ7RS;
+						LastSwiftMigration = 1120;
 					};
 					FC2BD15019B23CC0003ECABA = {
 						TestTargetID = FC2BD12919B23CBF003ECABA;
@@ -607,26 +582,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC4E641C19EB4AAC0079C0A3 /* DetailLingoViewController.m in Sources */,
-				FC4E643819EB4B7C0079C0A3 /* CoreDataTableViewController.m in Sources */,
-				FC4E643719EB4B7C0079C0A3 /* AppDelegate.m in Sources */,
-				FC4E642419EB4B120079C0A3 /* DetailNewsViewController.m in Sources */,
-				FC4E641219EB4A530079C0A3 /* TVCDetailViewController.m in Sources */,
-				FC4E641119EB4A530079C0A3 /* FishTVC.m in Sources */,
+				ED48447E23A0EC8900813483 /* AppDelegate.swift in Sources */,
+				ED648DDD23A0D26C00EC5F16 /* TableViewCellNews.swift in Sources */,
+				ED648DD523A02EAC00EC5F16 /* FishTVC.swift in Sources */,
+				ED48447623A0DF7000813483 /* DetailLingoViewController.swift in Sources */,
 				FC4E643A19EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld in Sources */,
-				FC4E642B19EB4B300079C0A3 /* TableViewCellNews.m in Sources */,
-				FC4E641D19EB4AAC0079C0A3 /* LingoTableViewController.m in Sources */,
-				FC4E643B19EB4B7C0079C0A3 /* Seafood.m in Sources */,
-				FC4E640619EB49D30079C0A3 /* DetailAboutViewController.m in Sources */,
-				FC4E640519EB49D30079C0A3 /* AboutTableViewController.m in Sources */,
-				FC4E643919EB4B7C0079C0A3 /* FishCat.m in Sources */,
+				ED648DCF23A0281800EC5F16 /* Seafood+CoreDataProperties.swift in Sources */,
+				ED648DDB23A0D18700EC5F16 /* GridViewController.swift in Sources */,
+				ED648DC723A0281800EC5F16 /* Lingo+CoreDataClass.swift in Sources */,
+				ED648DD323A02DA900EC5F16 /* CoreDataTableViewController.swift in Sources */,
+				ED48447C23A0E2F200813483 /* AboutTableViewController.swift in Sources */,
+				ED648DCA23A0281800EC5F16 /* About+CoreDataClass.swift in Sources */,
+				ED648DCD23A0281800EC5F16 /* Lingo+CoreDataProperties.swift in Sources */,
+				ED48447823A0E07400813483 /* DetailAboutViewController.swift in Sources */,
+				ED48447423A0DD4B00813483 /* DetailNewsViewController.swift in Sources */,
+				ED648DD923A0D04D00EC5F16 /* TVCDetailViewController.swift in Sources */,
+				ED4844A323A0F4F700813483 /* NewsViewController.swift in Sources */,
+				ED48447A23A0E1B800813483 /* LingoTableViewController.swift in Sources */,
+				ED648DC923A0281800EC5F16 /* About+CoreDataProperties.swift in Sources */,
 				FC16B63D2393878500DB454C /* RXMLElement.m in Sources */,
-				FC2BD13A19B23CBF003ECABA /* main.m in Sources */,
-				FC4E642519EB4B120079C0A3 /* NewsViewController.m in Sources */,
-				FC4E646319EB4C420079C0A3 /* config.m in Sources */,
-				FC7153811B5DE3E300F6E137 /* About.m in Sources */,
-				FCDAB75A1B537D600040E0F7 /* Lingo.m in Sources */,
-				FC4E640C19EB4A490079C0A3 /* GridViewController.m in Sources */,
+				ED648DCC23A0281800EC5F16 /* Seafood+CoreDataClass.swift in Sources */,
+				ED648DDF23A0D82600EC5F16 /* config.swift in Sources */,
+				ED648DD123A02C3900EC5F16 /* FishCat.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -780,6 +757,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -790,6 +768,7 @@
 			baseConfigurationReference = 6877C94D107D3BEA4B262575 /* Pods-Seafood Guide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = NO;
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_ENUM_CONVERSION = NO;
@@ -808,10 +787,14 @@
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 7.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Seafood Guide/Seafood Guide-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -822,6 +805,7 @@
 			baseConfigurationReference = D9F6403A4CD36BDC8E37CC0E /* Pods-Seafood Guide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_BOOL_CONVERSION = NO;
 				CLANG_WARN_CONSTANT_CONVERSION = NO;
 				CLANG_WARN_ENUM_CONVERSION = NO;
@@ -840,10 +824,13 @@
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MARKETING_VERSION = 7.0.5;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Seafood Guide/Seafood Guide-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -853,6 +840,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F8B625D1AA136F8869C38D44 /* Pods-Seafood GuideTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seafood Guide.app/Seafood Guide";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -876,6 +864,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CAC15469CCE5A05EC42FD6B7 /* Pods-Seafood GuideTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seafood Guide.app/Seafood Guide";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
