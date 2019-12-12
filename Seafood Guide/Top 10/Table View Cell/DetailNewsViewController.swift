@@ -47,11 +47,8 @@ class DetailNewsViewController: UIViewController, UINavigationBarDelegate, UINav
         super.viewDidAppear(animated)
         imgView.image = image
         txtView.text = txtProject
-        UIView.setAnimationDuration(0.5)
         imgView.alpha = 1
         txtView.alpha = 1
-
-        UIView.commitAnimations()
     }
 
     override func viewDidDisappear(_ animated: Bool) {

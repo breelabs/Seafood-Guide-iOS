@@ -23,7 +23,7 @@ class TVCDetailViewController: UITableViewController, UIWebViewDelegate, MFMailC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.groupTableViewBackground
+        view.backgroundColor = UIColor.white
 
         title = item?.name
     }

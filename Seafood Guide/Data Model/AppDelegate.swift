@@ -18,20 +18,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>?
     var fetchedResultsControllerLingo: NSFetchedResultsController<NSFetchRequestResult>?
 
-    var managedObjectContext: NSManagedObjectContext? {
+    lazy var managedObjectContext: NSManagedObjectContext? =  {
         let coordinator = persistentStoreCoordinator
         let _managedObjectContext = NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
         _managedObjectContext.persistentStoreCoordinator = coordinator
         return _managedObjectContext
-    }
+    }()
 
-    var managedObjectModel: NSManagedObjectModel? {
+    lazy var managedObjectModel: NSManagedObjectModel? = {
         let modelURL = Bundle.main.url(forResource: "Seafood_Guide", withExtension: "momd")
         if let modelURL = modelURL {
             return NSManagedObjectModel(contentsOf: modelURL)
         }
         return nil
-    }
+    }()
     
     lazy var persistentContainer: NSPersistentContainer = {
         /*
@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private var __persistentStoreCoordinator: NSPersistentStoreCoordinator?
     
-    var persistentStoreCoordinator: NSPersistentStoreCoordinator? {
+    lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         let storeURL = applicationDocumentsDirectory()?.appendingPathComponent("Seafood_Guide.sqlite")
 
         if let managedObjectModel = managedObjectModel {
@@ -72,15 +72,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         do {
             try __persistentStoreCoordinator?.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: storeURL, options: [
-                NSMigratePersistentStoresAutomaticallyOption: NSNumber(value: true),
-                NSInferMappingModelAutomaticallyOption: NSNumber(value: true)
+                NSMigratePersistentStoresAutomaticallyOption: true,
+                NSInferMappingModelAutomaticallyOption: true
             ])
         } catch {
             abort()
         }
 
         return __persistentStoreCoordinator
-    }
+    }()
 
     func saveContext() {
         let managedObjectContext = self.managedObjectContext

@@ -173,12 +173,9 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell?.newsImageView.alpha = 0
         cell?.textNewsLabel.alpha = 0
         cell?.textNewsLabel.alpha = 0
-        UIView.beginAnimations("ResizeAnimation", context: nil)
-        UIView.setAnimationDuration(0.5)
         cell?.newsImageView.alpha = 1
         cell?.textNewsLabel.alpha = 1
         cell?.newsImageView.alpha = 1
-        UIView.commitAnimations()
 
         return cell!
     }

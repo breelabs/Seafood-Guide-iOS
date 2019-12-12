@@ -35,7 +35,6 @@
 		FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
 		FC2BD13819B23CBF003ECABA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD13619B23CBF003ECABA /* InfoPlist.strings */; };
 		FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD13F19B23CBF003ECABA /* Main_iPhone.storyboard */; };
-		FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */; };
 		FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC2BD14B19B23CBF003ECABA /* Images.xcassets */; };
 		FC2BD15319B23CC0003ECABA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD15219B23CC0003ECABA /* XCTest.framework */; };
 		FC2BD15419B23CC0003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
@@ -105,7 +104,6 @@
 		FC2BD13719B23CBF003ECABA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FC2BD13B19B23CBF003ECABA /* Seafood Guide-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Seafood Guide-Prefix.pch"; sourceTree = "<group>"; };
 		FC2BD14019B23CBF003ECABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		FC2BD14319B23CBF003ECABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		FC2BD14B19B23CBF003ECABA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FC2BD15119B23CC0003ECABA /* Seafood GuideTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Seafood GuideTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2BD15219B23CC0003ECABA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -320,7 +318,6 @@
 			children = (
 				FC8F8C611FB839D10015E5E8 /* LaunchScreen.storyboard */,
 				FC2BD13F19B23CBF003ECABA /* Main_iPhone.storyboard */,
-				FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */,
 			);
 			name = Storyboards;
 			sourceTree = "<group>";
@@ -488,7 +485,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC2BD14419B23CBF003ECABA /* Main_iPad.storyboard in Resources */,
 				FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */,
 				FC8F8C621FB839D10015E5E8 /* LaunchScreen.storyboard in Resources */,
 				FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */,
@@ -642,14 +638,6 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		FC2BD14219B23CBF003ECABA /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC2BD14319B23CBF003ECABA /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		FC2BD15B19B23CC0003ECABA /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -775,7 +763,7 @@
 				CLANG_WARN_INT_CONVERSION = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7.0.5;
+				CURRENT_PROJECT_VERSION = 7.0.6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Seafood Guide/Seafood Guide-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -786,9 +774,9 @@
 					"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.0.5;
+				MARKETING_VERSION = 7.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -812,7 +800,7 @@
 				CLANG_WARN_INT_CONVERSION = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7.0.5;
+				CURRENT_PROJECT_VERSION = 7.0.6;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Seafood Guide/Seafood Guide-Prefix.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -823,9 +811,9 @@
 					"$(SDK_DIR)\"/usr/include/libxml2",
 				);
 				INFOPLIST_FILE = "Seafood Guide/Seafood Guide-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 7.0.5;
+				MARKETING_VERSION = 7.0.6;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
