@@ -7,85 +7,78 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		597F05E49F1BD2F72525C705815CA381 /* Pods-Seafood Guide-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62478C8177DFF8125D7B0F781B63D0BC /* Pods-Seafood Guide-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		632A5B226923C532A720B7675F8DF353 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		644AA05C7062E442A2B9582D203D882E /* Pods-Seafood GuideTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C844D1C1F4343ADB307A700EE50E6D1 /* Pods-Seafood GuideTests-dummy.m */; };
-		787982E06BA8E86A642A72EE8DD37176 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = ED5FAE6969AA253D0081C3895F91176C /* ProgressHUD.bundle */; };
-		90F08D8805CB453A316BD81AF0121FCF /* Pods-Seafood GuideTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC3851FE9932B960DA92F8091A3124B /* Pods-Seafood GuideTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		99DD1C9D5C58E0878F10A38DDE0E941D /* ProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD876A3A541EA8660236396A1A5B68C5 /* ProgressHUD-dummy.m */; };
-		A22D0C6B882869335793FFED2509721D /* Pods-Seafood Guide-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4C9C6D03C6BBF93559962BC7FDEFE /* Pods-Seafood Guide-dummy.m */; };
-		A34ECE93624FF2383A62E7C56CB4C57E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		AF2C0D69B83F759DFEC4D5CB07D8A792 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		BCDC042D9482426BA8A62E3170407236 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9B8509BA27863688FC8A61337B3D94 /* ProgressHUD.m */; };
-		D91D41C90DFAE210224AFD5358BFD72B /* ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = FA45D85289EA512C976A6A86D5F2C209 /* ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E77259292952A522E832209EAA8890A3 /* ProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0469F1AF2BA87FEF86F44C4DE6C812D1 /* ProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1053E4B94533F1C52110980EC23E21A2 /* Pods-Seafood GuideTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C844D1C1F4343ADB307A700EE50E6D1 /* Pods-Seafood GuideTests-dummy.m */; };
+		21F7F405F0392EEAF22EAC60ADB64DEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		787982E06BA8E86A642A72EE8DD37176 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F65BEAC8A32C1775C44C605DA38D377 /* ProgressHUD.bundle */; };
+		99DD1C9D5C58E0878F10A38DDE0E941D /* ProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 960A3A467532622FEB1CC167E6483AED /* ProgressHUD-dummy.m */; };
+		A047381B15ECC7B5888AFB327BE73C09 /* Pods-Seafood Guide-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62478C8177DFF8125D7B0F781B63D0BC /* Pods-Seafood Guide-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A5EC3BAB97021D664845529724E02D9B /* Pods-Seafood GuideTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC3851FE9932B960DA92F8091A3124B /* Pods-Seafood GuideTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B226F9BE32FCBE3B239B34343BD4025B /* Pods-Seafood Guide-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4C9C6D03C6BBF93559962BC7FDEFE /* Pods-Seafood Guide-dummy.m */; };
+		BCDC042D9482426BA8A62E3170407236 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 829F987BB347EE01C30689EA4A1D941F /* ProgressHUD.m */; };
+		BDAED3ADB388E35CE83531FA5EB0826C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D91D41C90DFAE210224AFD5358BFD72B /* ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D9F2F4DB966288D371DA22786A255D2 /* ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA87A9974B6EAF9F5213BFF3A19D9222 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E77259292952A522E832209EAA8890A3 /* ProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B26A0343A01F3DE27AD3ED65F908E7E5 /* ProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6EACB92DA3D4C39E55ADA7B7006BDBB9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 43E399894076CB56510F05379A03703C;
-			remoteInfo = "Pods-Seafood Guide";
-		};
-		99EB2ABD54DB6B79ADC503F82F8E6C53 /* PBXContainerItemProxy */ = {
+		34641456B93687B24CD048F2B93C8C6A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 022D0373DF61EE4E133BADB43CE7ED57;
 			remoteInfo = ProgressHUD;
 		};
+		FA5BFD70DECE4232DEFAE85862975FE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43E399894076CB56510F05379A03703C;
+			remoteInfo = "Pods-Seafood Guide";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0469F1AF2BA87FEF86F44C4DE6C812D1 /* ProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		0D3287058D2F13BD484A454154BEA62B /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C47357F27DBCA568A760C5006B38FA /* Pods-Seafood Guide-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Seafood Guide-frameworks.sh"; sourceTree = "<group>"; };
 		18E4C9C6D03C6BBF93559962BC7FDEFE /* Pods-Seafood Guide-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Seafood Guide-dummy.m"; sourceTree = "<group>"; };
+		1A7A65CF39148D361D15848F51EED31E /* ProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		1C844D1C1F4343ADB307A700EE50E6D1 /* Pods-Seafood GuideTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Seafood GuideTests-dummy.m"; sourceTree = "<group>"; };
-		1C9B8509BA27863688FC8A61337B3D94 /* ProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = ProgressHUD/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
 		26DA3BEC02C2EBB64B39166204575F36 /* Pods-Seafood GuideTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood GuideTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2A75131B7845D78B55D76E7A04E3A67C /* Pods-Seafood GuideTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood GuideTests-Info.plist"; sourceTree = "<group>"; };
+		2F65BEAC8A32C1775C44C605DA38D377 /* ProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = ProgressHUD/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
 		3155915CEDE7605A4A2903F7B6E6F93C /* Pods-Seafood GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
-		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		37B56B19278C033689C79380D5B0E1CB /* ProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		4090C366EE5E634276A0A0D466358901 /* Pods-Seafood Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood Guide.debug.xcconfig"; sourceTree = "<group>"; };
-		4B7082712FE514424A3D7A62A5E94009 /* ProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.xcconfig; sourceTree = "<group>"; };
+		4BF70F79F0BA52086E5C154821E0F6A5 /* ProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressHUD-Info.plist"; sourceTree = "<group>"; };
 		6236A48E8B323C2D410852338042B888 /* Pods-Seafood Guide-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood Guide-acknowledgements.plist"; sourceTree = "<group>"; };
 		62478C8177DFF8125D7B0F781B63D0BC /* Pods-Seafood Guide-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Seafood Guide-umbrella.h"; sourceTree = "<group>"; };
 		6A091270783123FBABE6D30E54EA96C4 /* Pods_Seafood_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		76C3D5F8F6981FEBF64A97F0CE436B2A /* ProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressHUD.modulemap; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7D9F2F4DB966288D371DA22786A255D2 /* ProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = ProgressHUD/ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
+		829F987BB347EE01C30689EA4A1D941F /* ProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = ProgressHUD/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
 		8BC3851FE9932B960DA92F8091A3124B /* Pods-Seafood GuideTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Seafood GuideTests-umbrella.h"; sourceTree = "<group>"; };
+		8C72270FBA7B4673AE6C6594F7F37D92 /* ProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressHUD.modulemap; sourceTree = "<group>"; };
 		93F19683601FE825339303E144029C66 /* Pods-Seafood GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood GuideTests.release.xcconfig"; sourceTree = "<group>"; };
+		960A3A467532622FEB1CC167E6483AED /* ProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		9632C36F75858F00E230E77318C6719C /* ProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.release.xcconfig; sourceTree = "<group>"; };
 		9C75D6E817305581323AF2A5224755AF /* Pods-Seafood Guide.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Seafood Guide.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A9B4F1627424B06914F0A836871E057B /* Pods_Seafood_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD876A3A541EA8660236396A1A5B68C5 /* ProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		B26A0343A01F3DE27AD3ED65F908E7E5 /* ProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		B61984BAA86EFA27D110C3259FC36FDC /* Pods-Seafood GuideTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Seafood GuideTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA21315FEF2DB6ACF53B8997C8455F9D /* ProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		CD65FC916364532DDA226B673D3960D0 /* Pods-Seafood Guide-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood Guide-Info.plist"; sourceTree = "<group>"; };
-		ED5FAE6969AA253D0081C3895F91176C /* ProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = ProgressHUD/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
 		F091B858B281822014C7DF1C95E3CA76 /* Pods-Seafood Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood Guide.release.xcconfig"; sourceTree = "<group>"; };
 		F1F35DDBE3053C2E712052260F33C6D2 /* Pods-Seafood Guide-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Seafood Guide-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F7C373CC10C22327274BC5869851C547 /* Pods-Seafood GuideTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Seafood GuideTests.modulemap"; sourceTree = "<group>"; };
-		FA45D85289EA512C976A6A86D5F2C209 /* ProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = ProgressHUD/ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
-		FB77802CCA33E0A1F763E92B7EFDF2CA /* ProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3024BC49A46F91CA1C0A68F1C11BF741 /* Frameworks */ = {
+		228867EEAF88DBBF06CE77AC0E69F006 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				632A5B226923C532A720B7675F8DF353 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		48694EEA27A4142F660C7564EF9D1CD8 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A34ECE93624FF2383A62E7C56CB4C57E /* Foundation.framework in Frameworks */,
+				DA87A9974B6EAF9F5213BFF3A19D9222 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +86,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2C0D69B83F759DFEC4D5CB07D8A792 /* Foundation.framework in Frameworks */,
+				BDAED3ADB388E35CE83531FA5EB0826C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA2380240E71EA00DFEF18289F6E49E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21F7F405F0392EEAF22EAC60ADB64DEC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,9 +104,17 @@
 		1B80C261650069FD42A4FF812557D186 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CFA2FF6780A3451CB9334E2A180B835E /* ProgressHUD */,
+				AF373CBFAEE0D3658E4B018F222C6B7D /* ProgressHUD */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		1BEDC6D0A39612181E7C12F49DB55C4A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F65BEAC8A32C1775C44C605DA38D377 /* ProgressHUD.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		255A93A4BE5D86927B5C5004EE7ED189 /* Products */ = {
@@ -127,34 +136,38 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5D6A53640B52088588D51E6F5DD60CDC /* Support Files */ = {
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				76C3D5F8F6981FEBF64A97F0CE436B2A /* ProgressHUD.modulemap */,
-				4B7082712FE514424A3D7A62A5E94009 /* ProgressHUD.xcconfig */,
-				AD876A3A541EA8660236396A1A5B68C5 /* ProgressHUD-dummy.m */,
-				37B56B19278C033689C79380D5B0E1CB /* ProgressHUD-Info.plist */,
-				FB77802CCA33E0A1F763E92B7EFDF2CA /* ProgressHUD-prefix.pch */,
-				0469F1AF2BA87FEF86F44C4DE6C812D1 /* ProgressHUD-umbrella.h */,
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7A8C57FB81AC319638F6634C79E2F1A9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C72270FBA7B4673AE6C6594F7F37D92 /* ProgressHUD.modulemap */,
+				960A3A467532622FEB1CC167E6483AED /* ProgressHUD-dummy.m */,
+				4BF70F79F0BA52086E5C154821E0F6A5 /* ProgressHUD-Info.plist */,
+				1A7A65CF39148D361D15848F51EED31E /* ProgressHUD-prefix.pch */,
+				B26A0343A01F3DE27AD3ED65F908E7E5 /* ProgressHUD-umbrella.h */,
+				BA21315FEF2DB6ACF53B8997C8455F9D /* ProgressHUD.debug.xcconfig */,
+				9632C36F75858F00E230E77318C6719C /* ProgressHUD.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ProgressHUD";
 			sourceTree = "<group>";
 		};
-		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+		AF373CBFAEE0D3658E4B018F222C6B7D /* ProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+				7D9F2F4DB966288D371DA22786A255D2 /* ProgressHUD.h */,
+				829F987BB347EE01C30689EA4A1D941F /* ProgressHUD.m */,
+				1BEDC6D0A39612181E7C12F49DB55C4A /* Resources */,
+				7A8C57FB81AC319638F6634C79E2F1A9 /* Support Files */,
 			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		C17D144F4975147A990DBFA8FF12E171 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				ED5FAE6969AA253D0081C3895F91176C /* ProgressHUD.bundle */,
-			);
-			name = Resources;
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		C6AD5388BA1A15F58C030217AB48BC27 /* Pods-Seafood GuideTests */ = {
@@ -184,17 +197,6 @@
 			);
 			sourceTree = "<group>";
 		};
-		CFA2FF6780A3451CB9334E2A180B835E /* ProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				FA45D85289EA512C976A6A86D5F2C209 /* ProgressHUD.h */,
-				1C9B8509BA27863688FC8A61337B3D94 /* ProgressHUD.m */,
-				C17D144F4975147A990DBFA8FF12E171 /* Resources */,
-				5D6A53640B52088588D51E6F5DD60CDC /* Support Files */,
-			);
-			path = ProgressHUD;
-			sourceTree = "<group>";
-		};
 		D1CD226921894DBE957DD93E20229EBE /* Pods-Seafood Guide */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +217,7 @@
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -223,11 +225,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		61DB07C62C3C62A3C1C61A449820C60D /* Headers */ = {
+		0743ECDC4C81BEB84107E69BE6A0BF58 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				90F08D8805CB453A316BD81AF0121FCF /* Pods-Seafood GuideTests-umbrella.h in Headers */,
+				A047381B15ECC7B5888AFB327BE73C09 /* Pods-Seafood Guide-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,11 +242,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C53D032861DAC4BC172CA9825BC52B68 /* Headers */ = {
+		6BBE51B34DB23FB276E27D69C474F512 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				597F05E49F1BD2F72525C705815CA381 /* Pods-Seafood Guide-umbrella.h in Headers */,
+				A5EC3BAB97021D664845529724E02D9B /* Pods-Seafood GuideTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,17 +273,17 @@
 		};
 		43E399894076CB56510F05379A03703C /* Pods-Seafood Guide */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 46A79D006B1F3207DCBA46E3F5EFAF59 /* Build configuration list for PBXNativeTarget "Pods-Seafood Guide" */;
+			buildConfigurationList = 931F1A7DDE1A08065ADD55DDDC87E188 /* Build configuration list for PBXNativeTarget "Pods-Seafood Guide" */;
 			buildPhases = (
-				C53D032861DAC4BC172CA9825BC52B68 /* Headers */,
-				8AB3B603D1318D7F9F9147FCCE505C4E /* Sources */,
-				48694EEA27A4142F660C7564EF9D1CD8 /* Frameworks */,
-				9BF55FD1A5D1DE3C15A826D89BB0FA02 /* Resources */,
+				0743ECDC4C81BEB84107E69BE6A0BF58 /* Headers */,
+				8ED2447DDE7973AC3060BA5E08A801F3 /* Sources */,
+				228867EEAF88DBBF06CE77AC0E69F006 /* Frameworks */,
+				B326D68F35EB3F5945ACAA3F91310A24 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2DD48A5D330F38DA917C88B336A6709D /* PBXTargetDependency */,
+				B9DCBF0E2AFC1C0819B95887E7AC05D3 /* PBXTargetDependency */,
 			);
 			name = "Pods-Seafood Guide";
 			productName = "Pods-Seafood Guide";
@@ -290,17 +292,17 @@
 		};
 		98FDE5C67B070D89FED3AE14E24EACBE /* Pods-Seafood GuideTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97CC92EC06481D93836B5C4A74DFDB2D /* Build configuration list for PBXNativeTarget "Pods-Seafood GuideTests" */;
+			buildConfigurationList = B17AF41554BD0C11813BDB3A52FA19FB /* Build configuration list for PBXNativeTarget "Pods-Seafood GuideTests" */;
 			buildPhases = (
-				61DB07C62C3C62A3C1C61A449820C60D /* Headers */,
-				80D762101E73DB057DD6C63C4301CEFD /* Sources */,
-				3024BC49A46F91CA1C0A68F1C11BF741 /* Frameworks */,
-				BD1C98A3F7F0B67EBF9DF8F32C903613 /* Resources */,
+				6BBE51B34DB23FB276E27D69C474F512 /* Headers */,
+				F7F232F71EE406EA80AAC6250877E1D7 /* Sources */,
+				BA2380240E71EA00DFEF18289F6E49E2 /* Frameworks */,
+				281569C073865E0586D844CBCD36582B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9844A0585D721FC5A62968D28E63FF35 /* PBXTargetDependency */,
+				204E8D66C9C7A716FB09069C69470378 /* PBXTargetDependency */,
 			);
 			name = "Pods-Seafood GuideTests";
 			productName = "Pods-Seafood GuideTests";
@@ -314,7 +316,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1250;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 8.0";
@@ -337,6 +339,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		281569C073865E0586D844CBCD36582B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7352DE14C725ACC66BAA1656A8FBE315 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -345,14 +354,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9BF55FD1A5D1DE3C15A826D89BB0FA02 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD1C98A3F7F0B67EBF9DF8F32C903613 /* Resources */ = {
+		B326D68F35EB3F5945ACAA3F91310A24 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -371,44 +373,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		80D762101E73DB057DD6C63C4301CEFD /* Sources */ = {
+		8ED2447DDE7973AC3060BA5E08A801F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				644AA05C7062E442A2B9582D203D882E /* Pods-Seafood GuideTests-dummy.m in Sources */,
+				B226F9BE32FCBE3B239B34343BD4025B /* Pods-Seafood Guide-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8AB3B603D1318D7F9F9147FCCE505C4E /* Sources */ = {
+		F7F232F71EE406EA80AAC6250877E1D7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22D0C6B882869335793FFED2509721D /* Pods-Seafood Guide-dummy.m in Sources */,
+				1053E4B94533F1C52110980EC23E21A2 /* Pods-Seafood GuideTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2DD48A5D330F38DA917C88B336A6709D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ProgressHUD;
-			target = 022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */;
-			targetProxy = 99EB2ABD54DB6B79ADC503F82F8E6C53 /* PBXContainerItemProxy */;
-		};
-		9844A0585D721FC5A62968D28E63FF35 /* PBXTargetDependency */ = {
+		204E8D66C9C7A716FB09069C69470378 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Seafood Guide";
 			target = 43E399894076CB56510F05379A03703C /* Pods-Seafood Guide */;
-			targetProxy = 6EACB92DA3D4C39E55ADA7B7006BDBB9 /* PBXContainerItemProxy */;
+			targetProxy = FA5BFD70DECE4232DEFAE85862975FE0 /* PBXContainerItemProxy */;
+		};
+		B9DCBF0E2AFC1C0819B95887E7AC05D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ProgressHUD;
+			target = 022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */;
+			targetProxy = 34641456B93687B24CD048F2B93C8C6A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		14DEE7AF6741DC76DDF7C4ADD62A623C /* Release */ = {
+		12E068767CF35B513130A458C3536CFB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -431,6 +434,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -453,7 +457,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -464,213 +468,11 @@
 			};
 			name = Release;
 		};
-		6CD4C332892909ED3F5980670708628E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3155915CEDE7605A4A2903F7B6E6F93C /* Pods-Seafood GuideTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6D73CBA5C396DECD7E6C50ABBC19B6D0 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B7082712FE514424A3D7A62A5E94009 /* ProgressHUD.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = ProgressHUD;
-				PRODUCT_NAME = ProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7B46D98CEBEE79E840EE241687EF0888 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93F19683601FE825339303E144029C66 /* Pods-Seafood GuideTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7DA498DC7F644D3BACCEBF128726AD1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B7082712FE514424A3D7A62A5E94009 /* ProgressHUD.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = ProgressHUD;
-				PRODUCT_NAME = ProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		856D9EEA75216CF342DBFE81128546A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4090C366EE5E634276A0A0D466358901 /* Pods-Seafood Guide.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		896095534F4AA5C69EB7830A0619828F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F091B858B281822014C7DF1C95E3CA76 /* Pods-Seafood Guide.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B963CC86710B44699D7402ACC2CFB8D3 /* Debug */ = {
+		2FF1CABA2F393C5AC709D7FB7D5C2319 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -693,6 +495,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -718,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -731,32 +534,229 @@
 			};
 			name = Debug;
 		};
+		4219FCD43629A52D4A3A218263589311 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F091B858B281822014C7DF1C95E3CA76 /* Pods-Seafood Guide.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4DB53CBAEAB81329D03703DBFA5EF57A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9632C36F75858F00E230E77318C6719C /* ProgressHUD.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = ProgressHUD;
+				PRODUCT_NAME = ProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		68220E200D67975B576FE5CCDE453D88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3155915CEDE7605A4A2903F7B6E6F93C /* Pods-Seafood GuideTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B85B30AA683C99115E3025E5B4C37558 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F19683601FE825339303E144029C66 /* Pods-Seafood GuideTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EE40ACF8E07F1F272E14C19F31FC496B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA21315FEF2DB6ACF53B8997C8455F9D /* ProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = ProgressHUD;
+				PRODUCT_NAME = ProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F0A184285118A4A071DEAAFB634A8D3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4090C366EE5E634276A0A0D466358901 /* Pods-Seafood Guide.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		46A79D006B1F3207DCBA46E3F5EFAF59 /* Build configuration list for PBXNativeTarget "Pods-Seafood Guide" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				856D9EEA75216CF342DBFE81128546A3 /* Debug */,
-				896095534F4AA5C69EB7830A0619828F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B963CC86710B44699D7402ACC2CFB8D3 /* Debug */,
-				14DEE7AF6741DC76DDF7C4ADD62A623C /* Release */,
+				2FF1CABA2F393C5AC709D7FB7D5C2319 /* Debug */,
+				12E068767CF35B513130A458C3536CFB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97CC92EC06481D93836B5C4A74DFDB2D /* Build configuration list for PBXNativeTarget "Pods-Seafood GuideTests" */ = {
+		931F1A7DDE1A08065ADD55DDDC87E188 /* Build configuration list for PBXNativeTarget "Pods-Seafood Guide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6CD4C332892909ED3F5980670708628E /* Debug */,
-				7B46D98CEBEE79E840EE241687EF0888 /* Release */,
+				F0A184285118A4A071DEAAFB634A8D3C /* Debug */,
+				4219FCD43629A52D4A3A218263589311 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B17AF41554BD0C11813BDB3A52FA19FB /* Build configuration list for PBXNativeTarget "Pods-Seafood GuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68220E200D67975B576FE5CCDE453D88 /* Debug */,
+				B85B30AA683C99115E3025E5B4C37558 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -764,8 +764,8 @@
 		CD4A27565EE13AC433E8F2F3E33E52B4 /* Build configuration list for PBXNativeTarget "ProgressHUD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7DA498DC7F644D3BACCEBF128726AD1F /* Debug */,
-				6D73CBA5C396DECD7E6C50ABBC19B6D0 /* Release */,
+				EE40ACF8E07F1F272E14C19F31FC496B /* Debug */,
+				4DB53CBAEAB81329D03703DBFA5EF57A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
