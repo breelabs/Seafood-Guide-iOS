@@ -149,15 +149,15 @@ class DetailAboutViewController: UITableViewController, UIWebViewDelegate, MFMai
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         switch result {
             case .cancelled:
-                ProgressHUD.showError("Email Not Sent")
+                ProgressHUD.failed("Email Not Sent")
             case .saved:
-                ProgressHUD.showSuccess("Email Saved!")
+                ProgressHUD.succeed("Email Saved!")
             case .sent:
-                ProgressHUD.showSuccess("Email Sent!")
+                ProgressHUD.succeed("Email Sent!")
             case .failed:
-                ProgressHUD.showError("Email Not Sent")
+                ProgressHUD.failed("Email Not Sent")
             default:
-                ProgressHUD.showError("Email Not Sent")
+                ProgressHUD.failed("Email Not Sent")
         }
         dismiss(animated: true)
     }

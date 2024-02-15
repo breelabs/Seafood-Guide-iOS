@@ -3,33 +3,57 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B61350FD071CAD6611AF486EDAFEE97 /* ProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B26A0343A01F3DE27AD3ED65F908E7E5 /* ProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19EC1B8B6F406FA06214FC65C9786E63 /* ProgressHUD+TriangleDotShift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A324AF91238A96FD441B3FA8725DFCEC /* ProgressHUD+TriangleDotShift.swift */; };
+		1E70D9711242B3AC19DA9136EC66E2D1 /* ProgressHUD+PacmanProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E1AB0E891E926A2B3BFEDB6ECCF842 /* ProgressHUD+PacmanProgress.swift */; };
+		22A265D12317652A2F25AB25A93D44AE /* ProgressHUD+CircleStrokeSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A206EE177E884600CA3F11D3AD125CF /* ProgressHUD+CircleStrokeSpin.swift */; };
 		22C68D510667FFFEC1251F11D5E726A6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		2494C7A105491A46CE307E2273C8E0A3 /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 829F987BB347EE01C30689EA4A1D941F /* ProgressHUD.m */; };
-		34FE6D946E9542BA2B0F8BA3DB9A2435 /* ProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2F65BEAC8A32C1775C44C605DA38D377 /* ProgressHUD.bundle */; };
+		28B22108FB83B10D3E01F65383135EB5 /* ProgressHUD+CirclePulseSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E120381BEC6F113C5924CF62254647 /* ProgressHUD+CirclePulseSingle.swift */; };
+		2A82B4FE8A6912CD632C2E47CDC4E4A5 /* ProgressHUD+BarSweepToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E37CC6F9808908A710D1572FC17C03C /* ProgressHUD+BarSweepToggle.swift */; };
+		3539ECBF8B961FE42A68B01A3AADF91B /* ProgressHUD+CircleRippleMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = AABF5C0C45FD8A85DCBC1285F124D45D /* ProgressHUD+CircleRippleMultiple.swift */; };
+		37BF610B60A0DFC350E9DC14511E09A0 /* ProgressHUD+SquareCircuitSnake.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BBC0BAFCC2302DDBDD0AB439186FC0 /* ProgressHUD+SquareCircuitSnake.swift */; };
+		3879E3E94921A9884C0A1E97A337DBD9 /* ProgressHUD+BallVerticalBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E4F91CB858FA3E7AD956A76C0B8220 /* ProgressHUD+BallVerticalBounce.swift */; };
+		3A1F799C0B6DE2FA431F4F49E417BB7F /* ProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F367D52BD7A90FF5BD4121F445FDE8 /* ProgressHUD-dummy.m */; };
 		42F482EC7BC513E097A69C6FABB8D23E /* Pods-Seafood Guide-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62478C8177DFF8125D7B0F781B63D0BC /* Pods-Seafood Guide-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AC3D9BC8082F950186C3B3C37AB1021 /* Pods-Seafood Guide-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E4C9C6D03C6BBF93559962BC7FDEFE /* Pods-Seafood Guide-dummy.m */; };
+		4F2262DDE8F5B1BEB5BE36ACB3B66CE1 /* ProgressHUD+SFSymbolBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD1EDE420E392FE799CFCBAEC54432A /* ProgressHUD+SFSymbolBounce.swift */; };
+		5B421F09FDF965E84313F4972A090BF6 /* ProgressHUD+QuintupleDotDance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8577244EAD758551D1AB57330A0DC3 /* ProgressHUD+QuintupleDotDance.swift */; };
+		5C91BDC6BB9D271C8483C270C69027D7 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB478A0FD6675EC408C1837A97CB9B0D /* ProgressHUD.swift */; };
+		68F9EF550BFD25E95D607655C70DC5C8 /* ProgressHUD+CircleBarSpinFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314CF644257698A653547C975C093A9B /* ProgressHUD+CircleBarSpinFade.swift */; };
+		6C7F8473BF45C1D6906C54CAD4E6C44A /* ProgressHUD+LiveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F732F66E6A2913C5270C4F58F3C6F9E /* ProgressHUD+LiveIcon.swift */; };
 		6F5953022A12811C39A84AC7BFBC3217 /* Pods-Seafood GuideTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C844D1C1F4343ADB307A700EE50E6D1 /* Pods-Seafood GuideTests-dummy.m */; };
 		766AADC20A32D0C527B2BCB6804CF2DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		803FA37FE2807B420914AFED975628BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		8B9B234ED293387A5E7686AB0173BB2F /* Pods-Seafood GuideTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BC3851FE9932B960DA92F8091A3124B /* Pods-Seafood GuideTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B47814B611C69DE367518CA33F3BED99 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		ECE69EB835F707909864BF4DF6703F62 /* ProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D9F2F4DB966288D371DA22786A255D2 /* ProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCCDB16DA3E0933685FA5228CD8324F2 /* ProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 960A3A467532622FEB1CC167E6483AED /* ProgressHUD-dummy.m */; };
+		904BFEA904ACA4C5AC97260C7999670E /* ProgressHUD+DualDotSidestep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A88218D111E8953B4A939859D85D1089 /* ProgressHUD+DualDotSidestep.swift */; };
+		90985370B109E9607ADC7D929D11DB48 /* ProgressHUD+Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0035DEF594A6D7CD1478D0D1FB25BC36 /* ProgressHUD+Public.swift */; };
+		A84A3A21CD23AF532AD78AB177247DAC /* ProgressHUD+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA200CBD2A0620A4566AC8747D7503B /* ProgressHUD+ActivityIndicator.swift */; };
+		ABB0C59CFAF36B3AFA1A27625EA54C46 /* ProgressHUD+CircleRotateChase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5638301E9C732A15F2AABD573D19891 /* ProgressHUD+CircleRotateChase.swift */; };
+		ACCA655A16ED1D29FDA81A391B7B8072 /* ProgressHUD+HorizontalBarScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7946C00885C3D21F264FE02FCE52D717 /* ProgressHUD+HorizontalBarScaling.swift */; };
+		B946C9FAD6CA44A50B8BD639F76806FB /* ProgressHUD+CirclePulseMultiple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A2AC2E6062AE9658BE8ACA281ED74C /* ProgressHUD+CirclePulseMultiple.swift */; };
+		C47F3591BFFDC019D3A2E1F9CC349610 /* ProgressHUD+CircleRippleSingle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFF8EF0537F8F6B172CAA4E6E7E4168 /* ProgressHUD+CircleRippleSingle.swift */; };
+		CCDF9BEDCBDE214A8C365737CD4A4DDB /* ProgressHUD+Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56DA6232A3E25F9C38620B7157FED87 /* ProgressHUD+Banner.swift */; };
+		DD74B53B9F24F949728B15A7F508D9D6 /* ProgressHUD+HorizontalDotScaling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5B7B339DC6112F0CCB4E1C7812E62E6 /* ProgressHUD+HorizontalDotScaling.swift */; };
+		DFF83C5C7DCE85FCC1AB1456093B6494 /* ProgressHUD+Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97542934005A25FBC5C181877C612B96 /* ProgressHUD+Enums.swift */; };
+		E490EB58EAF044E6BD7E0A9576625F37 /* ProgressHUD-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C151ADC523D1A5EDA43EA4B8EF73D05 /* ProgressHUD-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E51BFDF36F49754D25E35B5E1A399654 /* ProgressHUD+CircleArcDotSpin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EA911DEBBC4CCC4C4137CCD4280741 /* ProgressHUD+CircleArcDotSpin.swift */; };
+		E964F0AAA735F3A58CE8509C40404B16 /* ProgressHUD+CircleDotSpinFade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584CE0E95494FC1D20F914BC32B6781B /* ProgressHUD+CircleDotSpinFade.swift */; };
+		F7CE0CBE09706BF0FB99AC2AD44B1252 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAF9A79C396F6746C3B00130716EF7A /* ProgressView.swift */; };
+		FFF994826480BB690015EE4A46E260E2 /* ProgressHUD+SemiRingRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BDE6FEB604E207DD07C293A99671B9E /* ProgressHUD+SemiRingRotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B6FC42CB54CC8B6688D0672C2C941768 /* PBXContainerItemProxy */ = {
+		00C190A7518992B6C95EF612AE8A2473 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 022D0373DF61EE4E133BADB43CE7ED57;
 			remoteInfo = ProgressHUD;
 		};
-		BDED8174AE0A9023B481D3ED46C65409 /* PBXContainerItemProxy */ = {
+		8B94F7641359ED5E7A227E9E24D96319 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -39,46 +63,70 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D3287058D2F13BD484A454154BEA62B /* ProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0035DEF594A6D7CD1478D0D1FB25BC36 /* ProgressHUD+Public.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+Public.swift"; path = "ProgressHUD/Sources/ProgressHUD+Public.swift"; sourceTree = "<group>"; };
+		0D3287058D2F13BD484A454154BEA62B /* ProgressHUD */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ProgressHUD; path = ProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C47357F27DBCA568A760C5006B38FA /* Pods-Seafood Guide-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Seafood Guide-frameworks.sh"; sourceTree = "<group>"; };
+		1496BE0C8DD804A4025F8074ACF4F6D3 /* ProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressHUD.modulemap; sourceTree = "<group>"; };
 		18E4C9C6D03C6BBF93559962BC7FDEFE /* Pods-Seafood Guide-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Seafood Guide-dummy.m"; sourceTree = "<group>"; };
-		1A7A65CF39148D361D15848F51EED31E /* ProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		1C844D1C1F4343ADB307A700EE50E6D1 /* Pods-Seafood GuideTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Seafood GuideTests-dummy.m"; sourceTree = "<group>"; };
+		1F1DFB60618DFED7345D99B51E99F204 /* ProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		26DA3BEC02C2EBB64B39166204575F36 /* Pods-Seafood GuideTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood GuideTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2A206EE177E884600CA3F11D3AD125CF /* ProgressHUD+CircleStrokeSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleStrokeSpin.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleStrokeSpin.swift"; sourceTree = "<group>"; };
 		2A75131B7845D78B55D76E7A04E3A67C /* Pods-Seafood GuideTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood GuideTests-Info.plist"; sourceTree = "<group>"; };
-		2F65BEAC8A32C1775C44C605DA38D377 /* ProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = ProgressHUD.bundle; path = ProgressHUD/ProgressHUD/ProgressHUD.bundle; sourceTree = "<group>"; };
+		2E37CC6F9808908A710D1572FC17C03C /* ProgressHUD+BarSweepToggle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+BarSweepToggle.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+BarSweepToggle.swift"; sourceTree = "<group>"; };
+		314CF644257698A653547C975C093A9B /* ProgressHUD+CircleBarSpinFade.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleBarSpinFade.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleBarSpinFade.swift"; sourceTree = "<group>"; };
 		3155915CEDE7605A4A2903F7B6E6F93C /* Pods-Seafood GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
+		32EA911DEBBC4CCC4C4137CCD4280741 /* ProgressHUD+CircleArcDotSpin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleArcDotSpin.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleArcDotSpin.swift"; sourceTree = "<group>"; };
 		4090C366EE5E634276A0A0D466358901 /* Pods-Seafood Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood Guide.debug.xcconfig"; sourceTree = "<group>"; };
-		4BF70F79F0BA52086E5C154821E0F6A5 /* ProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		47E120381BEC6F113C5924CF62254647 /* ProgressHUD+CirclePulseSingle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CirclePulseSingle.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CirclePulseSingle.swift"; sourceTree = "<group>"; };
+		4AAF9A79C396F6746C3B00130716EF7A /* ProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressView.swift; path = ProgressHUD/Sources/ProgressView.swift; sourceTree = "<group>"; };
+		50E4F91CB858FA3E7AD956A76C0B8220 /* ProgressHUD+BallVerticalBounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+BallVerticalBounce.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+BallVerticalBounce.swift"; sourceTree = "<group>"; };
+		584CE0E95494FC1D20F914BC32B6781B /* ProgressHUD+CircleDotSpinFade.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleDotSpinFade.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleDotSpinFade.swift"; sourceTree = "<group>"; };
 		6236A48E8B323C2D410852338042B888 /* Pods-Seafood Guide-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood Guide-acknowledgements.plist"; sourceTree = "<group>"; };
 		62478C8177DFF8125D7B0F781B63D0BC /* Pods-Seafood Guide-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Seafood Guide-umbrella.h"; sourceTree = "<group>"; };
-		6A091270783123FBABE6D30E54EA96C4 /* Pods_Seafood_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A091270783123FBABE6D30E54EA96C4 /* Pods-Seafood Guide */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Seafood Guide"; path = Pods_Seafood_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A2AC2E6062AE9658BE8ACA281ED74C /* ProgressHUD+CirclePulseMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CirclePulseMultiple.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CirclePulseMultiple.swift"; sourceTree = "<group>"; };
+		72F367D52BD7A90FF5BD4121F445FDE8 /* ProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7D9F2F4DB966288D371DA22786A255D2 /* ProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ProgressHUD.h; path = ProgressHUD/ProgressHUD/ProgressHUD.h; sourceTree = "<group>"; };
-		829F987BB347EE01C30689EA4A1D941F /* ProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ProgressHUD.m; path = ProgressHUD/ProgressHUD/ProgressHUD.m; sourceTree = "<group>"; };
+		7946C00885C3D21F264FE02FCE52D717 /* ProgressHUD+HorizontalBarScaling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+HorizontalBarScaling.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+HorizontalBarScaling.swift"; sourceTree = "<group>"; };
+		7BDE6FEB604E207DD07C293A99671B9E /* ProgressHUD+SemiRingRotation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+SemiRingRotation.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+SemiRingRotation.swift"; sourceTree = "<group>"; };
+		7EA200CBD2A0620A4566AC8747D7503B /* ProgressHUD+ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+ActivityIndicator.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		7F732F66E6A2913C5270C4F58F3C6F9E /* ProgressHUD+LiveIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+LiveIcon.swift"; path = "ProgressHUD/Sources/ProgressHUD+LiveIcon.swift"; sourceTree = "<group>"; };
+		816DEAE3F58FA05E75DEC7ACC48B8C78 /* ProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		8BC3851FE9932B960DA92F8091A3124B /* Pods-Seafood GuideTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Seafood GuideTests-umbrella.h"; sourceTree = "<group>"; };
-		8C72270FBA7B4673AE6C6594F7F37D92 /* ProgressHUD.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ProgressHUD.modulemap; sourceTree = "<group>"; };
+		9396C32AA5D5DECDBDF460ACD6782071 /* ProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.release.xcconfig; sourceTree = "<group>"; };
 		93F19683601FE825339303E144029C66 /* Pods-Seafood GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood GuideTests.release.xcconfig"; sourceTree = "<group>"; };
-		960A3A467532622FEB1CC167E6483AED /* ProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ProgressHUD-dummy.m"; sourceTree = "<group>"; };
-		9632C36F75858F00E230E77318C6719C /* ProgressHUD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.release.xcconfig; sourceTree = "<group>"; };
+		969C6274623A7475C1DA40B8518DAA3D /* ProgressHUD-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ProgressHUD-Info.plist"; sourceTree = "<group>"; };
+		97542934005A25FBC5C181877C612B96 /* ProgressHUD+Enums.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+Enums.swift"; path = "ProgressHUD/Sources/ProgressHUD+Enums.swift"; sourceTree = "<group>"; };
+		9C151ADC523D1A5EDA43EA4B8EF73D05 /* ProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-umbrella.h"; sourceTree = "<group>"; };
 		9C75D6E817305581323AF2A5224755AF /* Pods-Seafood Guide.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Seafood Guide.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A9B4F1627424B06914F0A836871E057B /* Pods_Seafood_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B26A0343A01F3DE27AD3ED65F908E7E5 /* ProgressHUD-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ProgressHUD-umbrella.h"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DD1EDE420E392FE799CFCBAEC54432A /* ProgressHUD+SFSymbolBounce.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+SFSymbolBounce.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+SFSymbolBounce.swift"; sourceTree = "<group>"; };
+		9FFF8EF0537F8F6B172CAA4E6E7E4168 /* ProgressHUD+CircleRippleSingle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleRippleSingle.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleRippleSingle.swift"; sourceTree = "<group>"; };
+		A2BBC0BAFCC2302DDBDD0AB439186FC0 /* ProgressHUD+SquareCircuitSnake.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+SquareCircuitSnake.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+SquareCircuitSnake.swift"; sourceTree = "<group>"; };
+		A324AF91238A96FD441B3FA8725DFCEC /* ProgressHUD+TriangleDotShift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+TriangleDotShift.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+TriangleDotShift.swift"; sourceTree = "<group>"; };
+		A56DA6232A3E25F9C38620B7157FED87 /* ProgressHUD+Banner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+Banner.swift"; path = "ProgressHUD/Sources/ProgressHUD+Banner.swift"; sourceTree = "<group>"; };
+		A88218D111E8953B4A939859D85D1089 /* ProgressHUD+DualDotSidestep.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+DualDotSidestep.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+DualDotSidestep.swift"; sourceTree = "<group>"; };
+		A9B4F1627424B06914F0A836871E057B /* Pods-Seafood GuideTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Seafood GuideTests"; path = Pods_Seafood_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AABF5C0C45FD8A85DCBC1285F124D45D /* ProgressHUD+CircleRippleMultiple.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleRippleMultiple.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleRippleMultiple.swift"; sourceTree = "<group>"; };
 		B61984BAA86EFA27D110C3259FC36FDC /* Pods-Seafood GuideTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Seafood GuideTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BA21315FEF2DB6ACF53B8997C8455F9D /* ProgressHUD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ProgressHUD.debug.xcconfig; sourceTree = "<group>"; };
 		CD65FC916364532DDA226B673D3960D0 /* Pods-Seafood Guide-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Seafood Guide-Info.plist"; sourceTree = "<group>"; };
+		E4E1AB0E891E926A2B3BFEDB6ECCF842 /* ProgressHUD+PacmanProgress.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+PacmanProgress.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+PacmanProgress.swift"; sourceTree = "<group>"; };
+		EB478A0FD6675EC408C1837A97CB9B0D /* ProgressHUD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProgressHUD.swift; path = ProgressHUD/Sources/ProgressHUD.swift; sourceTree = "<group>"; };
 		F091B858B281822014C7DF1C95E3CA76 /* Pods-Seafood Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Seafood Guide.release.xcconfig"; sourceTree = "<group>"; };
 		F1F35DDBE3053C2E712052260F33C6D2 /* Pods-Seafood Guide-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Seafood Guide-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F5638301E9C732A15F2AABD573D19891 /* ProgressHUD+CircleRotateChase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+CircleRotateChase.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+CircleRotateChase.swift"; sourceTree = "<group>"; };
+		F5B7B339DC6112F0CCB4E1C7812E62E6 /* ProgressHUD+HorizontalDotScaling.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+HorizontalDotScaling.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+HorizontalDotScaling.swift"; sourceTree = "<group>"; };
 		F7C373CC10C22327274BC5869851C547 /* Pods-Seafood GuideTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Seafood GuideTests.modulemap"; sourceTree = "<group>"; };
+		FE8577244EAD758551D1AB57330A0DC3 /* ProgressHUD+QuintupleDotDance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ProgressHUD+QuintupleDotDance.swift"; path = "ProgressHUD/Sources/Animations/ProgressHUD+QuintupleDotDance.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1322C59082A686DB2CBCA6294E4D6F2B /* Frameworks */ = {
+		2535771E2D8DEDFBF7FBDF3DE9806D61 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B47814B611C69DE367518CA33F3BED99 /* Foundation.framework in Frameworks */,
+				803FA37FE2807B420914AFED975628BC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,22 +149,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B80C261650069FD42A4FF812557D186 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				AF373CBFAEE0D3658E4B018F222C6B7D /* ProgressHUD */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		1BEDC6D0A39612181E7C12F49DB55C4A /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2F65BEAC8A32C1775C44C605DA38D377 /* ProgressHUD.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		396AE0D859A3F956ED42414888FD454B /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +156,42 @@
 				C6AD5388BA1A15F58C030217AB48BC27 /* Pods-Seafood GuideTests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4F41C636F70ABD99BE5DCF35B56F1DAB /* ProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				EB478A0FD6675EC408C1837A97CB9B0D /* ProgressHUD.swift */,
+				7EA200CBD2A0620A4566AC8747D7503B /* ProgressHUD+ActivityIndicator.swift */,
+				50E4F91CB858FA3E7AD956A76C0B8220 /* ProgressHUD+BallVerticalBounce.swift */,
+				A56DA6232A3E25F9C38620B7157FED87 /* ProgressHUD+Banner.swift */,
+				2E37CC6F9808908A710D1572FC17C03C /* ProgressHUD+BarSweepToggle.swift */,
+				32EA911DEBBC4CCC4C4137CCD4280741 /* ProgressHUD+CircleArcDotSpin.swift */,
+				314CF644257698A653547C975C093A9B /* ProgressHUD+CircleBarSpinFade.swift */,
+				584CE0E95494FC1D20F914BC32B6781B /* ProgressHUD+CircleDotSpinFade.swift */,
+				70A2AC2E6062AE9658BE8ACA281ED74C /* ProgressHUD+CirclePulseMultiple.swift */,
+				47E120381BEC6F113C5924CF62254647 /* ProgressHUD+CirclePulseSingle.swift */,
+				AABF5C0C45FD8A85DCBC1285F124D45D /* ProgressHUD+CircleRippleMultiple.swift */,
+				9FFF8EF0537F8F6B172CAA4E6E7E4168 /* ProgressHUD+CircleRippleSingle.swift */,
+				F5638301E9C732A15F2AABD573D19891 /* ProgressHUD+CircleRotateChase.swift */,
+				2A206EE177E884600CA3F11D3AD125CF /* ProgressHUD+CircleStrokeSpin.swift */,
+				A88218D111E8953B4A939859D85D1089 /* ProgressHUD+DualDotSidestep.swift */,
+				97542934005A25FBC5C181877C612B96 /* ProgressHUD+Enums.swift */,
+				7946C00885C3D21F264FE02FCE52D717 /* ProgressHUD+HorizontalBarScaling.swift */,
+				F5B7B339DC6112F0CCB4E1C7812E62E6 /* ProgressHUD+HorizontalDotScaling.swift */,
+				7F732F66E6A2913C5270C4F58F3C6F9E /* ProgressHUD+LiveIcon.swift */,
+				E4E1AB0E891E926A2B3BFEDB6ECCF842 /* ProgressHUD+PacmanProgress.swift */,
+				0035DEF594A6D7CD1478D0D1FB25BC36 /* ProgressHUD+Public.swift */,
+				FE8577244EAD758551D1AB57330A0DC3 /* ProgressHUD+QuintupleDotDance.swift */,
+				7BDE6FEB604E207DD07C293A99671B9E /* ProgressHUD+SemiRingRotation.swift */,
+				9DD1EDE420E392FE799CFCBAEC54432A /* ProgressHUD+SFSymbolBounce.swift */,
+				A2BBC0BAFCC2302DDBDD0AB439186FC0 /* ProgressHUD+SquareCircuitSnake.swift */,
+				A324AF91238A96FD441B3FA8725DFCEC /* ProgressHUD+TriangleDotShift.swift */,
+				4AAF9A79C396F6746C3B00130716EF7A /* ProgressView.swift */,
+				B95712F8AAA52B99A5683C36580000A0 /* Support Files */,
+			);
+			name = ProgressHUD;
+			path = ProgressHUD;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -134,40 +202,37 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7A8C57FB81AC319638F6634C79E2F1A9 /* Support Files */ = {
+		A0796A0DAD5BA38EC18FB56E65C1D711 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8C72270FBA7B4673AE6C6594F7F37D92 /* ProgressHUD.modulemap */,
-				960A3A467532622FEB1CC167E6483AED /* ProgressHUD-dummy.m */,
-				4BF70F79F0BA52086E5C154821E0F6A5 /* ProgressHUD-Info.plist */,
-				1A7A65CF39148D361D15848F51EED31E /* ProgressHUD-prefix.pch */,
-				B26A0343A01F3DE27AD3ED65F908E7E5 /* ProgressHUD-umbrella.h */,
-				BA21315FEF2DB6ACF53B8997C8455F9D /* ProgressHUD.debug.xcconfig */,
-				9632C36F75858F00E230E77318C6719C /* ProgressHUD.release.xcconfig */,
+				6A091270783123FBABE6D30E54EA96C4 /* Pods-Seafood Guide */,
+				A9B4F1627424B06914F0A836871E057B /* Pods-Seafood GuideTests */,
+				0D3287058D2F13BD484A454154BEA62B /* ProgressHUD */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B95712F8AAA52B99A5683C36580000A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1496BE0C8DD804A4025F8074ACF4F6D3 /* ProgressHUD.modulemap */,
+				72F367D52BD7A90FF5BD4121F445FDE8 /* ProgressHUD-dummy.m */,
+				969C6274623A7475C1DA40B8518DAA3D /* ProgressHUD-Info.plist */,
+				1F1DFB60618DFED7345D99B51E99F204 /* ProgressHUD-prefix.pch */,
+				9C151ADC523D1A5EDA43EA4B8EF73D05 /* ProgressHUD-umbrella.h */,
+				816DEAE3F58FA05E75DEC7ACC48B8C78 /* ProgressHUD.debug.xcconfig */,
+				9396C32AA5D5DECDBDF460ACD6782071 /* ProgressHUD.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/ProgressHUD";
 			sourceTree = "<group>";
 		};
-		A0796A0DAD5BA38EC18FB56E65C1D711 /* Products */ = {
+		B992E5722E78CFDF18945D86DD7F4FE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6A091270783123FBABE6D30E54EA96C4 /* Pods_Seafood_Guide.framework */,
-				A9B4F1627424B06914F0A836871E057B /* Pods_Seafood_GuideTests.framework */,
-				0D3287058D2F13BD484A454154BEA62B /* ProgressHUD.framework */,
+				4F41C636F70ABD99BE5DCF35B56F1DAB /* ProgressHUD */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AF373CBFAEE0D3658E4B018F222C6B7D /* ProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				7D9F2F4DB966288D371DA22786A255D2 /* ProgressHUD.h */,
-				829F987BB347EE01C30689EA4A1D941F /* ProgressHUD.m */,
-				1BEDC6D0A39612181E7C12F49DB55C4A /* Resources */,
-				7A8C57FB81AC319638F6634C79E2F1A9 /* Support Files */,
-			);
-			path = ProgressHUD;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		C6AD5388BA1A15F58C030217AB48BC27 /* Pods-Seafood GuideTests */ = {
@@ -191,7 +256,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				1B80C261650069FD42A4FF812557D186 /* Pods */,
+				B992E5722E78CFDF18945D86DD7F4FE9 /* Pods */,
 				A0796A0DAD5BA38EC18FB56E65C1D711 /* Products */,
 				396AE0D859A3F956ED42414888FD454B /* Targets Support Files */,
 			);
@@ -233,12 +298,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7F9850EEBF50F31F41AF2F002E119C58 /* Headers */ = {
+		9207585A68DE7E3D7B3045B705FE5E5E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECE69EB835F707909864BF4DF6703F62 /* ProgressHUD.h in Headers */,
-				1B61350FD071CAD6611AF486EDAFEE97 /* ProgressHUD-umbrella.h in Headers */,
+				E490EB58EAF044E6BD7E0A9576625F37 /* ProgressHUD-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,12 +319,12 @@
 /* Begin PBXNativeTarget section */
 		022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 98DB1CEB64B25B7D92ACCB0F45D40523 /* Build configuration list for PBXNativeTarget "ProgressHUD" */;
+			buildConfigurationList = 12764E48EF11A2AC97C4A69E9D9480C4 /* Build configuration list for PBXNativeTarget "ProgressHUD" */;
 			buildPhases = (
-				7F9850EEBF50F31F41AF2F002E119C58 /* Headers */,
-				A7757DB3562998A19197D8A354251578 /* Sources */,
-				1322C59082A686DB2CBCA6294E4D6F2B /* Frameworks */,
-				11DBA9FA11A0E5EE66E0889E9BE99819 /* Resources */,
+				9207585A68DE7E3D7B3045B705FE5E5E /* Headers */,
+				D00B499FEC273B734572D5B55EBA6513 /* Sources */,
+				2535771E2D8DEDFBF7FBDF3DE9806D61 /* Frameworks */,
+				7BCA7DD16505108800805A20532A78A8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -268,7 +332,7 @@
 			);
 			name = ProgressHUD;
 			productName = ProgressHUD;
-			productReference = 0D3287058D2F13BD484A454154BEA62B /* ProgressHUD.framework */;
+			productReference = 0D3287058D2F13BD484A454154BEA62B /* ProgressHUD */;
 			productType = "com.apple.product-type.framework";
 		};
 		43E399894076CB56510F05379A03703C /* Pods-Seafood Guide */ = {
@@ -283,11 +347,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				7D59D75384682FD5E03308E644D87715 /* PBXTargetDependency */,
+				ADB5B336A443DF9026D186D72130BBCB /* PBXTargetDependency */,
 			);
 			name = "Pods-Seafood Guide";
 			productName = Pods_Seafood_Guide;
-			productReference = 6A091270783123FBABE6D30E54EA96C4 /* Pods_Seafood_Guide.framework */;
+			productReference = 6A091270783123FBABE6D30E54EA96C4 /* Pods-Seafood Guide */;
 			productType = "com.apple.product-type.framework";
 		};
 		98FDE5C67B070D89FED3AE14E24EACBE /* Pods-Seafood GuideTests */ = {
@@ -302,11 +366,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				F6F7C474F7266EFDEE7524B6C4556E9F /* PBXTargetDependency */,
+				820F317048B8D10C110F052F5DC34394 /* PBXTargetDependency */,
 			);
 			name = "Pods-Seafood GuideTests";
 			productName = Pods_Seafood_GuideTests;
-			productReference = A9B4F1627424B06914F0A836871E057B /* Pods_Seafood_GuideTests.framework */;
+			productReference = A9B4F1627424B06914F0A836871E057B /* Pods-Seafood GuideTests */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -315,11 +379,11 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1310;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -339,15 +403,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		11DBA9FA11A0E5EE66E0889E9BE99819 /* Resources */ = {
+		775B95A1A72B0587601E828EBF196122 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34FE6D946E9542BA2B0F8BA3DB9A2435 /* ProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		775B95A1A72B0587601E828EBF196122 /* Resources */ = {
+		7BCA7DD16505108800805A20532A78A8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -372,12 +435,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7757DB3562998A19197D8A354251578 /* Sources */ = {
+		D00B499FEC273B734572D5B55EBA6513 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2494C7A105491A46CE307E2273C8E0A3 /* ProgressHUD.m in Sources */,
-				FCCDB16DA3E0933685FA5228CD8324F2 /* ProgressHUD-dummy.m in Sources */,
+				5C91BDC6BB9D271C8483C270C69027D7 /* ProgressHUD.swift in Sources */,
+				A84A3A21CD23AF532AD78AB177247DAC /* ProgressHUD+ActivityIndicator.swift in Sources */,
+				3879E3E94921A9884C0A1E97A337DBD9 /* ProgressHUD+BallVerticalBounce.swift in Sources */,
+				CCDF9BEDCBDE214A8C365737CD4A4DDB /* ProgressHUD+Banner.swift in Sources */,
+				2A82B4FE8A6912CD632C2E47CDC4E4A5 /* ProgressHUD+BarSweepToggle.swift in Sources */,
+				E51BFDF36F49754D25E35B5E1A399654 /* ProgressHUD+CircleArcDotSpin.swift in Sources */,
+				68F9EF550BFD25E95D607655C70DC5C8 /* ProgressHUD+CircleBarSpinFade.swift in Sources */,
+				E964F0AAA735F3A58CE8509C40404B16 /* ProgressHUD+CircleDotSpinFade.swift in Sources */,
+				B946C9FAD6CA44A50B8BD639F76806FB /* ProgressHUD+CirclePulseMultiple.swift in Sources */,
+				28B22108FB83B10D3E01F65383135EB5 /* ProgressHUD+CirclePulseSingle.swift in Sources */,
+				3539ECBF8B961FE42A68B01A3AADF91B /* ProgressHUD+CircleRippleMultiple.swift in Sources */,
+				C47F3591BFFDC019D3A2E1F9CC349610 /* ProgressHUD+CircleRippleSingle.swift in Sources */,
+				ABB0C59CFAF36B3AFA1A27625EA54C46 /* ProgressHUD+CircleRotateChase.swift in Sources */,
+				22A265D12317652A2F25AB25A93D44AE /* ProgressHUD+CircleStrokeSpin.swift in Sources */,
+				904BFEA904ACA4C5AC97260C7999670E /* ProgressHUD+DualDotSidestep.swift in Sources */,
+				DFF83C5C7DCE85FCC1AB1456093B6494 /* ProgressHUD+Enums.swift in Sources */,
+				ACCA655A16ED1D29FDA81A391B7B8072 /* ProgressHUD+HorizontalBarScaling.swift in Sources */,
+				DD74B53B9F24F949728B15A7F508D9D6 /* ProgressHUD+HorizontalDotScaling.swift in Sources */,
+				6C7F8473BF45C1D6906C54CAD4E6C44A /* ProgressHUD+LiveIcon.swift in Sources */,
+				1E70D9711242B3AC19DA9136EC66E2D1 /* ProgressHUD+PacmanProgress.swift in Sources */,
+				90985370B109E9607ADC7D929D11DB48 /* ProgressHUD+Public.swift in Sources */,
+				5B421F09FDF965E84313F4972A090BF6 /* ProgressHUD+QuintupleDotDance.swift in Sources */,
+				FFF994826480BB690015EE4A46E260E2 /* ProgressHUD+SemiRingRotation.swift in Sources */,
+				4F2262DDE8F5B1BEB5BE36ACB3B66CE1 /* ProgressHUD+SFSymbolBounce.swift in Sources */,
+				37BF610B60A0DFC350E9DC14511E09A0 /* ProgressHUD+SquareCircuitSnake.swift in Sources */,
+				19EC1B8B6F406FA06214FC65C9786E63 /* ProgressHUD+TriangleDotShift.swift in Sources */,
+				3A1F799C0B6DE2FA431F4F49E417BB7F /* ProgressHUD-dummy.m in Sources */,
+				F7CE0CBE09706BF0FB99AC2AD44B1252 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,83 +481,131 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7D59D75384682FD5E03308E644D87715 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ProgressHUD;
-			target = 022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */;
-			targetProxy = B6FC42CB54CC8B6688D0672C2C941768 /* PBXContainerItemProxy */;
-		};
-		F6F7C474F7266EFDEE7524B6C4556E9F /* PBXTargetDependency */ = {
+		820F317048B8D10C110F052F5DC34394 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-Seafood Guide";
 			target = 43E399894076CB56510F05379A03703C /* Pods-Seafood Guide */;
-			targetProxy = BDED8174AE0A9023B481D3ED46C65409 /* PBXContainerItemProxy */;
+			targetProxy = 8B94F7641359ED5E7A227E9E24D96319 /* PBXContainerItemProxy */;
+		};
+		ADB5B336A443DF9026D186D72130BBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ProgressHUD;
+			target = 022D0373DF61EE4E133BADB43CE7ED57 /* ProgressHUD */;
+			targetProxy = 00C190A7518992B6C95EF612AE8A2473 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12E068767CF35B513130A458C3536CFB /* Release */ = {
+		05F689AC03B7E9166CE501E2E442B782 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93F19683601FE825339303E144029C66 /* Pods-Seafood GuideTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
 				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				MTL_FAST_MATH = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 5.0;
-				SYMROOT = "${SRCROOT}/../build";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2FF1CABA2F393C5AC709D7FB7D5C2319 /* Debug */ = {
+		10EB0577C176AF4F63F3A944FF2ACF99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3155915CEDE7605A4A2903F7B6E6F93C /* Pods-Seafood GuideTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		240986CF12AA8E7F10F6A6EFEBA2338F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 816DEAE3F58FA05E75DEC7ACC48B8C78 /* ProgressHUD.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = ProgressHUD;
+				PRODUCT_NAME = ProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		296F86E0DD688C440F8EB2FD9C0415AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -521,7 +658,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -534,138 +671,7 @@
 			};
 			name = Debug;
 		};
-		517C8E53C954042F278E6A07C2E4BBA8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F091B858B281822014C7DF1C95E3CA76 /* Pods-Seafood Guide.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6E3190B4A2FB23C67908BB66FDB648DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9632C36F75858F00E230E77318C6719C /* ProgressHUD.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = ProgressHUD;
-				PRODUCT_NAME = ProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		74983BE65E5814DF8C6569D421DA9F64 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BA21315FEF2DB6ACF53B8997C8455F9D /* ProgressHUD.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
-				PRODUCT_MODULE_NAME = ProgressHUD;
-				PRODUCT_NAME = ProgressHUD;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7F44DE9DB46C500D1F294C2FDCF82F83 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93F19683601FE825339303E144029C66 /* Pods-Seafood GuideTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BA000B97852F2042935107CE6FF30F92 /* Debug */ = {
+		5ABA5EEF7DA564638C50D66CDD17A135 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4090C366EE5E634276A0A0D466358901 /* Pods-Seafood Guide.debug.xcconfig */;
 			buildSettings = {
@@ -681,8 +687,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
 				OTHER_LDFLAGS = "";
@@ -698,9 +708,9 @@
 			};
 			name = Debug;
 		};
-		D6FC251330D1273F091CC650542537CC /* Debug */ = {
+		7649713CED8BFA04B80FA6B9799A3EC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3155915CEDE7605A4A2903F7B6E6F93C /* Pods-Seafood GuideTests.debug.xcconfig */;
+			baseConfigurationReference = F091B858B281822014C7DF1C95E3CA76 /* Pods-Seafood Guide.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -712,12 +722,16 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -726,19 +740,126 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
+		};
+		B57B09953DB018CB206D891E9478BFF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9396C32AA5D5DECDBDF460ACD6782071 /* ProgressHUD.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ProgressHUD/ProgressHUD-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ProgressHUD/ProgressHUD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ProgressHUD/ProgressHUD.modulemap";
+				PRODUCT_MODULE_NAME = ProgressHUD;
+				PRODUCT_NAME = ProgressHUD;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F3E264B2417BDFCD2BC2B58566242312 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		12764E48EF11A2AC97C4A69E9D9480C4 /* Build configuration list for PBXNativeTarget "ProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				240986CF12AA8E7F10F6A6EFEBA2338F /* Debug */,
+				B57B09953DB018CB206D891E9478BFF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FF1CABA2F393C5AC709D7FB7D5C2319 /* Debug */,
-				12E068767CF35B513130A458C3536CFB /* Release */,
+				296F86E0DD688C440F8EB2FD9C0415AF /* Debug */,
+				F3E264B2417BDFCD2BC2B58566242312 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -746,17 +867,8 @@
 		90648DEEE33BBA05CA87746CD40E4D43 /* Build configuration list for PBXNativeTarget "Pods-Seafood Guide" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BA000B97852F2042935107CE6FF30F92 /* Debug */,
-				517C8E53C954042F278E6A07C2E4BBA8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		98DB1CEB64B25B7D92ACCB0F45D40523 /* Build configuration list for PBXNativeTarget "ProgressHUD" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				74983BE65E5814DF8C6569D421DA9F64 /* Debug */,
-				6E3190B4A2FB23C67908BB66FDB648DB /* Release */,
+				5ABA5EEF7DA564638C50D66CDD17A135 /* Debug */,
+				7649713CED8BFA04B80FA6B9799A3EC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -764,8 +876,8 @@
 		B0883F12748C3D1CE6414611138998D3 /* Build configuration list for PBXNativeTarget "Pods-Seafood GuideTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6FC251330D1273F091CC650542537CC /* Debug */,
-				7F44DE9DB46C500D1F294C2FDCF82F83 /* Release */,
+				10EB0577C176AF4F63F3A944FF2ACF99 /* Debug */,
+				05F689AC03B7E9166CE501E2E442B782 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
