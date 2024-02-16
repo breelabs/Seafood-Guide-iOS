@@ -1,6 +1,0 @@
-framework module Pods_Seafood_Guide {
-  umbrella header "Pods-Seafood Guide-umbrella.h"
-
-  export *
-  module * { export * }
-}

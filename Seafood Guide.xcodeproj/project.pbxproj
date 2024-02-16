@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		948B6947DB3A7BB0D5179CD0 /* Pods_Seafood_GuideTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 218DD12931B743B0B7FC7297 /* Pods_Seafood_GuideTests.framework */; };
-		E1C96F67125806FBAC8482FB /* Pods_Seafood_Guide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F4106C48061A8568A13C9FA /* Pods_Seafood_Guide.framework */; };
 		ED48447423A0DD4B00813483 /* DetailNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447323A0DD4A00813483 /* DetailNewsViewController.swift */; };
 		ED48447623A0DF7000813483 /* DetailLingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447523A0DF7000813483 /* DetailLingoViewController.swift */; };
 		ED48447823A0E07400813483 /* DetailAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED48447723A0E07400813483 /* DetailAboutViewController.swift */; };
@@ -30,6 +28,7 @@
 		ED648DDD23A0D26C00EC5F16 /* TableViewCellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDC23A0D26C00EC5F16 /* TableViewCellNews.swift */; };
 		ED648DDF23A0D82600EC5F16 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDE23A0D82600EC5F16 /* config.swift */; };
 		FC16B63D2393878500DB454C /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FC16B63C2393878500DB454C /* RXMLElement.m */; };
+		FC2878B32B7EE27D00BF0892 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FC2878B22B7EE27D00BF0892 /* ProgressHUD */; };
 		FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
 		FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */; };
 		FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD13119B23CBF003ECABA /* UIKit.framework */; };
@@ -67,12 +66,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01BF60B6DEE058EE257EB5ED /* Pods-Seafood GuideTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood GuideTests.debug.xcconfig"; path = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.debug.xcconfig"; sourceTree = "<group>"; };
-		218DD12931B743B0B7FC7297 /* Pods_Seafood_GuideTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_GuideTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		317AC9619C4A1B45582B1842 /* Pods-Seafood GuideTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood GuideTests.release.xcconfig"; path = "Target Support Files/Pods-Seafood GuideTests/Pods-Seafood GuideTests.release.xcconfig"; sourceTree = "<group>"; };
-		483D4C2C81C0306E0B383B86 /* Pods-Seafood Guide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood Guide.debug.xcconfig"; path = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.debug.xcconfig"; sourceTree = "<group>"; };
-		6F4106C48061A8568A13C9FA /* Pods_Seafood_Guide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seafood_Guide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0E64E42247BD49050323528 /* Pods-Seafood Guide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Seafood Guide.release.xcconfig"; path = "Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide.release.xcconfig"; sourceTree = "<group>"; };
 		ED48447323A0DD4A00813483 /* DetailNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailNewsViewController.swift; path = "Top 10/Table View Cell/DetailNewsViewController.swift"; sourceTree = "<group>"; };
 		ED48447523A0DF7000813483 /* DetailLingoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailLingoViewController.swift; path = Lingo/ViewControllers/DetailLingoViewController.swift; sourceTree = "<group>"; };
 		ED48447723A0E07400813483 /* DetailAboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailAboutViewController.swift; path = About/ViewControllers/DetailAboutViewController.swift; sourceTree = "<group>"; };
@@ -135,10 +128,10 @@
 				FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */,
 				FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */,
 				FC2BD18B19B26F00003ECABA /* QuartzCore.framework in Frameworks */,
+				FC2878B32B7EE27D00BF0892 /* ProgressHUD in Frameworks */,
 				FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */,
 				FC2BD13219B23CBF003ECABA /* UIKit.framework in Frameworks */,
 				FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */,
-				E1C96F67125806FBAC8482FB /* Pods_Seafood_Guide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,24 +142,12 @@
 				FC2BD15319B23CC0003ECABA /* XCTest.framework in Frameworks */,
 				FC2BD15519B23CC0003ECABA /* UIKit.framework in Frameworks */,
 				FC2BD15419B23CC0003ECABA /* Foundation.framework in Frameworks */,
-				948B6947DB3A7BB0D5179CD0 /* Pods_Seafood_GuideTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B4036520A8036E532486C3FB /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				483D4C2C81C0306E0B383B86 /* Pods-Seafood Guide.debug.xcconfig */,
-				A0E64E42247BD49050323528 /* Pods-Seafood Guide.release.xcconfig */,
-				01BF60B6DEE058EE257EB5ED /* Pods-Seafood GuideTests.debug.xcconfig */,
-				317AC9619C4A1B45582B1842 /* Pods-Seafood GuideTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		FC2BD12119B23CBF003ECABA = {
 			isa = PBXGroup;
 			children = (
@@ -174,7 +155,6 @@
 				FC2BD15819B23CC0003ECABA /* Seafood GuideTests */,
 				FC2BD12C19B23CBF003ECABA /* Frameworks */,
 				FC2BD12B19B23CBF003ECABA /* Products */,
-				B4036520A8036E532486C3FB /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,8 +179,6 @@
 				FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */,
 				FC2BD13119B23CBF003ECABA /* UIKit.framework */,
 				FC2BD15219B23CC0003ECABA /* XCTest.framework */,
-				6F4106C48061A8568A13C9FA /* Pods_Seafood_Guide.framework */,
-				218DD12931B743B0B7FC7297 /* Pods_Seafood_GuideTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -409,17 +387,18 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC2BD16219B23CC0003ECABA /* Build configuration list for PBXNativeTarget "Seafood Guide" */;
 			buildPhases = (
-				A5D0FAECC89BDB8566B84C5B /* [CP] Check Pods Manifest.lock */,
 				FC2BD12619B23CBF003ECABA /* Sources */,
 				FC2BD12719B23CBF003ECABA /* Frameworks */,
 				FC2BD12819B23CBF003ECABA /* Resources */,
-				7EE3213445228C66BD351034 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Seafood Guide";
+			packageProductDependencies = (
+				FC2878B22B7EE27D00BF0892 /* ProgressHUD */,
+			);
 			productName = "Seafood Guide";
 			productReference = FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */;
 			productType = "com.apple.product-type.application";
@@ -428,7 +407,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC2BD16519B23CC0003ECABA /* Build configuration list for PBXNativeTarget "Seafood GuideTests" */;
 			buildPhases = (
-				D8347F47650D7503BA808585 /* [CP] Check Pods Manifest.lock */,
 				FC2BD14D19B23CC0003ECABA /* Sources */,
 				FC2BD14E19B23CC0003ECABA /* Frameworks */,
 				FC2BD14F19B23CC0003ECABA /* Resources */,
@@ -470,6 +448,9 @@
 				Base,
 			);
 			mainGroup = FC2BD12119B23CBF003ECABA;
+			packageReferences = (
+				FC2878B12B7EE27D00BF0892 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+			);
 			productRefGroup = FC2BD12B19B23CBF003ECABA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -507,71 +488,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7EE3213445228C66BD351034 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ProgressHUD/ProgressHUD.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProgressHUD.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Seafood Guide/Pods-Seafood Guide-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A5D0FAECC89BDB8566B84C5B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Seafood Guide-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D8347F47650D7503BA808585 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Seafood GuideTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FC2BD12619B23CBF003ECABA /* Sources */ = {
@@ -757,7 +673,6 @@
 		};
 		FC2BD16319B23CC0003ECABA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 483D4C2C81C0306E0B383B86 /* Pods-Seafood Guide.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -799,7 +714,6 @@
 		};
 		FC2BD16419B23CC0003ECABA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0E64E42247BD49050323528 /* Pods-Seafood Guide.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -840,7 +754,6 @@
 		};
 		FC2BD16619B23CC0003ECABA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01BF60B6DEE058EE257EB5ED /* Pods-Seafood GuideTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seafood Guide.app/Seafood Guide";
@@ -864,7 +777,6 @@
 		};
 		FC2BD16719B23CC0003ECABA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 317AC9619C4A1B45582B1842 /* Pods-Seafood GuideTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Seafood Guide.app/Seafood Guide";
@@ -913,6 +825,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC2878B12B7EE27D00BF0892 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC2878B22B7EE27D00BF0892 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2878B12B7EE27D00BF0892 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		FC4E643319EB4B7C0079C0A3 /* Seafood_Guide.xcdatamodeld */ = {

@@ -1,6 +1,0 @@
-framework module Pods_Seafood_GuideTests {
-  umbrella header "Pods-Seafood GuideTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
