@@ -164,7 +164,8 @@ class AboutTableViewController: UITableViewController, UINavigationBarDelegate, 
 
 // MARK: - Table view sends data to detail view
     override func tableView(_ aTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = DetailAboutViewController.init(style: .plain)
+        let detailViewController = DetailAboutViewController.init(style: .grouped)
+        detailViewController.tableView.backgroundColor = UIColor(named: "Background")
 
         if indexPath.section == 0 {
             let allAbout = fetchedResultsController1?.fetchedObjects?[indexPath.row]

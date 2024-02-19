@@ -108,8 +108,9 @@ class LingoTableViewController: UITableViewController, UINavigationBarDelegate, 
 // MARK: - Table view sends data to detail view
     override func tableView(_ aTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        let detailViewController = DetailLingoViewController.init(style: .plain)
-
+        let detailViewController = DetailLingoViewController.init(style: .grouped)
+        detailViewController.tableView.backgroundColor = UIColor(named: "Background")
+        
         var sumSections = 0
         for i in 0..<indexPath.section {
             let rowsInSection = tableView.numberOfRows(inSection: i)
