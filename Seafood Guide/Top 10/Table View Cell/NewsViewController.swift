@@ -28,6 +28,17 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.barStyle = .default
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "Text Color")!]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Text Color")!]
+        appearance.backgroundColor = .clear
+
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        
+        
         numArray = []
         imageArray = []
         descArray = []

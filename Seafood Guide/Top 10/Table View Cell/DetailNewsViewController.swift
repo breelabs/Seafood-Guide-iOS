@@ -28,6 +28,16 @@ class DetailNewsViewController: UIViewController, UINavigationBarDelegate, UINav
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.barStyle = .default
+        let appearance = UINavigationBarAppearance()
+        appearance.titleTextAttributes = [.foregroundColor: UIColor(named: "Text Color")!]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "Text Color")!]
+        appearance.backgroundColor = UIColor(named: "Background")
+
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+        self.navigationController?.navigationBar.tintColor = UIColor(named: "Text Color")!
+        
 // MARK: - Button Style
 
         // R: 76 G: 76 B: 76

@@ -98,6 +98,7 @@ class LingoTableViewController: UITableViewController, UINavigationBarDelegate, 
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(named: "Text Color")!
         navigationItem.backBarButtonItem?.title = "Back"
     }
 

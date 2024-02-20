@@ -136,6 +136,7 @@ class FishTVC: CoreDataTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor(named: "Text Color")!
         navigationItem.backBarButtonItem?.title = "Back"
     }
 
@@ -148,6 +149,8 @@ class FishTVC: CoreDataTableViewController {
     override func tableView(_ aTableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         let detailViewController = TVCDetailViewController.init(style: .plain)
+        detailViewController.tableView.backgroundColor = UIColor(named: "Background")
+        
 
         var sumSections = 0
         for i in 0..<indexPath.section {
@@ -161,6 +164,7 @@ class FishTVC: CoreDataTableViewController {
 
         navigationController?.pushViewController(detailViewController, animated: true)
 
+        navigationController?.navigationBar.tintColor = UIColor(named: "Text Color")!
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: nil, action: nil)
     }
 
