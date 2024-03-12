@@ -9,6 +9,7 @@
 
 import QuartzCore
 import UIKit
+import SWXMLHash
 
 class NewsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UINavigationBarDelegate, UINavigationControllerDelegate {
     var objects: [AnyHashable] = []
@@ -50,33 +51,35 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func refresh() {
 
-        let rootXML = RXMLElement(fromXMLFile: "ios-news.xml")
+        
+        guard let xml = Bundle.main.path(forResource: "ios-news", ofType: "xml") else {
+            print("File not found")
+            return
+        }
+        let data = try! Data(contentsOf: URL(fileURLWithPath: xml))
+        let rootXMLAbout1 = XMLHash.parse(data)
+        let rxmlIndividualNew = rootXMLAbout1["xml"]["news"]["new"]
 
-        let rxmlNews = rootXML?.child("news")
-
-        let rxmlIndividualNew = rxmlNews?.children("new")
-
-        for i in 0..<(rxmlIndividualNew?.count ?? 0) {
-            var imgUrl: String? = nil
-            if let child = (rxmlIndividualNew?[i] as AnyObject).child("imageurl").text {
-                imgUrl = "\(child):"
-            }
-            var num: String? = nil
-            if let child: String = (rxmlIndividualNew?[i] as AnyObject).child("linknews").text {
-                num = "\(child)"
-            }
-            let img1 = UIImage(named: imgUrl ?? "")
-
-            let title = (rxmlIndividualNew?[i] as AnyObject).child("titlenews").text ?? ""
-            let desc = (rxmlIndividualNew?[i] as AnyObject).child("descnews").text ?? ""
-
-            numArray.append(num ?? "")
-            if let img1 = img1 {
-                imageArray.append(img1)
-            }
+        
+        for elem in rxmlIndividualNew.all {
+            let imgURL = elem["imageurl"].element!.text
+            let img1 = UIImage(named: imgURL)
+            
+            
+            let num = elem["linknews"].element!.text
+            let desc = elem["descnews"].element!.text
+            let title = elem["titlenews"].element!.text
+            
+            numArray.append(num)
+                if let img1 = img1 {
+                    imageArray.append(img1)
+                }
+            
             titleArray.append(title)
             descArray.append(desc)
+            
         }
+        
 
         newsTbView.reloadData()
 
@@ -98,30 +101,28 @@ class NewsViewController: UIViewController, UITableViewDelegate, UITableViewData
 
     func connectionDidFinishLoading(_ connection: NSURLConnection) {
 
-        let rootXML = RXMLElement(fromXMLFile: "ios-news.xml")
+        guard let xml = Bundle.main.path(forResource: "ios-news", ofType: "xml") else {
+            print("File not found")
+            return
+        }
+        let data = try! Data(contentsOf: URL(fileURLWithPath: xml))
+        let rootXMLAbout1 = XMLHash.parse(data)
+        let rxmlIndividualNew = rootXMLAbout1["xml"]["news"]["new"]
 
-        let rxmlNews = rootXML?.child("news")
 
-        let rxmlIndividualNew = rxmlNews?.children("new")
-
-
-        for i in 0..<(rxmlIndividualNew?.count ?? 0) {
-
-            var imgUrl: String? = nil
-            if let child:String = (rxmlIndividualNew?[i] as AnyObject).child("imageurl").text {
-                imgUrl = "\(child):"
-            }
-
-            let img1 = UIImage(named: imgUrl ?? "")
-
-            let title = (rxmlIndividualNew?[i] as AnyObject).child("titlenews").text ?? ""
-            let desc = (rxmlIndividualNew?[i] as AnyObject).child("descnews").text ?? ""
-
+        for elem in rxmlIndividualNew.all {
+            let imgURL = elem["imageurl"].element!.text
+            let img1 = UIImage(named: imgURL)
+            let desc = elem["descnews"].element!.text
+            let title = elem["titlenews"].element!.text
+            
             if let img1 = img1 {
-                imageArray.append(img1)
-            }
+                            imageArray.append(img1)
+                        }
+            
             titleArray.append(title)
             descArray.append(desc)
+            
         }
 
 

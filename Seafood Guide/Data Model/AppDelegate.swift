@@ -9,6 +9,7 @@
 
 import CoreData
 import UIKit
+import SWXMLHash
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -164,6 +165,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func importCoreDataDefaultRoles() {
 
+        
         let defaultPrefsFile = Bundle.main.path(forResource: "defaultPrefs", ofType: "plist")
         let defaultPreferences = NSDictionary(contentsOfFile: defaultPrefsFile ?? "") as Dictionary?
         if let defaultPreferences = defaultPreferences as? [String : Any] {
@@ -173,43 +175,55 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //IMPORT ABOUT
         let integerFromPrefsAbout = defaults.integer(forKey: "loadabout")
-        let rootXMLAbout1 = RXMLElement(fromXMLFile: "ios-about-1.xml")
-        let rootXMLAbout2 = RXMLElement(fromXMLFile: "ios-about-2.xml")
-        let rootXMLAbout3 = RXMLElement(fromXMLFile: "ios-about-3.xml")
-        let rxmlabout1 = rootXMLAbout1?.child("news")
-        let rxmlabout2 = rootXMLAbout2?.child("news")
-        let rxmlabout3 = rootXMLAbout3?.child("news")
-        let rxmlIndividualNew1 = rxmlabout1?.children("new")
-        let rxmlIndividualNew2 = rxmlabout2?.children("new")
-        let rxmlIndividualNew3 = rxmlabout3?.children("new")
+        
+        guard let xml = Bundle.main.path(forResource: "ios-about-1", ofType: "xml") else {
+            print("File not found")
+            return
+        }
+        let data1 = try! Data(contentsOf: URL(fileURLWithPath: xml))
+        let rootXMLAbout1 = XMLHash.parse(data1)
+        
+        guard let xml2 = Bundle.main.path(forResource: "ios-about-2", ofType: "xml") else {
+            print("File not found")
+            return
+        }
+        let data2 = try! Data(contentsOf: URL(fileURLWithPath: xml2))
+        let rootXMLAbout2 = XMLHash.parse(data2)
+        
+        guard let xml3 = Bundle.main.path(forResource: "ios-about-3", ofType: "xml") else {
+            print("File not found")
+            return
+        }
+        let data3 = try! Data(contentsOf: URL(fileURLWithPath: xml3))
+        let rootXMLAbout3 = XMLHash.parse(data3)
+        
+        let rxmlIndividualNew1 = rootXMLAbout1["xml"]["news"]["new"]
+        let rxmlIndividualNew2 = rootXMLAbout2["xml"]["news"]["new"]
+        let rxmlIndividualNew3 = rootXMLAbout3["xml"]["news"]["new"]
 
+       
 
         if integerFromPrefsAbout == 0 {
 
-            for i in 0..<(rxmlIndividualNew1?.count ?? 0) {
-
-                let title = (rxmlIndividualNew1?[i] as AnyObject).child("titlenews").text ?? ""
-                let desc = (rxmlIndividualNew1?[i] as AnyObject).child("descnews").text ?? ""
-                let link = (rxmlIndividualNew1?[i] as AnyObject).child("linknews").text ?? ""
-
+            
+            for elem in rxmlIndividualNew1.all {
+                let title = elem["titlenews"].element!.text
+                let desc = elem["descnews"].element!.text
+                let link = elem["linknews"].element!.text
                 insertAbout(withAboutName: title, descName: desc, newsName: link)
             }
-
-            for i in 0..<(rxmlIndividualNew2?.count ?? 0) {
-
-                let title = (rxmlIndividualNew2?[i] as AnyObject).child("titlenews").text ?? ""
-                let desc = (rxmlIndividualNew2?[i] as AnyObject).child("descnews").text ?? ""
-                let link = (rxmlIndividualNew2?[i] as AnyObject).child("linknews").text ?? ""
-
+            
+            for elem in rxmlIndividualNew2.all {
+                let title = elem["titlenews"].element!.text
+                let desc = elem["descnews"].element!.text
+                let link = elem["linknews"].element!.text
                 insertAbout(withAboutName: title, descName: desc, newsName: link)
             }
-
-            for i in 0..<(rxmlIndividualNew3?.count ?? 0) {
-
-                let title = (rxmlIndividualNew3?[i] as AnyObject).child("titlenews").text ?? ""
-                let desc = (rxmlIndividualNew3?[i] as AnyObject).child("descnews").text ?? ""
-                let link = (rxmlIndividualNew3?[i] as AnyObject).child("linknews").text ?? ""
-
+            
+            for elem in rxmlIndividualNew3.all {
+                let title = elem["titlenews"].element!.text
+                let desc = elem["descnews"].element!.text
+                let link = elem["linknews"].element!.text
                 insertAbout(withAboutName: title, descName: desc, newsName: link)
             }
 
@@ -219,25 +233,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         //IMPORT FISH LINGO
         let integerFromPrefsLingo = defaults.integer(forKey: "loadlingo")
-        let rootXML = RXMLElement(fromXMLFile: "ios-lingo.xml")
-        let rxmlNews = rootXML?.child("news")
-        let rxmlIndividualNew = rxmlNews?.children("new")
-
-        //RELOAD DATA BY UNCOMMENTING THE BELOW
-        //[[NSUserDefaults standardUserDefaults] setValue:@"0" forKey:@"loadlingo"];
-        //[[NSUserDefaults standardUserDefaults] synchronize];
-
+        
+               
+    
+    
+        guard let xml4 = Bundle.main.path(forResource: "ios-lingo", ofType: "xml") else {
+            print("File not found")
+            return
+        }
+        let data = try! Data(contentsOf: URL(fileURLWithPath: xml4))
+        let rootXML = XMLHash.parse(data)
+        
         if integerFromPrefsLingo == 0 {
 
-            for i in 0..<(rxmlIndividualNew?.count ?? 0) {
-
-                var imgUrl: String? = nil
-                if let child: String = (rxmlIndividualNew?[i] as AnyObject).child("imageurl").text {
-                    imgUrl = "\(child):"
-                }
-                let title = (rxmlIndividualNew?[i] as AnyObject).child("titlenews").text ?? ""
-                let desc = (rxmlIndividualNew?[i] as AnyObject).child("descnews").text ?? ""
-
+            
+            for elem in rootXML["xml"]["news"]["new"].all {
+                let imgUrl = elem["imageurl"].element!.text
+                let title = elem["titlenews"].element!.text
+                let desc = elem["descnews"].element!.text
                 insertLingo(withLingoName: title, imageName: imgUrl, descName: desc, newsName: desc)
             }
 
@@ -501,29 +514,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-
+       
         importCoreDataDefaultRoles()
-
-        // set the socialize api key and secret, register your app here: http://www.getsocialize.com/apps/
-        //[Socialize storeConsumerKey:@"949236fa-03da-4e7b-9b6a-20ef5ce84a2b"];
-        //[Socialize storeConsumerSecret:@"4188fe46-49c3-492f-bb46-7e305a06258e"];
-
-        //    if (![[self.fetchedResultsController fetchedObjects] count] > 0 ) {
-        //        NSLog(@"!!!!! ~~> There's nothing in the database so defaults will be inserted");
-        //
-        //    }
-        //    else {
-        //
-        //        NSLog(@"There's stuff in the database so skipping the import of default data");
-        //    }
-        //
-
-        // UIImage *navBarImage = [UIImage imageNamed:@"menubar.png"];
-
-        // [[UINavigationBar appearance] setBackgroundImage:navBarImage
-        //                                   forBarMetrics:UIBarMetricsDefault];
-
-        // Override point for customization after application launch.
         return true
     }
 

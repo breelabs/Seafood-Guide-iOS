@@ -27,7 +27,6 @@
 		ED648DDB23A0D18700EC5F16 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDA23A0D18700EC5F16 /* GridViewController.swift */; };
 		ED648DDD23A0D26C00EC5F16 /* TableViewCellNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDC23A0D26C00EC5F16 /* TableViewCellNews.swift */; };
 		ED648DDF23A0D82600EC5F16 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED648DDE23A0D82600EC5F16 /* config.swift */; };
-		FC16B63D2393878500DB454C /* RXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = FC16B63C2393878500DB454C /* RXMLElement.m */; };
 		FC2878B32B7EE27D00BF0892 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FC2878B22B7EE27D00BF0892 /* ProgressHUD */; };
 		FC2BD12E19B23CBF003ECABA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12D19B23CBF003ECABA /* Foundation.framework */; };
 		FC2BD13019B23CBF003ECABA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */; };
@@ -44,6 +43,7 @@
 		FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085E19B435430049FA70 /* libxml2.dylib */; };
 		FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B086119B4354F0049FA70 /* libz.dylib */; };
 		FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085D19B435430049FA70 /* libxml2.2.dylib */; };
+		FC483B642B9FDA1700C486D0 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FC483B632B9FDA1700C486D0 /* SWXMLHash */; };
 		FC4E63FE19EB49CA0079C0A3 /* ios-about-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FB19EB49CA0079C0A3 /* ios-about-1.xml */; };
 		FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FC19EB49CA0079C0A3 /* ios-about-2.xml */; };
 		FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FD19EB49CA0079C0A3 /* ios-about-3.xml */; };
@@ -87,8 +87,6 @@
 		ED648DDC23A0D26C00EC5F16 /* TableViewCellNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TableViewCellNews.swift; path = "Top 10/View Controller/TableViewCellNews.swift"; sourceTree = "<group>"; };
 		ED648DDE23A0D82600EC5F16 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = config.swift; path = classes/Config/config.swift; sourceTree = "<group>"; };
 		ED648DE023A0D90900EC5F16 /* NewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsViewController.swift; path = "Top 10/Table View Cell/NewsViewController.swift"; sourceTree = "<group>"; };
-		FC16B63B2393878500DB454C /* RXMLElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RXMLElement.h; sourceTree = "<group>"; };
-		FC16B63C2393878500DB454C /* RXMLElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RXMLElement.m; sourceTree = "<group>"; };
 		FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Seafood Guide.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC2BD12D19B23CBF003ECABA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FC2BD12F19B23CBF003ECABA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -125,6 +123,7 @@
 			files = (
 				FCE79F3A19B99F87003E03BE /* CoreData.framework in Frameworks */,
 				FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */,
+				FC483B642B9FDA1700C486D0 /* SWXMLHash in Frameworks */,
 				FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */,
 				FC3B086019B435430049FA70 /* libxml2.dylib in Frameworks */,
 				FC2BD18B19B26F00003ECABA /* QuartzCore.framework in Frameworks */,
@@ -201,8 +200,6 @@
 		FC2BD13419B23CBF003ECABA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FC16B63B2393878500DB454C /* RXMLElement.h */,
-				FC16B63C2393878500DB454C /* RXMLElement.m */,
 				FC3B084619B430620049FA70 /* Config */,
 				FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */,
 				FC2BD13619B23CBF003ECABA /* InfoPlist.strings */,
@@ -398,6 +395,7 @@
 			name = "Seafood Guide";
 			packageProductDependencies = (
 				FC2878B22B7EE27D00BF0892 /* ProgressHUD */,
+				FC483B632B9FDA1700C486D0 /* SWXMLHash */,
 			);
 			productName = "Seafood Guide";
 			productReference = FC2BD12A19B23CBF003ECABA /* Seafood Guide.app */;
@@ -450,6 +448,7 @@
 			mainGroup = FC2BD12119B23CBF003ECABA;
 			packageReferences = (
 				FC2878B12B7EE27D00BF0892 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				FC483B622B9FDA1700C486D0 /* XCRemoteSwiftPackageReference "SWXMLHash" */,
 			);
 			productRefGroup = FC2BD12B19B23CBF003ECABA /* Products */;
 			projectDirPath = "";
@@ -512,7 +511,6 @@
 				ED4844A323A0F4F700813483 /* NewsViewController.swift in Sources */,
 				ED48447A23A0E1B800813483 /* LingoTableViewController.swift in Sources */,
 				ED648DC923A0281800EC5F16 /* About+CoreDataProperties.swift in Sources */,
-				FC16B63D2393878500DB454C /* RXMLElement.m in Sources */,
 				ED648DCC23A0281800EC5F16 /* Seafood+CoreDataClass.swift in Sources */,
 				ED648DDF23A0D82600EC5F16 /* config.swift in Sources */,
 				ED648DD123A02C3900EC5F16 /* FishCat.swift in Sources */,
@@ -839,6 +837,14 @@
 				minimumVersion = 14.1.1;
 			};
 		};
+		FC483B622B9FDA1700C486D0 /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/drmohundro/SWXMLHash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -846,6 +852,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC2878B12B7EE27D00BF0892 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		FC483B632B9FDA1700C486D0 /* SWXMLHash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC483B622B9FDA1700C486D0 /* XCRemoteSwiftPackageReference "SWXMLHash" */;
+			productName = SWXMLHash;
 		};
 /* End XCSwiftPackageProductDependency section */
 

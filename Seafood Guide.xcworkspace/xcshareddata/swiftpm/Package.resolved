@@ -1,4 +1,5 @@
 {
+  "originHash" : "1c147f9469518f622c8d9934cf5b9512d504a3ff046f81b7f89f431ce368d53c",
   "pins" : [
     {
       "identity" : "progresshud",
@@ -8,7 +9,16 @@
         "revision" : "fd18c75d5f650a949e1da5fc725a1c1b523bbf8e",
         "version" : "14.1.1"
       }
+    },
+    {
+      "identity" : "swxmlhash",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/drmohundro/SWXMLHash",
+      "state" : {
+        "revision" : "a853604c9e9a83ad9954c7e3d2a565273982471f",
+        "version" : "7.0.2"
+      }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
