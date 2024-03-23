@@ -682,7 +682,7 @@
 				CLANG_WARN_INT_CONVERSION = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7.4.2;
+				CURRENT_PROJECT_VERSION = 7.5.2;
 				DEVELOPMENT_TEAM = F64HQQLAVQ;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -701,7 +701,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 7.4.2;
+				MARKETING_VERSION = 7.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -724,7 +724,7 @@
 				CLANG_WARN_INT_CONVERSION = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 7.4.2;
+				CURRENT_PROJECT_VERSION = 7.5.2;
 				DEVELOPMENT_TEAM = F64HQQLAVQ;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -743,7 +743,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 7.4.2;
+				MARKETING_VERSION = 7.5.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jonbrown.org.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
