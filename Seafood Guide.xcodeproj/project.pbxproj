@@ -44,6 +44,7 @@
 		FC3B086219B4354F0049FA70 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B086119B4354F0049FA70 /* libz.dylib */; };
 		FC3B086319B435C50049FA70 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FC3B085D19B435430049FA70 /* libxml2.2.dylib */; };
 		FC483B642B9FDA1700C486D0 /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = FC483B632B9FDA1700C486D0 /* SWXMLHash */; };
+		FC4E2B992BB0B533006C3151 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = FC4E2B982BB0B533006C3151 /* PrivacyInfo.xcprivacy */; };
 		FC4E63FE19EB49CA0079C0A3 /* ios-about-1.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FB19EB49CA0079C0A3 /* ios-about-1.xml */; };
 		FC4E63FF19EB49CA0079C0A3 /* ios-about-2.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FC19EB49CA0079C0A3 /* ios-about-2.xml */; };
 		FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */ = {isa = PBXBuildFile; fileRef = FC4E63FD19EB49CA0079C0A3 /* ios-about-3.xml */; };
@@ -105,6 +106,7 @@
 		FC3B085D19B435430049FA70 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
 		FC3B085E19B435430049FA70 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 		FC3B086119B4354F0049FA70 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FC4E2B982BB0B533006C3151 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		FC4E63FB19EB49CA0079C0A3 /* ios-about-1.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-about-1.xml"; path = "About/DataSource/ios-about-1.xml"; sourceTree = "<group>"; };
 		FC4E63FC19EB49CA0079C0A3 /* ios-about-2.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-about-2.xml"; path = "About/DataSource/ios-about-2.xml"; sourceTree = "<group>"; };
 		FC4E63FD19EB49CA0079C0A3 /* ios-about-3.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = "ios-about-3.xml"; path = "About/DataSource/ios-about-3.xml"; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				FC2BD13519B23CBF003ECABA /* Seafood Guide-Info.plist */,
 				FC2BD13619B23CBF003ECABA /* InfoPlist.strings */,
 				FC2BD13B19B23CBF003ECABA /* Seafood Guide-Prefix.pch */,
+				FC4E2B982BB0B533006C3151 /* PrivacyInfo.xcprivacy */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2BD14C19B23CBF003ECABA /* Images.xcassets in Resources */,
+				FC4E2B992BB0B533006C3151 /* PrivacyInfo.xcprivacy in Resources */,
 				FC8F8C621FB839D10015E5E8 /* LaunchScreen.storyboard in Resources */,
 				FC2BD14119B23CBF003ECABA /* Main_iPhone.storyboard in Resources */,
 				FC4E640019EB49CA0079C0A3 /* ios-about-3.xml in Resources */,
